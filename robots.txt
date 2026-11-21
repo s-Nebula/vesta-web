@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://vestasecurity.date
+Sitemap: https://vestasecurity.date/sitemap.xml

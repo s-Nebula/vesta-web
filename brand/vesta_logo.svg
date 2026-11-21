@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 360" role="img" aria-labelledby="title desc">
+  <title id="title">Vesta — Protección familiar</title>
+  <desc id="desc">Logotipo horizontal de Vesta con símbolo de ubicación y protección familiar.</desc>
+  <defs><style>.wine{fill:#421827}.rose{fill:#C15B68}.ivory{fill:#F4EDEA}.beige{fill:#D6B7A6}.word{font-family:Montserrat,Arial,sans-serif;font-weight:700;letter-spacing:5px}</style></defs>
+  <g transform="translate(28 18) scale(.62)">
+    <path class="wine" d="M256 34C143 34 58 119 58 229c0 139 150 240 198 279 48-39 198-140 198-279C454 119 369 34 256 34Z"/>
+    <path class="ivory" d="M256 78c-88 0-153 65-153 151 0 91 86 166 153 222 67-56 153-131 153-222 0-86-65-151-153-151Z"/>
+    <circle class="wine" cx="211" cy="207" r="42"/><path class="wine" d="M133 344c3-58 36-91 78-91s75 33 78 91c-25 22-51 43-78 66-27-23-53-44-78-66Z"/>
+    <circle class="rose" cx="309" cy="255" r="31"/><path class="rose" d="M252 359c3-43 27-68 57-68s54 25 57 68c-18 17-37 32-57 48-20-16-39-31-57-48Z"/>
+    <path d="M91 326c58 73 214 78 323-12" fill="none" stroke="#C15B68" stroke-width="25" stroke-linecap="round"/><path d="M105 345c74 54 204 55 291-10" fill="none" stroke="#F4EDEA" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text x="390" y="174" class="wine word" font-size="112">VESTA</text>
+  <path d="M395 205H905" stroke="#D6B7A6" stroke-width="3"/>
+  <text x="400" y="258" class="rose" font-family="Montserrat,Arial,sans-serif" font-size="31" font-weight="600" letter-spacing="8">PROTECCIÓN FAMILIAR</text>
+</svg>
