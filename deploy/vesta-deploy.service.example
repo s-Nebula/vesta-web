@@ -1,0 +1,12 @@
+# EJEMPLO opcional: ejecutar el despliegue cada 5 minutos con systemd.
+# Copiar a /etc/systemd/system/ junto con vesta-deploy.timer.example.
+[Unit]
+Description=Despliegue del sitio de Vesta Security (rama deploy)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+User=www-data
+Environment=VESTA_BASE=/var/www/vesta-web
+ExecStart=/opt/vesta-web/vesta-deploy.sh deploy

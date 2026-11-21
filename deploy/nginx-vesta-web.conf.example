@@ -1,0 +1,41 @@
+# EJEMPLO de server block para el sitio de Vesta Security.
+# No se instala automáticamente: revísalo y adáptalo a tu configuración actual.
+# El dominio está en Cloudflare: Cloudflare Tunnel termina TLS y reenvía a este
+# Nginx. El túnel no se modifica.
+#
+# Única diferencia esencial respecto a servir el repositorio: el root apunta al
+# enlace `current`, que solo contiene el sitio compilado.
+
+server {
+    listen 80;                       # ajusta al puerto que usa hoy el túnel
+    server_name vestasecurity.date www.vestasecurity.date;
+
+    root /var/www/vesta-web/current;
+    index index.html;
+    disable_symlinks off;            # `current` es un enlace simbólico
+
+    # URLs limpias con barra final: /plataforma/ -> /plataforma/index.html
+    location / {
+        try_files $uri $uri/ $uri.html =404;
+    }
+    error_page 404 /404.html;
+
+    # Archivos con hash: caché larga. Se usa `expires` y no `add_header` para no
+    # anular los encabezados de seguridad del bloque server (herencia de Nginx).
+    location /_next/static/ {
+        expires 1y;
+    }
+
+    # No servir metadatos de compilación
+    location = /BUILD_INFO.txt { deny all; }
+    location ~ /\. { deny all; }
+
+    # Encabezados de seguridad. Si Cloudflare ya añade HSTS (SSL/TLS > Edge
+    # Certificates), puedes quitar la línea de HSTS para no duplicarla.
+    add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "DENY" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" always;
+}
