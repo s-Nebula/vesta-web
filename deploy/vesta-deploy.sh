@@ -3,14 +3,23 @@
 #
 # Descarga SOLO la rama `deploy` (sitio compilado), la extrae en una carpeta de
 # versión y cambia de forma atómica el enlace `current`, que es el que sirve Nginx.
-# No necesita Node.js, no usa credenciales (el repositorio es público) y no toca
-# Nginx, Cloudflare Tunnel, el backend ni OpenMediaVault.
+# No necesita Node.js y no toca Nginx, Cloudflare Tunnel, el backend ni OpenMediaVault.
+#
+# Autenticación: el repositorio es privado. Se usa una deploy key SSH de SOLO
+# LECTURA que vive únicamente en el servidor (ver docs/DESPLIEGUE.md). No se usan
+# tokens personales ni credenciales guardadas en GitHub.
 #
 # Estructura (BASE por defecto /var/www/vesta-web):
 #   BASE/repo.git          copia local solo de la rama deploy (sin código fuente)
 #   BASE/releases/<id>/    una carpeta por versión publicada
 #   BASE/current ->        enlace a la versión activa  (root de Nginx)
 #   BASE/deploy.log        historial de despliegues
+#
+# Configuración (variables de entorno, o el archivo /etc/vesta-web/deploy.env):
+#   VESTA_REPO_URL     git@github.com:s-Nebula/vesta-web.git
+#   VESTA_SSH_KEY      /etc/vesta-web/deploy_key      (clave privada de la deploy key)
+#   VESTA_KNOWN_HOSTS  /etc/vesta-web/known_hosts     (huella verificada de github.com)
+#   VESTA_BASE, VESTA_BRANCH, VESTA_KEEP_RELEASES
 #
 # Uso:
 #   vesta-deploy.sh deploy            publica la última versión de la rama deploy
@@ -19,13 +28,20 @@
 #   vesta-deploy.sh unpin             quita la fijación: el siguiente `deploy` vuelve a la última
 #   vesta-deploy.sh list              versiones disponibles en el servidor
 #   vesta-deploy.sh status            versión activa
+#   vesta-deploy.sh check             comprueba el acceso al repositorio con la deploy key
 #
 # Tras `rollback` o `deploy <commit>`, la versión queda FIJADA: un `deploy` sin
 # argumentos (por ejemplo, el temporizador) no la sustituye hasta ejecutar `unpin`.
 set -euo pipefail
 
+CONFIG="${VESTA_CONFIG:-/etc/vesta-web/deploy.env}"
+# shellcheck disable=SC1090
+[ -r "$CONFIG" ] && . "$CONFIG"
+
 BASE="${VESTA_BASE:-/var/www/vesta-web}"
-REPO_URL="${VESTA_REPO_URL:-https://github.com/s-Nebula/vesta-web.git}"
+REPO_URL="${VESTA_REPO_URL:-git@github.com:s-Nebula/vesta-web.git}"
+SSH_KEY="${VESTA_SSH_KEY:-/etc/vesta-web/deploy_key}"
+KNOWN_HOSTS="${VESTA_KNOWN_HOSTS:-/etc/vesta-web/known_hosts}"
 BRANCH="${VESTA_BRANCH:-deploy}"
 KEEP="${VESTA_KEEP_RELEASES:-10}"
 
@@ -44,12 +60,28 @@ flock -n 9 || die "otro despliegue está en curso"
 
 active() { [ -L "$CURRENT" ] && basename "$(readlink "$CURRENT")" || true; }
 
+ssh_setup() {
+  case "$REPO_URL" in
+    git@*|ssh://*)
+      [ -r "$SSH_KEY" ] || die "no se puede leer la deploy key $SSH_KEY"
+      [ -r "$KNOWN_HOSTS" ] || die "no se puede leer $KNOWN_HOSTS (huella de github.com)"
+      # Solo esta clave, sin agente, sin aceptar huellas desconocidas.
+      export GIT_SSH_COMMAND="ssh -i $SSH_KEY -o IdentitiesOnly=yes -o IdentityAgent=none -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$KNOWN_HOSTS"
+      ;;
+  esac
+  export GIT_TERMINAL_PROMPT=0
+}
+
 fetch() {
+  ssh_setup
   if [ ! -d "$REPO" ]; then
     git init -q --bare "$REPO"
     git -C "$REPO" remote add origin "$REPO_URL"
+  else
+    git -C "$REPO" remote set-url origin "$REPO_URL"
   fi
-  git -C "$REPO" fetch -q --prune origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH"
+  git -C "$REPO" fetch -q --prune origin "+refs/heads/$BRANCH:refs/remotes/origin/$BRANCH" \
+    || die "no se pudo descargar la rama $BRANCH de $REPO_URL (revisa la deploy key)"
 }
 
 switch_to() {
@@ -109,5 +141,6 @@ case "${1:-}" in
   unpin)    rm -f "$PIN"; echo "Fijación eliminada." ;;
   list)     ls -1t "$RELEASES" | sed "s/^$(active)\$/& (activa)/" ;;
   status)   echo "activa: $(active)"; [ -f "$CURRENT/BUILD_INFO.txt" ] && cat "$CURRENT/BUILD_INFO.txt" ;;
-  *)        sed -n '2,25p' "$0"; exit 1 ;;
+  check)    fetch; echo "Acceso correcto: $(git -C "$REPO" rev-parse --short "origin/$BRANCH") en $BRANCH" ;;
+  *)        sed -n '2,35p' "$0"; exit 1 ;;
 esac

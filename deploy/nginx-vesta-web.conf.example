@@ -1,20 +1,29 @@
-# EJEMPLO de server block para el sitio de Vesta Security.
-# No se instala automáticamente: revísalo y adáptalo a tu configuración actual.
-# El dominio está en Cloudflare: Cloudflare Tunnel termina TLS y reenvía a este
-# Nginx. El túnel no se modifica.
+# EJEMPLO de referencia para el sitio de Vesta Security. No se instala solo.
 #
-# Única diferencia esencial respecto a servir el repositorio: el root apunta al
-# enlace `current`, que solo contiene el sitio compilado.
+# El dominio está en Cloudflare y Cloudflare Tunnel usa como origen
+# http://127.0.0.1:8082. Este bloque conserva ese listener: el ÚNICO cambio
+# necesario en tu configuración actual es la línea `root`.
+#
+#   antes:  root <carpeta actual del sitio>;
+#   ahora:  root /var/www/vesta-web/current;
+#
+# Todo lo marcado como OPCIONAL son mejoras que puedes añadir o no. No se
+# modifica Cloudflare Tunnel, el backend ni OpenMediaVault.
 
 server {
-    listen 80;                       # ajusta al puerto que usa hoy el túnel
+    listen 127.0.0.1:8082;           # origen actual de Cloudflare Tunnel (sin cambios)
     server_name vestasecurity.date www.vestasecurity.date;
 
-    root /var/www/vesta-web/current;
+    root /var/www/vesta-web/current; # ÚNICO CAMBIO: sitio compilado, fuera del código fuente
     index index.html;
-    disable_symlinks off;            # `current` es un enlace simbólico
 
-    # URLs limpias con barra final: /plataforma/ -> /plataforma/index.html
+    # --- OPCIONAL -----------------------------------------------------------
+
+    # /plataforma -> /plataforma/ sin exponer el puerto interno 8082 en la
+    # redirección (detrás del túnel, Nginx no conoce el puerto público).
+    absolute_redirect off;
+
+    # URLs limpias y página 404 propia del sitio.
     location / {
         try_files $uri $uri/ $uri.html =404;
     }
@@ -26,7 +35,7 @@ server {
         expires 1y;
     }
 
-    # No servir metadatos de compilación
+    # No servir metadatos de compilación ni archivos ocultos.
     location = /BUILD_INFO.txt { deny all; }
     location ~ /\. { deny all; }
 

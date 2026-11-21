@@ -21,15 +21,18 @@ npm run legal        # regenerar documentos legales desde los .docx de legal-sou
 
 ## Desplegar
 
-El sitio se publica en `https://vestasecurity.date` y `https://www.vestasecurity.date` con Nginx.
+El sitio se publica en `https://vestasecurity.date` y `https://www.vestasecurity.date`
+(dominio en Cloudflare, Cloudflare Tunnel hacia Nginx en `127.0.0.1:8082`).
 
 1. Cada push a `main` ejecuta la GitHub Action `.github/workflows/deploy.yml`.
 2. La Action instala dependencias, compila y publica **solo** el contenido de `out/` en la rama `deploy`
    (en la raíz de esa rama está `index.html`).
-3. El servidor hace `git pull` de la rama `deploy` y Nginx sirve esos archivos.
+3. En el servidor, `deploy/vesta-deploy.sh` descarga solo la rama `deploy` con una deploy key SSH
+   de solo lectura, la guarda como una versión nueva y Nginx sirve `/var/www/vesta-web/current`.
+   `rollback` vuelve a la versión anterior.
 
-El servidor no necesita Node.js y nunca recibe el código fuente. Configuración sugerida de Nginx
-(encabezados de seguridad, `try_files`, página 404 y caché) en `docs/DESPLIEGUE.md`.
+El servidor no necesita Node.js y nunca recibe el código fuente. Instrucciones completas
+(deploy key, Nginx y rollback) en `docs/DESPLIEGUE.md`.
 
 ## Estructura
 

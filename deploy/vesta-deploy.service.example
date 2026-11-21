@@ -8,5 +8,5 @@ After=network-online.target
 [Service]
 Type=oneshot
 User=www-data
-Environment=VESTA_BASE=/var/www/vesta-web
+# Rutas y deploy key: /etc/vesta-web/deploy.env (ver docs/DESPLIEGUE.md)
 ExecStart=/opt/vesta-web/vesta-deploy.sh deploy
