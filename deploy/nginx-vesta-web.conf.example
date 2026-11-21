@@ -1,0 +1,50 @@
+# EJEMPLO de referencia para el sitio de Vesta Security. No se instala solo.
+#
+# El dominio está en Cloudflare y Cloudflare Tunnel usa como origen
+# http://127.0.0.1:8082. Este bloque conserva ese listener: el ÚNICO cambio
+# necesario en tu configuración actual es la línea `root`.
+#
+#   antes:  root <carpeta actual del sitio>;
+#   ahora:  root /var/www/vesta-web/current;
+#
+# Todo lo marcado como OPCIONAL son mejoras que puedes añadir o no. No se
+# modifica Cloudflare Tunnel, el backend ni OpenMediaVault.
+
+server {
+    listen 127.0.0.1:8082;           # origen actual de Cloudflare Tunnel (sin cambios)
+    server_name vestasecurity.date www.vestasecurity.date;
+
+    root /var/www/vesta-web/current; # ÚNICO CAMBIO: sitio compilado, fuera del código fuente
+    index index.html;
+
+    # --- OPCIONAL -----------------------------------------------------------
+
+    # /plataforma -> /plataforma/ sin exponer el puerto interno 8082 en la
+    # redirección (detrás del túnel, Nginx no conoce el puerto público).
+    absolute_redirect off;
+
+    # URLs limpias y página 404 propia del sitio.
+    location / {
+        try_files $uri $uri/ $uri.html =404;
+    }
+    error_page 404 /404.html;
+
+    # Archivos con hash: caché larga. Se usa `expires` y no `add_header` para no
+    # anular los encabezados de seguridad del bloque server (herencia de Nginx).
+    location /_next/static/ {
+        expires 1y;
+    }
+
+    # No servir metadatos de compilación ni archivos ocultos.
+    location = /BUILD_INFO.txt { deny all; }
+    location ~ /\. { deny all; }
+
+    # Encabezados de seguridad. Si Cloudflare ya añade HSTS (SSL/TLS > Edge
+    # Certificates), puedes quitar la línea de HSTS para no duplicarla.
+    add_header Strict-Transport-Security "max-age=63072000; includeSubDomains" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header X-Frame-Options "DENY" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'" always;
+}

@@ -1,0 +1,375 @@
+@import "tailwindcss";
+
+/*
+ * SISTEMA VISUAL VESTA
+ * Paleta derivada de los SVG oficiales (vesta_logo.svg / vesta_simbolo.svg):
+ *   wine  #421827  — contorno del pin y figura adulta. Color institucional.
+ *   rose  #C15B68  — figura menor y arco protector. Acento.
+ *   ivory #F4EDEA  — interior del pin. Fondo principal.
+ *   beige #D6B7A6  — filete bajo el nombre. Líneas y superficies secundarias.
+ * Los demás tonos son escalones de esos cuatro colores (más claros u oscuros),
+ * calculados para cumplir contraste WCAG AA. Ver docs/IDENTIDAD.md.
+ */
+@theme {
+  --color-wine-950: #1f0b13;
+  --color-wine-900: #2c101b;
+  --color-wine: #421827;
+  --color-wine-700: #5b2537;
+  --color-wine-600: #74384a;
+
+  --color-rose: #c15b68;
+  --color-rose-700: #a2434f;
+  --color-rose-300: #dd9aa2;
+  --color-rose-100: #f2dcdd;
+
+  --color-ivory: #f4edea;
+  --color-paper: #faf7f5;
+  --color-beige: #d6b7a6;
+  --color-beige-200: #e7d6cc;
+  --color-beige-100: #efe4dd;
+
+  --color-ink: #2c101b;
+  --color-muted: #6a4c56;
+  --color-line: #dcc8bd;
+
+  --color-ok: #3c6a4f;
+  --color-warn: #8a5a14;
+  --color-error: #a2434f;
+
+  --font-serif: "Source Serif 4 Variable", "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Montserrat Variable", Montserrat, "Helvetica Neue", Arial, sans-serif;
+
+  --breakpoint-xs: 30rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  html {
+    background: var(--color-ivory);
+    color: var(--color-ink);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 6rem;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+  body {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.65;
+    background: var(--color-ivory);
+    -webkit-font-smoothing: antialiased;
+  }
+  ::selection {
+    background: var(--color-rose-100);
+    color: var(--color-wine);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-rose-700);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: 100%;
+    max-width: 78rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 48rem) {
+    .wrap {
+      padding-inline: 2.5rem;
+    }
+  }
+
+  /* Rótulo en versalitas, heredado del descriptor «PROTECCIÓN FAMILIAR» del logotipo. */
+  .kicker {
+    font-family: var(--font-sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-rose-700);
+  }
+  .on-dark .kicker {
+    color: var(--color-rose-300);
+  }
+
+  .display {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 1.4rem + 4.6vw, 5.1rem);
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    font-weight: 450;
+  }
+  .h-section {
+    font-family: var(--font-serif);
+    font-size: clamp(2rem, 1.3rem + 2.6vw, 3.4rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+    font-weight: 450;
+  }
+  .h-sub {
+    font-family: var(--font-serif);
+    font-size: clamp(1.4rem, 1.1rem + 1vw, 1.9rem);
+    line-height: 1.2;
+    font-weight: 500;
+  }
+  .lead {
+    font-size: clamp(1.05rem, 1rem + 0.3vw, 1.2rem);
+    line-height: 1.65;
+    color: var(--color-muted);
+  }
+  .on-dark .lead {
+    color: color-mix(in oklab, var(--color-ivory) 78%, transparent);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 2.9rem;
+    padding: 0.7rem 1.25rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    border-radius: 2px;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
+  }
+  .btn-primary {
+    background: var(--color-wine);
+    color: var(--color-ivory);
+  }
+  .btn-primary:hover {
+    background: var(--color-wine-700);
+  }
+  .btn-ghost {
+    border: 1px solid var(--color-wine);
+    color: var(--color-wine);
+  }
+  .btn-ghost:hover {
+    background: var(--color-wine);
+    color: var(--color-ivory);
+  }
+  .on-dark .btn-primary {
+    background: var(--color-ivory);
+    color: var(--color-wine);
+  }
+  .on-dark .btn-primary:hover {
+    background: var(--color-beige-100);
+  }
+  .on-dark .btn-ghost {
+    border-color: color-mix(in oklab, var(--color-ivory) 55%, transparent);
+    color: var(--color-ivory);
+  }
+  .on-dark .btn-ghost:hover {
+    background: var(--color-ivory);
+    color: var(--color-wine);
+  }
+
+  .link {
+    color: var(--color-wine);
+    text-decoration: underline;
+    text-decoration-color: var(--color-rose);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.22em;
+    transition: text-decoration-color 0.2s ease;
+  }
+  .link:hover {
+    text-decoration-color: var(--color-wine);
+    text-decoration-thickness: 2px;
+  }
+
+  .arrow-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: var(--color-wine);
+  }
+  .arrow-link svg {
+    transition: transform 0.2s ease;
+  }
+  .arrow-link:hover svg {
+    transform: translateX(3px);
+  }
+  .on-dark .arrow-link {
+    color: var(--color-ivory);
+  }
+
+  .hairline {
+    border-color: var(--color-line);
+  }
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border: 1px solid currentColor;
+    border-radius: 999px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  /* Texto largo (documentos legales y guía). */
+  .prose-legal {
+    font-family: var(--font-serif);
+    font-size: 1.075rem;
+    line-height: 1.75;
+    color: var(--color-ink);
+  }
+  .prose-legal h2 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-line);
+  }
+  .prose-legal h2:first-child {
+    margin-top: 0;
+  }
+  .prose-legal h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 2.2rem;
+    margin-bottom: 0.6rem;
+  }
+  .prose-legal p {
+    margin-block: 0.9rem;
+    white-space: pre-line;
+  }
+  .prose-legal ul,
+  .prose-legal ol {
+    margin-block: 1rem;
+    padding-left: 1.4rem;
+  }
+  .prose-legal ul {
+    list-style: none;
+  }
+  .prose-legal ul li {
+    position: relative;
+  }
+  .prose-legal ul li::before {
+    content: "";
+    position: absolute;
+    left: -1.1rem;
+    top: 0.78em;
+    width: 0.45rem;
+    height: 1px;
+    background: var(--color-rose);
+  }
+  .prose-legal ol {
+    list-style: decimal;
+  }
+  .prose-legal ol li::marker {
+    font-family: var(--font-sans);
+    font-size: 0.85em;
+    font-weight: 600;
+    color: var(--color-rose-700);
+  }
+  .prose-legal li {
+    margin-block: 0.35rem;
+    padding-left: 0.2rem;
+  }
+  .prose-legal table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    margin-block: 1.5rem;
+  }
+  .prose-legal th,
+  .prose-legal td {
+    text-align: left;
+    vertical-align: top;
+    padding: 0.75rem 0.9rem 0.75rem 0;
+    border-bottom: 1px solid var(--color-line);
+  }
+  .prose-legal th {
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .grain {
+    background-image: radial-gradient(color-mix(in oklab, var(--color-wine) 7%, transparent) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    scrollbar-width: none;
+  }
+}
+
+/* Aparición discreta al desplazarse (solo si el usuario no pidió reducir movimiento). */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    animation: reveal-in linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 30%;
+  }
+  @keyframes reveal-in {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@media print {
+  .no-print,
+  header[data-site-header],
+  footer[data-site-footer] {
+    display: none !important;
+  }
+  html,
+  body {
+    background: #fff !important;
+  }
+  .prose-legal {
+    font-size: 11pt;
+  }
+  .prose-legal h2 {
+    break-after: avoid;
+  }
+  a {
+    text-decoration: none !important;
+  }
+}
