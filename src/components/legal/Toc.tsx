@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export type TocItem = { id: string; text: string };
 
-/** Índice con resaltado de la sección visible. */
+/** Table of contents that highlights the visible section. */
 export function Toc({ items }: { items: TocItem[] }) {
   const [active, setActive] = useState<string | null>(null);
   useEffect(() => {

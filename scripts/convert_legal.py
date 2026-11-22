@@ -145,7 +145,7 @@ def convert(path: Path):
             current_list["items"].append(text)
         else:
             flush_list()
-            # Párrafos con saltos de línea (bloques de contacto) se conservan.
+            # Paragraphs with line breaks (contact blocks) are kept.
             lines = []
             for r in el.iter():
                 t = r.tag.split("}")[1]
@@ -161,7 +161,7 @@ def convert(path: Path):
         title = preamble[1] if len(preamble) > 1 else preamble[0]
         subtitle = preamble[2] if len(preamble) > 2 else None
 
-    # Separar las líneas finales de copyright como nota de cierre.
+    # Split off the final copyright lines as a closing note.
     closing = []
     while blocks and blocks[-1]["type"] == "p" and blocks[-1]["text"].startswith("©"):
         closing.insert(0, blocks.pop()["text"])

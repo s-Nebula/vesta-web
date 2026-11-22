@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 
-/** Año actual: se fija en la compilación y se actualiza en el navegador. */
+/** Current year: fixed at build time and updated in the browser. */
 export function Year({ initial }: { initial: number }) {
   const [year, setYear] = useState(initial);
   useEffect(() => setYear(new Date().getFullYear()), []);

@@ -1,8 +1,8 @@
 /**
- * Logotipo oficial de Vesta (vesta_logo.svg) y símbolo (vesta_simbolo.svg).
- * Trazados, proporciones y colores copiados sin modificar de los archivos originales
- * en /public/brand. Se insertan en línea para que el nombre use la tipografía
- * Montserrat cargada por el sitio (en un <img> el SVG no puede acceder a ella).
+ * Official Vesta logo (vesta_logo.svg) and symbol (vesta_simbolo.svg).
+ * Paths, proportions and colours copied unchanged from the original files
+ * in /public/brand. Inlined so the name uses the Montserrat typeface the
+ * site loads (inside an <img> the SVG cannot reach it).
  */
 
 type Props = { className?: string; title?: string };
@@ -50,8 +50,8 @@ export function Symbol({ className, title = "Vesta" }: Props) {
 }
 
 /**
- * Arco protector: el trazo inferior del símbolo, aislado como recurso gráfico.
- * Mismo trazado y proporción; solo cambia la escala.
+ * Protective arc: the lower stroke of the symbol, isolated as a graphic element.
+ * Same path and proportion; only the scale changes.
  */
 export function Arc({ className, color = "#C15B68", inner = "#F4EDEA" }: { className?: string; color?: string; inner?: string | null }) {
   return (

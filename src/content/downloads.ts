@@ -77,8 +77,8 @@ export const apps: AppDownload[] = [
     packageId: "org.vestaopensource.tutor",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 68_166_917,
-    sha256: "6782fce93c68f975fa11748ed0c188d31d4195133c2ee26b5aba6efa636bef69",
+    sizeBytes: 67_918_745,
+    sha256: "7cc552ef624756abe4c11f7c9b50e8f417c92f887f63f6ba1c976059bc9e52b4",
     apkUrl: null, // PENDING: official APK URL
     playStoreUrl: null,
     releases: [
@@ -109,8 +109,8 @@ export const apps: AppDownload[] = [
     packageId: "org.vestaopensource.tracker",
     minSdk: 24,
     targetSdk: 35,
-    sizeBytes: 78_097_834,
-    sha256: "1ab2bda872b5e2e109f027c34f316dbeb14f5f9f31a849ead87d8f1fa47e540a",
+    sizeBytes: 78_167_470,
+    sha256: "7e65f1bcf2c2c4baf2a4c92940f474166276326e13e0ee3cc550e99797bbcd81",
     apkUrl: null, // PENDING: official APK URL
     playStoreUrl: null,
     releases: [

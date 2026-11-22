@@ -1,7 +1,7 @@
 /**
- * Marcador de contenido pendiente.
- * - En desarrollo (`next dev`) se ve como un aviso interno, con lo que falta.
- * - En producción muestra `fallback` (texto neutro) o nada.
+ * Placeholder for pending content.
+ * - In development (`next dev`) it shows as an internal notice saying what is missing.
+ * - In production it shows `fallback` (neutral text) or nothing.
  */
 export function Pending({ what, fallback }: { what: string; fallback?: React.ReactNode }) {
   if (process.env.NODE_ENV !== "production") {
