@@ -34,7 +34,11 @@ const copy = {
     ],
     shots: [
       ["panel-dispositivos", "Panel"],
+      ["vinculacion-qr", "Vinculación por QR"],
       ["ubicacion", "Mapa"],
+      ["zonas-seguras", "Zonas seguras"],
+      ["modo-estudio", "Modo estudio"],
+      ["limites", "Límites de tiempo"],
       ["reportes", "Reportes"],
       ["alertas", "Alertas"],
     ],
@@ -106,7 +110,11 @@ const copy = {
     ],
     shots: [
       ["panel-dispositivos", "Dashboard"],
+      ["vinculacion-qr", "QR linking"],
       ["ubicacion", "Map"],
+      ["zonas-seguras", "Safe zones"],
+      ["modo-estudio", "Study mode"],
+      ["limites", "Time limits"],
       ["reportes", "Reports"],
       ["alertas", "Alerts"],
     ],

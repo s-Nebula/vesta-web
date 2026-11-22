@@ -147,6 +147,7 @@ export const guideFigures: Record<Locale, Record<string, Figure[]>> = {
     ],
     "desde-vesta-padre": [
       { src: "/img/padre/registro-menor", alt: "Formulario para añadir el perfil de un menor en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Crear el perfil del menor" },
+      { src: "/img/padre/vinculacion-qr", alt: "Código QR de vinculación en Vesta Padre, con el código difuminado", kind: "phone", sizes: [420, 840], caption: "Código QR de vinculación. El código se ha difuminado." },
     ],
     "6-panel-de-vesta-padre": [
       { src: "/img/padre/panel-dispositivos", alt: "Panel de control con un dispositivo vinculado", kind: "phone", sizes: [420, 840], caption: "Panel de control" },
@@ -155,6 +156,36 @@ export const guideFigures: Record<Locale, Record<string, Figure[]>> = {
     "bloquear-una-aplicacion": [
       { src: "/img/padre/filtros", alt: "Pantalla de filtros con una regla de bloqueo de aplicación", kind: "phone", sizes: [420, 840], caption: "Reglas de bloqueo" },
     ],
+    "desde-vesta-tracker": [
+      { src: "/img/tracker/vinculacion", alt: "Pantalla de vinculación de Vesta Tracker con el campo de código y el botón Escanear código QR", kind: "tablet", sizes: [800, 1600], caption: "Vincular desde Vesta Tracker" },
+    ],
+    "perfiles": [
+      { src: "/img/padre/editar-perfil", alt: "Pantalla Editar perfil con nombre, edad y color identificador", kind: "phone", sizes: [420, 840], caption: "Editar el perfil del menor" },
+    ],
+    "ubicacion": [
+      { src: "/img/padre/ubicacion", alt: "Mapa de rastreo en tiempo real con el botón Cómo llegar", kind: "phone", sizes: [420, 840], caption: "Mapa. El fondo se ha difuminado para proteger una ubicación real." },
+    ],
+    "modo-estudio": [
+      { src: "/img/padre/modo-estudio", alt: "Pantalla Modo estudio con duraciones, horarios automáticos y apps permitidas", kind: "phone", sizes: [420, 840], caption: "Modo estudio" },
+    ],
+    "zonas-seguras": [
+      { src: "/img/padre/zonas-seguras", alt: "Pantalla Zonas seguras con el botón Nueva zona", kind: "phone", sizes: [420, 840], caption: "Zonas seguras" },
+    ],
+    "limites-de-tiempo": [
+      { src: "/img/padre/limites", alt: "Lista de aplicaciones con su límite diario y el uso de hoy", kind: "phone", sizes: [420, 840], caption: "Límites de tiempo" },
+    ],
+    "peticiones": [
+      { src: "/img/padre/peticiones", alt: "Historial de peticiones del menor en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Peticiones recibidas" },
+    ],
+    "boton-de-emergencia-sos": [
+      { src: "/img/tracker/rastreo-activo", alt: "Pantalla principal de Vesta Tracker con el botón SOS", kind: "tablet", sizes: [800, 1600], caption: "Botón SOS en Vesta Tracker" },
+    ],
+    "pedir-permiso": [
+      { src: "/img/tracker/pedir-permiso", alt: "Pantalla Pedir permiso de Vesta Tracker", kind: "tablet", sizes: [800, 1600], caption: "Pedir permiso" },
+    ],
+    "que-comparte-vesta": [
+      { src: "/img/tracker/que-comparte", alt: "Pantalla Qué comparte Vesta", kind: "tablet", sizes: [800, 1600], caption: "Qué comparte Vesta" },
+    ],
   },
   en: {
     "3-1-vesta-parent": [
@@ -162,6 +193,7 @@ export const guideFigures: Record<Locale, Record<string, Figure[]>> = {
     ],
     "from-vesta-parent": [
       { src: "/img/padre/registro-menor", alt: "Form to add a minor's profile in Vesta Parent", kind: "phone", sizes: [420, 840], caption: "Creating the minor's profile (Spanish interface)" },
+      { src: "/img/padre/vinculacion-qr", alt: "Linking QR code in Vesta Parent, with the code blurred", kind: "phone", sizes: [420, 840], caption: "Linking QR code (Spanish interface). The code has been blurred." },
     ],
     "6-vesta-parent-dashboard": [
       { src: "/img/padre/panel-dispositivos", alt: "Dashboard with a linked device", kind: "phone", sizes: [420, 840], caption: "Dashboard (Spanish interface)" },
@@ -169,6 +201,36 @@ export const guideFigures: Record<Locale, Record<string, Figure[]>> = {
     alerts: [{ src: "/img/padre/alertas", alt: "List of alerts in Vesta Parent", kind: "phone", sizes: [420, 840], caption: "Alerts (Spanish interface)" }],
     "block-an-app": [
       { src: "/img/padre/filtros", alt: "Filters screen with an app blocking rule", kind: "phone", sizes: [420, 840], caption: "Blocking rules (Spanish interface)" },
+    ],
+    "from-vesta-tracker": [
+      { src: "/img/tracker/vinculacion", alt: "Vesta Tracker linking screen with the code field and the Scan QR code button", kind: "tablet", sizes: [800, 1600], caption: "Linking from Vesta Tracker (Spanish interface)" },
+    ],
+    "profiles": [
+      { src: "/img/padre/editar-perfil", alt: "Edit profile screen with name, age and identifying colour", kind: "phone", sizes: [420, 840], caption: "Editing the minor's profile (Spanish interface)" },
+    ],
+    "location": [
+      { src: "/img/padre/ubicacion", alt: "Real-time tracking map with the Directions button", kind: "phone", sizes: [420, 840], caption: "Map (Spanish interface). The background has been blurred to protect a real location." },
+    ],
+    "study-mode": [
+      { src: "/img/padre/modo-estudio", alt: "Study mode screen with durations, automatic schedules and allowed apps", kind: "phone", sizes: [420, 840], caption: "Study mode (Spanish interface)" },
+    ],
+    "safe-zones": [
+      { src: "/img/padre/zonas-seguras", alt: "Safe zones screen with the New zone button", kind: "phone", sizes: [420, 840], caption: "Safe zones (Spanish interface)" },
+    ],
+    "time-limits": [
+      { src: "/img/padre/limites", alt: "List of apps with their daily limit and today's usage", kind: "phone", sizes: [420, 840], caption: "Time limits (Spanish interface)" },
+    ],
+    "requests": [
+      { src: "/img/padre/peticiones", alt: "History of the minor's requests in Vesta Parent", kind: "phone", sizes: [420, 840], caption: "Requests received (Spanish interface)" },
+    ],
+    "emergency-sos-button": [
+      { src: "/img/tracker/rastreo-activo", alt: "Vesta Tracker home screen with the SOS button", kind: "tablet", sizes: [800, 1600], caption: "SOS button in Vesta Tracker (Spanish interface)" },
+    ],
+    "ask-for-permission": [
+      { src: "/img/tracker/pedir-permiso", alt: "Vesta Tracker Ask permission screen", kind: "tablet", sizes: [800, 1600], caption: "Ask for permission (Spanish interface)" },
+    ],
+    "what-vesta-shares": [
+      { src: "/img/tracker/que-comparte", alt: "What Vesta shares screen", kind: "tablet", sizes: [800, 1600], caption: "What Vesta shares (Spanish interface)" },
     ],
   },
 };

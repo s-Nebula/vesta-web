@@ -102,6 +102,7 @@ const es: Feature[] = [
   },
   {
     id: "zonas-seguras",
+    screenshot: phone("zonas-seguras", "Pantalla Zonas seguras de Vesta Padre con el botón Nueva zona", "Vesta Padre · Zonas seguras"),
     isNew: true,
     title: "Zonas seguras",
     short: "Aviso cuando el menor llega o sale de casa, del colegio o de otro lugar.",
@@ -120,6 +121,7 @@ const es: Feature[] = [
   },
   {
     id: "sos",
+    screenshot: tablet("rastreo-activo", "Pantalla principal de Vesta Tracker con el botón rojo SOS de emergencia", "Vesta Tracker · Botón SOS"),
     isNew: true,
     title: "Botón SOS",
     short: "Un aviso de emergencia desde el teléfono del menor, con su ubicación.",
@@ -176,6 +178,7 @@ const es: Feature[] = [
   },
   {
     id: "modo-estudio",
+    screenshot: phone("modo-estudio", "Pantalla Modo estudio con duraciones de 30 min, 1 hora y 2 horas, horarios automáticos y apps permitidas", "Vesta Padre · Modo estudio"),
     isNew: true,
     title: "Modo estudio",
     short: "Solo las apps que elijas, durante un rato o en un horario fijo.",
@@ -193,6 +196,7 @@ const es: Feature[] = [
   },
   {
     id: "limites-de-tiempo",
+    screenshot: phone("limites", "Pantalla Límites de tiempo con la lista de aplicaciones y su uso de hoy", "Vesta Padre · Límites de tiempo"),
     isNew: true,
     title: "Límites de tiempo",
     short: "Un máximo diario para cada aplicación.",
@@ -212,6 +216,7 @@ const es: Feature[] = [
   },
   {
     id: "peticiones",
+    screenshot: tablet("pedir-permiso", "Pantalla Pedir permiso de Vesta Tracker para pedir una app o más tiempo, con mensaje opcional", "Vesta Tracker · Pedir permiso"),
     isNew: true,
     title: "Peticiones",
     short: "El menor pide más tiempo o desbloquear una app, y el tutor responde con un toque.",
@@ -244,7 +249,7 @@ const es: Feature[] = [
       "Depende de la versión de Android, del fabricante y de que el servicio de accesibilidad siga activo. Si se desactiva, el tutor recibe una alerta.",
     screenshot: phone(
       "filtros",
-      "Pantalla Control de contenido con lista negra y una regla de bloqueo de aplicación activa",
+      "Pantalla Control de contenido con búsqueda segura, bloqueo del DNS cifrado y lista negra",
       "Vesta Padre · Filtros",
     ),
   },
@@ -302,7 +307,7 @@ const es: Feature[] = [
     managedIn: "Vesta Padre y Vesta Tracker.",
     authorization: { android: ["Cámara (solo para leer el QR; opcional)"] },
     limits: "Desvincular un teléfono no borra por sí solo los datos históricos.",
-    screenshot: phone("panel-dispositivos", "Panel de control de Vesta Padre con un dispositivo vinculado", "Vesta Padre · Panel"),
+    screenshot: phone("vinculacion-qr", "Código QR de vinculación en Vesta Padre, con el código difuminado", "Vesta Padre · Vinculación por QR. El código se ha difuminado."),
   },
   {
     id: "privacidad-y-autorizaciones",
@@ -319,9 +324,9 @@ const es: Feature[] = [
     managedIn: "Se gestiona en Vesta Padre. Se respeta en Vesta Tracker.",
     authorization: {},
     screenshot: tablet(
-      "esperando-autorizacion",
-      "Vesta Tracker indicando que la ubicación no está autorizada",
-      "Vesta Tracker · Sin autorización no se recopila la ubicación.",
+      "que-comparte",
+      "Pantalla Qué comparte Vesta, donde el menor ve qué información reciben sus tutores y si está activa",
+      "Vesta Tracker · Qué comparte Vesta: el menor ve qué se recopila y qué no.",
     ),
   },
 ];
@@ -350,11 +355,12 @@ const en: Feature[] = [
     screenshot: phone(
       "ubicacion",
       "Tracking screen in Vesta Parent with a marker on the map and the Directions button",
-      "Vesta Parent · Map. The map background has been blurred to protect a real location.",
+      "Vesta Parent · Map (Spanish interface). The map background has been blurred to protect a real location.",
     ),
   },
   {
     id: "safe-zones",
+    screenshot: phone("zonas-seguras", "Safe zones screen in Vesta Parent with the New zone button", "Vesta Parent · Safe zones (Spanish interface)"),
     isNew: true,
     title: "Safe zones",
     short: "A notice when the minor arrives at or leaves home, school or another place.",
@@ -373,6 +379,7 @@ const en: Feature[] = [
   },
   {
     id: "sos",
+    screenshot: tablet("rastreo-activo", "Vesta Tracker home screen with the red SOS emergency button", "Vesta Tracker · SOS button (Spanish interface)"),
     isNew: true,
     title: "SOS button",
     short: "An emergency alert from the minor's phone, with their location.",
@@ -401,7 +408,7 @@ const en: Feature[] = [
     screenshot: phone(
       "estado-dispositivo",
       "Device status screen with battery and manufacturer, model and Android version",
-      "Vesta Parent · Device",
+      "Vesta Parent · Device (Spanish interface)",
     ),
   },
   {
@@ -424,11 +431,12 @@ const en: Feature[] = [
     screenshot: phone(
       "reportes",
       "Reports screen with screen time, app usage, opens and a daily activity chart",
-      "Vesta Parent · Reports",
+      "Vesta Parent · Reports (Spanish interface)",
     ),
   },
   {
     id: "study-mode",
+    screenshot: phone("modo-estudio", "Study mode screen with 30 min, 1 hour and 2 hour durations, automatic schedules and allowed apps", "Vesta Parent · Study mode (Spanish interface)"),
     isNew: true,
     title: "Study mode",
     short: "Only the apps you choose, for a while or on a fixed schedule.",
@@ -446,6 +454,7 @@ const en: Feature[] = [
   },
   {
     id: "time-limits",
+    screenshot: phone("limites", "Time limits screen listing apps and today's usage", "Vesta Parent · Time limits (Spanish interface)"),
     isNew: true,
     title: "Time limits",
     short: "A daily maximum for each app.",
@@ -465,6 +474,7 @@ const en: Feature[] = [
   },
   {
     id: "requests",
+    screenshot: tablet("pedir-permiso", "Vesta Tracker Ask permission screen to request an app or more time, with an optional message", "Vesta Tracker · Ask permission (Spanish interface)"),
     isNew: true,
     title: "Requests",
     short: "The minor asks for more time or to unlock an app; the guardian answers with one tap.",
@@ -497,8 +507,8 @@ const en: Feature[] = [
       "It depends on the Android version, the manufacturer and the accessibility service staying on. If it is turned off, the guardian gets an alert.",
     screenshot: phone(
       "filtros",
-      "Content control screen with a block list and an active app blocking rule",
-      "Vesta Parent · Filters",
+      "Content control screen with safe search, encrypted DNS blocking and a block list",
+      "Vesta Parent · Filters (Spanish interface)",
     ),
   },
   {
@@ -538,7 +548,7 @@ const en: Feature[] = [
     authorization: { purpose: P("en", "alerts"), android: ["Notifications"] },
     limits:
       "Alerts are not an emergency service and may be delayed if the phone is offline. Deleting an alert does not delete the location history or reports.",
-    screenshot: phone("alertas", "Alerts screen with battery notices", "Vesta Parent · Alerts"),
+    screenshot: phone("alertas", "Alerts screen with battery notices", "Vesta Parent · Alerts (Spanish interface)"),
   },
   {
     id: "profiles-and-linking",
@@ -555,7 +565,7 @@ const en: Feature[] = [
     managedIn: "Vesta Parent and Vesta Tracker.",
     authorization: { android: ["Camera (only to read the QR code; optional)"] },
     limits: "Unlinking a phone does not, by itself, delete historical data.",
-    screenshot: phone("panel-dispositivos", "Vesta Parent dashboard with a linked device", "Vesta Parent · Dashboard"),
+    screenshot: phone("vinculacion-qr", "Linking QR code in Vesta Parent, with the code blurred", "Vesta Parent · QR linking (Spanish interface). The code has been blurred."),
   },
   {
     id: "privacy-and-authorisations",
@@ -572,9 +582,9 @@ const en: Feature[] = [
     managedIn: "Managed in Vesta Parent. Respected by Vesta Tracker.",
     authorization: {},
     screenshot: tablet(
-      "esperando-autorizacion",
-      "Vesta Tracker showing that location is not authorised",
-      "Vesta Tracker · Without authorisation, location is not collected.",
+      "que-comparte",
+      "What Vesta shares screen, where the minor sees what information their guardians receive and whether it is active",
+      "Vesta Tracker · What Vesta shares: the minor sees what is and is not collected (Spanish interface).",
     ),
   },
 ];
