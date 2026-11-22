@@ -29,7 +29,7 @@ export type AppDownload = {
   /** Exact APK size in bytes. */
   sizeBytes: number | null;
   sha256: string | null;
-  /** Direct link to the official APK (HTTPS). PENDING. */
+  /** Direct link to the official APK (HTTPS). */
   apkUrl: string | null;
   /** Google Play listing, once published. */
   playStoreUrl: string | null;
@@ -77,12 +77,12 @@ export const apps: AppDownload[] = [
     packageId: "org.vestaopensource.tutor",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 67_918_745,
-    sha256: "7cc552ef624756abe4c11f7c9b50e8f417c92f887f63f6ba1c976059bc9e52b4",
-    apkUrl: null, // PENDING: official APK URL
+    sizeBytes: 67_918_781,
+    sha256: "3127ba2847979f209f8b0fb36974cc8c8ad84671baeb70318035236412128e6a",
+    apkUrl: "https://vestasecurity.date/downloads/Vesta-Padre.apk",
     playStoreUrl: null,
     releases: [
-      { version: "1.1.0", versionCode: 2, date: null, notes: notes11 },
+      { version: "1.1.0", versionCode: 3, date: "2026-11-22", notes: notes11 },
       { version: "1.0.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
     ],
   },
@@ -111,10 +111,10 @@ export const apps: AppDownload[] = [
     targetSdk: 35,
     sizeBytes: 78_167_470,
     sha256: "7e65f1bcf2c2c4baf2a4c92940f474166276326e13e0ee3cc550e99797bbcd81",
-    apkUrl: null, // PENDING: official APK URL
+    apkUrl: "https://vestasecurity.date/downloads/Vesta-Tracker.apk",
     playStoreUrl: null,
     releases: [
-      { version: "1.1.0", versionCode: 2, date: null, notes: notes11 },
+      { version: "1.1.0", versionCode: 2, date: "2026-11-22", notes: notes11 },
       { version: "1.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
     ],
   },
