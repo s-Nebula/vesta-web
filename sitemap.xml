@@ -1,63 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 <url>
 <loc>https://vestasecurity.date/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>1</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/plataforma/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/plataforma/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/platform/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/platform/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/plataforma/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/platform/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/funcionalidades/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/funcionalidades/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/features/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/features/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/funcionalidades/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/features/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/mision-y-vision/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/mision-y-vision/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/mission/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/mission/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/mision-y-vision/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/mission/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/descargas/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/descargas/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/downloads/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/downloads/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/descargas/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/downloads/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/ayuda/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/ayuda/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/help/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/help/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/ayuda/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/help/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/documentacion/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/docs/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/documentacion/terminos-y-condiciones/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
-<changefreq>yearly</changefreq>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/terminos-y-condiciones/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/terms/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/docs/terms/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/terminos-y-condiciones/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/terms/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/documentacion/politica-de-privacidad/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
-<changefreq>yearly</changefreq>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/politica-de-privacidad/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/privacy/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/docs/privacy/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/politica-de-privacidad/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/privacy/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 <url>
 <loc>https://vestasecurity.date/documentacion/guia-de-usuario/</loc>
-<lastmod>2026-11-21T00:00:00.000Z</lastmod>
-<changefreq>yearly</changefreq>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/guia-de-usuario/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/user-guide/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/docs/user-guide/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/guia-de-usuario/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/user-guide/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
 <priority>0.6</priority>
 </url>
 </urlset>

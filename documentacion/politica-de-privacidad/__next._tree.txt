@@ -1,6 +1,7 @@
-:HL["/_next/static/chunks/048jg3n2r7gkp.css","style"]
+:HL["/_next/static/chunks/3rm4m3lkck76k.css","style"]
 :HC["/",""]
-3:[["children",{"s":"__PAGE__","h":160}]]
-2:[["children",{"s":{"n":"slug","t":"d","k":"politica-de-privacidad","s":[]},"h":65632,"c":"$Q3"}]]
-1:[["children",{"s":"documentacion","h":131136,"c":"$Q2"}]]
-0:{"b":"cNqSQYSIxUbpbrG4czjlD","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":{"n":"slug","t":"d","k":"politica-de-privacidad","s":[]},"h":65632,"c":"$Q4"}]]
+2:[["children",{"s":"documentacion","h":131136,"c":"$Q3"}]]
+1:[["children",{"s":"(es)","h":131104,"c":"$Q2"}]]
+0:{"b":"LsL6WbZE106Cmg4BUOIaX","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}
