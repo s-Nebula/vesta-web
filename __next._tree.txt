@@ -4,4 +4,4 @@
 :HL["/img/padre/panel-dispositivos-420.webp?v=1.1-20261122","image",{"imageSrcSet":"/img/padre/panel-dispositivos-420.webp?v=1.1-20261122 420w, /img/padre/panel-dispositivos-840.webp?v=1.1-20261122 840w","imageSizes":"(min-width: 64rem) 190px, 33vw","fetchPriority":"high"}]
 2:[["children",{"s":"__PAGE__","h":128}]]
 1:[["children",{"s":"(es)","h":32,"c":"$Q2"}]]
-0:{"b":"DViGUWN2_smAFYHYYeuQ_","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"wrv-XbV5cVdwiy43SLLq5","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
