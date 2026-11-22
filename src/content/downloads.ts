@@ -42,14 +42,14 @@ const notes11 = {
     "Zonas seguras, botón SOS, modo estudio, límites de tiempo y peticiones del menor.",
     "Búsqueda segura, bloqueo de DNS cifrado y filtros recomendados por edad.",
     "Notificaciones push, resumen semanal y funcionamiento sin conexión.",
-    "Versión en inglés y modo claro.",
+    "Versión en inglés (también en los avisos) y modo claro.",
   ],
   en: [
     "Linking with a QR code, and codes that expire after 24 hours.",
     "Safe zones, SOS button, study mode, time limits and requests from the minor.",
     "Safe search, encrypted DNS blocking and filters recommended by age.",
     "Push notifications, weekly summary and offline operation.",
-    "English version and light mode.",
+    "English version (notifications included) and light mode.",
   ],
 };
 
@@ -78,11 +78,11 @@ export const apps: AppDownload[] = [
     minSdk: 24,
     targetSdk: 36,
     sizeBytes: 67_918_781,
-    sha256: "3127ba2847979f209f8b0fb36974cc8c8ad84671baeb70318035236412128e6a",
+    sha256: "d700c9fc15e155e9438209e28cd5ae3efe4403ed539d7be0f76bb251a105eced",
     apkUrl: "https://vestasecurity.date/downloads/Vesta-Padre.apk",
     playStoreUrl: null,
     releases: [
-      { version: "1.1.0", versionCode: 3, date: "2026-11-22", notes: notes11 },
+      { version: "1.1.0", versionCode: 4, date: "2026-11-22", notes: notes11 },
       { version: "1.0.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
     ],
   },
