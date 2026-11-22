@@ -1,7 +1,7 @@
 :HL["/_next/static/chunks/3rm4m3lkck76k.css","style"]
 :HC["/",""]
-:HL["/img/tracker/rastreo-activo-800.webp","image",{"imageSrcSet":"/img/tracker/rastreo-activo-800.webp 800w, /img/tracker/rastreo-activo-1600.webp 1600w","imageSizes":"(min-width: 64rem) 420px, 75vw","fetchPriority":"high"}]
-:HL["/img/padre/panel-dispositivos-420.webp","image",{"imageSrcSet":"/img/padre/panel-dispositivos-420.webp 420w, /img/padre/panel-dispositivos-840.webp 840w","imageSizes":"(min-width: 64rem) 190px, 33vw","fetchPriority":"high"}]
+:HL["/img/tracker/rastreo-activo-800.webp?v=1.1-20261122","image",{"imageSrcSet":"/img/tracker/rastreo-activo-800.webp?v=1.1-20261122 800w, /img/tracker/rastreo-activo-1600.webp?v=1.1-20261122 1600w","imageSizes":"(min-width: 64rem) 420px, 75vw","fetchPriority":"high"}]
+:HL["/img/padre/panel-dispositivos-420.webp?v=1.1-20261122","image",{"imageSrcSet":"/img/padre/panel-dispositivos-420.webp?v=1.1-20261122 420w, /img/padre/panel-dispositivos-840.webp?v=1.1-20261122 840w","imageSizes":"(min-width: 64rem) 190px, 33vw","fetchPriority":"high"}]
 2:[["children",{"s":"__PAGE__","h":128}]]
 1:[["children",{"s":"en","h":32,"c":"$Q2"}]]
-0:{"b":"ej4odVy1RZeGI6G2lZUcw","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"asa4O5fm1S6ttZRjxTJZq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
