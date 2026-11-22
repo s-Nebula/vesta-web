@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Convierte los documentos oficiales (.docx) de Vesta en JSON estructurado para el sitio.
+Converts the official Vesta documents (.docx) into structured JSON for the site.
 
-Uso:
-    python3 scripts/convert_legal.py [carpeta_con_docx]
+Usage:
+    python3 scripts/convert_legal.py
 
-Por defecto lee los .docx de `legal-source/`. Cada documento se identifica por su
-nombre de archivo (ver DOCS). El texto NO se reescribe: se conservan párrafos,
-listas, tablas y encabezados tal y como están en el documento original.
+Reads the Spanish .docx files from `legal-source/` and the English courtesy
+translations from `legal-source/en/`. Each document is identified by its file
+name (see DOCS). The text is NOT rewritten: paragraphs, lists, tables and
+headings are kept exactly as in the original document.
 
-Requiere: pip install python-docx
+Requires: pip install python-docx
 """
 import json
 import re
@@ -21,15 +22,27 @@ import docx
 from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parent.parent
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "legal-source"
-OUT = ROOT / "src" / "content" / "legal"
-
-# slug -> fragmento del nombre del archivo .docx
-DOCS = {
-    "terminos-y-condiciones": "Términos y condiciones",
-    "politica-de-privacidad": "Política de tratamiento",
-    "guia-de-usuario": "Guía de usuario",
-}
+# (source folder, output folder, {slug: fragment of the .docx file name})
+LANGUAGES = [
+    (
+        ROOT / "legal-source",
+        ROOT / "src" / "content" / "legal",
+        {
+            "terminos-y-condiciones": "Términos y condiciones",
+            "politica-de-privacidad": "Política de tratamiento",
+            "guia-de-usuario": "Guía de usuario",
+        },
+    ),
+    (
+        ROOT / "legal-source" / "en",
+        ROOT / "src" / "content" / "legal" / "en",
+        {
+            "terms": "Terms and Conditions",
+            "privacy": "Privacy Policy",
+            "user-guide": "User Guide",
+        },
+    ),
+]
 
 
 def slugify(text: str) -> str:
@@ -164,17 +177,18 @@ def convert(path: Path):
 
 
 def main():
-    OUT.mkdir(parents=True, exist_ok=True)
-    files = list(SRC.glob("*.docx"))
-    for slug, needle in DOCS.items():
-        match = next((f for f in files if needle.lower() in f.name.lower()), None)
-        if not match:
-            print(f"[pendiente] No se encontró el documento para «{slug}» en {SRC}")
-            continue
-        data = convert(match)
-        (OUT / f"{slug}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
-        h2 = sum(1 for b in data["blocks"] if b["type"] == "h2")
-        print(f"[ok] {slug}: {match.name} -> {h2} secciones")
+    for src, out, docs in LANGUAGES:
+        out.mkdir(parents=True, exist_ok=True)
+        files = list(src.glob("*.docx"))
+        for slug, needle in docs.items():
+            match = next((f for f in files if needle.lower() in f.name.lower()), None)
+            if not match:
+                print(f"[pending] No document found for '{slug}' in {src}")
+                continue
+            data = convert(match)
+            (out / f"{slug}.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+            h2 = sum(1 for b in data["blocks"] if b["type"] == "h2")
+            print(f"[ok] {slug}: {match.name} -> {h2} sections")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,1165 @@
+{
+ "title": "Personal Data Processing and Privacy Policy",
+ "subtitle": "How FORBIDDEN S.A.S. collects, uses, protects and retains the personal data processed through Vesta, in accordance with Law 1581 of 2012.",
+ "meta": {
+  "Version": "1.1",
+  "Effective date": "22 November 2026",
+  "Last updated": "22 November 2026",
+  "Data controller": "FORBIDDEN S.A.S. — Tax ID (NIT) 901653270-2",
+  "Project": "Vesta Security",
+  "Jurisdiction": "Republic of Colombia"
+ },
+ "blocks": [
+  {
+   "type": "h2",
+   "id": "1-identification-of-the-controller",
+   "text": "1. Identification of the controller"
+  },
+  {
+   "type": "p",
+   "text": "The controller of the personal data collected through Vesta Security is:"
+  },
+  {
+   "type": "p",
+   "text": "Company name: FORBIDDEN S.A.S.\nTax ID (NIT): 901653270-2\nCommercial registration: 262746\nChamber of Commerce: Santa Marta para el Magdalena\nRegistered office: Santa Marta, Magdalena, Colombia.\nEmail for privacy matters and requests: nebulagnu@proton.me\nPhone: +57 324 616 7956.\nDepartment responsible for enquiries and complaints: Personal Data Protection at FORBIDDEN S.A.S., through the email address nebulagnu@proton.me."
+  },
+  {
+   "type": "p",
+   "text": "Service name: Vesta Security.\nProject author: Nebula."
+  },
+  {
+   "type": "p",
+   "text": "In this policy, FORBIDDEN S.A.S. is referred to as “Vesta”, “the Company” or “the Controller”."
+  },
+  {
+   "type": "h2",
+   "id": "2-purpose-of-this-policy",
+   "text": "2. Purpose of this Policy"
+  },
+  {
+   "type": "p",
+   "text": "This Policy sets out the conditions under which FORBIDDEN S.A.S. collects, stores, uses, consults, transmits, updates, retains and deletes personal data through Vesta Parent, Vesta Tracker and the associated technology services."
+  },
+  {
+   "type": "p",
+   "text": "Its aim is to inform data subjects about:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "What data is collected.",
+    "Why it is collected.",
+    "How it is used.",
+    "Who it may be shared with.",
+    "How long it is kept.",
+    "What protection measures are applied.",
+    "How to exercise the rights recognised by Colombian law."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Processing will be carried out in accordance with Law 1581 of 2012, its regulatory decrees and other applicable provisions."
+  },
+  {
+   "type": "h2",
+   "id": "3-scope",
+   "text": "3. Scope"
+  },
+  {
+   "type": "p",
+   "text": "This Policy applies to:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Users who create accounts in Vesta Parent.",
+    "Parents and legal representatives.",
+    "Children and adolescents whose devices are linked to Vesta.",
+    "People who contact the support service.",
+    "People whose data enters the systems through the authorised use of the apps."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The Policy covers the Android apps, the API services, the databases, the authentication systems and the technology providers involved in operating the service."
+  },
+  {
+   "type": "h2",
+   "id": "4-processing-principles",
+   "text": "4. Processing principles"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. undertakes to apply the following principles:"
+  },
+  {
+   "type": "h3",
+   "id": "legality",
+   "text": "Legality"
+  },
+  {
+   "type": "p",
+   "text": "Processing will be carried out in accordance with current legislation."
+  },
+  {
+   "type": "h3",
+   "id": "purpose",
+   "text": "Purpose"
+  },
+  {
+   "type": "p",
+   "text": "Data will be used for legitimate, specific and disclosed purposes."
+  },
+  {
+   "type": "h3",
+   "id": "freedom",
+   "text": "Freedom"
+  },
+  {
+   "type": "p",
+   "text": "Prior, express and informed authorisation will be requested where required."
+  },
+  {
+   "type": "h3",
+   "id": "accuracy",
+   "text": "Accuracy"
+  },
+  {
+   "type": "p",
+   "text": "Every effort will be made to keep information accurate, complete, up to date and understandable."
+  },
+  {
+   "type": "h3",
+   "id": "transparency",
+   "text": "Transparency"
+  },
+  {
+   "type": "p",
+   "text": "Data subjects may know about the existence and use of their data."
+  },
+  {
+   "type": "h3",
+   "id": "restricted-access-and-circulation",
+   "text": "Restricted access and circulation"
+  },
+  {
+   "type": "p",
+   "text": "Data will only be available to authorised people and to providers who need to process it to deliver the service."
+  },
+  {
+   "type": "h3",
+   "id": "security",
+   "text": "Security"
+  },
+  {
+   "type": "p",
+   "text": "Technical, human and administrative measures will be adopted to protect the information."
+  },
+  {
+   "type": "h3",
+   "id": "confidentiality",
+   "text": "Confidentiality"
+  },
+  {
+   "type": "p",
+   "text": "Everyone involved in the processing must keep personal data confidential."
+  },
+  {
+   "type": "h2",
+   "id": "5-categories-of-data-collected",
+   "text": "5. Categories of data collected"
+  },
+  {
+   "type": "p",
+   "text": "Vesta may process the following categories of information, depending on the features enabled and the permissions granted."
+  },
+  {
+   "type": "h3",
+   "id": "5-1-administrator-account-data",
+   "text": "5.1. Administrator account data"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "User identifier.",
+    "Email address.",
+    "Username, when provided.",
+    "Authentication method.",
+    "Account creation date.",
+    "Technical information needed to keep the session active.",
+    "Identifier used to send notifications to the administrator's device.",
+    "Notification preferences, such as receiving only critical alerts instantly or the weekly summary."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Authentication credentials are managed by the corresponding identity provider. Vesta does not need to store passwords in plain text."
+  },
+  {
+   "type": "h3",
+   "id": "5-2-minor-s-profile-data",
+   "text": "5.2. Minor's profile data"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Profile identifier.",
+    "Name or nickname.",
+    "Age, when provided.",
+    "Colour or visual identifier.",
+    "Identifier of the authorised administrator account.",
+    "Linking status.",
+    "Creation and linking date.",
+    "Current linking code and its expiry date."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "We recommend using only the information needed to identify the profile within the service."
+  },
+  {
+   "type": "h3",
+   "id": "5-3-location-data",
+   "text": "5.3. Location data"
+  },
+  {
+   "type": "p",
+   "text": "When the location feature is authorised, Tracker may collect:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Latitude.",
+    "Longitude.",
+    "Estimated speed.",
+    "Estimated accuracy of the measurement.",
+    "Date and time of the measurement on the device and date it was received by the server.",
+    "Device activity status.",
+    "Technical information needed to interpret the location."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The data is used to show the device's location and keep the authorised history."
+  },
+  {
+   "type": "p",
+   "text": "The capture frequency depends on the conditions of the device, Android, GPS, battery and connectivity. An exact frequency or permanent availability is not guaranteed."
+  },
+  {
+   "type": "p",
+   "text": "If the device is offline, Vesta Tracker may store measurements temporarily on the device itself and send them once the connection is restored. The measurement date allows them to be shown in the correct order."
+  },
+  {
+   "type": "h3",
+   "id": "5-4-device-status-information",
+   "text": "5.4. Device status information"
+  },
+  {
+   "type": "p",
+   "text": "Vesta may collect:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Manufacturer.",
+    "Brand and model.",
+    "Android version.",
+    "Battery level.",
+    "Charging status.",
+    "Connectivity.",
+    "Date of last update."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "This information shows the operating status of the device and helps diagnose problems."
+  },
+  {
+   "type": "h3",
+   "id": "5-5-app-usage-statistics",
+   "text": "5.5. App usage statistics"
+  },
+  {
+   "type": "p",
+   "text": "When the legal representative authorises this feature and the permission is enabled, Vesta may collect:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "App package identifier.",
+    "App name.",
+    "Foreground usage time.",
+    "Number of times opened.",
+    "Total screen time.",
+    "Total app usage time.",
+    "Report date."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Reports are generated periodically and may be limited to a maximum number of apps per report."
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not use this feature to record the content of messages, passwords or private communications."
+  },
+  {
+   "type": "p",
+   "text": "When the administrator sets daily time limits, Vesta Tracker calculates on the device itself how long the limited apps have been used that day in order to decide whether to block them."
+  },
+  {
+   "type": "h3",
+   "id": "5-6-data-related-to-accessibility-and-blocking",
+   "text": "5.6. Data related to accessibility and blocking"
+  },
+  {
+   "type": "p",
+   "text": "The accessibility service may receive Android system events in order to:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Identify the app being opened.",
+    "Detect when a blocked app is opened.",
+    "Read the address bar of the compatible browser.",
+    "Determine whether the domain matches a block or allow rule."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "When a block occurs, Vesta may record:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "App name.",
+    "Package identifier.",
+    "Domain detected.",
+    "Event type.",
+    "Source of the block.",
+    "Date and time."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The service may need technical access to the window structure in order to work. That access does not authorise Vesta to collect the content of all apps indiscriminately."
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not aim to record messages, keystrokes, passwords, photographs or the general content of screens."
+  },
+  {
+   "type": "h3",
+   "id": "5-7-dns-query-data",
+   "text": "5.7. DNS query data"
+  },
+  {
+   "type": "p",
+   "text": "The local filtering VPN processes the device's DNS queries to determine whether a domain matches a rule."
+  },
+  {
+   "type": "p",
+   "text": "When a domain is blocked, the following may be recorded:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Domain name.",
+    "Source of the event.",
+    "Date and time.",
+    "Identifier of the associated profile."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Allowed queries are forwarded to the DNS server available on the device's network."
+  },
+  {
+   "type": "p",
+   "text": "The Vesta local VPN is not intended to route all browsing traffic through the Company's VPN servers."
+  },
+  {
+   "type": "h3",
+   "id": "5-8-alerts",
+   "text": "5.8. Alerts"
+  },
+  {
+   "type": "p",
+   "text": "Alerts may contain:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Event type.",
+    "Title and description.",
+    "Date and time.",
+    "Associated app or domain.",
+    "Technical data needed to identify the event."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Alerts may be generated for battery, speed, blocks, safe zones, the SOS button, study mode, time limits, loss of connection and protections being turned off, depending on the features enabled."
+  },
+  {
+   "type": "h3",
+   "id": "5-9-safe-zones",
+   "text": "5.9. Safe zones"
+  },
+  {
+   "type": "p",
+   "text": "The administrator can define safe zones (for example, home or school). For each zone, the following is processed:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Zone name.",
+    "Coordinates of the centre and radius.",
+    "Arrival and departure notification preferences."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker compares its location with these zones on the device itself. When it detects an arrival or a departure, it generates an alert with the zone name, the date and time, and the location at that moment."
+  },
+  {
+   "type": "p",
+   "text": "This feature is part of the location purpose and only works when that purpose is authorised."
+  },
+  {
+   "type": "h3",
+   "id": "5-10-emergency-sos-button",
+   "text": "5.10. Emergency (SOS) button"
+  },
+  {
+   "type": "p",
+   "text": "When the minor presses and holds the SOS button in Vesta Tracker, a critical alert is sent to the administrators, which may include:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Date and time of the alert.",
+    "The device's location and its accuracy, only if the location purpose is authorised.",
+    "An indication that the last known location was used, when a new one could not be obtained."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The alert requires the alerts purpose to be authorised. If there is no connection, it is sent once the connection is restored."
+  },
+  {
+   "type": "h3",
+   "id": "5-11-requests-from-the-minor",
+   "text": "5.11. Requests from the minor"
+  },
+  {
+   "type": "p",
+   "text": "From Vesta Tracker, the minor can ask the administrator for permission to use an app or for more time. Each request contains:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Request type.",
+    "App name and identifier.",
+    "Time requested.",
+    "An optional message written by the minor, of up to 200 characters.",
+    "Request status, the administrator's response, the time granted and the date."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "If the administrator approves it, the app is allowed for the time granted. The minor is advised not to include unnecessary personal data in the message."
+  },
+  {
+   "type": "h3",
+   "id": "5-12-study-mode-and-time-limits",
+   "text": "5.12. Study mode and time limits"
+  },
+  {
+   "type": "p",
+   "text": "To apply study mode and daily time limits, the following is processed:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Study mode schedules and status.",
+    "Apps allowed during study mode.",
+    "Daily limit set for each app.",
+    "Attempts to open apps that are not allowed during study mode, and time-up notices."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "These features are part of the app control purpose."
+  },
+  {
+   "type": "h3",
+   "id": "5-13-safe-search-and-encrypted-dns",
+   "text": "5.13. Safe search and encrypted DNS"
+  },
+  {
+   "type": "p",
+   "text": "When the administrator turns on safe search, the Vesta Tracker local VPN answers queries for compatible search engines (Google, Bing, DuckDuckGo and YouTube) with the addresses of their content-filtered versions. It also blocks the resolution of known encrypted DNS providers, so that filtering cannot be bypassed from the browser."
+  },
+  {
+   "type": "p",
+   "text": "This process happens on the device. No search or browsing history is stored, and these queries do not generate alerts."
+  },
+  {
+   "type": "h3",
+   "id": "5-14-protection-and-connection-notices",
+   "text": "5.14. Protection and connection notices"
+  },
+  {
+   "type": "p",
+   "text": "To inform the administrator about situations that affect protection, Vesta may record:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "The accessibility service or the local VPN being turned off.",
+    "The device's location being turned off or the location permission being withdrawn.",
+    "Periods when the device was offline and their duration.",
+    "Prolonged lack of communication, detected by the server from the date of the last update received."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "5-15-weekly-summaries",
+   "text": "5.15. Weekly summaries"
+  },
+  {
+   "type": "p",
+   "text": "Each week, the server prepares a summary from data already collected, which may include:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Number of alerts by type.",
+    "Average daily screen time.",
+    "Most used apps and their usage time."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Usage data is only included if the usage statistics purpose is authorised. The administrator can turn off the summary."
+  },
+  {
+   "type": "h3",
+   "id": "5-16-linking-with-a-qr-code",
+   "text": "5.16. Linking with a QR code"
+  },
+  {
+   "type": "p",
+   "text": "The QR code contains only the linking code, which expires after 24 hours."
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker uses the camera only to read the QR code. Images are neither stored nor transmitted."
+  },
+  {
+   "type": "h3",
+   "id": "5-17-technical-and-support-data",
+   "text": "5.17. Technical and support data"
+  },
+  {
+   "type": "p",
+   "text": "When the user requests support, Vesta may process:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Email address.",
+    "Description of the problem.",
+    "App version.",
+    "Device model, when provided.",
+    "Technical logs needed to diagnose the incident."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Passwords or secret authentication codes will never be requested in order to provide support."
+  },
+  {
+   "type": "h2",
+   "id": "6-purposes-of-processing",
+   "text": "6. Purposes of processing"
+  },
+  {
+   "type": "p",
+   "text": "Personal data will be used exclusively for purposes related to the service:"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Creating and managing accounts.",
+    "Authenticating users and devices.",
+    "Creating profiles for minors.",
+    "Linking and unlinking devices.",
+    "Obtaining and showing authorised location.",
+    "Keeping location history for the established period.",
+    "Generating app usage reports.",
+    "Applying blocking rules.",
+    "Processing DNS queries for domain filtering.",
+    "Generating and showing alerts.",
+    "Notifying arrivals at and departures from safe zones.",
+    "Sending emergency (SOS) alerts to the administrators.",
+    "Applying study mode and daily time limits.",
+    "Managing the minor's requests and the temporary permissions granted.",
+    "Applying safe search and preventing filtering from being bypassed through encrypted DNS.",
+    "Detecting when protections are turned off and prolonged loss of connection.",
+    "Preparing weekly summaries.",
+    "Sending notifications according to the administrator's preferences.",
+    "Diagnosing errors.",
+    "Protecting the security and availability of the service.",
+    "Handling data subjects' requests.",
+    "Complying with legal obligations.",
+    "Investigating security incidents.",
+    "Keeping the records needed to demonstrate authorisations and compliance."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Data will not be used for behavioural advertising, the sale of personal profiles or purposes incompatible with those described here."
+  },
+  {
+   "type": "p",
+   "text": "Any new purpose that requires authorisation will be disclosed before it is implemented."
+  },
+  {
+   "type": "h2",
+   "id": "7-processing-of-data-of-children-and-adolescents",
+   "text": "7. Processing of data of children and adolescents"
+  },
+  {
+   "type": "p",
+   "text": "Vesta recognises that the data of minors requires enhanced protection."
+  },
+  {
+   "type": "p",
+   "text": "Data of minors will only be processed when:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "It serves and respects their best interests.",
+    "It guarantees respect for their fundamental rights.",
+    "There is prior authorisation from the legal representative where required.",
+    "The minor is informed in a way appropriate to their age and understanding.",
+    "Their opinion is heard and taken into account according to their maturity and autonomy.",
+    "Collection is limited to the data needed for the disclosed purposes."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The legal representative must declare that they have sufficient authority to authorise the processing."
+  },
+  {
+   "type": "p",
+   "text": "The authorisation must not be used to justify disproportionate surveillance, invasion of privacy or actions contrary to the minor's rights."
+  },
+  {
+   "type": "p",
+   "text": "The minor may request information about how the supervision works and express their opinion through the available channels."
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker includes the “What Vesta shares” section, which explains to the minor in plain language what information is shared, what is not shared and which features are active. From Vesta Tracker the minor can also send requests to the administrator."
+  },
+  {
+   "type": "h2",
+   "id": "8-authorisation-and-consent",
+   "text": "8. Authorisation and consent"
+  },
+  {
+   "type": "p",
+   "text": "Before starting to collect personal data, Vesta informs the data subject or their legal representative about:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "The identity of the controller.",
+    "The data to be processed.",
+    "The purposes.",
+    "The data subject's rights.",
+    "The channels for exercising them.",
+    "The optional nature of answers concerning sensitive data or data of minors, where applicable."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The authorisation is kept in a way that allows it to be consulted and demonstrated later."
+  },
+  {
+   "type": "p",
+   "text": "Authorisation for the processing of personal data is independent of Android's technical permissions. Granting an operating system permission does not replace the legal authorisation for data processing."
+  },
+  {
+   "type": "p",
+   "text": "When a new feature involving an additional purpose or category of data is enabled, Vesta will inform the user and request the corresponding authorisation where necessary."
+  },
+  {
+   "type": "p",
+   "text": "Authorisation is granted by purpose. Each feature only works if all the legal representatives linked to the profile have authorised the corresponding purpose:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Location: location, history, safe zones and the location of the SOS alert.",
+    "Device status: battery, connectivity and loss-of-connection notices.",
+    "Usage statistics: usage reports and the usage data in the weekly summary.",
+    "App control: app blocking, study mode, time limits and requests from the minor.",
+    "Domain filtering: domain blocking, safe search and encrypted DNS blocking.",
+    "Alerts: sending alerts, SOS alerts and the weekly summary."
+   ]
+  },
+  {
+   "type": "h2",
+   "id": "9-sensitive-data",
+   "text": "9. Sensitive data"
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not aim to collect sensitive data as defined by Law 1581 of 2012."
+  },
+  {
+   "type": "p",
+   "text": "If a feature ever required sensitive data, its nature and purpose would be expressly disclosed and explicit authorisation would be requested where legally required."
+  },
+  {
+   "type": "p",
+   "text": "The user will not be obliged to provide sensitive data unless an applicable legal exception exists."
+  },
+  {
+   "type": "h2",
+   "id": "10-storage-and-technology-providers",
+   "text": "10. Storage and technology providers"
+  },
+  {
+   "type": "p",
+   "text": "Vesta uses technology services to deliver its features."
+  },
+  {
+   "type": "p",
+   "text": "Providers that may be involved include:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Firebase Authentication: authentication of accounts and sessions.",
+    "Cloud Firestore: storage of profiles, location, alerts, rules, reports and other records.",
+    "API infrastructure: processing of linking operations and communication between apps and services.",
+    "Infrastructure and connectivity providers: hosting, availability, security and technical operation.",
+    "Firebase Cloud Messaging: delivery of notifications to the administrators' devices.",
+    "OpenStreetMap: maps shown in Vesta Parent. When the map loads, the administrator's device requests images of the area being viewed from the OpenStreetMap servers.",
+    "Google Maps: only when the administrator chooses to open a location or a route in that app."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Providers act according to the roles and responsibilities that correspond to each service."
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. keeps an up-to-date inventory of providers, their roles, contractual conditions, processing locations and applicable safeguards."
+  },
+  {
+   "type": "p",
+   "text": "Where personal data is transmitted or transferred internationally, the requirements of Colombian law will be met."
+  },
+  {
+   "type": "p",
+   "text": "Information about providers and transfers is available to data subjects through the contact channels indicated in this Policy."
+  },
+  {
+   "type": "h2",
+   "id": "11-security-measures",
+   "text": "11. Security measures"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. will implement reasonable measures to protect personal data, including:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Authentication of users and devices.",
+    "Role-based access control.",
+    "Authorisation rules in the databases.",
+    "Expiry of linking codes after 24 hours.",
+    "Exclusion of the apps' local data from the device's automatic backups.",
+    "Encrypted communications where appropriate.",
+    "Protection of credentials and secrets.",
+    "Restricted administrative access.",
+    "Logging and monitoring of security events.",
+    "Controlled backups.",
+    "Vulnerability and update management.",
+    "Incident response procedures.",
+    "Secure deletion of information where appropriate."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "No system connected to the Internet can guarantee absolute security. The Company will work to prevent unauthorised access, loss, alteration or improper disclosure."
+  },
+  {
+   "type": "h2",
+   "id": "12-rights-of-data-subjects",
+   "text": "12. Rights of data subjects"
+  },
+  {
+   "type": "p",
+   "text": "In accordance with Colombian law, data subjects may:"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Access, update and rectify their personal data.",
+    "Request proof of the authorisation given.",
+    "Know how their data has been used.",
+    "Submit enquiries and complaints.",
+    "Request deletion of data where legally appropriate.",
+    "Withdraw authorisation where applicable.",
+    "Access their personal data free of charge.",
+    "Go to the Superintendence of Industry and Commerce after completing the enquiry or complaint procedure with the Controller, where appropriate."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The rights of minors may be exercised by the people legally entitled to do so, without disregarding the minor's right to be heard."
+  },
+  {
+   "type": "h2",
+   "id": "13-procedure-for-enquiries-and-complaints",
+   "text": "13. Procedure for enquiries and complaints"
+  },
+  {
+   "type": "p",
+   "text": "Requests may be submitted by:"
+  },
+  {
+   "type": "p",
+   "text": "Email: nebulagnu@proton.me\nPhone: +57 324 616 7956."
+  },
+  {
+   "type": "h3",
+   "id": "13-1-enquiries",
+   "text": "13.1. Enquiries"
+  },
+  {
+   "type": "p",
+   "text": "The data subject or their representative may request information about the personal data stored."
+  },
+  {
+   "type": "p",
+   "text": "The enquiry must make it possible to identify the requester and describe the information requested."
+  },
+  {
+   "type": "p",
+   "text": "The Controller will respond within the applicable legal term: ten (10) business days from receipt. If it is not possible to respond within that period, the reason and the new response date will be given, which may not exceed five (5) additional business days."
+  },
+  {
+   "type": "h3",
+   "id": "13-2-complaints",
+   "text": "13.2. Complaints"
+  },
+  {
+   "type": "p",
+   "text": "The data subject may request correction, update, deletion or withdrawal of authorisation where applicable."
+  },
+  {
+   "type": "p",
+   "text": "The complaint must include:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Identification of the data subject.",
+    "Description of the facts.",
+    "The right they wish to exercise.",
+    "Contact information.",
+    "Documents proving representation, where applicable."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "If the complaint is incomplete, the person concerned will be asked to correct it within five (5) business days of receipt. If two (2) months pass from the date of the request without the requester providing the information, the complaint will be deemed withdrawn."
+  },
+  {
+   "type": "p",
+   "text": "The maximum term for handling the complaint is fifteen (15) business days from the day after it is received. When it cannot be handled within that term, the person concerned will be told the reasons for the delay and the date on which it will be handled, which may not exceed eight (8) business days after the first term expires."
+  },
+  {
+   "type": "p",
+   "text": "Once the complete complaint is received, the note “complaint in progress” and its reason will be added to the database within no more than two (2) business days. The note will remain until the complaint is decided."
+  },
+  {
+   "type": "h2",
+   "id": "14-retention-policy",
+   "text": "14. Retention policy"
+  },
+  {
+   "type": "p",
+   "text": "Vesta will keep data for as long as needed to fulfil the disclosed purposes and legal obligations."
+  },
+  {
+   "type": "p",
+   "text": "Vesta's databases will remain in place while the services are provided and for as long as needed to fulfil the purposes described in this Policy. Within that framework, Vesta applies the following maximum retention periods for ordinary operation:"
+  },
+  {
+   "type": "table",
+   "rows": [
+    [
+     "Category",
+     "Retention period"
+    ],
+    [
+     "Account data",
+     "While the account is active and up to 30 days after the deletion request is completed, unless required by law"
+    ],
+    [
+     "Minor's profile",
+     "While there is an active relationship and until the requested deletion is completed"
+    ],
+    [
+     "Location history",
+     "90 days"
+    ],
+    [
+     "Usage reports",
+     "90 days"
+    ],
+    [
+     "Alerts",
+     "12 months"
+    ],
+    [
+     "Requests from the minor",
+     "90 days"
+    ],
+    [
+     "Weekly summaries",
+     "12 months"
+    ],
+    [
+     "Device status",
+     "90 days from the last update"
+    ],
+    [
+     "Protection rules",
+     "While active and up to 30 days after deletion"
+    ],
+    [
+     "Safe zones, study mode and time limits",
+     "While configured and up to 30 days after deletion"
+    ],
+    [
+     "Data pending upload on the device",
+     "Until it is sent to the server or until the device is unlinked"
+    ],
+    [
+     "Security logs",
+     "12 months, unless there is a justified need to keep them"
+    ],
+    [
+     "Proof of authorisation",
+     "During the processing and the additional period needed to demonstrate compliance with legal obligations"
+    ],
+    [
+     "Backups",
+     "Maximum cycle of 90 days, unless required by law or a security incident"
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "text": "These periods may change when there is a legal obligation or a legitimate justification, with notice of the changes where appropriate."
+  },
+  {
+   "type": "p",
+   "text": "Retention does not authorise the use of data for other purposes."
+  },
+  {
+   "type": "h2",
+   "id": "15-deletion-of-data",
+   "text": "15. Deletion of data"
+  },
+  {
+   "type": "p",
+   "text": "The data subject or their representative may request the deletion of personal data where legally appropriate."
+  },
+  {
+   "type": "p",
+   "text": "The procedure includes:"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Verifying the identity and standing of the requester.",
+    "Identifying the account and related profiles.",
+    "Informing about the data that will be deleted.",
+    "Unlinking devices when necessary.",
+    "Deleting profiles and associated records.",
+    "Deleting location history.",
+    "Deleting usage reports.",
+    "Deleting alerts.",
+    "Deleting protection rules.",
+    "Deleting safe zones, study mode settings and time limits.",
+    "Deleting the minor's requests and weekly summaries.",
+    "Deleting device associations.",
+    "Deleting or anonymising backup data according to the established cycle.",
+    "Keeping only the data that must be kept for legal obligations, security or the defence of claims."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "When a legal exception prevents immediate deletion, the requester will be informed and processing will be limited to the purpose that justifies keeping the data."
+  },
+  {
+   "type": "p",
+   "text": "Unlinking a device is not the same as deleting personal data."
+  },
+  {
+   "type": "h2",
+   "id": "16-withdrawal-of-authorisation",
+   "text": "16. Withdrawal of authorisation"
+  },
+  {
+   "type": "p",
+   "text": "The data subject may withdraw authorisation where legally appropriate."
+  },
+  {
+   "type": "p",
+   "text": "Withdrawal may affect one or more features of the service."
+  },
+  {
+   "type": "p",
+   "text": "If withdrawal prevents the processing needed for a feature, that feature may stop being available."
+  },
+  {
+   "type": "p",
+   "text": "Withdrawal does not affect the lawfulness of processing carried out before it took effect."
+  },
+  {
+   "type": "h2",
+   "id": "17-cookies-and-similar-technologies",
+   "text": "17. Cookies and similar technologies"
+  },
+  {
+   "type": "p",
+   "text": "Mobile apps may use technical identifiers, local storage and the mechanisms needed to maintain sessions, preferences and operation."
+  },
+  {
+   "type": "p",
+   "text": "Vesta will not use advertising tracking technologies to build commercial profiles of minors."
+  },
+  {
+   "type": "p",
+   "text": "If the website or future versions add non-essential cookies, their purpose will be disclosed and consent will be requested where necessary."
+  },
+  {
+   "type": "h2",
+   "id": "18-security-incidents",
+   "text": "18. Security incidents"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. will maintain an incident management procedure to detect, investigate, contain and document unauthorised access, loss, alteration or disclosure of personal data."
+  },
+  {
+   "type": "p",
+   "text": "When the regulations require notification to authorities or data subjects, it will be made within the applicable terms and conditions."
+  },
+  {
+   "type": "p",
+   "text": "The procedure includes:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Identifying the incident.",
+    "Assessing the data affected.",
+    "Containment measures.",
+    "Recovery.",
+    "Recording evidence.",
+    "Assessing the risks to data subjects.",
+    "Notification where appropriate.",
+    "Corrective actions."
+   ]
+  },
+  {
+   "type": "h2",
+   "id": "19-third-party-data-and-external-links",
+   "text": "19. Third-party data and external links"
+  },
+  {
+   "type": "p",
+   "text": "Vesta may rely on external services and third-party platforms."
+  },
+  {
+   "type": "p",
+   "text": "The use of those services may be subject to separate policies."
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. does not control the privacy policies of external services, but will seek to inform about the providers involved in processing Vesta data."
+  },
+  {
+   "type": "h2",
+   "id": "20-changes-to-this-policy",
+   "text": "20. Changes to this Policy"
+  },
+  {
+   "type": "p",
+   "text": "This Policy may be updated when the features, providers, purposes or legal obligations change."
+  },
+  {
+   "type": "p",
+   "text": "The current version is available to users in the apps and on the Vesta website."
+  },
+  {
+   "type": "p",
+   "text": "When a change involves a new purpose or processing that requires additional authorisation, that authorisation will be requested before the processing begins."
+  },
+  {
+   "type": "p",
+   "text": "The update date will be shown in the header of the document."
+  },
+  {
+   "type": "p",
+   "text": "Version 1.1 adds the data categories and purposes for safe zones, the SOS button, requests from the minor, study mode, time limits, safe search, encrypted DNS blocking, protection and connection notices, weekly summaries and linking by QR code. Because these are new purposes, a new authorisation is requested."
+  },
+  {
+   "type": "h2",
+   "id": "21-data-protection-authority",
+   "text": "21. Data protection authority"
+  },
+  {
+   "type": "p",
+   "text": "In Colombia, the Superintendence of Industry and Commerce (SIC) supervises compliance with the general personal data protection regime."
+  },
+  {
+   "type": "p",
+   "text": "Data subjects may go to that authority after submitting the corresponding enquiry or complaint to the Controller and completing the applicable procedure."
+  },
+  {
+   "type": "h2",
+   "id": "22-contact",
+   "text": "22. Contact"
+  },
+  {
+   "type": "p",
+   "text": "For enquiries, complaints, deletion requests, withdrawal or any matter related to privacy:"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S.\nTax ID (NIT): 901653270-2\nProject: Vesta Security\nRegistered office: Santa Marta, Magdalena, Colombia.\nEmail: nebulagnu@proton.me\nPhone: +57 324 616 7956."
+  }
+ ],
+ "closing": [
+  "© 2026 Vesta Security. FORBIDDEN S.A.S. All rights reserved.",
+  "© 2026 Vesta Security · FORBIDDEN S.A.S. Official document, version 1.1. This is a courtesy translation: in case of discrepancy, the Spanish version prevails. The current version is published in the apps and on the Vesta website."
+ ],
+ "sourceFile": "Vesta - Personal Data Processing and Privacy Policy.docx"
+}

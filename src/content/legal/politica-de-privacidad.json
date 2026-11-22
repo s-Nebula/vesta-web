@@ -2,9 +2,9 @@
  "title": "Política de tratamiento de datos personales y privacidad",
  "subtitle": "Cómo FORBIDDEN S.A.S. recolecta, usa, protege y conserva los datos personales tratados mediante Vesta, conforme a la Ley 1581 de 2012.",
  "meta": {
-  "Versión": "1.0",
-  "Fecha de entrada en vigor": "20 de noviembre de 2026",
-  "Última actualización": "20 de noviembre de 2026",
+  "Versión": "1.1",
+  "Fecha de entrada en vigor": "22 de noviembre de 2026",
+  "Última actualización": "22 de noviembre de 2026",
   "Responsable del tratamiento": "FORBIDDEN S.A.S. — NIT 901653270-2",
   "Proyecto": "Vesta Security",
   "Jurisdicción": "República de Colombia"
@@ -21,7 +21,7 @@
   },
   {
    "type": "p",
-   "text": "Razón social: FORBIDDEN S.A.S.\nNIT: 901653270-2\nMatrícula mercantil: 262746\nCámara de Comercio: Santa Marta para el Magdalena\nDomicilio: Santa Marta, Magdalena, Colombia.\nDirección física: Cra. 66 # 46a - 128.\nCorreo para privacidad y solicitudes: nebulagnu@proton.me\nTeléfono: +57 324 616 7956.\nÁrea responsable de atender consultas y reclamos: Protección de Datos Personales de FORBIDDEN S.A.S., a través del correo nebulagnu@proton.me."
+   "text": "Razón social: FORBIDDEN S.A.S.\nNIT: 901653270-2\nMatrícula mercantil: 262746\nCámara de Comercio: Santa Marta para el Magdalena\nDomicilio: Santa Marta, Magdalena, Colombia.\nCorreo para privacidad y solicitudes: nebulagnu@proton.me\nTeléfono: +57 324 616 7956.\nÁrea responsable de atender consultas y reclamos: Protección de Datos Personales de FORBIDDEN S.A.S., a través del correo nebulagnu@proton.me."
   },
   {
    "type": "p",
@@ -186,7 +186,9 @@
     "Nombre de usuario, cuando se proporcione.",
     "Método de autenticación.",
     "Fecha de creación de cuenta.",
-    "Información técnica necesaria para mantener la sesión."
+    "Información técnica necesaria para mantener la sesión.",
+    "Identificador para el envío de notificaciones al dispositivo del administrador.",
+    "Preferencias de notificación, como recibir al instante solo las alertas críticas o el resumen semanal."
    ]
   },
   {
@@ -207,7 +209,8 @@
     "Color o identificador visual.",
     "Identificador de la cuenta administradora autorizada.",
     "Estado de vinculación.",
-    "Fecha de creación y vinculación."
+    "Fecha de creación y vinculación.",
+    "Código de vinculación vigente y su fecha de caducidad."
    ]
   },
   {
@@ -229,7 +232,8 @@
     "Latitud.",
     "Longitud.",
     "Velocidad estimada.",
-    "Fecha y hora de la medición.",
+    "Precisión estimada de la medición.",
+    "Fecha y hora de la medición en el dispositivo y fecha de recepción en el servidor.",
     "Estado de actividad del dispositivo.",
     "Información técnica necesaria para interpretar la ubicación."
    ]
@@ -241,6 +245,10 @@
   {
    "type": "p",
    "text": "La frecuencia de captura depende de las condiciones del dispositivo, Android, GPS, batería y conectividad. No se garantiza una frecuencia exacta ni disponibilidad permanente."
+  },
+  {
+   "type": "p",
+   "text": "Si el dispositivo no tiene conexión, Vesta Tracker puede guardar las mediciones temporalmente en el propio dispositivo y enviarlas cuando se recupere la conexión. La fecha de la medición permite mostrarlas en el orden correcto."
   },
   {
    "type": "h3",
@@ -295,6 +303,10 @@
   {
    "type": "p",
    "text": "Vesta no utiliza esta función para registrar el contenido de mensajes, contraseñas o comunicaciones privadas."
+  },
+  {
+   "type": "p",
+   "text": "Cuando el administrador configura límites de tiempo diarios, Vesta Tracker calcula en el propio dispositivo el tiempo de uso del día de las aplicaciones limitadas para decidir si deben bloquearse."
   },
   {
    "type": "h3",
@@ -388,12 +400,168 @@
   },
   {
    "type": "p",
-   "text": "Pueden generarse alertas por batería, velocidad y bloqueos, de acuerdo con las funciones habilitadas."
+   "text": "Pueden generarse alertas por batería, velocidad, bloqueos, zonas seguras, botón SOS, modo estudio, límites de tiempo, pérdida de conexión y desactivación de las protecciones, de acuerdo con las funciones habilitadas."
   },
   {
    "type": "h3",
-   "id": "5-9-datos-tecnicos-y-de-soporte",
-   "text": "5.9. Datos técnicos y de soporte"
+   "id": "5-9-zonas-seguras",
+   "text": "5.9. Zonas seguras"
+  },
+  {
+   "type": "p",
+   "text": "El administrador puede definir zonas seguras (por ejemplo, la casa o el colegio). Para cada zona se trata:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Nombre de la zona.",
+    "Coordenadas del centro y radio.",
+    "Preferencias de aviso de llegada y salida."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker compara su ubicación con estas zonas en el propio dispositivo. Cuando detecta una llegada o una salida, genera una alerta con el nombre de la zona, la fecha y hora y la ubicación en ese momento."
+  },
+  {
+   "type": "p",
+   "text": "Esta función forma parte de la finalidad de ubicación y solo opera cuando esa finalidad está autorizada."
+  },
+  {
+   "type": "h3",
+   "id": "5-10-boton-de-emergencia-sos",
+   "text": "5.10. Botón de emergencia (SOS)"
+  },
+  {
+   "type": "p",
+   "text": "Cuando el menor mantiene pulsado el botón SOS de Vesta Tracker, se envía a los administradores una alerta crítica que puede incluir:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Fecha y hora del aviso.",
+    "Ubicación del dispositivo y su precisión, solo si la finalidad de ubicación está autorizada.",
+    "Indicación de que se usó la última ubicación conocida, cuando no fue posible obtener una nueva."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "El aviso requiere que la finalidad de alertas esté autorizada. Si no hay conexión, se envía cuando se recupere."
+  },
+  {
+   "type": "h3",
+   "id": "5-11-solicitudes-del-menor",
+   "text": "5.11. Solicitudes del menor"
+  },
+  {
+   "type": "p",
+   "text": "Desde Vesta Tracker, el menor puede pedir al administrador permiso para usar una aplicación o más tiempo. Cada solicitud contiene:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Tipo de solicitud.",
+    "Nombre e identificador de la aplicación.",
+    "Tiempo solicitado.",
+    "Mensaje opcional escrito por el menor, de hasta 200 caracteres.",
+    "Estado de la solicitud, respuesta del administrador, tiempo concedido y fecha."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Si el administrador la aprueba, la aplicación queda permitida durante el tiempo concedido. Se recomienda al menor no incluir en el mensaje datos personales innecesarios."
+  },
+  {
+   "type": "h3",
+   "id": "5-12-modo-estudio-y-limites-de-tiempo",
+   "text": "5.12. Modo estudio y límites de tiempo"
+  },
+  {
+   "type": "p",
+   "text": "Para aplicar el modo estudio y los límites de tiempo diarios se trata:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Horarios y estado del modo estudio.",
+    "Aplicaciones permitidas durante el modo estudio.",
+    "Límite diario configurado para cada aplicación.",
+    "Intentos de abrir aplicaciones no permitidas durante el modo estudio y avisos de tiempo agotado."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Estas funciones forman parte de la finalidad de control de aplicaciones."
+  },
+  {
+   "type": "h3",
+   "id": "5-13-busqueda-segura-y-dns-cifrado",
+   "text": "5.13. Búsqueda segura y DNS cifrado"
+  },
+  {
+   "type": "p",
+   "text": "Cuando el administrador activa la búsqueda segura, la VPN local de Vesta Tracker responde a las consultas de los buscadores compatibles (Google, Bing, DuckDuckGo y YouTube) con las direcciones de sus versiones con filtrado de contenido. También bloquea la resolución de proveedores conocidos de DNS cifrado, para que el filtrado no pueda evitarse desde el navegador."
+  },
+  {
+   "type": "p",
+   "text": "Este proceso ocurre en el dispositivo. No se guarda el historial de búsquedas ni de navegación, y estas consultas no generan alertas."
+  },
+  {
+   "type": "h3",
+   "id": "5-14-avisos-de-proteccion-y-de-conexion",
+   "text": "5.14. Avisos de protección y de conexión"
+  },
+  {
+   "type": "p",
+   "text": "Para informar al administrador de situaciones que afectan a la protección, Vesta puede registrar:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Desactivación del servicio de accesibilidad o de la VPN local.",
+    "Desactivación de la ubicación del dispositivo o retirada del permiso de ubicación.",
+    "Periodos en los que el dispositivo estuvo sin conexión y su duración.",
+    "Falta de comunicación prolongada, detectada por el servidor a partir de la fecha de la última actualización recibida."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "5-15-resumenes-semanales",
+   "text": "5.15. Resúmenes semanales"
+  },
+  {
+   "type": "p",
+   "text": "Cada semana, el servidor elabora un resumen a partir de datos ya recopilados, que puede incluir:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Número de alertas por tipo.",
+    "Tiempo medio diario de pantalla.",
+    "Aplicaciones más utilizadas y su tiempo de uso."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Los datos de uso solo se incluyen si la finalidad de estadísticas de uso está autorizada. El administrador puede desactivar el envío del resumen."
+  },
+  {
+   "type": "h3",
+   "id": "5-16-vinculacion-mediante-codigo-qr",
+   "text": "5.16. Vinculación mediante código QR"
+  },
+  {
+   "type": "p",
+   "text": "El código QR contiene únicamente el código de vinculación, que caduca a las 24 horas."
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker utiliza la cámara solo para leer el código QR. Las imágenes no se almacenan ni se transmiten."
+  },
+  {
+   "type": "h3",
+   "id": "5-17-datos-tecnicos-y-de-soporte",
+   "text": "5.17. Datos técnicos y de soporte"
   },
   {
    "type": "p",
@@ -435,6 +603,14 @@
     "Aplicar reglas de bloqueo.",
     "Procesar consultas DNS para filtrado de dominios.",
     "Generar y mostrar alertas.",
+    "Avisar de llegadas y salidas de las zonas seguras.",
+    "Transmitir los avisos de emergencia (SOS) a los administradores.",
+    "Aplicar el modo estudio y los límites de tiempo diarios.",
+    "Gestionar las solicitudes del menor y los permisos temporales concedidos.",
+    "Aplicar la búsqueda segura e impedir que el filtrado se evite mediante DNS cifrado.",
+    "Detectar la desactivación de las protecciones y la pérdida prolongada de conexión.",
+    "Elaborar resúmenes semanales.",
+    "Enviar notificaciones según las preferencias del administrador.",
     "Diagnosticar errores.",
     "Proteger la seguridad y disponibilidad del servicio.",
     "Atender solicitudes de los titulares.",
@@ -488,6 +664,10 @@
    "text": "El menor podrá solicitar información sobre el funcionamiento de la supervisión y expresar su opinión mediante los canales disponibles."
   },
   {
+   "type": "p",
+   "text": "Vesta Tracker incluye la sección «Qué comparte Vesta», que explica al menor en lenguaje sencillo qué información se comparte, qué no se comparte y qué funciones están activas. Desde Vesta Tracker el menor también puede enviar solicitudes al administrador."
+  },
+  {
    "type": "h2",
    "id": "8-autorizacion-y-consentimiento",
    "text": "8. Autorización y consentimiento"
@@ -518,6 +698,21 @@
   {
    "type": "p",
    "text": "Cuando se active una nueva función que implique una finalidad o categoría de datos adicional, Vesta informará al usuario y solicitará la autorización correspondiente cuando sea necesaria."
+  },
+  {
+   "type": "p",
+   "text": "La autorización se otorga por finalidades. Cada función solo opera si todos los representantes legales vinculados al perfil autorizaron la finalidad correspondiente:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Ubicación: ubicación, historial, zonas seguras y ubicación del aviso SOS.",
+    "Estado del dispositivo: batería, conectividad y avisos de pérdida de conexión.",
+    "Estadísticas de uso: informes de uso y datos de uso del resumen semanal.",
+    "Control de aplicaciones: bloqueo de aplicaciones, modo estudio, límites de tiempo y solicitudes del menor.",
+    "Filtrado de dominios: bloqueo de dominios, búsqueda segura y bloqueo de DNS cifrado.",
+    "Alertas: envío de alertas, avisos SOS y resumen semanal."
+   ]
   },
   {
    "type": "h2",
@@ -555,7 +750,10 @@
     "Firebase Authentication: autenticación de cuentas y sesiones.",
     "Cloud Firestore: almacenamiento de perfiles, ubicación, alertas, reglas, informes y otros registros.",
     "Infraestructura de API: procesamiento de operaciones de vinculación y comunicación entre aplicaciones y servicios.",
-    "Proveedores de infraestructura y conectividad: alojamiento, disponibilidad, seguridad y operación técnica."
+    "Proveedores de infraestructura y conectividad: alojamiento, disponibilidad, seguridad y operación técnica.",
+    "Firebase Cloud Messaging: envío de notificaciones a los dispositivos de los administradores.",
+    "OpenStreetMap: mapas mostrados en Vesta Padre. Al cargar el mapa, el dispositivo del administrador solicita imágenes de la zona consultada a los servidores de OpenStreetMap.",
+    "Google Maps: solo cuando el administrador elige abrir una ubicación o una ruta en esa aplicación."
    ]
   },
   {
@@ -589,6 +787,8 @@
     "Autenticación de usuarios y dispositivos.",
     "Control de acceso por roles.",
     "Reglas de autorización en las bases de datos.",
+    "Caducidad de los códigos de vinculación a las 24 horas.",
+    "Exclusión de los datos locales de las aplicaciones de las copias de seguridad automáticas del dispositivo.",
     "Comunicaciones cifradas cuando corresponda.",
     "Protección de credenciales y secretos.",
     "Restricción del acceso administrativo.",
@@ -640,7 +840,7 @@
   },
   {
    "type": "p",
-   "text": "Correo: nebulagnu@proton.me\nDirección: Cra. 66 # 46a - 128, Santa Marta, Magdalena, Colombia.\nTeléfono: +57 324 616 7956."
+   "text": "Correo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
   },
   {
    "type": "h3",
@@ -735,12 +935,28 @@
      "12 meses"
     ],
     [
+     "Solicitudes del menor",
+     "90 días"
+    ],
+    [
+     "Resúmenes semanales",
+     "12 meses"
+    ],
+    [
      "Estado del dispositivo",
      "90 días desde la última actualización"
     ],
     [
      "Reglas de protección",
      "Mientras estén activas y hasta 30 días después de su eliminación"
+    ],
+    [
+     "Zonas seguras, modo estudio y límites de tiempo",
+     "Mientras estén configurados y hasta 30 días después de su eliminación"
+    ],
+    [
+     "Datos pendientes de envío en el dispositivo",
+     "Hasta su envío al servidor o hasta la desvinculación del dispositivo"
     ],
     [
      "Registros de seguridad",
@@ -789,6 +1005,8 @@
     "Eliminar informes de uso.",
     "Eliminar alertas.",
     "Eliminar reglas de protección.",
+    "Eliminar zonas seguras, configuración del modo estudio y límites de tiempo.",
+    "Eliminar solicitudes del menor y resúmenes semanales.",
     "Eliminar asociaciones de dispositivos.",
     "Eliminar o anonimizar datos de respaldo conforme al ciclo establecido.",
     "Conservar únicamente los datos que deban mantenerse por obligación legal, seguridad o defensa de reclamaciones."
@@ -909,6 +1127,10 @@
    "text": "La fecha de actualización será indicada en el encabezado del documento."
   },
   {
+   "type": "p",
+   "text": "La versión 1.1 incorpora las categorías de datos y finalidades de las zonas seguras, el botón SOS, las solicitudes del menor, el modo estudio, los límites de tiempo, la búsqueda segura, el bloqueo de DNS cifrado, los avisos de protección y conexión, los resúmenes semanales y la vinculación por código QR. Por tratarse de finalidades nuevas, se solicita una nueva autorización."
+  },
+  {
    "type": "h2",
    "id": "21-autoridad-de-proteccion-de-datos",
    "text": "21. Autoridad de protección de datos"
@@ -932,12 +1154,12 @@
   },
   {
    "type": "p",
-   "text": "FORBIDDEN S.A.S.\nNIT: 901653270-2\nProyecto: Vesta Security\nDomicilio: Santa Marta, Magdalena, Colombia.\nDirección: Cra. 66 # 46a - 128.\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
+   "text": "FORBIDDEN S.A.S.\nNIT: 901653270-2\nProyecto: Vesta Security\nDomicilio: Santa Marta, Magdalena, Colombia.\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
   }
  ],
  "closing": [
-  "© 2026 Vesta Security. FORBIDDEN S.A.S. Todos los derechos reservados, sin perjuicio de las licencias de software de código abierto aplicables.",
-  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.0. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
+  "© 2026 Vesta Security. FORBIDDEN S.A.S. Todos los derechos reservados.",
+  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.1. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
  ],
  "sourceFile": "Vesta - Política de tratamiento de datos personales y privacidad.docx"
 }

@@ -1,0 +1,508 @@
+{
+ "title": "Terms and Conditions of Use",
+ "subtitle": "Conditions governing access to, installation and use of Vesta Parent, Vesta Tracker and related services.",
+ "meta": {
+  "Version": "1.1",
+  "Effective date": "22 November 2026",
+  "Last updated": "22 November 2026",
+  "Service provider": "FORBIDDEN S.A.S. — Tax ID (NIT) 901653270-2",
+  "Project": "Vesta Security",
+  "Jurisdiction": "Republic of Colombia"
+ },
+ "blocks": [
+  {
+   "type": "h2",
+   "id": "1-provider-identification",
+   "text": "1. Provider identification"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Security is a family digital supervision and protection service operated by:"
+  },
+  {
+   "type": "p",
+   "text": "Company name: FORBIDDEN S.A.S.\nTax ID (NIT): 901653270-2\nCommercial registration: 262746\nChamber of Commerce: Santa Marta para el Magdalena\nRegistered office: Santa Marta, Magdalena, Colombia.\nEmail: nebulagnu@proton.me\nPhone: +57 324 616 7956."
+  },
+  {
+   "type": "p",
+   "text": "Nebula is the author of the Vesta Security project."
+  },
+  {
+   "type": "p",
+   "text": "In these terms, FORBIDDEN S.A.S. is referred to as “Vesta”, “the Company” or “the Provider”."
+  },
+  {
+   "type": "h2",
+   "id": "2-acceptance",
+   "text": "2. Acceptance"
+  },
+  {
+   "type": "p",
+   "text": "These Terms govern access to, installation and use of Vesta Parent, Vesta Tracker and related services."
+  },
+  {
+   "type": "p",
+   "text": "By creating an account, or by installing, linking or using the service, the user declares that they have read and understood these Terms and the Privacy Policy."
+  },
+  {
+   "type": "p",
+   "text": "Where the processing involves data of minors, accepting these Terms does not replace the specific authorisation for the processing of personal data required by applicable law."
+  },
+  {
+   "type": "p",
+   "text": "If the user does not agree with these conditions, they must refrain from using the service."
+  },
+  {
+   "type": "h2",
+   "id": "3-description-of-the-service",
+   "text": "3. Description of the service"
+  },
+  {
+   "type": "p",
+   "text": "Vesta is a technology solution made up of two Android applications:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Vesta Parent: lets the administrator manage profiles, linked devices and protection rules, and view the information received.",
+    "Vesta Tracker: collects and transmits authorised information from the device, applies rules and runs protection services."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Its features include:"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Linking devices with a code or a QR code.",
+    "Viewing location.",
+    "Available location history.",
+    "Alerts about battery, speed, blocks, safe zones, loss of connection and protections being turned off.",
+    "Aggregated supervision of app usage.",
+    "App blocking.",
+    "Domain filtering through accessibility and a DNS VPN.",
+    "Management of block and exception rules.",
+    "Privacy management and requests related to personal data.",
+    "Safe zones with arrival and departure notices.",
+    "Emergency (SOS) button in Vesta Tracker.",
+    "Study mode, activated manually or on a schedule.",
+    "Daily time limits per app.",
+    "Requests from the minor to the administrator for temporary permissions.",
+    "Safe search on compatible search engines and blocking of known encrypted DNS providers.",
+    "Weekly activity summary.",
+    "An information section for the minor about the data being shared."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The availability of each feature depends on the version, device compatibility, permissions, connectivity and settings."
+  },
+  {
+   "type": "h2",
+   "id": "4-eligibility-requirements",
+   "text": "4. Eligibility requirements"
+  },
+  {
+   "type": "p",
+   "text": "The administrator account must be used by an adult with sufficient legal capacity."
+  },
+  {
+   "type": "p",
+   "text": "An administrator who links a minor's device declares that they:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Are the minor's parent or legal representative, or have sufficient legal authorisation.",
+    "Are entitled to authorise the use of the corresponding features.",
+    "Have informed the minor appropriately about how Vesta works.",
+    "Have considered the minor's opinion according to their age, maturity and understanding.",
+    "Will use the platform for the minor's benefit and with respect for their rights."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Vesta may not be used to supervise an adult without their consent or another valid legal basis."
+  },
+  {
+   "type": "h2",
+   "id": "5-administrator-responsibilities",
+   "text": "5. Administrator responsibilities"
+  },
+  {
+   "type": "p",
+   "text": "The administrator undertakes to:"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Provide truthful information.",
+    "Keep their credentials secure.",
+    "Protect linking codes and QR codes.",
+    "Use Vesta exclusively for legitimate purposes.",
+    "Obtain the necessary authorisations.",
+    "Inform the minor about the supervision.",
+    "Avoid disproportionate or abusive use.",
+    "Configure rules responsibly.",
+    "Not attempt to access other people's devices without authorisation.",
+    "Not use the data obtained to harass, discriminate against, threaten or harm another person.",
+    "Respond to the minor's requests and respect their rights.",
+    "Keep the apps up to date when security updates are available.",
+    "Configure study mode, time limits and safe zones in proportion to the minor's age and needs.",
+    "Respond reasonably to the requests the minor sends from Vesta Tracker."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The administrator is responsible for the decisions they make based on the data and alerts shown by Vesta."
+  },
+  {
+   "type": "h2",
+   "id": "6-processing-of-personal-data",
+   "text": "6. Processing of personal data"
+  },
+  {
+   "type": "p",
+   "text": "The processing of personal data is governed by the Vesta Privacy Policy."
+  },
+  {
+   "type": "p",
+   "text": "The information may include account data, profiles, location, app activity, device status, alerts and protection rules."
+  },
+  {
+   "type": "p",
+   "text": "The administrator declares that they have the authorisation and standing required to process the minor's data."
+  },
+  {
+   "type": "p",
+   "text": "The authorisation must be prior, express, informed and verifiable where required."
+  },
+  {
+   "type": "p",
+   "text": "The minor must be able to exercise their right to be heard according to their maturity, autonomy and understanding."
+  },
+  {
+   "type": "h2",
+   "id": "7-operating-system-permissions",
+   "text": "7. Operating system permissions"
+  },
+  {
+   "type": "p",
+   "text": "Vesta requires Android permissions for certain features."
+  },
+  {
+   "type": "p",
+   "text": "The user understands that:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Location may require precise and background access.",
+    "Usage statistics require specific authorisation and are also used to apply daily time limits.",
+    "Accessibility makes it possible to detect window events and read the address bar of a compatible browser.",
+    "The local VPN processes DNS queries in order to apply filters.",
+    "Notifications and foreground services are used to report which features are active.",
+    "The camera is used in Vesta Tracker only to read the linking QR code. Images are neither stored nor transmitted."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Revoking permissions may prevent or limit the related features."
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not use permissions for purposes other than those described in its Privacy Policy."
+  },
+  {
+   "type": "h2",
+   "id": "8-service-limitations",
+   "text": "8. Service limitations"
+  },
+  {
+   "type": "p",
+   "text": "Vesta is a support tool and does not guarantee:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Permanent real-time location.",
+    "Absolute accuracy of coordinates.",
+    "Uninterrupted availability.",
+    "Immediate delivery of alerts.",
+    "Blocking of every website or app.",
+    "Compatibility with every device, browser or Android version.",
+    "Prevention of every form of access to unwanted content.",
+    "Protection against tampering with, uninstalling or altering the operating system."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Location and reports may be delayed by low battery, GPS signal, connectivity, manufacturer restrictions or system conditions."
+  },
+  {
+   "type": "p",
+   "text": "DNS filtering may not detect traffic that uses alternative resolution mechanisms, encrypted DNS, apps with direct connections or other methods that bypass the filtering mechanism."
+  },
+  {
+   "type": "p",
+   "text": "Blocking of encrypted DNS providers is limited to the providers known to Vesta and may not prevent other resolution mechanisms."
+  },
+  {
+   "type": "p",
+   "text": "Safe search only applies to compatible search engines and services, and depends on each provider's configuration."
+  },
+  {
+   "type": "p",
+   "text": "Safe zone notices depend on GPS accuracy and connectivity: they may be delayed, occur away from the exact edge of the zone, or not occur at all."
+  },
+  {
+   "type": "p",
+   "text": "Study mode and time limits do not block calls, SMS messages, system settings or the keyboard, and may be affected if the accessibility service is turned off."
+  },
+  {
+   "type": "p",
+   "text": "When the device is offline, Vesta Tracker keeps the latest rules received for a limited time and sends pending data once the connection is restored."
+  },
+  {
+   "type": "p",
+   "text": "Vesta is not an emergency response service, a police location service or a substitute for medical, security or child protection services. The SOS button notifies the administrators when there is a connection, but it does not contact emergency services. In an emergency, call 123 or the relevant emergency service."
+  },
+  {
+   "type": "h2",
+   "id": "9-prohibited-use",
+   "text": "9. Prohibited use"
+  },
+  {
+   "type": "p",
+   "text": "The following is prohibited:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Installing Tracker on devices without authorisation.",
+    "Using Vesta to monitor partners, employees, acquaintances or other people without a legal basis.",
+    "Deliberately hiding the supervision where this infringes rights or applicable rules.",
+    "Using the information for threats, extortion, harassment or discrimination.",
+    "Attempting to breach the systems of Vesta or third parties.",
+    "Interfering with the availability of the service.",
+    "Copying, modifying, decompiling, disassembling, redistributing or creating derivative works of the apps without written authorisation, except to the extent expressly permitted by law.",
+    "Impersonating others.",
+    "Sharing linking codes with unauthorised people.",
+    "Using the service for illegal activities."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The Company may suspend access when it has reasonable grounds to believe that the service is being used in breach of these Terms or the applicable law, with due safeguards."
+  },
+  {
+   "type": "h2",
+   "id": "10-accounts-and-security",
+   "text": "10. Accounts and security"
+  },
+  {
+   "type": "p",
+   "text": "The user is responsible for keeping their credentials confidential."
+  },
+  {
+   "type": "p",
+   "text": "The user must notify Vesta of any unauthorised access, loss of control of the account or incident that may compromise the information."
+  },
+  {
+   "type": "p",
+   "text": "The Company may take reasonable technical measures to protect accounts, verify requests and limit anomalous activity."
+  },
+  {
+   "type": "h2",
+   "id": "11-unlinking-termination-and-deletion",
+   "text": "11. Unlinking, termination and deletion"
+  },
+  {
+   "type": "p",
+   "text": "The administrator may unlink a device when the feature is available."
+  },
+  {
+   "type": "p",
+   "text": "Linking codes and QR codes expire after 24 hours. The administrator can generate a new one at any time, which invalidates the previous one."
+  },
+  {
+   "type": "p",
+   "text": "Unlinking ends the active association, but does not in itself delete historical data."
+  },
+  {
+   "type": "p",
+   "text": "The user may request the deletion of personal data in accordance with the Privacy Policy, unless a legal obligation or exception justifies keeping it."
+  },
+  {
+   "type": "p",
+   "text": "Deletion covers, as applicable:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "The minor's profile.",
+    "Location history.",
+    "Usage reports.",
+    "Alerts.",
+    "Protection rules.",
+    "Safe zones, study mode settings and time limits.",
+    "The minor's requests and weekly summaries.",
+    "Device records.",
+    "Data associated with the account."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Backup copies will be deleted according to the established retention cycle, except for legal obligations or legitimate security needs."
+  },
+  {
+   "type": "h2",
+   "id": "12-intellectual-property",
+   "text": "12. Intellectual property"
+  },
+  {
+   "type": "p",
+   "text": "Vesta, its apps, its source code, its trademarks, designs and documentation are the property of FORBIDDEN S.A.S. or are used with the authorisation of their owners. All rights reserved."
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. grants the user a limited, personal, non-exclusive, non-transferable and revocable licence to install and use the apps in accordance with these Terms. This licence does not transfer any ownership rights over the software."
+  },
+  {
+   "type": "p",
+   "text": "Vesta includes third-party components that are governed by their own licences. Nothing in these Terms limits the rights those licences grant over such components."
+  },
+  {
+   "type": "p",
+   "text": "The Vesta Security brand and the identifying elements of FORBIDDEN S.A.S. may not be used to suggest an affiliation or official endorsement without authorisation."
+  },
+  {
+   "type": "h2",
+   "id": "13-third-party-services",
+   "text": "13. Third-party services"
+  },
+  {
+   "type": "p",
+   "text": "Vesta may rely on external services for authentication, storage, notifications, infrastructure and technical operation."
+  },
+  {
+   "type": "p",
+   "text": "These services may be subject to their own terms, privacy policies and availability conditions."
+  },
+  {
+   "type": "p",
+   "text": "The Company will seek to select suitable providers, document their roles and establish the appropriate data protection conditions."
+  },
+  {
+   "type": "h2",
+   "id": "14-availability-maintenance-and-changes",
+   "text": "14. Availability, maintenance and changes"
+  },
+  {
+   "type": "p",
+   "text": "Vesta may update, fix, maintain or modify its apps and services."
+  },
+  {
+   "type": "p",
+   "text": "Some features may be temporarily suspended for maintenance, security, Android changes or circumstances beyond the Company's reasonable control."
+  },
+  {
+   "type": "p",
+   "text": "When a change substantially affects privacy, permissions or the purposes of processing, information will be provided and the necessary authorisations will be requested."
+  },
+  {
+   "type": "h2",
+   "id": "15-liability",
+   "text": "15. Liability"
+  },
+  {
+   "type": "p",
+   "text": "The Company will act with reasonable diligence in operating and protecting the service."
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not guarantee that the supervision is infallible or that its alerts reflect every event that occurred on the device."
+  },
+  {
+   "type": "p",
+   "text": "The administrator must verify important information and should not make high-impact decisions based solely on an automated alert."
+  },
+  {
+   "type": "p",
+   "text": "Nothing in these Terms excludes liability that cannot legally be excluded, or limits the rights of consumers or data subjects recognised by Colombian law."
+  },
+  {
+   "type": "h2",
+   "id": "16-privacy-and-data-subject-rights",
+   "text": "16. Privacy and data subject rights"
+  },
+  {
+   "type": "p",
+   "text": "The Privacy Policy forms part of these Terms."
+  },
+  {
+   "type": "p",
+   "text": "Data subjects may exercise their rights of access, update, rectification, deletion and withdrawal of authorisation where applicable."
+  },
+  {
+   "type": "p",
+   "text": "Contact channel:"
+  },
+  {
+   "type": "p",
+   "text": "nebulagnu@proton.me"
+  },
+  {
+   "type": "h2",
+   "id": "17-changes-to-these-terms",
+   "text": "17. Changes to these Terms"
+  },
+  {
+   "type": "p",
+   "text": "The Company may update these Terms to reflect legal, technical or functional changes."
+  },
+  {
+   "type": "p",
+   "text": "The current version is available in the apps and on the Vesta website."
+  },
+  {
+   "type": "p",
+   "text": "When changes require a new acceptance or authorisation, it will be requested before the corresponding processing begins."
+  },
+  {
+   "type": "p",
+   "text": "Version 1.1 adds linking by QR code, safe zones, the SOS button, study mode, time limits, requests from the minor, safe search, encrypted DNS blocking and the weekly summary."
+  },
+  {
+   "type": "h2",
+   "id": "18-governing-law",
+   "text": "18. Governing law"
+  },
+  {
+   "type": "p",
+   "text": "These Terms shall be interpreted in accordance with the laws of the Republic of Colombia."
+  },
+  {
+   "type": "p",
+   "text": "Disputes will be handled through the competent legal and judicial mechanisms, respecting the mandatory rules on consumer protection and personal data protection."
+  },
+  {
+   "type": "h2",
+   "id": "19-contact",
+   "text": "19. Contact"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S.\nTax ID (NIT): 901653270-2\nProject: Vesta Security\nRegistered office: Santa Marta, Magdalena, Colombia.\nEmail: nebulagnu@proton.me\nPhone: +57 324 616 7956."
+  },
+  {
+   "type": "p",
+   "text": "By using Vesta, the user acknowledges having had the opportunity to read these Terms and the Privacy Policy."
+  }
+ ],
+ "closing": [
+  "© 2026 Vesta Security · FORBIDDEN S.A.S. Official document, version 1.1. This is a courtesy translation: in case of discrepancy, the Spanish version prevails. The current version is published in the apps and on the Vesta website."
+ ],
+ "sourceFile": "Vesta - Terms and Conditions of Use.docx"
+}
