@@ -4,7 +4,7 @@ import { docHref, href, locales, type DocKey, type PageKey } from "@/i18n";
 
 export const dynamic = "force-static";
 
-const pages: PageKey[] = ["home", "platform", "features", "mission", "downloads", "help", "docs"];
+const pages: PageKey[] = ["home", "platform", "features", "mission", "downloads", "help", "docs", "deleteAccount"];
 const docs: DocKey[] = ["terms", "privacy", "guide"];
 
 export default function sitemap(): MetadataRoute.Sitemap {

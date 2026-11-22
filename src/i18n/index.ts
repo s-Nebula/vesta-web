@@ -17,6 +17,7 @@ const pages = {
   help: { es: "/ayuda/", en: "/en/help/" },
   docs: { es: "/documentacion/", en: "/en/docs/" },
   downloads: { es: "/descargas/", en: "/en/downloads/" },
+  deleteAccount: { es: "/eliminar-cuenta/", en: "/en/delete-account/" },
 } as const;
 
 export type PageKey = keyof typeof pages;

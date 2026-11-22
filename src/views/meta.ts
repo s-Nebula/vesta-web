@@ -42,6 +42,10 @@ const pages: Record<PageKey, Record<Locale, { title: string; description: string
     es: { title: "Documentación legal y privacidad", description: "Términos y condiciones, Política de privacidad y Guía de usuario de Vesta Security, versión 1.1." },
     en: { title: "Legal documents and privacy", description: "Vesta Security Terms and Conditions, Privacy Policy and User Guide, version 1.1." },
   },
+  deleteAccount: {
+    es: { title: "Eliminar tu cuenta", description: "Cómo eliminar tu cuenta de Vesta Padre y sus datos desde la app o por correo, qué se elimina y en qué plazo." },
+    en: { title: "Delete your account", description: "How to delete your Vesta Parent account and its data from the app or by e-mail, what is deleted and how long it takes." },
+  },
   downloads: {
     es: { title: "Descargar Vesta", description: "Descarga Vesta Padre y Vesta Tracker para Android: requisitos, versión, huella SHA-256 e instalación desde APK." },
     en: { title: "Download Vesta", description: "Download Vesta Parent and Vesta Tracker for Android: requirements, version, SHA-256 fingerprint and installation from APK." },

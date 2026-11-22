@@ -14,6 +14,7 @@ const text = {
     apps: "Aplicaciones",
     installApk: "Instalar desde APK",
     docs: "Documentación",
+    deleteAccount: "Eliminar cuenta",
     contact: "Contacto",
     help: "Centro de ayuda →",
     rights: "Todos los derechos reservados.",
@@ -26,6 +27,7 @@ const text = {
     apps: "Apps",
     installApk: "Installing from APK",
     docs: "Documentation",
+    deleteAccount: "Delete account",
     contact: "Contact",
     help: "Help center →",
     rights: "All rights reserved.",
@@ -85,6 +87,11 @@ export function Footer({ locale }: { locale: Locale }) {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link className="text-ink hover:text-rose-700" href={href(locale, "deleteAccount")}>
+                  {t.deleteAccount}
+                </Link>
+              </li>
             </ul>
           </div>
           <div>

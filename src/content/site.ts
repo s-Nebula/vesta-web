@@ -53,7 +53,7 @@ export const companyText = {
 
 export type NavItem = { page: PageKey; href: string; label: string };
 
-const navLabels: Record<Locale, Record<Exclude<PageKey, "downloads">, string>> = {
+const navLabels: Record<Locale, Record<Exclude<PageKey, "downloads" | "deleteAccount">, string>> = {
   es: {
     home: "Inicio",
     platform: "La plataforma",
@@ -73,7 +73,7 @@ const navLabels: Record<Locale, Record<Exclude<PageKey, "downloads">, string>> =
 };
 
 export function mainNav(locale: Locale): NavItem[] {
-  return (Object.keys(navLabels[locale]) as Exclude<PageKey, "downloads">[]).map((page) => ({
+  return (Object.keys(navLabels[locale]) as Exclude<PageKey, "downloads" | "deleteAccount">[]).map((page) => ({
     page,
     href: href(locale, page),
     label: navLabels[locale][page],
