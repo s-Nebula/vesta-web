@@ -113,6 +113,22 @@
 <priority>0.8</priority>
 </url>
 <url>
+<loc>https://vestasecurity.date/eliminar-cuenta/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/eliminar-cuenta/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/delete-account/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://vestasecurity.date/en/delete-account/</loc>
+<xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/eliminar-cuenta/" />
+<xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/delete-account/" />
+<lastmod>2026-11-22T00:00:00.000Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
 <loc>https://vestasecurity.date/documentacion/terminos-y-condiciones/</loc>
 <xhtml:link rel="alternate" hreflang="es" href="https://vestasecurity.date/documentacion/terminos-y-condiciones/" />
 <xhtml:link rel="alternate" hreflang="en" href="https://vestasecurity.date/en/docs/terms/" />
