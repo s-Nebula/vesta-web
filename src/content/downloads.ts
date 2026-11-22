@@ -4,9 +4,7 @@
  * Este es el único archivo que hay que editar para publicar una nueva versión.
  * Todas las páginas (inicio, descargas, pie de página, ayuda) leen de aquí.
  *
- * Datos verificados el 21/11/2026 a partir de los APK entregados
- * (Vesta-Padre.apk y Vesta-Tracker.apk): versionName, versionCode, minSdk,
- * targetSdk, tamaño exacto y SHA-256.
+ * Datos de los APK publicados en el servidor oficial de Vesta (22/11/2026).
  *
  * Campos con valor `null` = PENDIENTE. El sitio no inventa nada: si falta el enlace,
  * el botón de descarga no se muestra y aparece un aviso (visible en desarrollo).
@@ -36,7 +34,7 @@ export type AppDownload = {
   /** Tamaño exacto del APK en bytes. */
   sizeBytes: number | null;
   sha256: string | null;
-  /** Enlace directo al APK oficial (HTTPS). PENDIENTE. */
+  /** Enlace directo al APK oficial (HTTPS). */
   apkUrl: string | null;
   /** Ficha de Google Play, cuando exista publicación. */
   playStoreUrl: string | null;
@@ -56,9 +54,9 @@ export const apps: AppDownload[] = [
     minAndroid: "Android 7.0 o superior",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 188_687_018,
-    sha256: "32076a67bc6fc46b22b31e91800d9cb46faef62341b25791eb04bb7bf2a48a8f",
-    apkUrl: null, // PENDIENTE: URL oficial del APK (p. ej. GitHub Releases o servidor propio)
+    sizeBytes: 67918745,
+    sha256: "7cc552ef624756abe4c11f7c9b50e8f417c92f887f63f6ba1c976059bc9e52b4",
+    apkUrl: "https://vestasecurity.date/downloads/Vesta-Padre.apk",
     playStoreUrl: null,
     releases: [{ version: "1.0.0", versionCode: 1, date: null, notes: [] }],
   },
@@ -74,9 +72,9 @@ export const apps: AppDownload[] = [
     minAndroid: "Android 7.0 o superior",
     minSdk: 24,
     targetSdk: 35,
-    sizeBytes: 59_415_171,
-    sha256: "eb60d8f429be9c2f6c2f9ca18ddfe5d9c40139bccc1b25e3704df93bbe6e222d",
-    apkUrl: null, // PENDIENTE: URL oficial del APK
+    sizeBytes: 78167470,
+    sha256: "7e65f1bcf2c2c4baf2a4c92940f474166276326e13e0ee3cc550e99797bbcd81",
+    apkUrl: "https://vestasecurity.date/downloads/Vesta-Tracker.apk",
     playStoreUrl: null,
     releases: [{ version: "1.0", versionCode: 1, date: null, notes: [] }],
   },
