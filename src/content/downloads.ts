@@ -1,99 +1,137 @@
 /**
- * CONFIGURACIÓN CENTRAL DE DESCARGAS
- * ----------------------------------
- * Este es el único archivo que hay que editar para publicar una nueva versión.
- * Todas las páginas (inicio, descargas, pie de página, ayuda) leen de aquí.
+ * CENTRAL DOWNLOAD SETTINGS
+ * -------------------------
+ * This is the only file to edit when publishing a new version.
+ * Every page (home, downloads, footer, help) reads from here.
  *
- * Datos verificados el 21/11/2026 a partir de los APK entregados
- * (Vesta-Padre.apk y Vesta-Tracker.apk): versionName, versionCode, minSdk,
- * targetSdk, tamaño exacto y SHA-256.
- *
- * Campos con valor `null` = PENDIENTE. El sitio no inventa nada: si falta el enlace,
- * el botón de descarga no se muestra y aparece un aviso (visible en desarrollo).
+ * Fields set to `null` are PENDING. The site never makes anything up: if the
+ * link is missing, the download button is not shown and a notice appears
+ * (visible in development only).
  */
+import type { Locale } from "@/i18n";
 
 export type Release = {
   version: string;
   versionCode: number;
-  /** Fecha de publicación en formato ISO (AAAA-MM-DD). null = pendiente. */
+  /** Publication date in ISO format (YYYY-MM-DD). null = pending. */
   date: string | null;
-  /** Notas de la versión. Déjalo vacío si no hay notas aprobadas. */
-  notes: string[];
+  notes: Record<Locale, string[]>;
 };
+
+type Localized = { name: string; role: string; summary: string; installOn: string; minAndroid: string };
 
 export type AppDownload = {
   id: "padre" | "tracker";
-  name: string;
-  role: string;
-  summary: string;
-  installOn: string;
+  text: Record<Locale, Localized>;
   packageId: string;
-  icon: string;
-  /** Versión mínima de Android (minSdkVersion del APK). */
-  minAndroid: string;
   minSdk: number;
   targetSdk: number;
-  /** Tamaño exacto del APK en bytes. */
+  /** Exact APK size in bytes. */
   sizeBytes: number | null;
   sha256: string | null;
-  /** Enlace directo al APK oficial (HTTPS). PENDIENTE. */
+  /** Direct link to the official APK (HTTPS). PENDING. */
   apkUrl: string | null;
-  /** Ficha de Google Play, cuando exista publicación. */
+  /** Google Play listing, once published. */
   playStoreUrl: string | null;
   releases: Release[];
+};
+
+const notes11 = {
+  es: [
+    "Vinculación con código QR y códigos que caducan a las 24 horas.",
+    "Zonas seguras, botón SOS, modo estudio, límites de tiempo y peticiones del menor.",
+    "Búsqueda segura, bloqueo de DNS cifrado y filtros recomendados por edad.",
+    "Notificaciones push, resumen semanal y funcionamiento sin conexión.",
+    "Versión en inglés y modo claro.",
+  ],
+  en: [
+    "Linking with a QR code, and codes that expire after 24 hours.",
+    "Safe zones, SOS button, study mode, time limits and requests from the minor.",
+    "Safe search, encrypted DNS blocking and filters recommended by age.",
+    "Push notifications, weekly summary and offline operation.",
+    "English version and light mode.",
+  ],
 };
 
 export const apps: AppDownload[] = [
   {
     id: "padre",
-    name: "Vesta Padre",
-    role: "Para el padre, la madre o el tutor",
-    summary:
-      "Administra los perfiles y dispositivos vinculados, consulta la ubicación y el estado del equipo, revisa los informes de uso, configura los filtros y gestiona las autorizaciones de privacidad.",
-    installOn: "Se instala en el teléfono del adulto responsable.",
+    text: {
+      es: {
+        name: "Vesta Padre",
+        role: "Para el padre, la madre o el tutor",
+        summary:
+          "Gestiona los perfiles y los teléfonos vinculados, consulta la ubicación y las zonas seguras, revisa los informes, configura filtros, modo estudio y límites, y responde a las peticiones del menor.",
+        installOn: "Se instala en el teléfono del adulto responsable.",
+        minAndroid: "Android 7.0 o superior",
+      },
+      en: {
+        name: "Vesta Parent",
+        role: "For the parent or guardian",
+        summary:
+          "Manage profiles and linked phones, check location and safe zones, review reports, set up filters, study mode and limits, and answer the minor's requests.",
+        installOn: "Install it on the responsible adult's phone.",
+        minAndroid: "Android 7.0 or later",
+      },
+    },
     packageId: "org.vestaopensource.tutor",
-    icon: "/brand/vesta_simbolo.svg",
-    minAndroid: "Android 7.0 o superior",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 188_687_018,
-    sha256: "32076a67bc6fc46b22b31e91800d9cb46faef62341b25791eb04bb7bf2a48a8f",
-    apkUrl: null, // PENDIENTE: URL oficial del APK (p. ej. GitHub Releases o servidor propio)
+    sizeBytes: 68_166_917,
+    sha256: "6782fce93c68f975fa11748ed0c188d31d4195133c2ee26b5aba6efa636bef69",
+    apkUrl: null, // PENDING: official APK URL
     playStoreUrl: null,
-    releases: [{ version: "1.0.0", versionCode: 1, date: null, notes: [] }],
+    releases: [
+      { version: "1.1.0", versionCode: 2, date: null, notes: notes11 },
+      { version: "1.0.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
+    ],
   },
   {
     id: "tracker",
-    name: "Vesta Tracker",
-    role: "Para el dispositivo del menor",
-    summary:
-      "Se vincula con Vesta Padre mediante un código, envía la información autorizada (ubicación, estado del equipo y uso de aplicaciones) y aplica en el dispositivo las reglas de protección configuradas.",
-    installOn: "Se instala en el teléfono o la tableta del menor.",
+    text: {
+      es: {
+        name: "Vesta Tracker",
+        role: "Para el teléfono del menor",
+        summary:
+          "Se vincula con Vesta Padre escaneando un código QR, envía la información autorizada, aplica las reglas incluso sin conexión y permite al menor pedir permiso o enviar un aviso SOS.",
+        installOn: "Se instala en el teléfono o la tableta del menor.",
+        minAndroid: "Android 7.0 o superior",
+      },
+      en: {
+        name: "Vesta Tracker",
+        role: "For the minor's phone",
+        summary:
+          "Links to Vesta Parent by scanning a QR code, sends the authorised information, applies the rules even offline, and lets the minor ask for permission or send an SOS alert.",
+        installOn: "Install it on the minor's phone or tablet.",
+        minAndroid: "Android 7.0 or later",
+      },
+    },
     packageId: "org.vestaopensource.tracker",
-    icon: "/brand/vesta_simbolo.svg",
-    minAndroid: "Android 7.0 o superior",
     minSdk: 24,
     targetSdk: 35,
-    sizeBytes: 59_415_171,
-    sha256: "eb60d8f429be9c2f6c2f9ca18ddfe5d9c40139bccc1b25e3704df93bbe6e222d",
-    apkUrl: null, // PENDIENTE: URL oficial del APK
+    sizeBytes: 78_097_834,
+    sha256: "1ab2bda872b5e2e109f027c34f316dbeb14f5f9f31a849ead87d8f1fa47e540a",
+    apkUrl: null, // PENDING: official APK URL
     playStoreUrl: null,
-    releases: [{ version: "1.0", versionCode: 1, date: null, notes: [] }],
+    releases: [
+      { version: "1.1.0", versionCode: 2, date: null, notes: notes11 },
+      { version: "1.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
+    ],
   },
 ];
 
-export const getApp = (id: AppDownload["id"]) => apps.find((a) => a.id === id)!;
-
 export const latest = (app: AppDownload) => app.releases[0];
 
-export function formatBytes(bytes: number | null) {
+const numberLocale = { es: "es-CO", en: "en-US" } as const;
+
+export function formatBytes(bytes: number | null, locale: Locale) {
   if (!bytes) return null;
   const mb = bytes / (1024 * 1024);
-  return `${mb.toLocaleString("es-CO", { maximumFractionDigits: 1 })} MB`;
+  return `${mb.toLocaleString(numberLocale[locale], { maximumFractionDigits: 1 })} MB`;
 }
 
-export function formatDate(iso: string | null) {
+export function formatDate(iso: string | null, locale: Locale) {
   if (!iso) return null;
   const d = new Date(`${iso}T12:00:00`);
-  return d.toLocaleDateString("es-CO", { day: "numeric", month: "long", year: "numeric" });
+  return d.toLocaleDateString(numberLocale[locale], { day: "numeric", month: "long", year: "numeric" });
 }

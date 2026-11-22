@@ -100,13 +100,12 @@
     }
   }
 
-  /* Rótulo en versalitas, heredado del descriptor «PROTECCIÓN FAMILIAR» del logotipo. */
+  /* Small section label: plain sentence case, like a magazine standfirst. */
   .kicker {
     font-family: var(--font-sans);
-    font-size: 0.72rem;
+    font-size: 0.86rem;
     font-weight: 600;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
+    letter-spacing: 0;
     color: var(--color-rose-700);
   }
   .on-dark .kicker {
@@ -226,15 +225,12 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    font-size: 0.68rem;
+    font-size: 0.78rem;
     font-weight: 600;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.55rem;
-    border: 1px solid currentColor;
-    border-radius: 999px;
-    line-height: 1.4;
-    white-space: nowrap;
+    letter-spacing: 0;
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+    background: color-mix(in oklab, currentColor 10%, transparent);
   }
 
   /* Texto largo (documentos legales y guía). */
@@ -336,10 +332,8 @@
 
 /* Aparición discreta al desplazarse (solo si el usuario no pidió reducir movimiento). */
 @media (prefers-reduced-motion: no-preference) {
+  /* Content is shown as is: no scroll-triggered fade-ins. */
   .reveal {
-    animation: reveal-in linear both;
-    animation-timeline: view();
-    animation-range: entry 0% entry 30%;
   }
   @keyframes reveal-in {
     from {

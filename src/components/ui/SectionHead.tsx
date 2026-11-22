@@ -1,5 +1,5 @@
 type Props = {
-  kicker: string;
+  kicker?: string;
   title: React.ReactNode;
   lead?: React.ReactNode;
   id?: string;
@@ -11,11 +11,8 @@ export function SectionHead({ kicker, title, lead, id, className = "", as = "h2"
   const H = as;
   return (
     <div className={className}>
-      <p className="kicker flex items-center gap-3">
-        <span aria-hidden="true" className="h-px w-8 bg-current" />
-        {kicker}
-      </p>
-      <H id={id} className={`${as === "h1" ? "display" : "h-section"} mt-5`}>
+      {kicker && <p className="kicker">{kicker}</p>}
+      <H id={id} className={`${as === "h1" ? "display" : "h-section"} ${kicker ? "mt-4" : ""}`}>
         {title}
       </H>
       {lead && <div className="lead mt-6 max-w-2xl">{lead}</div>}

@@ -24,9 +24,9 @@ function SymbolPaths() {
 
 const WORD_FONT = "'Montserrat Variable', Montserrat, Arial, sans-serif";
 
-export function Logo({ className, title = "Vesta — Protección familiar" }: Props) {
+export function Logo({ className, descriptor = "Protección familiar" }: Props & { descriptor?: string }) {
   return (
-    <svg viewBox="0 0 1000 360" role="img" aria-label={title} className={className}>
+    <svg viewBox="0 0 1000 360" role="img" aria-label={`Vesta, ${descriptor.toLowerCase()}`} className={className}>
       <g transform="translate(28 18) scale(.62)">
         <SymbolPaths />
       </g>
@@ -35,13 +35,13 @@ export function Logo({ className, title = "Vesta — Protección familiar" }: Pr
       </text>
       <path d="M395 205H905" stroke="#D6B7A6" strokeWidth="3" />
       <text x="400" y="258" fill="#C15B68" fontFamily={WORD_FONT} fontSize="31" fontWeight={600} letterSpacing="8">
-        PROTECCIÓN FAMILIAR
+        {descriptor.toUpperCase()}
       </text>
     </svg>
   );
 }
 
-export function Symbol({ className, title = "Símbolo Vesta" }: Props) {
+export function Symbol({ className, title = "Vesta" }: Props) {
   return (
     <svg viewBox="0 0 512 512" role="img" aria-label={title} className={className}>
       <SymbolPaths />

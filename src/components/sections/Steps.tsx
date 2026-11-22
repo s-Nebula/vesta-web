@@ -1,39 +1,37 @@
 import { AppTag } from "@/components/ui/AppTag";
+import type { Locale } from "@/i18n";
 
-export const steps = [
-  { app: "padre" as const, title: "Instala Vesta Padre", text: "Descarga la aplicación en el teléfono del adulto responsable." },
-  { app: "padre" as const, title: "Crea tu cuenta", text: "Regístrate con correo y contraseña, Google o GitHub, y acepta los documentos vigentes." },
-  { app: "padre" as const, title: "Registra al menor", text: "Crea su perfil y genera un código de vinculación de un solo uso." },
-  { app: "tracker" as const, title: "Instala y vincula Vesta Tracker", text: "En el dispositivo del menor, introduce el código y concede los permisos de Android necesarios." },
-  { app: "padre" as const, title: "Autoriza las finalidades", text: "Elige qué funciones activar. Cada una es independiente y se puede revocar." },
-  { app: "padre" as const, title: "Consulta y acompaña", text: "Revisa la ubicación, el estado del equipo, los informes y las alertas desde Vesta Padre." },
-];
+type Step = { app: "padre" | "tracker"; title: string; text: string };
 
-/** Proceso en seis pasos. Escritorio: línea horizontal; móvil: lista vertical con hilo. */
-export function Steps({ dark = false }: { dark?: boolean }) {
+const steps: Record<Locale, Step[]> = {
+  es: [
+    { app: "padre", title: "Instala Vesta Padre", text: "En tu teléfono. Crea una cuenta con correo, Google o GitHub y acepta los documentos." },
+    { app: "padre", title: "Crea el perfil del menor", text: "Nombre, edad y un color. Vesta Padre te muestra un código QR para vincular." },
+    { app: "tracker", title: "Vincula su teléfono", text: "Instala Vesta Tracker en el teléfono del menor, escanea el QR y concede los permisos." },
+    { app: "padre", title: "Elige qué activar", text: "Autoriza solo las funciones que vayas a usar. Cada una se puede retirar cuando quieras." },
+    { app: "padre", title: "Ajusta las reglas", text: "Filtros, modo estudio, límites diarios y zonas seguras, a la medida de su edad." },
+  ],
+  en: [
+    { app: "padre", title: "Install Vesta Parent", text: "On your phone. Create an account with email, Google or GitHub and accept the documents." },
+    { app: "padre", title: "Create the minor's profile", text: "Name, age and a colour. Vesta Parent shows you a QR code for linking." },
+    { app: "tracker", title: "Link their phone", text: "Install Vesta Tracker on the minor's phone, scan the QR code and grant the permissions." },
+    { app: "padre", title: "Choose what to turn on", text: "Authorise only the features you will use. You can withdraw any of them at any time." },
+    { app: "padre", title: "Set the rules", text: "Filters, study mode, daily limits and safe zones, suited to their age." },
+  ],
+};
+
+/** Setup steps. Desktop: a row; mobile: a vertical list. */
+export function Steps({ locale, dark = false }: { locale: Locale; dark?: boolean }) {
+  const list = steps[locale];
   return (
-    <ol className="relative grid gap-0 md:grid-cols-3 md:gap-x-10 md:gap-y-14 xl:grid-cols-6 xl:gap-x-6">
-      {steps.map((s, i) => (
-        <li key={s.title} className="reveal relative flex gap-5 pb-10 md:block md:pb-0">
-          {/* hilo vertical (móvil) */}
-          {i < steps.length - 1 && (
-            <span aria-hidden="true" className={`absolute left-[1.15rem] top-12 bottom-0 w-px md:hidden ${dark ? "bg-ivory/20" : "bg-line"}`} />
-          )}
-          <span
-            className={`relative z-10 flex size-[2.35rem] shrink-0 items-center justify-center rounded-full border font-serif text-lg ${
-              s.app === "tracker"
-                ? "border-rose bg-rose text-ivory"
-                : dark
-                  ? "border-ivory/50 text-ivory"
-                  : "border-wine text-wine"
-            }`}
-          >
-            {i + 1}
-          </span>
-          <div className="md:mt-6">
-            <AppTag app={s.app} className={dark ? (s.app === "tracker" ? "!text-rose-300" : "!text-ivory/80") : ""} />
-            <h3 className="mt-3 font-serif text-[1.3rem] leading-snug">{s.title}</h3>
-            <p className={`mt-2 text-[0.92rem] leading-relaxed ${dark ? "text-ivory/70" : "text-muted"}`}>{s.text}</p>
+    <ol className="grid gap-10 md:grid-cols-3 md:gap-x-10 md:gap-y-14 xl:grid-cols-5 xl:gap-x-8">
+      {list.map((s, i) => (
+        <li key={s.title} className="flex gap-5 md:block">
+          <span className={`font-serif text-4xl leading-none ${dark ? "text-rose-300" : "text-rose-700"}`}>{i + 1}</span>
+          <div className="md:mt-4">
+            <h3 className="font-serif text-[1.3rem] leading-snug">{s.title}</h3>
+            <p className={`mt-2 text-[0.95rem] leading-relaxed ${dark ? "text-ivory/75" : "text-muted"}`}>{s.text}</p>
+            <AppTag app={s.app} locale={locale} className={`mt-3 ${dark ? (s.app === "tracker" ? "!text-rose-300" : "!text-ivory/80") : ""}`} />
           </div>
         </li>
       ))}

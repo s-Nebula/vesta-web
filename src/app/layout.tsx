@@ -3,14 +3,12 @@ import "@fontsource-variable/montserrat/wght.css";
 import "@fontsource-variable/source-serif-4/opsz.css";
 import "@fontsource-variable/source-serif-4/opsz-italic.css";
 import "@/styles/globals.css";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
-import { site } from "@/content/site";
+import { site, siteText } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} · Protección digital familiar para Android`, template: `%s · ${site.name}` },
-  description: site.description,
+  title: { default: `${site.name} · ${siteText.es.title}`, template: `%s · ${site.name}` },
+  description: siteText.es.description,
   applicationName: site.name,
   authors: [{ name: "FORBIDDEN S.A.S." }],
   formatDetection: { telephone: false, email: false, address: false },
@@ -27,14 +25,14 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+/**
+ * The document is Spanish by default; English pages wrap their content in
+ * lang="en" (see components/layout/Shell.tsx) and declare hreflang alternates.
+ */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es">
-      <body className="min-h-dvh">
-        <Header />
-        <main id="contenido">{children}</main>
-        <Footer />
-      </body>
+      <body className="min-h-dvh">{children}</body>
     </html>
   );
 }

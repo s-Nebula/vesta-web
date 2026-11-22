@@ -77,9 +77,17 @@ Todo está en `src/content/downloads.ts`:
 Para obtener tamaño y huella: `stat -c %s archivo.apk` y `sha256sum archivo.apk`.
 Si la app se publica en Google Play, rellena `playStoreUrl`: el botón apuntará a la ficha.
 
+## Idiomas
+
+El español vive en la raíz (`/`, `/plataforma/`, …) y el inglés en `/en/` (`/en/platform/`, …).
+Las rutas de cada idioma se definen en `src/i18n/index.ts`; las páginas son vistas compartidas en
+`src/views/` que reciben el idioma, y los textos de contenido están en `src/content/*` en ambos idiomas.
+
 ## Actualizar los documentos legales
 
-1. Copia el nuevo `.docx` oficial en `legal-source/` (el nombre debe contener «Términos y condiciones»,
+1. Copia el nuevo `.docx` oficial en `legal-source/` y su traducción al inglés en `legal-source/en/`
+   (los nombres en inglés deben contener «Terms and Conditions», «Privacy Policy» o «User Guide»;
+   los españoles, «Términos y condiciones»,
    «Política de tratamiento» o «Guía de usuario»).
 2. `npm run legal` (convierte el .docx sin reescribir el texto: párrafos, listas, tablas y títulos).
 3. Actualiza `version`, `effectiveDate` y `updatedDate` en `src/content/legal.ts`.
@@ -91,7 +99,7 @@ Las capturas que acompañan a la Guía se configuran en `guideFigures` (mismo ar
 ## Modificar contenido institucional
 
 - Misión, visión, valores y compromisos: `src/content/institutional.ts`.
-- Datos de empresa y contacto: `src/content/site.ts` (provienen de los documentos oficiales v1.0).
+- Datos de empresa y contacto: `src/content/site.ts` (provienen de los documentos oficiales v1.1).
 - Funcionalidades: `src/content/features.ts`. Marca `status: "en-desarrollo"` o usa `upcoming` para funciones no terminadas.
 - Preguntas frecuentes y ayuda: `src/content/help.ts`.
 
@@ -109,4 +117,5 @@ un texto neutro. La lista completa está en `docs/PENDIENTES.md`.
 
 ## Licencia
 
-El código de las aplicaciones Vesta es GPL v3. La marca Vesta Security pertenece a FORBIDDEN S.A.S.
+Software propietario. © FORBIDDEN S.A.S. Todos los derechos reservados.
+Este repositorio es privado: no lo publiques ni lo redistribuyas sin autorización.

@@ -1,9 +1,8 @@
 import { Fragment } from "react";
 import type { LegalBlock } from "@/content/legal";
-import { guideFigures } from "@/content/legal";
 import { Device } from "@/components/ui/Device";
 
-/** Detecta direcciones de correo en el texto y las convierte en enlaces. */
+/** Turns email addresses in the text into links. */
 function linkify(text: string) {
   const parts = text.split(/([\w.+-]+@[\w-]+\.[\w.]+)/g);
   return parts.map((p, i) =>
@@ -17,7 +16,7 @@ function linkify(text: string) {
   );
 }
 
-type Fig = (typeof guideFigures)[string];
+type Fig = { src: string; alt: string; kind: "phone" | "tablet"; sizes: [number, number]; caption: string }[];
 
 function Figures({ figs }: { figs: Fig }) {
   return (
@@ -32,8 +31,8 @@ function Figures({ figs }: { figs: Fig }) {
   );
 }
 
-export function LegalBody({ blocks, withFigures = false }: { blocks: LegalBlock[]; withFigures?: boolean }) {
-  // Las capturas de una sección se muestran al final de esa sección (antes del siguiente encabezado).
+export function LegalBody({ blocks, figures }: { blocks: LegalBlock[]; figures?: Record<string, Fig> }) {
+  // Screenshots for a section are shown at the end of that section (before the next heading).
   const out: React.ReactNode[] = [];
   let pending: Fig | undefined;
   const flush = (key: string) => {
@@ -51,7 +50,7 @@ export function LegalBody({ blocks, withFigures = false }: { blocks: LegalBlock[
             {b.text}
           </H>,
         );
-        if (withFigures) pending = guideFigures[b.id];
+        if (figures) pending = figures[b.id];
         break;
       }
       case "p":

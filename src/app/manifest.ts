@@ -6,7 +6,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Vesta Security",
     short_name: "Vesta",
-    description: "Protección digital familiar para Android.",
+    description: "Protección digital familiar para Android · Family digital protection for Android.",
     start_url: "/",
     display: "browser",
     background_color: "#F4EDEA",

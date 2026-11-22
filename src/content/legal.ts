@@ -1,17 +1,19 @@
 /**
- * Registro de documentos legales.
+ * Legal documents registry.
  *
- * El texto de cada documento se genera desde el .docx oficial con:
+ * The text of each document is generated from the official .docx with:
  *   npm run legal      (python3 scripts/convert_legal.py)
- * que escribe src/content/legal/<slug>.json. Ver README → «Actualizar documentos».
- *
- * `status`:
- *   - "oficial": documento aprobado y vigente. Se publica.
- *   - "pendiente": aún no existe versión aprobada. Se muestra un aviso y no se publica texto.
+ * which writes src/content/legal/<slug>.json (Spanish, official text) and
+ * src/content/legal/en/<slug>.json (English courtesy translation).
  */
+import type { DocKey, Locale } from "@/i18n";
+import { docSlugs } from "@/i18n";
 import terminos from "./legal/terminos-y-condiciones.json";
 import privacidad from "./legal/politica-de-privacidad.json";
 import guia from "./legal/guia-de-usuario.json";
+import terms from "./legal/en/terms.json";
+import privacy from "./legal/en/privacy.json";
+import userGuide from "./legal/en/user-guide.json";
 
 export type LegalBlock =
   | { type: "h2" | "h3"; id: string; text: string }
@@ -29,88 +31,144 @@ export type LegalSource = {
 };
 
 export type LegalDoc = {
-  slug: "terminos-y-condiciones" | "politica-de-privacidad" | "guia-de-usuario";
+  key: DocKey;
+  slug: string;
   shortTitle: string;
   title: string;
-  kicker: string;
   summary: string;
-  status: "oficial" | "pendiente";
   version: string;
   effectiveDate: string;
   updatedDate: string;
-  /** PDF oficial, si existe. null = no se muestra botón de descarga. */
+  /** Official PDF, if any. null = no download button. */
   pdfUrl: string | null;
   source: LegalSource;
 };
 
-export const legalDocs: LegalDoc[] = [
+const VERSION = "1.1";
+
+const es: LegalDoc[] = [
   {
-    slug: "terminos-y-condiciones",
+    key: "terms",
+    slug: docSlugs.terms.es,
     shortTitle: "Términos y condiciones",
     title: "Términos y condiciones de uso",
-    kicker: "Documento 01",
     summary:
-      "Condiciones que regulan el acceso, la instalación y el uso de Vesta Padre, Vesta Tracker y los servicios relacionados: elegibilidad, responsabilidades del administrador, usos prohibidos y limitaciones del servicio.",
-    status: "oficial",
-    version: "1.0",
-    effectiveDate: "20 de noviembre de 2026",
-    updatedDate: "20 de noviembre de 2026",
+      "Las condiciones para instalar y usar Vesta Padre y Vesta Tracker: quién puede usarlas, responsabilidades del tutor, usos prohibidos, propiedad intelectual y límites del servicio.",
+    version: VERSION,
+    effectiveDate: "22 de noviembre de 2026",
+    updatedDate: "22 de noviembre de 2026",
     pdfUrl: null,
     source: terminos as LegalSource,
   },
   {
-    slug: "politica-de-privacidad",
+    key: "privacy",
+    slug: docSlugs.privacy.es,
     shortTitle: "Política de privacidad",
     title: "Política de tratamiento de datos personales y privacidad",
-    kicker: "Documento 02",
     summary:
-      "Cómo FORBIDDEN S.A.S. recolecta, usa, protege y conserva los datos personales tratados mediante Vesta, conforme a la Ley 1581 de 2012: finalidades, datos de menores, derechos, plazos y revocación.",
-    status: "oficial",
-    version: "1.0",
-    effectiveDate: "20 de noviembre de 2026",
-    updatedDate: "20 de noviembre de 2026",
+      "Qué datos trata Vesta y para qué, cómo se protegen los datos de menores, cuánto tiempo se guardan y cómo ejercer tus derechos, conforme a la Ley 1581 de 2012.",
+    version: VERSION,
+    effectiveDate: "22 de noviembre de 2026",
+    updatedDate: "22 de noviembre de 2026",
     pdfUrl: null,
     source: privacidad as LegalSource,
   },
   {
-    slug: "guia-de-usuario",
+    key: "guide",
+    slug: docSlugs.guide.es,
     shortTitle: "Guía de usuario",
     title: "Guía de usuario",
-    kicker: "Documento 03",
     summary:
-      "Cómo instalar, vincular y utilizar Vesta Padre y Vesta Tracker de forma responsable: requisitos, permisos, panel, reglas, desvinculación y solución de problemas.",
-    status: "oficial",
-    version: "1.0",
-    effectiveDate: "20 de noviembre de 2026",
-    updatedDate: "20 de noviembre de 2026",
+      "Cómo instalar, vincular y usar Vesta Padre y Vesta Tracker: permisos, panel, modo estudio, zonas, límites, peticiones, desvinculación y solución de problemas.",
+    version: VERSION,
+    effectiveDate: "22 de noviembre de 2026",
+    updatedDate: "22 de noviembre de 2026",
     pdfUrl: null,
     source: guia as LegalSource,
   },
 ];
 
-export const getDoc = (slug: LegalDoc["slug"]) => legalDocs.find((d) => d.slug === slug)!;
+const en: LegalDoc[] = [
+  {
+    key: "terms",
+    slug: docSlugs.terms.en,
+    shortTitle: "Terms and Conditions",
+    title: "Terms and Conditions of Use",
+    summary:
+      "The conditions for installing and using Vesta Parent and Vesta Tracker: who can use them, the guardian's responsibilities, prohibited uses, intellectual property and the limits of the service.",
+    version: VERSION,
+    effectiveDate: "22 November 2026",
+    updatedDate: "22 November 2026",
+    pdfUrl: null,
+    source: terms as LegalSource,
+  },
+  {
+    key: "privacy",
+    slug: docSlugs.privacy.en,
+    shortTitle: "Privacy Policy",
+    title: "Personal Data Processing and Privacy Policy",
+    summary:
+      "What data Vesta processes and why, how minors' data is protected, how long it is kept and how to exercise your rights, under Colombian Law 1581 of 2012.",
+    version: VERSION,
+    effectiveDate: "22 November 2026",
+    updatedDate: "22 November 2026",
+    pdfUrl: null,
+    source: privacy as LegalSource,
+  },
+  {
+    key: "guide",
+    slug: docSlugs.guide.en,
+    shortTitle: "User Guide",
+    title: "User Guide",
+    summary:
+      "How to install, link and use Vesta Parent and Vesta Tracker: permissions, dashboard, study mode, zones, limits, requests, unlinking and troubleshooting.",
+    version: VERSION,
+    effectiveDate: "22 November 2026",
+    updatedDate: "22 November 2026",
+    pdfUrl: null,
+    source: userGuide as LegalSource,
+  },
+];
+
+export const legalDocsFor = (locale: Locale): LegalDoc[] => (locale === "en" ? en : es);
+
+export const getDoc = (locale: Locale, slug: string) => legalDocsFor(locale).find((d) => d.slug === slug);
+
+type Figure = { src: string; alt: string; kind: "phone" | "tablet"; sizes: [number, number]; caption: string };
 
 /**
- * Capturas reales que se intercalan en la Guía de usuario, por id de sección.
- * Las capturas no forman parte del documento oficial; se muestran como apoyo visual.
+ * Real screenshots shown inside the User Guide, by section id.
+ * They are not part of the official document; they are a visual aid.
  */
-export const guideFigures: Record<string, { src: string; alt: string; kind: "phone" | "tablet"; sizes: [number, number]; caption: string }[]> = {
-  "3-1-vesta-padre": [
-    { src: "/img/padre/inicio-sesion", alt: "Pantalla de inicio de sesión de Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Inicio de sesión en Vesta Padre" },
-  ],
-  "desde-vesta-padre": [
-    { src: "/img/padre/registro-menor", alt: "Formulario para añadir el perfil de un menor en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Crear el perfil del menor" },
-  ],
-  "desde-vesta-tracker": [
-    { src: "/img/tracker/vinculacion", alt: "Pantalla Vincular dispositivo de Vesta Tracker con el campo para el código", kind: "tablet", sizes: [800, 1600], caption: "Introducir el código en Vesta Tracker" },
-  ],
-  "6-panel-de-vesta-padre": [
-    { src: "/img/padre/panel-dispositivos", alt: "Panel de control con un dispositivo vinculado", kind: "phone", sizes: [420, 840], caption: "Panel de control" },
-  ],
-  "alertas": [
-    { src: "/img/padre/alertas", alt: "Lista de alertas de batería en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Alertas" },
-  ],
-  "bloquear-una-aplicacion": [
-    { src: "/img/padre/filtros", alt: "Pantalla de filtros con una regla de bloqueo de aplicación", kind: "phone", sizes: [420, 840], caption: "Reglas de bloqueo" },
-  ],
+export const guideFigures: Record<Locale, Record<string, Figure[]>> = {
+  es: {
+    "3-1-vesta-padre": [
+      { src: "/img/padre/inicio-sesion", alt: "Pantalla de inicio de sesión de Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Inicio de sesión en Vesta Padre" },
+    ],
+    "desde-vesta-padre": [
+      { src: "/img/padre/registro-menor", alt: "Formulario para añadir el perfil de un menor en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Crear el perfil del menor" },
+    ],
+    "6-panel-de-vesta-padre": [
+      { src: "/img/padre/panel-dispositivos", alt: "Panel de control con un dispositivo vinculado", kind: "phone", sizes: [420, 840], caption: "Panel de control" },
+    ],
+    alertas: [{ src: "/img/padre/alertas", alt: "Lista de alertas en Vesta Padre", kind: "phone", sizes: [420, 840], caption: "Alertas" }],
+    "bloquear-una-aplicacion": [
+      { src: "/img/padre/filtros", alt: "Pantalla de filtros con una regla de bloqueo de aplicación", kind: "phone", sizes: [420, 840], caption: "Reglas de bloqueo" },
+    ],
+  },
+  en: {
+    "3-1-vesta-parent": [
+      { src: "/img/padre/inicio-sesion", alt: "Vesta Parent sign-in screen", kind: "phone", sizes: [420, 840], caption: "Signing in to Vesta Parent (Spanish interface)" },
+    ],
+    "from-vesta-parent": [
+      { src: "/img/padre/registro-menor", alt: "Form to add a minor's profile in Vesta Parent", kind: "phone", sizes: [420, 840], caption: "Creating the minor's profile (Spanish interface)" },
+    ],
+    "6-vesta-parent-dashboard": [
+      { src: "/img/padre/panel-dispositivos", alt: "Dashboard with a linked device", kind: "phone", sizes: [420, 840], caption: "Dashboard (Spanish interface)" },
+    ],
+    alerts: [{ src: "/img/padre/alertas", alt: "List of alerts in Vesta Parent", kind: "phone", sizes: [420, 840], caption: "Alerts (Spanish interface)" }],
+    "block-an-app": [
+      { src: "/img/padre/filtros", alt: "Filters screen with an app blocking rule", kind: "phone", sizes: [420, 840], caption: "Blocking rules (Spanish interface)" },
+    ],
+  },
 };
