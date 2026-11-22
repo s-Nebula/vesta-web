@@ -1,8 +1,8 @@
 /**
- * Logotipo oficial de Vesta (vesta_logo.svg) y símbolo (vesta_simbolo.svg).
- * Trazados, proporciones y colores copiados sin modificar de los archivos originales
- * en /public/brand. Se insertan en línea para que el nombre use la tipografía
- * Montserrat cargada por el sitio (en un <img> el SVG no puede acceder a ella).
+ * Official Vesta logo (vesta_logo.svg) and symbol (vesta_simbolo.svg).
+ * Paths, proportions and colours copied unchanged from the original files
+ * in /public/brand. Inlined so the name uses the Montserrat typeface the
+ * site loads (inside an <img> the SVG cannot reach it).
  */
 
 type Props = { className?: string; title?: string };
@@ -24,9 +24,9 @@ function SymbolPaths() {
 
 const WORD_FONT = "'Montserrat Variable', Montserrat, Arial, sans-serif";
 
-export function Logo({ className, title = "Vesta — Protección familiar" }: Props) {
+export function Logo({ className, descriptor = "Protección familiar" }: Props & { descriptor?: string }) {
   return (
-    <svg viewBox="0 0 1000 360" role="img" aria-label={title} className={className}>
+    <svg viewBox="0 0 1000 360" role="img" aria-label={`Vesta, ${descriptor.toLowerCase()}`} className={className}>
       <g transform="translate(28 18) scale(.62)">
         <SymbolPaths />
       </g>
@@ -35,13 +35,13 @@ export function Logo({ className, title = "Vesta — Protección familiar" }: Pr
       </text>
       <path d="M395 205H905" stroke="#D6B7A6" strokeWidth="3" />
       <text x="400" y="258" fill="#C15B68" fontFamily={WORD_FONT} fontSize="31" fontWeight={600} letterSpacing="8">
-        PROTECCIÓN FAMILIAR
+        {descriptor.toUpperCase()}
       </text>
     </svg>
   );
 }
 
-export function Symbol({ className, title = "Símbolo Vesta" }: Props) {
+export function Symbol({ className, title = "Vesta" }: Props) {
   return (
     <svg viewBox="0 0 512 512" role="img" aria-label={title} className={className}>
       <SymbolPaths />
@@ -50,8 +50,8 @@ export function Symbol({ className, title = "Símbolo Vesta" }: Props) {
 }
 
 /**
- * Arco protector: el trazo inferior del símbolo, aislado como recurso gráfico.
- * Mismo trazado y proporción; solo cambia la escala.
+ * Protective arc: the lower stroke of the symbol, isolated as a graphic element.
+ * Same path and proportion; only the scale changes.
  */
 export function Arc({ className, color = "#C15B68", inner = "#F4EDEA" }: { className?: string; color?: string; inner?: string | null }) {
   return (

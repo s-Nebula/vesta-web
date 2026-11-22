@@ -1,5 +1,6 @@
 import { company, site } from "@/content/site";
 import { apps, latest } from "@/content/downloads";
+import type { Locale } from "@/i18n";
 
 export const organizationSchema = {
   "@context": "https://schema.org",
@@ -12,22 +13,21 @@ export const organizationSchema = {
   telephone: company.phone,
   address: {
     "@type": "PostalAddress",
-    streetAddress: company.address,
     addressLocality: "Santa Marta",
     addressRegion: "Magdalena",
     addressCountry: "CO",
   },
 };
 
-export const appsSchema = apps.map((a) => ({
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  name: a.name,
-  operatingSystem: `Android ${a.minAndroid.replace(/[^0-9.]/g, "")}+`,
-  applicationCategory: "UtilitiesApplication",
-  softwareVersion: latest(a).version,
-  ...(a.sizeBytes ? { fileSize: `${Math.round(a.sizeBytes / 1048576)}MB` } : {}),
-  ...(a.apkUrl ? { downloadUrl: a.apkUrl } : {}),
-  publisher: { "@type": "Organization", name: company.legalName },
-  license: "https://www.gnu.org/licenses/gpl-3.0.html",
-}));
+export const appsSchema = (locale: Locale) =>
+  apps.map((a) => ({
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: a.text[locale].name,
+    operatingSystem: "Android 7.0+",
+    applicationCategory: "UtilitiesApplication",
+    softwareVersion: latest(a).version,
+    ...(a.sizeBytes ? { fileSize: `${Math.round(a.sizeBytes / 1048576)}MB` } : {}),
+    ...(a.apkUrl ? { downloadUrl: a.apkUrl } : {}),
+    publisher: { "@type": "Organization", name: company.legalName },
+  }));

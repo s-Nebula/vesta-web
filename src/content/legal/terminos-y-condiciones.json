@@ -2,9 +2,9 @@
  "title": "Términos y condiciones de uso",
  "subtitle": "Condiciones que regulan el acceso, la instalación y el uso de Vesta Padre, Vesta Tracker y los servicios relacionados.",
  "meta": {
-  "Versión": "1.0",
-  "Fecha de entrada en vigor": "20 de noviembre de 2026",
-  "Última actualización": "20 de noviembre de 2026",
+  "Versión": "1.1",
+  "Fecha de entrada en vigor": "22 de noviembre de 2026",
+  "Última actualización": "22 de noviembre de 2026",
   "Responsable del servicio": "FORBIDDEN S.A.S. — NIT 901653270-2",
   "Proyecto": "Vesta Security",
   "Jurisdicción": "República de Colombia"
@@ -21,7 +21,7 @@
   },
   {
    "type": "p",
-   "text": "Razón social: FORBIDDEN S.A.S.\nNIT: 901653270-2\nMatrícula mercantil: 262746\nCámara de Comercio: Santa Marta para el Magdalena\nDomicilio: Santa Marta, Magdalena, Colombia.\nDirección: Cra. 66 # 46a - 128.\nCorreo electrónico: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
+   "text": "Razón social: FORBIDDEN S.A.S.\nNIT: 901653270-2\nMatrícula mercantil: 262746\nCámara de Comercio: Santa Marta para el Magdalena\nDomicilio: Santa Marta, Magdalena, Colombia.\nCorreo electrónico: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
   },
   {
    "type": "p",
@@ -75,15 +75,23 @@
   {
    "type": "ol",
    "items": [
-    "Vinculación entre dispositivos.",
+    "Vinculación entre dispositivos mediante código o código QR.",
     "Consulta de ubicación.",
     "Historial de ubicación disponible.",
-    "Alertas relacionadas con batería, velocidad y bloqueos.",
+    "Alertas relacionadas con batería, velocidad, bloqueos, zonas seguras, pérdida de conexión y desactivación de las protecciones.",
     "Supervisión agregada del uso de aplicaciones.",
     "Bloqueo de aplicaciones.",
     "Filtrado de dominios mediante accesibilidad y VPN DNS.",
     "Administración de reglas de bloqueo y excepción.",
-    "Gestión de privacidad y solicitudes relacionadas con datos personales."
+    "Gestión de privacidad y solicitudes relacionadas con datos personales.",
+    "Zonas seguras con avisos de llegada y salida.",
+    "Botón de emergencia (SOS) en Vesta Tracker.",
+    "Modo estudio, con activación manual u horarios programados.",
+    "Límites de tiempo diarios por aplicación.",
+    "Solicitudes del menor al administrador para obtener permisos temporales.",
+    "Búsqueda segura en buscadores compatibles y bloqueo de proveedores conocidos de DNS cifrado.",
+    "Resumen semanal de actividad.",
+    "Sección informativa para el menor sobre los datos que se comparten."
    ]
   },
   {
@@ -131,7 +139,7 @@
    "items": [
     "Proporcionar información veraz.",
     "Mantener la seguridad de sus credenciales.",
-    "Proteger los códigos de vinculación.",
+    "Proteger los códigos de vinculación y los códigos QR.",
     "Utilizar Vesta exclusivamente para fines legítimos.",
     "Obtener las autorizaciones necesarias.",
     "Informar al menor sobre la supervisión.",
@@ -140,7 +148,9 @@
     "No intentar acceder a dispositivos ajenos sin autorización.",
     "No utilizar los datos obtenidos para acosar, discriminar, amenazar o perjudicar a otra persona.",
     "Atender las solicitudes y derechos del menor.",
-    "Mantener actualizadas las aplicaciones cuando existan versiones de seguridad."
+    "Mantener actualizadas las aplicaciones cuando existan versiones de seguridad.",
+    "Configurar el modo estudio, los límites de tiempo y las zonas seguras de forma proporcionada a la edad y a las necesidades del menor.",
+    "Atender de forma razonable las solicitudes que el menor envíe desde Vesta Tracker."
    ]
   },
   {
@@ -189,10 +199,11 @@
    "type": "ul",
    "items": [
     "La ubicación puede necesitar acceso preciso y en segundo plano.",
-    "Las estadísticas de uso requieren autorización específica.",
+    "Las estadísticas de uso requieren autorización específica y también se utilizan para aplicar los límites de tiempo diarios.",
     "La accesibilidad permite detectar eventos de ventanas y consultar información de la barra de direcciones del navegador compatible.",
     "La VPN local permite procesar consultas DNS para aplicar filtros.",
-    "Las notificaciones y servicios en primer plano permiten informar sobre funciones activas."
+    "Las notificaciones y servicios en primer plano permiten informar sobre funciones activas.",
+    "La cámara se utiliza en Vesta Tracker únicamente para leer el código QR de vinculación. Las imágenes no se almacenan ni se transmiten."
    ]
   },
   {
@@ -235,7 +246,27 @@
   },
   {
    "type": "p",
-   "text": "Vesta no es un servicio de respuesta a emergencias, localización policial ni sustituto de servicios médicos, de seguridad o protección infantil."
+   "text": "El bloqueo de proveedores de DNS cifrado se limita a los proveedores conocidos por Vesta y puede no impedir otros mecanismos de resolución."
+  },
+  {
+   "type": "p",
+   "text": "La búsqueda segura solo se aplica a los buscadores y servicios compatibles, y depende de la configuración de cada proveedor."
+  },
+  {
+   "type": "p",
+   "text": "Los avisos de zonas seguras dependen de la precisión del GPS y de la conectividad: pueden retrasarse, producirse fuera del borde exacto de la zona o no producirse."
+  },
+  {
+   "type": "p",
+   "text": "El modo estudio y los límites de tiempo no bloquean las llamadas, los mensajes SMS, los ajustes del sistema ni el teclado, y pueden verse afectados si se desactiva el servicio de accesibilidad."
+  },
+  {
+   "type": "p",
+   "text": "Cuando el dispositivo no tiene conexión, Vesta Tracker mantiene durante un tiempo limitado las últimas reglas recibidas y envía los datos pendientes al recuperar la conexión."
+  },
+  {
+   "type": "p",
+   "text": "Vesta no es un servicio de respuesta a emergencias, localización policial ni sustituto de servicios médicos, de seguridad o protección infantil. El botón SOS envía un aviso a los administradores cuando hay conexión, pero no contacta con los servicios de emergencia. En una emergencia se debe llamar a la línea 123 o al servicio de emergencias que corresponda."
   },
   {
    "type": "h2",
@@ -255,7 +286,7 @@
     "Utilizar la información para amenazas, extorsión, acoso o discriminación.",
     "Intentar vulnerar los sistemas de Vesta o de terceros.",
     "Interferir con la disponibilidad del servicio.",
-    "Distribuir versiones modificadas con fines maliciosos.",
+    "Copiar, modificar, descompilar, desensamblar, redistribuir o crear obras derivadas de las aplicaciones sin autorización escrita, salvo en la medida en que la ley lo permita expresamente.",
     "Suplantar identidades.",
     "Compartir códigos de vinculación con personas no autorizadas.",
     "Utilizar el servicio para actividades ilegales."
@@ -293,6 +324,10 @@
   },
   {
    "type": "p",
+   "text": "Los códigos de vinculación y los códigos QR caducan a las 24 horas. El administrador puede generar uno nuevo en cualquier momento, lo que invalida el anterior."
+  },
+  {
+   "type": "p",
    "text": "La desvinculación impide mantener la asociación activa, pero no implica por sí sola la eliminación de los datos históricos."
   },
   {
@@ -311,6 +346,8 @@
     "Informes de uso.",
     "Alertas.",
     "Reglas de protección.",
+    "Zonas seguras, configuración del modo estudio y límites de tiempo.",
+    "Solicitudes del menor y resúmenes semanales.",
     "Registros de dispositivos.",
     "Datos asociados a la cuenta."
    ]
@@ -321,16 +358,20 @@
   },
   {
    "type": "h2",
-   "id": "12-propiedad-intelectual-y-codigo-abierto",
-   "text": "12. Propiedad intelectual y código abierto"
+   "id": "12-propiedad-intelectual",
+   "text": "12. Propiedad intelectual"
   },
   {
    "type": "p",
-   "text": "Los derechos sobre Vesta, sus marcas, diseños, documentación y componentes pertenecen a sus respectivos titulares."
+   "text": "Vesta, sus aplicaciones, su código fuente, sus marcas, diseños y documentación son propiedad de FORBIDDEN S.A.S. o se utilizan con autorización de sus titulares. Todos los derechos están reservados."
   },
   {
    "type": "p",
-   "text": "Los componentes distribuidos bajo licencias de código abierto se rigen por sus licencias específicas. Nada en estos Términos elimina los derechos concedidos por dichas licencias."
+   "text": "FORBIDDEN S.A.S. concede al usuario una licencia de uso limitada, personal, no exclusiva, intransferible y revocable para instalar y utilizar las aplicaciones conforme a estos Términos. Esta licencia no transfiere ningún derecho de propiedad sobre el software."
+  },
+  {
+   "type": "p",
+   "text": "Vesta incorpora componentes de terceros que se rigen por sus propias licencias. Nada en estos Términos limita los derechos que esas licencias conceden sobre dichos componentes."
   },
   {
    "type": "p",
@@ -430,6 +471,10 @@
    "text": "Cuando los cambios requieran una nueva aceptación o autorización, esta se solicitará antes de aplicar el tratamiento correspondiente."
   },
   {
+   "type": "p",
+   "text": "La versión 1.1 incorpora las funciones de vinculación por QR, zonas seguras, botón SOS, modo estudio, límites de tiempo, solicitudes del menor, búsqueda segura, bloqueo de DNS cifrado y resumen semanal."
+  },
+  {
    "type": "h2",
    "id": "18-legislacion-aplicable",
    "text": "18. Legislación aplicable"
@@ -449,7 +494,7 @@
   },
   {
    "type": "p",
-   "text": "FORBIDDEN S.A.S.\nNIT: 901653270-2\nProyecto: Vesta Security\nDomicilio: Santa Marta, Magdalena, Colombia.\nDirección: Cra. 66 # 46a - 128.\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
+   "text": "FORBIDDEN S.A.S.\nNIT: 901653270-2\nProyecto: Vesta Security\nDomicilio: Santa Marta, Magdalena, Colombia.\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956."
   },
   {
    "type": "p",
@@ -457,7 +502,7 @@
   }
  ],
  "closing": [
-  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.0. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
+  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.1. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
  ],
  "sourceFile": "Vesta - Términos y condiciones de uso.docx"
 }

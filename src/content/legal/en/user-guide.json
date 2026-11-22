@@ -1,0 +1,836 @@
+{
+ "title": "User Guide",
+ "subtitle": "How to install, link and use Vesta Parent and Vesta Tracker responsibly.",
+ "meta": {
+  "Version": "1.1",
+  "Publication date": "22 November 2026",
+  "Last updated": "22 November 2026",
+  "Service provider": "FORBIDDEN S.A.S.",
+  "Project author": "Nebula",
+  "Contact": "nebulagnu@proton.me",
+  "Jurisdiction": "Republic of Colombia"
+ },
+ "blocks": [
+  {
+   "type": "h2",
+   "id": "1-welcome-to-vesta",
+   "text": "1. Welcome to Vesta"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Security is a family digital supervision and protection platform made up of two independent Android apps:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Vesta Parent: the app the parent or legal representative uses to manage profiles, set protection rules and view information from the linked device.",
+    "Vesta Tracker: the app installed on the minor's device, which sends authorised information and applies the protection rules that have been set."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Vesta is designed to support responsible supervision of the digital environment of children and adolescents."
+  },
+  {
+   "type": "p",
+   "text": "It must be used with respect for the minor's privacy, dignity, developing autonomy and fundamental rights."
+  },
+  {
+   "type": "p",
+   "text": "Vesta does not replace family support, digital education or emergency services."
+  },
+  {
+   "type": "h2",
+   "id": "2-requirements",
+   "text": "2. Requirements"
+  },
+  {
+   "type": "p",
+   "text": "To use Vesta you need:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Two compatible Android devices.",
+    "An Internet connection.",
+    "A user account for Vesta Parent.",
+    "Vesta Tracker installed on the device to be supervised.",
+    "Location and background operation permissions.",
+    "Usage access permission, if you want to use that feature.",
+    "Accessibility permission, needed to block apps and detect domains in the compatible browser.",
+    "A camera on the minor's device, only if you want to link it by scanning the QR code (optional).",
+    "Authorisation from the legal representative for processing the minor's personal data, and the minor's participation according to their age, maturity and understanding."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Feature availability may vary depending on the Android version, the manufacturer and device restrictions."
+  },
+  {
+   "type": "h2",
+   "id": "3-installation",
+   "text": "3. Installation"
+  },
+  {
+   "type": "h3",
+   "id": "3-1-vesta-parent",
+   "text": "3.1. Vesta Parent"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Download Vesta Parent from the official distribution channel.",
+    "Install the app on the parent's or guardian's device.",
+    "Open Vesta Parent.",
+    "Create an account or sign in.",
+    "Read and accept the current legal documents.",
+    "Fill in the requested information."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Available sign-in methods may include email and password, Google and GitHub, depending on the version distributed."
+  },
+  {
+   "type": "h3",
+   "id": "3-2-vesta-tracker",
+   "text": "3.2. Vesta Tracker"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Download Vesta Tracker from the official channel.",
+    "Install it on the device to be supervised.",
+    "Open the app.",
+    "Read the information about permissions and data processing.",
+    "Complete the linking process.",
+    "Grant the permissions you have authorised for the selected features."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Do not install Vesta Tracker on a device without informing its user and without the legally required authority and authorisations."
+  },
+  {
+   "type": "h2",
+   "id": "4-linking-the-devices",
+   "text": "4. Linking the devices"
+  },
+  {
+   "type": "p",
+   "text": "Linking connects Vesta Parent with Vesta Tracker."
+  },
+  {
+   "type": "h3",
+   "id": "from-vesta-parent",
+   "text": "From Vesta Parent"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Sign in.",
+    "Create a profile for the minor.",
+    "Enter the requested information.",
+    "When you save the profile, Vesta Parent shows a QR code and a 10-character code.",
+    "Keep the screen open while you complete the process in Tracker. If you close it, tap the profile on the dashboard to see the code again."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "from-vesta-tracker",
+   "text": "From Vesta Tracker"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open Vesta Tracker.",
+    "Tap “Scan QR code” and point the camera at the code, or type the 10-character code.",
+    "Complete the device authentication.",
+    "Accept the required permissions.",
+    "Wait for the linking confirmation."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Linking codes can be used only once and expire after 24 hours. If a code expires or you think someone else has seen it, tap “New code”: the previous one stops working. Do not share codes with unauthorised people."
+  },
+  {
+   "type": "p",
+   "text": "Once the process is complete, Vesta Parent can view the available information from the linked device."
+  },
+  {
+   "type": "h2",
+   "id": "5-permissions-and-how-they-work",
+   "text": "5. Permissions and how they work"
+  },
+  {
+   "type": "p",
+   "text": "Android requires specific permissions for certain features. Vesta explains their purpose before requesting them."
+  },
+  {
+   "type": "h3",
+   "id": "5-1-location",
+   "text": "5.1. Location"
+  },
+  {
+   "type": "p",
+   "text": "The location permission lets Tracker obtain the device's geographic coordinates and send them to Vesta so that the authorised administrator can see its location."
+  },
+  {
+   "type": "p",
+   "text": "The feature may require:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Precise location.",
+    "Background location access.",
+    "A foreground location service.",
+    "An Internet connection."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The app may keep collecting location while running in the background if the user grants the corresponding permissions."
+  },
+  {
+   "type": "p",
+   "text": "The update frequency depends on GPS, Android, the manufacturer, battery, connectivity and other conditions. Vesta does not guarantee exact updates or continuous availability."
+  },
+  {
+   "type": "h3",
+   "id": "5-2-usage-access",
+   "text": "5.2. Usage access"
+  },
+  {
+   "type": "p",
+   "text": "This permission lets Vesta collect app usage statistics, such as:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Apps used.",
+    "Foreground usage time.",
+    "Number of times opened.",
+    "Total screen time.",
+    "Report date."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The information is used to show summaries of digital activity."
+  },
+  {
+   "type": "p",
+   "text": "It is also used to apply daily time limits: Vesta Tracker calculates on the phone itself how much each limited app has been used."
+  },
+  {
+   "type": "h3",
+   "id": "5-3-accessibility",
+   "text": "5.3. Accessibility"
+  },
+  {
+   "type": "p",
+   "text": "The accessibility service detects when an app configured as blocked is opened and, in the compatible browser, identifies the domain being visited."
+  },
+  {
+   "type": "p",
+   "text": "The permission may allow Android to expose information about active windows. Vesta uses that access only for the features described in its Privacy Policy."
+  },
+  {
+   "type": "p",
+   "text": "This permission must not be understood as authorisation to collect messages, passwords, photographs or the general content of other apps indiscriminately."
+  },
+  {
+   "type": "h3",
+   "id": "5-4-local-vpn-for-dns-filtering",
+   "text": "5.4. Local VPN for DNS filtering"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker may use the Android VPN service to process DNS queries and apply domain blocking rules."
+  },
+  {
+   "type": "p",
+   "text": "This VPN is used for local filtering. It is not an anonymisation service or a commercial VPN for hiding your IP address."
+  },
+  {
+   "type": "p",
+   "text": "Allowed DNS queries are forwarded to the DNS server available on the device's network. Queries for blocked domains receive an error response."
+  },
+  {
+   "type": "p",
+   "text": "If the administrator turns on safe search, the VPN sends Google, Bing, DuckDuckGo and YouTube to their content-filtered versions, and blocks known encrypted DNS providers so that the filter cannot be bypassed from the browser."
+  },
+  {
+   "type": "h3",
+   "id": "5-5-notifications-and-background-operation",
+   "text": "5.5. Notifications and background operation"
+  },
+  {
+   "type": "p",
+   "text": "Android may ask for permission to show notifications and keep services running in the foreground."
+  },
+  {
+   "type": "p",
+   "text": "These notifications show that certain Vesta features are active, such as tracking or DNS protection."
+  },
+  {
+   "type": "p",
+   "text": "When Vesta blocks an app, Vesta Tracker may show a notice with the option to ask the administrator for permission."
+  },
+  {
+   "type": "h3",
+   "id": "5-6-camera",
+   "text": "5.6. Camera"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker only uses the camera to read the linking QR code. It does not store or send images. If you do not grant the permission, you can type the code by hand."
+  },
+  {
+   "type": "h2",
+   "id": "6-vesta-parent-dashboard",
+   "text": "6. Vesta Parent dashboard"
+  },
+  {
+   "type": "p",
+   "text": "From Vesta Parent, the administrator can use the features enabled in the installed version."
+  },
+  {
+   "type": "h3",
+   "id": "profiles",
+   "text": "Profiles"
+  },
+  {
+   "type": "p",
+   "text": "Lets you view and manage the profiles linked to the authorised account."
+  },
+  {
+   "type": "p",
+   "text": "From the ⋮ menu of each profile you can edit the name, age and colour, see the linking QR code or unlink the device."
+  },
+  {
+   "type": "h3",
+   "id": "location",
+   "text": "Location"
+  },
+  {
+   "type": "p",
+   "text": "Lets you see the last location received from the device and the available history."
+  },
+  {
+   "type": "p",
+   "text": "The location may appear out of date if the device is off, out of battery, without GPS signal, without Internet, or if Android restricts background activity."
+  },
+  {
+   "type": "h3",
+   "id": "alerts",
+   "text": "Alerts"
+  },
+  {
+   "type": "p",
+   "text": "Alerts report relevant events, including:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Low battery.",
+    "Speed above the configured threshold.",
+    "Attempts to open blocked apps.",
+    "Attempts to access blocked domains.",
+    "Arrivals at and departures from safe zones.",
+    "Emergency (SOS) alerts.",
+    "Device offline for a long time.",
+    "App blocking, the web filter or location being turned off.",
+    "Daily time used up and attempts to use apps during study mode."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Alerts may show the date, time, event type and related technical data."
+  },
+  {
+   "type": "p",
+   "text": "Alerts arrive as notifications on the administrator's phone even when Vesta Parent is closed. In Settings you can choose to receive only critical alerts instantly; SOS alerts always come through."
+  },
+  {
+   "type": "p",
+   "text": "In the Alerts tab you can filter alerts by severity, swipe an alert to delete it or clear the list. Alerts with a location, such as zone or SOS alerts, include a “View on map” button."
+  },
+  {
+   "type": "p",
+   "text": "The administrator can delete individual alerts from the available interface. Deleting an alert does not delete the location history, usage reports or any other data."
+  },
+  {
+   "type": "h3",
+   "id": "protection-rules",
+   "text": "Protection rules"
+  },
+  {
+   "type": "p",
+   "text": "The administrator can set blocking rules for apps and domains, as well as exceptions for allowed domains when the feature is available."
+  },
+  {
+   "type": "p",
+   "text": "Rules are applied on the Tracker device when it receives and processes the configuration."
+  },
+  {
+   "type": "p",
+   "text": "Effectiveness depends on operating system and browser compatibility, connectivity and Android's technical limitations."
+  },
+  {
+   "type": "h3",
+   "id": "study-mode",
+   "text": "Study mode"
+  },
+  {
+   "type": "p",
+   "text": "While it is active, the minor's phone can only open the apps you choose, plus the phone, messages, settings and keyboard. You can turn it on for 30 minutes, 1 hour, 2 hours or with no limit, or schedule times that repeat every week, including overnight."
+  },
+  {
+   "type": "p",
+   "text": "It works even when the minor's phone is offline."
+  },
+  {
+   "type": "h3",
+   "id": "safe-zones",
+   "text": "Safe zones"
+  },
+  {
+   "type": "p",
+   "text": "Mark places such as home or school on the map and choose whether you want a notice on arrival, on departure or both. Zones are shown in green on the location map."
+  },
+  {
+   "type": "h3",
+   "id": "time-limits",
+   "text": "Time limits"
+  },
+  {
+   "type": "p",
+   "text": "Give each app a maximum daily usage time. When it runs out, the app is blocked until the next day. The screen shows how much each app has been used today."
+  },
+  {
+   "type": "h3",
+   "id": "requests",
+   "text": "Requests"
+  },
+  {
+   "type": "p",
+   "text": "The minor can ask you from Vesta Tracker for permission to use an app or for more time. You will get a notification and can approve the request, choosing how many minutes to grant, or reject it. While the permission lasts, the app works even if it is blocked, in study mode or out of daily time."
+  },
+  {
+   "type": "h3",
+   "id": "web-protection",
+   "text": "Web protection"
+  },
+  {
+   "type": "p",
+   "text": "In Filters you can turn on safe search and encrypted DNS blocking, and apply with one tap the filters recommended for the minor's age. The recommendations are added to the block list and you can remove them whenever you like."
+  },
+  {
+   "type": "h3",
+   "id": "weekly-summary",
+   "text": "Weekly summary"
+  },
+  {
+   "type": "p",
+   "text": "Every Sunday evening you receive a summary with the average screen time, the most used apps and the week's alerts. It also appears in the Reports tab."
+  },
+  {
+   "type": "h3",
+   "id": "settings",
+   "text": "Settings"
+  },
+  {
+   "type": "p",
+   "text": "From the settings icon on the dashboard you can choose the light, dark or system theme, set up notifications, review privacy and authorisations, and sign out."
+  },
+  {
+   "type": "h2",
+   "id": "7-vesta-tracker-on-the-minor-s-phone",
+   "text": "7. Vesta Tracker on the minor's phone"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker offers the minor several features of its own."
+  },
+  {
+   "type": "h3",
+   "id": "emergency-sos-button",
+   "text": "Emergency (SOS) button"
+  },
+  {
+   "type": "p",
+   "text": "By pressing and holding the “Emergency” button, the minor sends an alert to their administrators with their location, if location is authorised. If there is no connection, the alert is sent once it is restored. The SOS button does not contact emergency services: in an emergency, call 123."
+  },
+  {
+   "type": "h3",
+   "id": "ask-for-permission",
+   "text": "Ask for permission"
+  },
+  {
+   "type": "p",
+   "text": "From “Ask for permission”, or by tapping the notice shown when an app is blocked, the minor chooses the app and the time and can write a message. On the same screen they can see whether their request is pending, approved or rejected."
+  },
+  {
+   "type": "h3",
+   "id": "what-vesta-shares",
+   "text": "What Vesta shares"
+  },
+  {
+   "type": "p",
+   "text": "This section explains to the minor, in plain language, what information their administrators receive, what is not shared and which features are active at that moment."
+  },
+  {
+   "type": "h3",
+   "id": "working-offline",
+   "text": "Working offline"
+  },
+  {
+   "type": "p",
+   "text": "When offline, Vesta Tracker keeps the latest rules received for up to 24 hours and stores the data to send it once reconnected. If the phone goes more than 20 minutes without sending data, Vesta Parent receives an alert."
+  },
+  {
+   "type": "h2",
+   "id": "8-how-to-set-up-rules",
+   "text": "8. How to set up rules"
+  },
+  {
+   "type": "h3",
+   "id": "block-an-app",
+   "text": "Block an app"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open the app management section.",
+    "Select the app you want to restrict.",
+    "Add the blocking rule.",
+    "Save the changes.",
+    "Wait for Tracker to receive the configuration."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "block-a-domain",
+   "text": "Block a domain"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open the filters section.",
+    "Enter the domain you want to restrict.",
+    "Save the rule.",
+    "Check that the Tracker device is connected."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Domain rules may apply to the domain entered and its subdomains, depending on the matching mechanism implemented."
+  },
+  {
+   "type": "h3",
+   "id": "allow-a-domain",
+   "text": "Allow a domain"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open the filters section.",
+    "Add the domain to the allow list.",
+    "Save the changes.",
+    "Wait for it to sync."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "The most specific rule decides the result when matching block and allow rules exist. In a tie, the allow rule prevails."
+  },
+  {
+   "type": "h3",
+   "id": "apply-age-recommendations",
+   "text": "Apply age recommendations"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open the profile's Filters tab.",
+    "Tap “Apply age recommendations”.",
+    "Review the list proposed for the minor's age.",
+    "Tap “Apply”."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "turn-on-safe-search",
+   "text": "Turn on safe search"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Open the profile's Filters tab.",
+    "Turn on “Safe search”.",
+    "Check that “Block encrypted DNS” is also on."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "set-up-study-mode",
+   "text": "Set up study mode"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "On the profile screen, tap “Study mode”.",
+    "Turn it on for a period or add a schedule.",
+    "Select the apps allowed while studying."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "set-a-daily-limit",
+   "text": "Set a daily limit"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "On the profile screen, tap “Limits”.",
+    "Choose the app.",
+    "Select the maximum time per day."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "create-a-safe-zone",
+   "text": "Create a safe zone"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "On the profile screen, tap “Zones” and then “New zone”.",
+    "Tap the map to set the centre and adjust the radius.",
+    "Enter a name and choose the notices.",
+    "Tap “Save”."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "answer-a-request",
+   "text": "Answer a request"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Tap the notification or open “Requests” on the profile screen.",
+    "Tap “Approve” and choose the minutes, or tap “Reject”."
+   ]
+  },
+  {
+   "type": "h2",
+   "id": "9-unlinking-a-device",
+   "text": "9. Unlinking a device"
+  },
+  {
+   "type": "p",
+   "text": "Unlinking separates the Tracker device from the corresponding profile."
+  },
+  {
+   "type": "p",
+   "text": "Before you do it, bear in mind that unlinking does not delete all historical data."
+  },
+  {
+   "type": "p",
+   "text": "To unlink, open the profile's ⋮ menu on the dashboard and choose “Unlink device”. Vesta asks for confirmation. Vesta Tracker detects the unlinking automatically, turns off its protections and returns to the linking screen."
+  },
+  {
+   "type": "p",
+   "text": "Stored information must be managed through the privacy and deletion controls available in the corresponding version."
+  },
+  {
+   "type": "p",
+   "text": "To link the device again, tap the profile on the dashboard: a new QR code will be shown."
+  },
+  {
+   "type": "h2",
+   "id": "10-privacy-and-rights",
+   "text": "10. Privacy and rights"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S. is the controller of the personal data managed by Vesta."
+  },
+  {
+   "type": "p",
+   "text": "The user may request:"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Access to their data.",
+    "Correction or update.",
+    "Proof of authorisation.",
+    "Information about how their data is used.",
+    "Withdrawal of authorisation where appropriate.",
+    "Deletion of data where legally appropriate."
+   ]
+  },
+  {
+   "type": "p",
+   "text": "Requests must be sent to:"
+  },
+  {
+   "type": "p",
+   "text": "Email: nebulagnu@proton.me"
+  },
+  {
+   "type": "p",
+   "text": "Where data of minors is involved, requests must be submitted by the people legally entitled to do so, while also respecting the minor's rights."
+  },
+  {
+   "type": "h2",
+   "id": "11-troubleshooting",
+   "text": "11. Troubleshooting"
+  },
+  {
+   "type": "h3",
+   "id": "location-does-not-appear",
+   "text": "Location does not appear"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that GPS is on.",
+    "Review the location permissions.",
+    "Check that Tracker is allowed to run in the background.",
+    "Check the Internet connection.",
+    "Check that the device has battery."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "alerts-are-not-updating",
+   "text": "Alerts are not updating"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check connectivity.",
+    "Check that the devices are still linked.",
+    "Check that Tracker has the required permissions.",
+    "Check that the rules are synced."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "apps-are-not-being-blocked",
+   "text": "Apps are not being blocked"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that the accessibility service is on.",
+    "Check that the app is on the block list.",
+    "Check that Tracker is not restricted by the manufacturer."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "domains-are-not-being-blocked",
+   "text": "Domains are not being blocked"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that the DNS VPN is active.",
+    "Check the configured rules.",
+    "Check that the browser supports domain detection.",
+    "Bear in mind that encrypted DNS, alternative browsers and custom resolution mechanisms may limit the effectiveness of filtering."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "the-service-stops",
+   "text": "The service stops"
+  },
+  {
+   "type": "p",
+   "text": "Some manufacturers apply aggressive battery restrictions. Review Android's battery and background operation settings."
+  },
+  {
+   "type": "h3",
+   "id": "the-linking-code-does-not-work",
+   "text": "The linking code does not work"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that no more than 24 hours have passed since it was generated.",
+    "Tap “New code” and scan it again.",
+    "Check that the minor's phone has an Internet connection."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "notifications-are-not-arriving",
+   "text": "Notifications are not arriving"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that Vesta Parent is allowed to show notifications.",
+    "Check in Settings whether you chose to receive only critical alerts.",
+    "Sign out and sign in again to register the phone again."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "study-mode-or-limits-are-not-applied",
+   "text": "Study mode or limits are not applied"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Check that the Vesta Tracker accessibility service is on.",
+    "For limits, check that Tracker has usage access.",
+    "Remember that the phone, messages, settings and keyboard are always available."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "offline-appears",
+   "text": "“Offline” appears"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Parent shows the latest saved data and updates automatically once the connection is restored. Vesta Tracker keeps applying the latest rules received for up to 24 hours."
+  },
+  {
+   "type": "h2",
+   "id": "12-responsible-use",
+   "text": "12. Responsible use"
+  },
+  {
+   "type": "p",
+   "text": "Vesta must be used for legitimate family protection and not for abusive surveillance, harassment, intimidation, control of third parties or unauthorised access to devices."
+  },
+  {
+   "type": "p",
+   "text": "The administrator must explain to the minor, in a way appropriate to their age, which features are active and what information is collected."
+  },
+  {
+   "type": "h2",
+   "id": "13-contact-and-support",
+   "text": "13. Contact and support"
+  },
+  {
+   "type": "p",
+   "text": "FORBIDDEN S.A.S.\nProject: Vesta Security\nEmail: nebulagnu@proton.me\nPhone: +57 324 616 7956"
+  }
+ ],
+ "closing": [
+  "© 2026 Vesta Security. All rights reserved.",
+  "© 2026 Vesta Security · FORBIDDEN S.A.S. Official document, version 1.1. This is a courtesy translation: in case of discrepancy, the Spanish version prevails. The current version is published in the apps and on the Vesta website."
+ ],
+ "sourceFile": "Vesta - User Guide.docx"
+}

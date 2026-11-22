@@ -2,9 +2,9 @@
  "title": "Guía de usuario",
  "subtitle": "Cómo instalar, vincular y utilizar Vesta Padre y Vesta Tracker de forma responsable.",
  "meta": {
-  "Versión": "1.0",
-  "Fecha de publicación": "20 de noviembre de 2026",
-  "Última actualización": "20 de noviembre de 2026",
+  "Versión": "1.1",
+  "Fecha de publicación": "22 de noviembre de 2026",
+  "Última actualización": "22 de noviembre de 2026",
   "Responsable del servicio": "FORBIDDEN S.A.S.",
   "Autor del proyecto": "Nebula",
   "Contacto": "nebulagnu@proton.me",
@@ -58,6 +58,7 @@
     "Permisos de ubicación y funcionamiento en segundo plano.",
     "Permiso de acceso a estadísticas de uso, cuando se desee utilizar esa función.",
     "Permiso de accesibilidad, necesario para aplicar el bloqueo de aplicaciones y detectar dominios en el navegador compatible.",
+    "Cámara en el dispositivo del menor, solo si quieres vincularlo escaneando el código QR (opcional).",
     "Autorización del representante legal para el tratamiento de los datos personales del menor y participación del menor de acuerdo con su edad, madurez y capacidad de comprensión."
    ]
   },
@@ -130,8 +131,8 @@
     "Inicia sesión.",
     "Crea un perfil para el menor.",
     "Introduce la información solicitada.",
-    "Genera el código de vinculación.",
-    "Mantén el código disponible para completar el proceso en Tracker."
+    "Al guardar el perfil, Vesta Padre muestra un código QR y un código de 10 caracteres.",
+    "Mantén la pantalla abierta mientras completas el proceso en Tracker. Si la cierras, toca el perfil en el panel para volver a ver el código."
    ]
   },
   {
@@ -143,7 +144,7 @@
    "type": "ol",
    "items": [
     "Abre Vesta Tracker.",
-    "Introduce el código generado por Vesta Padre.",
+    "Pulsa «Escanear código QR» y apunta la cámara al código, o escribe el código de 10 caracteres.",
     "Completa la autenticación del dispositivo.",
     "Acepta los permisos necesarios.",
     "Espera la confirmación de vinculación."
@@ -151,7 +152,7 @@
   },
   {
    "type": "p",
-   "text": "Los códigos de vinculación son de uso limitado. No los compartas con personas no autorizadas."
+   "text": "Los códigos de vinculación son de un solo uso y caducan a las 24 horas. Si un código caduca o crees que otra persona lo ha visto, toca «Código nuevo»: el anterior deja de funcionar. No compartas los códigos con personas no autorizadas."
   },
   {
    "type": "p",
@@ -220,6 +221,10 @@
    "text": "La información se utiliza para presentar resúmenes de actividad digital."
   },
   {
+   "type": "p",
+   "text": "También se utiliza para aplicar los límites de tiempo diarios: Vesta Tracker calcula en el propio teléfono cuánto se ha usado cada aplicación limitada."
+  },
+  {
    "type": "h3",
    "id": "5-3-accesibilidad",
    "text": "5.3. Accesibilidad"
@@ -254,6 +259,10 @@
    "text": "Las consultas DNS permitidas se reenvían al servidor DNS disponible en la red del dispositivo. Las consultas correspondientes a dominios bloqueados reciben una respuesta de error."
   },
   {
+   "type": "p",
+   "text": "Si el administrador activa la búsqueda segura, la VPN dirige Google, Bing, DuckDuckGo y YouTube a sus versiones con filtrado de contenido, y bloquea los proveedores conocidos de DNS cifrado para que el filtro no pueda evitarse desde el navegador."
+  },
+  {
    "type": "h3",
    "id": "5-5-notificaciones-y-ejecucion-en-segundo-plano",
    "text": "5.5. Notificaciones y ejecución en segundo plano"
@@ -265,6 +274,19 @@
   {
    "type": "p",
    "text": "Estas notificaciones informan de que determinadas funciones de Vesta están activas, como el rastreo o la protección DNS."
+  },
+  {
+   "type": "p",
+   "text": "Cuando Vesta bloquea una aplicación, Vesta Tracker puede mostrar un aviso con la opción de pedir permiso al administrador."
+  },
+  {
+   "type": "h3",
+   "id": "5-6-camara",
+   "text": "5.6. Cámara"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker solo usa la cámara para leer el código QR de vinculación. No guarda ni envía imágenes. Si no concedes el permiso, puedes escribir el código a mano."
   },
   {
    "type": "h2",
@@ -283,6 +305,10 @@
   {
    "type": "p",
    "text": "Permite consultar y administrar los perfiles vinculados a la cuenta autorizada."
+  },
+  {
+   "type": "p",
+   "text": "Desde el menú ⋮ de cada perfil puedes editar el nombre, la edad y el color, ver el código QR de vinculación o desvincular el dispositivo."
   },
   {
    "type": "h3",
@@ -312,12 +338,25 @@
     "Batería baja.",
     "Velocidad superior al umbral configurado.",
     "Intentos de abrir aplicaciones bloqueadas.",
-    "Intentos de acceder a dominios bloqueados."
+    "Intentos de acceder a dominios bloqueados.",
+    "Llegadas y salidas de las zonas seguras.",
+    "Avisos de emergencia (SOS).",
+    "Dispositivo sin conexión durante un tiempo prolongado.",
+    "Desactivación del bloqueo de aplicaciones, del filtro web o de la ubicación.",
+    "Tiempo diario agotado e intentos de uso durante el modo estudio."
    ]
   },
   {
    "type": "p",
    "text": "Las alertas pueden mostrar fecha, hora, tipo de evento y datos técnicos asociados."
+  },
+  {
+   "type": "p",
+   "text": "Las alertas llegan como notificación al teléfono del administrador aunque Vesta Padre esté cerrada. En Ajustes puedes elegir recibir al instante solo las alertas críticas; el aviso SOS llega siempre."
+  },
+  {
+   "type": "p",
+   "text": "En la pestaña Alertas puedes filtrarlas por gravedad, deslizar una alerta para eliminarla o vaciar la lista. Las alertas con ubicación, como las de zonas o SOS, incluyen el botón «Ver en el mapa»."
   },
   {
    "type": "p",
@@ -341,9 +380,121 @@
    "text": "La efectividad depende de la compatibilidad del sistema operativo, el navegador, la conectividad y las limitaciones técnicas de Android."
   },
   {
+   "type": "h3",
+   "id": "modo-estudio",
+   "text": "Modo estudio"
+  },
+  {
+   "type": "p",
+   "text": "Mientras está activo, en el teléfono del menor solo se pueden abrir las aplicaciones que elijas, además del teléfono, los mensajes, los ajustes y el teclado. Puedes activarlo durante 30 minutos, 1 hora, 2 horas o sin límite, o programar horarios que se repiten cada semana, incluidos horarios nocturnos."
+  },
+  {
+   "type": "p",
+   "text": "Funciona aunque el teléfono del menor no tenga conexión."
+  },
+  {
+   "type": "h3",
+   "id": "zonas-seguras",
+   "text": "Zonas seguras"
+  },
+  {
+   "type": "p",
+   "text": "Marca en el mapa lugares como la casa o el colegio y elige si quieres un aviso al llegar, al salir o en ambos casos. Las zonas aparecen en verde en el mapa de ubicación."
+  },
+  {
+   "type": "h3",
+   "id": "limites-de-tiempo",
+   "text": "Límites de tiempo"
+  },
+  {
+   "type": "p",
+   "text": "Asigna a cada aplicación un tiempo máximo de uso al día. Al agotarse, la aplicación se bloquea hasta el día siguiente. La pantalla muestra cuánto se ha usado hoy cada aplicación."
+  },
+  {
+   "type": "h3",
+   "id": "peticiones",
+   "text": "Peticiones"
+  },
+  {
+   "type": "p",
+   "text": "El menor puede pedirte desde Vesta Tracker permiso para usar una aplicación o más tiempo. Recibirás una notificación y podrás aprobar la petición, eligiendo cuántos minutos concedes, o rechazarla. Mientras dure el permiso, la aplicación funciona aunque esté bloqueada, en modo estudio o sin tiempo diario."
+  },
+  {
+   "type": "h3",
+   "id": "proteccion-web",
+   "text": "Protección web"
+  },
+  {
+   "type": "p",
+   "text": "En Filtros puedes activar la búsqueda segura y el bloqueo de DNS cifrado, y aplicar con un toque los filtros recomendados para la edad del menor. Las recomendaciones se añaden a la lista negra y puedes quitarlas cuando quieras."
+  },
+  {
+   "type": "h3",
+   "id": "resumen-semanal",
+   "text": "Resumen semanal"
+  },
+  {
+   "type": "p",
+   "text": "Cada domingo por la tarde recibes un resumen con el tiempo medio de pantalla, las aplicaciones más usadas y las alertas de la semana. También aparece en la pestaña Reportes."
+  },
+  {
+   "type": "h3",
+   "id": "ajustes",
+   "text": "Ajustes"
+  },
+  {
+   "type": "p",
+   "text": "Desde el icono de ajustes del panel puedes elegir el tema claro, oscuro o el del sistema, configurar las notificaciones, consultar la privacidad y las autorizaciones y cerrar la sesión."
+  },
+  {
    "type": "h2",
-   "id": "7-como-configurar-reglas",
-   "text": "7. Cómo configurar reglas"
+   "id": "7-vesta-tracker-en-el-telefono-del-menor",
+   "text": "7. Vesta Tracker en el teléfono del menor"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Tracker ofrece al menor varias funciones propias."
+  },
+  {
+   "type": "h3",
+   "id": "boton-de-emergencia-sos",
+   "text": "Botón de emergencia (SOS)"
+  },
+  {
+   "type": "p",
+   "text": "Manteniendo pulsado el botón «Emergencia», el menor envía un aviso a sus administradores con su ubicación, si esta está autorizada. Si no hay conexión, el aviso se envía al recuperarla. El botón SOS no contacta con los servicios de emergencia: en una emergencia llama al 123."
+  },
+  {
+   "type": "h3",
+   "id": "pedir-permiso",
+   "text": "Pedir permiso"
+  },
+  {
+   "type": "p",
+   "text": "Desde «Pedir permiso», o tocando el aviso que aparece al bloquearse una aplicación, el menor elige la aplicación, el tiempo y, si quiere, escribe un mensaje. En la misma pantalla ve si su petición está pendiente, aprobada o rechazada."
+  },
+  {
+   "type": "h3",
+   "id": "que-comparte-vesta",
+   "text": "Qué comparte Vesta"
+  },
+  {
+   "type": "p",
+   "text": "Esta sección explica al menor, en lenguaje sencillo, qué información reciben sus administradores, qué no se comparte y qué funciones están activas en ese momento."
+  },
+  {
+   "type": "h3",
+   "id": "funcionamiento-sin-conexion",
+   "text": "Funcionamiento sin conexión"
+  },
+  {
+   "type": "p",
+   "text": "Sin conexión, Vesta Tracker mantiene hasta 24 horas las últimas reglas recibidas y guarda los datos para enviarlos al reconectar. Si el teléfono pasa más de 20 minutos sin enviar datos, Vesta Padre recibe una alerta."
+  },
+  {
+   "type": "h2",
+   "id": "8-como-configurar-reglas",
+   "text": "8. Cómo configurar reglas"
   },
   {
    "type": "h3",
@@ -397,9 +548,88 @@
    "text": "La regla más específica determina el resultado cuando existen reglas de bloqueo y permiso que coinciden. En caso de empate, prevalece la regla permitida."
   },
   {
+   "type": "h3",
+   "id": "aplicar-recomendaciones-por-edad",
+   "text": "Aplicar recomendaciones por edad"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Abre la pestaña Filtros del perfil.",
+    "Toca «Aplicar recomendaciones por edad».",
+    "Revisa la lista propuesta para la edad del menor.",
+    "Toca «Aplicar»."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "activar-la-busqueda-segura",
+   "text": "Activar la búsqueda segura"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Abre la pestaña Filtros del perfil.",
+    "Activa «Búsqueda segura».",
+    "Comprueba que también esté activo «Bloquear DNS cifrado»."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "configurar-el-modo-estudio",
+   "text": "Configurar el modo estudio"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "En la pantalla del perfil, toca «Modo estudio».",
+    "Actívalo durante un tiempo o añade un horario.",
+    "Marca las aplicaciones permitidas durante el estudio."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "poner-un-limite-diario",
+   "text": "Poner un límite diario"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "En la pantalla del perfil, toca «Límites».",
+    "Elige la aplicación.",
+    "Selecciona el tiempo máximo al día."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "crear-una-zona-segura",
+   "text": "Crear una zona segura"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "En la pantalla del perfil, toca «Zonas» y después «Nueva zona».",
+    "Toca el mapa para fijar el centro y ajusta el radio.",
+    "Escribe un nombre y elige los avisos.",
+    "Toca «Guardar»."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "responder-a-una-peticion",
+   "text": "Responder a una petición"
+  },
+  {
+   "type": "ol",
+   "items": [
+    "Toca la notificación o abre «Peticiones» en la pantalla del perfil.",
+    "Toca «Aprobar» y elige los minutos, o toca «Rechazar»."
+   ]
+  },
+  {
    "type": "h2",
-   "id": "8-desvincular-un-dispositivo",
-   "text": "8. Desvincular un dispositivo"
+   "id": "9-desvincular-un-dispositivo",
+   "text": "9. Desvincular un dispositivo"
   },
   {
    "type": "p",
@@ -411,16 +641,20 @@
   },
   {
    "type": "p",
+   "text": "Para desvincular, abre el menú ⋮ del perfil en el panel y elige «Desvincular dispositivo». Vesta pide confirmación. Vesta Tracker detecta la desvinculación automáticamente, desactiva sus protecciones y vuelve a la pantalla de vinculación."
+  },
+  {
+   "type": "p",
    "text": "La información almacenada debe gestionarse mediante los controles de privacidad y eliminación disponibles en la versión correspondiente."
   },
   {
    "type": "p",
-   "text": "Para volver a vincular el dispositivo será necesario generar y utilizar un nuevo código."
+   "text": "Para volver a vincular el dispositivo, toca el perfil en el panel: se mostrará un código QR nuevo."
   },
   {
    "type": "h2",
-   "id": "9-privacidad-y-derechos",
-   "text": "9. Privacidad y derechos"
+   "id": "10-privacidad-y-derechos",
+   "text": "10. Privacidad y derechos"
   },
   {
    "type": "p",
@@ -451,16 +685,12 @@
   },
   {
    "type": "p",
-   "text": "Dirección: Cra. 66 # 46a - 128, Santa Marta, Magdalena, Colombia."
-  },
-  {
-   "type": "p",
    "text": "Cuando se trate de datos de menores, las solicitudes deberán presentarse por las personas legalmente facultadas, respetando también los derechos del menor."
   },
   {
    "type": "h2",
-   "id": "10-solucion-de-problemas",
-   "text": "10. Solución de problemas"
+   "id": "11-solucion-de-problemas",
+   "text": "11. Solución de problemas"
   },
   {
    "type": "h3",
@@ -528,9 +758,57 @@
    "text": "Algunos fabricantes aplican restricciones agresivas de batería. Revisa la configuración de batería y ejecución en segundo plano de Android."
   },
   {
+   "type": "h3",
+   "id": "el-codigo-de-vinculacion-no-funciona",
+   "text": "El código de vinculación no funciona"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Comprueba que no hayan pasado más de 24 horas desde que se generó.",
+    "Toca «Código nuevo» y vuelve a escanearlo.",
+    "Comprueba que el teléfono del menor tenga conexión a Internet."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "no-llegan-las-notificaciones",
+   "text": "No llegan las notificaciones"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Comprueba que Vesta Padre tenga permiso para mostrar notificaciones.",
+    "Revisa en Ajustes si elegiste recibir solo las alertas críticas.",
+    "Cierra la sesión y vuelve a entrar para registrar de nuevo el teléfono."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "el-modo-estudio-o-los-limites-no-se-aplican",
+   "text": "El modo estudio o los límites no se aplican"
+  },
+  {
+   "type": "ul",
+   "items": [
+    "Comprueba que el servicio de accesibilidad de Vesta Tracker esté activado.",
+    "Para los límites, comprueba que Tracker tenga acceso a las estadísticas de uso.",
+    "Recuerda que el teléfono, los mensajes, los ajustes y el teclado siempre están disponibles."
+   ]
+  },
+  {
+   "type": "h3",
+   "id": "aparece-sin-conexion",
+   "text": "Aparece «Sin conexión»"
+  },
+  {
+   "type": "p",
+   "text": "Vesta Padre muestra los últimos datos guardados y se actualiza solo al recuperar la conexión. Vesta Tracker sigue aplicando las últimas reglas recibidas hasta 24 horas."
+  },
+  {
    "type": "h2",
-   "id": "11-uso-responsable",
-   "text": "11. Uso responsable"
+   "id": "12-uso-responsable",
+   "text": "12. Uso responsable"
   },
   {
    "type": "p",
@@ -542,17 +820,17 @@
   },
   {
    "type": "h2",
-   "id": "12-contacto-y-soporte",
-   "text": "12. Contacto y soporte"
+   "id": "13-contacto-y-soporte",
+   "text": "13. Contacto y soporte"
   },
   {
    "type": "p",
-   "text": "FORBIDDEN S.A.S.\nProyecto: Vesta Security\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956\nDirección: Cra. 66 # 46a - 128, Santa Marta, Magdalena, Colombia."
+   "text": "FORBIDDEN S.A.S.\nProyecto: Vesta Security\nCorreo: nebulagnu@proton.me\nTeléfono: +57 324 616 7956"
   }
  ],
  "closing": [
-  "© 2026 Vesta Security. Todos los derechos reservados, sin perjuicio de las licencias de software de código abierto aplicables.",
-  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.0. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
+  "© 2026 Vesta Security. Todos los derechos reservados.",
+  "© 2026 Vesta Security · FORBIDDEN S.A.S.. Documento oficial, versión 1.1. La versión vigente se publica en las aplicaciones y en el sitio web de Vesta."
  ],
  "sourceFile": "Vesta - Guía de usuario.docx"
 }

@@ -1,14 +1,24 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
-import { legalDocs } from "@/content/legal";
+import { docHref, href, locales, type DocKey, type PageKey } from "@/i18n";
 
 export const dynamic = "force-static";
 
+const pages: PageKey[] = ["home", "platform", "features", "mission", "downloads", "help", "docs"];
+const docs: DocKey[] = ["terms", "privacy", "guide"];
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["/", "/plataforma/", "/funcionalidades/", "/mision-y-vision/", "/descargas/", "/ayuda/", "/documentacion/"];
-  const lastModified = new Date("2026-11-21");
+  const lastModified = new Date("2026-11-22");
+  const entry = (paths: Record<"es" | "en", string>, priority: number) =>
+    locales.map((l) => ({
+      url: `${site.url}${paths[l]}`,
+      lastModified,
+      changeFrequency: "monthly" as const,
+      priority,
+      alternates: { languages: { es: `${site.url}${paths.es}`, en: `${site.url}${paths.en}` } },
+    }));
   return [
-    ...routes.map((r) => ({ url: `${site.url}${r}`, lastModified, changeFrequency: "monthly" as const, priority: r === "/" ? 1 : 0.8 })),
-    ...legalDocs.map((d) => ({ url: `${site.url}/documentacion/${d.slug}/`, lastModified, changeFrequency: "yearly" as const, priority: 0.6 })),
+    ...pages.flatMap((p) => entry({ es: href("es", p), en: href("en", p) }, p === "home" ? 1 : 0.8)),
+    ...docs.flatMap((d) => entry({ es: docHref("es", d), en: docHref("en", d) }, 0.6)),
   ];
 }

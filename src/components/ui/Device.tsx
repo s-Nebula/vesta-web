@@ -7,7 +7,7 @@ type Props = {
   sizesAttr?: string;
 };
 
-/** Marco de dispositivo con una captura real. Las capturas se sirven en WebP a dos tamaños. */
+/** Device frame with a real screenshot. Screenshots are served as WebP in two sizes. */
 export function Device({ shot, className = "", priority = false, sizesAttr }: Props) {
   const [s, l] = shot.sizes;
   const isPhone = shot.kind === "phone";
