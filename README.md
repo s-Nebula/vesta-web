@@ -117,5 +117,7 @@ un texto neutro. La lista completa está en `docs/PENDIENTES.md`.
 
 ## Licencia
 
-Software propietario. © FORBIDDEN S.A.S. Todos los derechos reservados.
-Este repositorio es privado: no lo publiques ni lo redistribuyas sin autorización.
+Copyright © 2026 FORBIDDEN S.A.S.
+
+El código de este sitio es software libre bajo la GNU Affero General Public License versión 3 (AGPL-3.0). Ver `LICENSE`.
+El nombre Vesta, el logotipo y los demás elementos de marca no están cubiertos por esta licencia.
