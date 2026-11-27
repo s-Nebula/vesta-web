@@ -1,8 +1,8 @@
-:HL["/_next/static/chunks/1quvu8cemoyqh.css","style"]
+:HL["/_next/static/chunks/430_2p3fercer.css","style"]
 :HC["/",""]
 :HL["/img/tracker/rastreo-activo-800.webp?v=1.1-20261122","image",{"imageSrcSet":"/img/tracker/rastreo-activo-800.webp?v=1.1-20261122 800w, /img/tracker/rastreo-activo-1600.webp?v=1.1-20261122 1600w","imageSizes":"(min-width: 64rem) 420px, 75vw","fetchPriority":"high"}]
 :HL["/img/padre/panel-dispositivos-420.webp?v=1.1-20261122","image",{"imageSrcSet":"/img/padre/panel-dispositivos-420.webp?v=1.1-20261122 420w, /img/padre/panel-dispositivos-840.webp?v=1.1-20261122 840w","imageSizes":"(min-width: 64rem) 190px, 33vw","fetchPriority":"high"}]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"control-parental","h":64,"c":"$Q3"}]]
 1:[["children",{"s":"(es)","h":32,"c":"$Q2"}]]
-0:{"b":"zbiKnxk4AUiH7FggX3x50","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"lHx-ZG-gs1wrrGhefN7Aq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

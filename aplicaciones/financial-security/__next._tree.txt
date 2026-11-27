@@ -1,8 +1,8 @@
-:HL["/_next/static/chunks/1quvu8cemoyqh.css","style"]
+:HL["/_next/static/chunks/430_2p3fercer.css","style"]
 :HC["/",""]
 :HL["/brand/financial_logo.svg","image"]
 4:[["children",{"s":"__PAGE__","h":160}]]
 3:[["children",{"s":"financial-security","h":96,"c":"$Q4"}]]
 2:[["children",{"s":"aplicaciones","h":64,"c":"$Q3"}]]
 1:[["children",{"s":"(security)","h":32,"c":"$Q2"}]]
-0:{"b":"zbiKnxk4AUiH7FggX3x50","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"lHx-ZG-gs1wrrGhefN7Aq","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
