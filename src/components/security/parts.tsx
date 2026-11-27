@@ -5,7 +5,7 @@ import { site } from "@/content/site";
 import { contact, formatCop, sinIva, waLink, type QA, type Service } from "@/content/security";
 
 /** Metadatos de una página en español sin versión en inglés. */
-export function securityMeta(title: string, description: string, path: string, absolute = false, image = "/og-servicios.png"): Metadata {
+export function securityMeta(title: string, description: string, path: string, absolute = false, image = "/og-servicios.png?v=2"): Metadata {
   const url = `${site.url}${path}`;
   const full = absolute ? title : `${title} · ${site.name}`;
   return {
