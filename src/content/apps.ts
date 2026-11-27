@@ -73,11 +73,13 @@ export const financial = {
 
 /** Nebula PDF: el APK se sirve desde /downloads/ de este sitio. */
 export const nebulaPdf = {
-  version: "1.0.0",
-  date: "2026-11-26",
-  apk: "/downloads/Nebula-PDF.apk",
-  sizeMb: 120,
-  sha256: "283627fb1fafdb91e939d1695362c348c61bf4476591ad4b491ccd7790cfe427",
-  beta: true,
+  version: "1.0.1",
+  date: "2026-11-27",
+  apk: "/downloads/Nebula-PDF-1.0.1.apk",
+  sizeMb: 116,
+  sha256: "a1a118afe6c693acb86067b0e6c4b09838b051696b6a08e28965d0caa12dd78a",
+  /** Huella SHA-256 del certificado de firma (FORBIDDEN S.A.S.). */
+  certSha256: "BA:9D:18:17:AB:88:9F:35:7E:77:4F:A4:9D:04:59:16:B9:D8:02:D1:C6:BB:7D:35:08:B2:62:DD:5B:5F:0C:B9",
+  beta: false,
   repo: "https://github.com/s-Nebula/nebula-pdf",
 };

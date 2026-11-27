@@ -1,11 +1,13 @@
 import Link from "next/link";
 import { Wordmark } from "@/components/brand/Wordmark";
+import { Nebula } from "@/components/brand/Nebula";
 
 /** Página 404 en los dos idiomas (la exportación estática no conoce el idioma del visitante). */
 export default function NotFound() {
   return (
-    <main className="sx min-h-dvh">
-      <div className="sx-wrap py-16 md:py-28">
+    <main className="sx relative min-h-dvh">
+      <Nebula />
+      <div className="sx-wrap relative z-10 py-16 md:py-28">
         <Link href="/" aria-label="Vesta Security">
           <Wordmark size="lg" />
         </Link>

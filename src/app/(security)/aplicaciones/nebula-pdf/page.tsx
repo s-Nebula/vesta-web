@@ -87,7 +87,7 @@ function RetroWindow() {
           </div>
         </div>
       </div>
-      <figcaption className="mt-3 text-center text-[0.8rem] text-dim">La interfaz de Nebula PDF tiene estilo de escritorio clásico. Recreación.</figcaption>
+      <figcaption className="mt-3 text-center text-[0.86rem] text-dim">La interfaz de Nebula PDF tiene estilo de escritorio clásico. Recreación.</figcaption>
     </figure>
   );
 }
@@ -113,7 +113,7 @@ function BeforeAfter() {
           <b style={{ color: BLUE }}>hashes</b>.
         </p>
       </div>
-      <p className="text-[0.82rem] text-dim md:col-span-2">
+      <p className="text-[0.88rem] text-dim md:col-span-2">
         En azul, lo que el glosario deja en inglés. El comando se copia tal cual. Ejemplo ilustrativo; la traducción real depende del modelo de ML Kit.
       </p>
     </div>
@@ -249,14 +249,18 @@ export default function Page() {
             <a href={nebulaPdf.apk} className="sx-btn mt-7 text-night-950" style={{ background: BLUE }}>
               <Download aria-hidden="true" className="size-4" /> Descargar APK
             </a>
-            <p className="sx-mono mt-6 text-[0.72rem] text-dim">SHA-256</p>
-            <p className="sx-mono mt-1 break-all text-[0.78rem] text-mist">{nebulaPdf.sha256}</p>
-            {nebulaPdf.beta && (
-              <p className="mt-6 border-l pl-4 text-[0.88rem] text-mist" style={{ borderColor: BLUE }}>
-                Versión beta: es una compilación de pruebas, todavía no la versión firmada de publicación. Android te pedirá permitir la instalación de
-                apps de origen desconocido.
-              </p>
-            )}
+            <p className="sx-mono mt-6 text-[0.8rem] text-dim">SHA-256</p>
+            <p className="sx-mono mt-1 break-all text-[0.85rem] text-mist">{nebulaPdf.sha256}</p>
+            <p className="sx-mono mt-4 text-[0.8rem] text-dim">Certificado de firma (SHA-256)</p>
+            <p className="sx-mono mt-1 break-all text-[0.85rem] text-mist">{nebulaPdf.certSha256}</p>
+            <p className="mt-6 border-l pl-4 text-[0.95rem] text-mist" style={{ borderColor: BLUE }}>
+              Versión firmada por FORBIDDEN S.A.S. Si instalaste la beta 1.0.0, desinstálala antes: la firma cambió y Android no deja instalar una
+              encima de la otra.{" "}
+              <Link href="/blog/nebula-pdf-1-0-1/" className="sx-link">
+                Más detalles
+              </Link>
+              .
+            </p>
           </div>
           <div className="sx-panel p-8 md:p-10 lg:col-span-5">
             <p className="sx-label !text-mist">Limitaciones conocidas</p>
@@ -292,7 +296,7 @@ export default function Page() {
               {posts.map((p) => (
                 <li key={p.slug}>
                   <Link href={`/blog/${p.slug}/`} className="sx-panel group flex h-full flex-col p-7 transition-colors hover:border-night-500">
-                    <p className="sx-mono text-[0.72rem] text-dim">
+                    <p className="sx-mono text-[0.8rem] text-dim">
                       {formatDate(p.date)} · {p.minutes} min
                     </p>
                     <h3 className="mt-3 text-[1.3rem] font-medium leading-snug tracking-[-0.025em]">{p.title}</h3>

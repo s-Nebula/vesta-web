@@ -93,7 +93,7 @@ function Steps({ items }: { items: [string, string][] }) {
     <ol className="mt-6 space-y-0">
       {items.map(([t, d], i) => (
         <li key={t} className="grid grid-cols-[2.2rem_1fr] gap-3 border-t border-[#d5e5dc] py-4">
-          <span className="flex size-7 items-center justify-center rounded-full bg-[#0B6E4F] text-[0.8rem] font-bold text-white">{i + 1}</span>
+          <span className="flex size-7 items-center justify-center rounded-full bg-[#0B6E4F] text-[0.86rem] font-bold text-white">{i + 1}</span>
           <div>
             <p className="font-semibold">{t}</p>
             <p className="mt-0.5 text-[0.93rem] text-[#4b5d55]">{d}</p>
@@ -117,7 +117,7 @@ function PhoneMock() {
       <div className="rounded-[2.2rem] border-[10px] border-[#16211d] bg-[#F5F8F6] p-4 shadow-2xl shadow-[#0B6E4F]/25">
         <div className="flex items-center justify-between">
           <p className="font-bold">Cobros de hoy</p>
-          <span className="rounded-full bg-[#E6F2EC] px-2 py-0.5 text-[0.7rem] font-semibold text-[#0B6E4F]">Al día</span>
+          <span className="rounded-full bg-[#E6F2EC] px-2 py-0.5 text-[0.78rem] font-semibold text-[#0B6E4F]">Al día</span>
         </div>
         <div className="mt-3 grid grid-cols-3 gap-2 text-center">
           {[
@@ -127,25 +127,25 @@ function PhoneMock() {
           ].map(([k, v]) => (
             <div key={k} className="rounded-xl bg-white p-2 shadow-sm">
               <p className="text-[0.6rem] text-[#4b5d55]">{k}</p>
-              <p className="text-[0.82rem] font-bold">{v}</p>
+              <p className="text-[0.88rem] font-bold">{v}</p>
             </div>
           ))}
         </div>
         <ul className="mt-3 space-y-2">
           {rows.map(([n, s, v, late]) => (
             <li key={n} className="flex items-center gap-2.5 rounded-xl bg-white p-2.5 shadow-sm">
-              <span className={`flex size-8 items-center justify-center rounded-full text-[0.8rem] font-bold ${late ? "bg-[#f9dedc] text-[#b3261e]" : "bg-[#E6F2EC] text-[#0B6E4F]"}`}>{n[0]}</span>
+              <span className={`flex size-8 items-center justify-center rounded-full text-[0.86rem] font-bold ${late ? "bg-[#f9dedc] text-[#b3261e]" : "bg-[#E6F2EC] text-[#0B6E4F]"}`}>{n[0]}</span>
               <span className="flex-1">
-                <span className="block text-[0.8rem] font-semibold">{n}</span>
-                <span className={`block text-[0.68rem] ${late ? "text-[#b3261e]" : "text-[#4b5d55]"}`}>{s}</span>
+                <span className="block text-[0.86rem] font-semibold">{n}</span>
+                <span className={`block text-[0.76rem] ${late ? "text-[#b3261e]" : "text-[#4b5d55]"}`}>{s}</span>
               </span>
-              <span className="text-[0.8rem] font-bold">{v}</span>
+              <span className="text-[0.86rem] font-bold">{v}</span>
             </li>
           ))}
         </ul>
-        <p className="mt-3 rounded-xl bg-[#0B6E4F] px-3 py-2 text-center text-[0.72rem] font-semibold text-white">Pago de $ 15.000 guardado en el celular</p>
+        <p className="mt-3 rounded-xl bg-[#0B6E4F] px-3 py-2 text-center text-[0.8rem] font-semibold text-white">Pago de $ 15.000 guardado en el celular</p>
       </div>
-      <figcaption className="mt-3 text-center text-[0.8rem] text-[#4b5d55]">Así trabaja el cobrador, con o sin señal. Datos de ejemplo.</figcaption>
+      <figcaption className="mt-3 text-center text-[0.86rem] text-[#4b5d55]">Así trabaja el cobrador, con o sin señal. Datos de ejemplo.</figcaption>
     </figure>
   );
 }
@@ -160,8 +160,8 @@ function Download_({ title, req, file, sha, label }: { title: string; req: strin
       <a href={`${financial.downloadsBase}/${file}`} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0B6E4F] px-5 py-2.5 font-semibold text-white hover:bg-[#09573f]">
         <Download aria-hidden="true" className="size-4" /> {label}
       </a>
-      <p className="mt-4 text-[0.75rem] text-[#4b5d55]">Huella SHA-256 del archivo:</p>
-      <p className="mt-1 break-all font-mono text-[0.72rem] text-[#16211d]">{sha}</p>
+      <p className="mt-4 text-[0.82rem] text-[#4b5d55]">Huella SHA-256 del archivo:</p>
+      <p className="mt-1 break-all font-mono text-[0.8rem] text-[#16211d]">{sha}</p>
     </div>
   );
 }
@@ -187,7 +187,7 @@ export default function Page() {
         <section className="border-b border-[#d5e5dc]">
           <div className="sx-wrap grid items-center gap-14 py-16 md:py-24 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <p className="inline-flex rounded-full bg-[#E6F2EC] px-3 py-1 text-[0.82rem] font-semibold text-[#0B6E4F]">App de cobros para prestamistas</p>
+              <p className="inline-flex rounded-full bg-[#E6F2EC] px-3 py-1 text-[0.88rem] font-semibold text-[#0B6E4F]">App de cobros para prestamistas</p>
               <h1 className="mt-6 font-[family-name:var(--font-grotesk)] text-[clamp(2.4rem,1.4rem+3.8vw,4.4rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
                 Sus cobros al día, sin cuadernos y <span className="text-[#0B6E4F]">sin perder un peso.</span>
               </h1>
