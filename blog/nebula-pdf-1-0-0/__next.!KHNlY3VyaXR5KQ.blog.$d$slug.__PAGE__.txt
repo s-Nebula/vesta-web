@@ -1,0 +1,62 @@
+3:"$Sreact.fragment"
+4:"/_next/static/chunks/3qfy96eoyh-ek.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+d:"/_next/static/chunks/1-nznp50ceufw.js"
+e:I[22016,["$4","$d"],""]
+f:I[5014,["$4","$d"],"default"]
+15:"ViewportBoundary"
+16:I[97367,["$4"],"$15"]
+17:"MetadataBoundary"
+18:I[97367,["$4"],"$17"]
+19:"$Sreact.suspense"
+1a:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+10:T944,<p>Nebula PDF 1.0.0 es la primera versión pública del traductor de PDF de Vesta Security. Es una <strong>beta</strong>: funciona y se puede usar todos los días, pero todavía es una compilación de pruebas y no la versión firmada de publicación.</p>
+<h2>Qué incluye</h2>
+<ul>
+<li>Traducción de PDF del inglés al español <strong>conservando el diseño</strong>: imágenes, tablas, columnas, colores, títulos y numeración.</li>
+<li><strong>Modo ciberseguridad</strong> con un glosario editable de más de 200 términos que no se traducen.</li>
+<li><strong>Código y comandos intactos</strong>, y detección automática de IPs, URLs, rutas, CVE, técnicas de MITRE ATT&amp;CK y opciones de comandos.</li>
+<li><strong>OCR</strong> para páginas escaneadas.</li>
+<li>Traducción de <strong>libros largos</strong> en segundo plano, con notificación de progreso y botón para cancelar.</li>
+<li><strong>Mis traducciones</strong>: la lista de todos los PDF traducidos, para abrirlos, compartirlos o borrarlos.</li>
+<li><strong>Abrir con</strong> y <strong>Compartir</strong> desde el gestor de archivos, el navegador o el correo.</li>
+</ul>
+<p>Todo se hace en el teléfono. La app solo usa internet una vez, para descargar el modelo de idioma.</p>
+<h2>Cómo instalarla</h2>
+<ol>
+<li>Descarga el APK desde la <a href="/aplicaciones/nebula-pdf/#descargar">página de Nebula PDF</a>.</li>
+<li>Si quieres, verifica la huella SHA-256 del archivo con la que aparece en la página.</li>
+<li>Ábrelo y permite la instalación de apps de origen desconocido cuando Android lo pida.</li>
+</ol>
+<p>Necesitas Android 8.0 o superior.</p>
+<h2>Limitaciones conocidas</h2>
+<ul>
+<li>Las páginas giradas se dejan sin traducir.</li>
+<li>Los PDF protegidos con contraseña de apertura no se pueden abrir.</li>
+<li>Si una página tiene muy poco espacio libre, la letra traducida puede quedar algo más pequeña que la original.</li>
+</ul>
+<h2>El código</h2>
+<p>Nebula PDF está escrito en Kotlin y su código está en <a href="https://github.com/s-Nebula/nebula-pdf" target="_blank" rel="noopener noreferrer">GitHub</a>. Si encuentras un error o un término técnico que se tradujo cuando no debía, escríbeme por <a href="https://wa.me/573246167956" target="_blank" rel="noopener noreferrer">WhatsApp</a> o por correo a <a href="mailto:nebulagnu@proton.me">nebulagnu@proton.me</a>.</p>
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"Nebula PDF 1.0.0, la primera versión beta\",\"description\":\"Ya se puede descargar la primera versión de Nebula PDF, el traductor de PDF para libros de ciberseguridad. Qué incluye, cómo instalarla y qué viene después.\",\"datePublished\":\"2026-11-26\",\"inLanguage\":\"es-CO\",\"url\":\"https://vestasecurity.date/blog/nebula-pdf-1-0-0/\",\"author\":{\"@type\":\"Person\",\"name\":\"Nebula\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vesta Security\"}}"}}],["$","article",null,{"children":[["$","header",null,{"className":"border-b border-night-600","children":["$","div",null,{"className":"sx-wrap max-w-[50rem] pb-12 pt-12 md:pb-16 md:pt-16","children":[["$","$Le",null,{"href":"/aplicaciones/nebula-pdf/","className":"sx-arrow text-sm","children":[["$","$Lf",null,{"icon":{"name":"arrow-left","size":24,"node":[["path",{"d":"m12 19-7-7 7-7","key":"1l729n"}],["path",{"d":"M19 12H5","key":"x3x0zl"}]]},"className":"size-4","aria-hidden":"true"}]," ","Nebula PDF"]}],["$","h1",null,{"className":"mt-7 text-[clamp(2rem,1.3rem+2.8vw,3.4rem)] font-medium leading-[1.04] tracking-[-0.04em]","children":"Nebula PDF 1.0.0, la primera versión beta"}],["$","p",null,{"className":"sx-lead mt-6","children":"Ya se puede descargar la primera versión de Nebula PDF, el traductor de PDF para libros de ciberseguridad. Qué incluye, cómo instalarla y qué viene después."}],["$","p",null,{"className":"sx-mono mt-7 text-[0.75rem] text-dim","children":["por ","Nebula"," · ",["$","time",null,{"dateTime":"2026-11-26","children":"26 de noviembre de 2026"}]," · ",1," min de lectura"]}]]}]}],["$","div",null,{"className":"sx-wrap max-w-[50rem] py-12 md:py-16","children":[["$","div",null,{"className":"sx-prose","dangerouslySetInnerHTML":{"__html":"$10"}}],"$L11","$L12"]}]]}]],null,"$L13"]}],"p":"$@14","v":null,"s":"$9"}}]]
+a:[["children",{"s":{"n":"slug","t":"d","k":"nebula-pdf-1-0-0","s":[]},"h":65632,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@b","v":"$8","s":"$9"},"c":"$Qc"}]]
+2:[["children",{"s":"blog","h":131136,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":"(security)","h":131104,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":131152,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0E1014"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$19",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Nebula PDF 1.0.0, la primera versión beta · Vesta Security"}],["$","meta","1",{"name":"description","content":"Ya se puede descargar la primera versión de Nebula PDF, el traductor de PDF para libros de ciberseguridad. Qué incluye, cómo instalarla y qué viene después."}],["$","meta","2",{"name":"application-name","content":"Vesta Security"}],["$","meta","3",{"name":"author","content":"FORBIDDEN S.A.S."}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","link","5",{"rel":"canonical","href":"https://vestasecurity.date/blog/nebula-pdf-1-0-0/"}],["$","meta","6",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","7",{"property":"og:title","content":"Nebula PDF 1.0.0, la primera versión beta · Vesta Security"}],["$","meta","8",{"property":"og:description","content":"Ya se puede descargar la primera versión de Nebula PDF, el traductor de PDF para libros de ciberseguridad. Qué incluye, cómo instalarla y qué viene después."}],["$","meta","9",{"property":"og:url","content":"https://vestasecurity.date/blog/nebula-pdf-1-0-0/"}],["$","meta","10",{"property":"og:site_name","content":"Vesta Security"}],["$","meta","11",{"property":"og:locale","content":"es_CO"}],["$","meta","12",{"property":"og:image","content":"https://vestasecurity.date/og-servicios.png"}],["$","meta","13",{"property":"og:image:width","content":"1200"}],["$","meta","14",{"property":"og:image:height","content":"630"}],["$","meta","15",{"property":"og:image:alt","content":"Nebula PDF 1.0.0, la primera versión beta · Vesta Security"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2026-11-26"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:title","content":"Nebula PDF 1.0.0, la primera versión beta · Vesta Security"}],["$","meta","20",{"name":"twitter:description","content":"Ya se puede descargar la primera versión de Nebula PDF, el traductor de PDF para libros de ciberseguridad. Qué incluye, cómo instalarla y qué viene después."}],["$","meta","21",{"name":"twitter:image","content":"https://vestasecurity.date/og-servicios.png"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","23",{"rel":"icon","href":"/icon.svg","type":"image/svg+xml"}],["$","link","24",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","$L1a","25",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1b","v":null,"s":"$9"}},"a":"$@1c","u":"$@1d","b":"RQjoJmLUdUVxCzz2ka2XO"}
+1e:I[97367,["$4"],"OutletBoundary"]
+:HL["/brand/nebula_pdf_icon.svg","image"]
+11:["$","aside",null,{"className":"sx-panel mt-16 flex flex-wrap items-center gap-5 p-7","children":[["$","img",null,{"src":"/brand/nebula_pdf_icon.svg","alt":"","width":48,"height":48,"className":"size-12 rounded-xl"}],["$","div",null,{"className":"flex-1","children":[["$","p",null,{"className":"text-lg font-medium","children":"Nebula PDF"}],["$","p",null,{"className":"text-[0.9rem] text-mist","children":"Traduce libros y manuales en PDF del inglés al español sin perder el diseño. Pensado para libros de ciberseguridad."}]]}],["$","$Le",null,{"href":"/aplicaciones/nebula-pdf/","className":"sx-btn sx-btn-ghost","children":["Ver la app ",["$","$Lf",null,{"icon":{"name":"arrow-right","size":24,"node":[["path",{"d":"M5 12h14","key":"1ays0h"}],["path",{"d":"m12 5 7 7-7 7","key":"xquz4c"}]]},"className":"size-4","aria-hidden":"true"}]]}]]}]
+12:["$","nav",null,{"aria-label":"Otros artículos","className":"mt-16","children":[["$","p",null,{"className":"sx-label","children":"Sigue leyendo"}],["$","ul",null,{"className":"mt-5 grid gap-6 sm:grid-cols-2","children":[["$","li","traducir-libros-de-pentesting",{"className":"border-t border-night-500 pt-4","children":["$","$Le",null,{"href":"/blog/traducir-libros-de-pentesting/","className":"text-[1.1rem] font-medium leading-snug tracking-[-0.02em] hover:text-violet-200","children":"Cómo traducir un libro de pentesting sin romper los comandos"}]}],["$","li","correo-falso-cuenta-de-pago",{"className":"border-t border-night-500 pt-4","children":["$","$Le",null,{"href":"/blog/correo-falso-cuenta-de-pago/","className":"text-[1.1rem] font-medium leading-snug tracking-[-0.02em] hover:text-violet-200","children":"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC"}]}]]}]]}]
+13:["$","$L1e",null,{"children":["$","$19",null,{"name":"Next.MetadataOutlet","children":"$@1f"}]}]
+1d:true
+9:300
+1f:null
+9:C
+1c:0
+b:"$undefined"
+7:"$undefined"
+1b:"$undefined"
+14:"$undefined"

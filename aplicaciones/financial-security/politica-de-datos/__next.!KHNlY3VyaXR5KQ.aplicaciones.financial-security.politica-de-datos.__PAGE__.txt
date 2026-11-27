@@ -1,0 +1,229 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/3qfy96eoyh-ek.js"
+3:I[39756,["$2"],"default"]
+4:I[37457,["$2"],"default"]
+5:"/_next/static/chunks/1-nznp50ceufw.js"
+6:I[22016,["$2","$5"],""]
+a:I[95290,["$2","$5"],"SecurityHeader"]
+1b:"ViewportBoundary"
+1c:I[97367,["$2"],"$1b"]
+1d:"MetadataBoundary"
+1e:I[97367,["$2"],"$1d"]
+1f:"$Sreact.suspense"
+:HL["/_next/static/chunks/2gop92yb8a075.css","style"]
+8:X
+11:X
+11:C
+18:[["children",{"s":"__PAGE__","h":160,"d":{"r":"$L19","p":"$@1a","v":null,"s":"$8"}}]]
+15:[["children",{"s":"politica-de-datos","h":96,"d":{"r":"$L16","p":"$@17","v":"$11","s":"$8"},"c":"$Q18"}]]
+12:[["children",{"s":"financial-security","h":96,"d":{"r":"$L13","p":"$@14","v":"$11","s":"$8"},"c":"$Q15"}]]
+e:[["children",{"s":"aplicaciones","h":96,"d":{"r":"$Lf","p":"$@10","v":"$11","s":"$8"},"c":"$Q12"}]]
+9:[["children",{"s":"(security)","h":96,"d":{"r":["$","$1","c",{"children":[[["$","script","script-0",{"src":"/_next/static/chunks/1-nznp50ceufw.js","async":true}]],["$","div",null,{"lang":"es","className":"sx min-h-dvh","children":[["$","$La",null,{}],["$","main",null,{"id":"contenido","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","main",null,{"className":"sx min-h-dvh","children":["$","div",null,{"className":"sx-wrap py-16 md:py-28","children":[["$","$L6",null,{"href":"/","aria-label":"Vesta Security","children":["$","span",null,{"className":"inline-flex items-baseline gap-[0.32em] font-[family-name:var(--font-grotesk)] leading-none text-[2rem] ","children":[["$","span",null,{"className":"font-bold tracking-[-0.035em] text-haze","children":"VESTA"}],["$","span",null,{"className":"font-normal tracking-[-0.02em] text-violet-300","children":"Security"}]]}]}],["$","p",null,{"className":"sx-mono mt-16 text-[0.8rem] text-dim","children":"HTTP 404"}],["$","div",null,{"className":"mt-6 grid gap-16 md:grid-cols-2","children":[["$","section",null,{"lang":"es","children":[["$","h1",null,{"className":"sx-h2","children":["Esta página no existe ",["$","span",null,{"className":"sx-em","children":"o cambió de lugar."}]]}],["$","div",null,{"className":"mt-8 flex flex-wrap gap-3","children":[["$","$L6",null,{"href":"/","className":"sx-btn sx-btn-primary","children":"Volver al inicio"}],["$","$L6",null,{"href":"/aplicaciones/","className":"sx-btn sx-btn-ghost","children":"Aplicaciones"}]]}]]}],["$","section",null,{"lang":"en","children":[["$","h2",null,{"className":"sx-h2","children":["This page does not exist ",["$","span",null,{"className":"sx-em","children":"or has moved."}]]}],["$","div",null,{"className":"mt-8 flex flex-wrap gap-3","children":["$","$L6",null,{"href":"/en/","className":"sx-btn sx-btn-ghost","children":"Vesta in English"}]}]]}]]}]]}]}],[]]}]}],["$","footer",null,{"data-site-footer":true,"className":"sx border-t border-night-600 bg-night-950","children":[["$","div",null,{"className":"sx-wrap grid gap-12 py-16 md:grid-cols-12 md:py-20","children":[["$","div",null,{"className":"md:col-span-4","children":[["$","span",null,{"className":"inline-flex items-baseline gap-[0.32em] font-[family-name:var(--font-grotesk)] leading-none text-[2rem] ","children":[["$","span",null,{"className":"font-bold tracking-[-0.035em] text-haze","children":"VESTA"}],["$","span",null,{"className":"font-normal tracking-[-0.02em] text-violet-300","children":"Security"}]]}],["$","p",null,{"className":"mt-5 max-w-xs text-[0.92rem] leading-relaxed text-mist","children":["Auditorías de seguridad y pruebas de penetración para pequeños negocios. Un proyecto de ","Nebula",", operado por"," ","FORBIDDEN S.A.S."," desde Santa Marta, Colombia."]}]]}],"$Lb"]}],"$Lc"]}]]}]]}],"p":"$@d","v":null,"s":"$8"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2gop92yb8a075.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/3qfy96eoyh-ek.js","async":true}]],["$","html",null,{"lang":"es","children":["$","body",null,{"className":"min-h-dvh","children":["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}],"notFound":[["$","main",null,{"className":"sx min-h-dvh","children":["$","div",null,{"className":"sx-wrap py-16 md:py-28","children":[["$","$L6",null,{"href":"/","aria-label":"Vesta Security","children":["$","span",null,{"className":"inline-flex items-baseline gap-[0.32em] font-[family-name:var(--font-grotesk)] leading-none text-[2rem] ","children":[["$","span",null,{"className":"font-bold tracking-[-0.035em] text-haze","children":"VESTA"}],["$","span",null,{"className":"font-normal tracking-[-0.02em] text-violet-300","children":"Security"}]]}]}],["$","p",null,{"className":"sx-mono mt-16 text-[0.8rem] text-dim","children":"HTTP 404"}],["$","div",null,{"className":"mt-6 grid gap-16 md:grid-cols-2","children":[["$","section",null,{"lang":"es","children":[["$","h1",null,{"className":"sx-h2","children":["Esta página no existe ",["$","span",null,{"className":"sx-em","children":"o cambió de lugar."}]]}],["$","div",null,{"className":"mt-8 flex flex-wrap gap-3","children":[["$","$L6",null,{"href":"/","className":"sx-btn sx-btn-primary","children":"Volver al inicio"}],["$","$L6",null,{"href":"/aplicaciones/","className":"sx-btn sx-btn-ghost","children":"Aplicaciones"}]]}]]}],["$","section",null,{"lang":"en","children":[["$","h2",null,{"className":"sx-h2","children":["This page does not exist ",["$","span",null,{"className":"sx-em","children":"or has moved."}]]}],["$","div",null,{"className":"mt-8 flex flex-wrap gap-3","children":["$","$L6",null,{"href":"/en/","className":"sx-btn sx-btn-ghost","children":"Vesta in English"}]}]]}]]}]]}]}],[]]}]}]}]]}],"p":"$@7","v":null,"s":"$8"},"c":"$Q9"},"h":{"r":["$","$1","h",{"children":[null,["$","$L1c",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#0E1014"}]]}],["$","$L1e",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1f",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Política de tratamiento de datos · Financial Security · Vesta Security"}],["$","meta","1",{"name":"description","content":"Cómo trata FORBIDDEN S.A.S. los datos personales en Financial Security: responsable, finalidades, derechos, seguridad y conservación (Ley 1581 de 2012)."}],["$","meta","2",{"name":"application-name","content":"Vesta Security"}],["$","meta","3",{"name":"author","content":"FORBIDDEN S.A.S."}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","link","5",{"rel":"canonical","href":"https://vestasecurity.date/aplicaciones/financial-security/politica-de-datos/"}],["$","meta","6",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","7",{"property":"og:title","content":"Política de tratamiento de datos · Financial Security · Vesta Security"}],["$","meta","8",{"property":"og:description","content":"Cómo trata FORBIDDEN S.A.S. los datos personales en Financial Security: responsable, finalidades, derechos, seguridad y conservación (Ley 1581 de 2012)."}],["$","meta","9",{"property":"og:url","content":"https://vestasecurity.date/aplicaciones/financial-security/politica-de-datos/"}],["$","meta","10",{"property":"og:site_name","content":"Vesta Security"}],["$","meta","11",{"property":"og:locale","content":"es_CO"}],["$","meta","12",{"property":"og:image","content":"https://vestasecurity.date/og-financial.png"}],["$","meta","13",{"property":"og:image:width","content":"1200"}],["$","meta","14",{"property":"og:image:height","content":"630"}],["$","meta","15",{"property":"og:image:alt","content":"Política de tratamiento de datos · Financial Security · Vesta Security"}],["$","meta","16",{"property":"og:type","content":"website"}],["$","meta","17",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","18",{"name":"twitter:title","content":"Política de tratamiento de datos · Financial Security · Vesta Security"}],["$","meta","19",{"name":"twitter:description","content":"Cómo trata FORBIDDEN S.A.S. los datos personales en Financial Security: responsable, finalidades, derechos, seguridad y conservación (Ley 1581 de 2012)."}],"$L20","$L21","$L22","$L23","$L24"]}]}],null]}],"$L25"]}],"p":"$@26","v":null,"s":"$8"}},"a":"$@27","u":"$@28","b":"RQjoJmLUdUVxCzz2ka2XO"}
+29:I[87154,["$2","$5"],"Year"]
+2c:I[27201,["$2"],"IconMark"]
+:HL["/brand/financial_logo.svg","image"]
+b:["$","nav",null,{"aria-label":"Navegación del pie","className":"grid gap-10 sm:grid-cols-3 md:col-span-8","children":[["$","div",null,{"children":[["$","h2",null,{"className":"sx-label","children":"Sitio"}],["$","ul",null,{"className":"mt-5 space-y-2.5","children":[["$","li","/",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/","children":"Inicio"}]}],["$","li","/servicios/",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/servicios/","children":"Servicios y precios"}]}],["$","li","/aplicaciones/",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/aplicaciones/","children":"Aplicaciones"}]}],["$","li","/blog/",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/blog/","children":"Blog"}]}],["$","li","/#contacto",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/#contacto","children":"Contacto"}]}]]}]]}],["$","div",null,{"children":[["$","h2",null,{"className":"sx-label","children":"Aplicaciones"}],["$","ul",null,{"className":"mt-5 space-y-2.5","children":[["$","li","vesta",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/control-parental/","children":["Vesta"," ",["$","span",null,{"className":"text-dim","children":["· ","Control parental"]}]]}]}],["$","li","financial",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/aplicaciones/financial-security/","children":["Financial Security"," ",["$","span",null,{"className":"text-dim","children":["· ","Créditos y cobranza"]}]]}]}],["$","li","nebula-pdf",{"children":["$","$L6",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"/aplicaciones/nebula-pdf/","children":["Nebula PDF"," ",["$","span",null,{"className":"text-dim","children":["· ","Traductor de PDF"]}]]}]}]]}],["$","h2",null,{"className":"sx-label mt-9","children":"Encuéntrame"}],["$","ul",null,{"className":"mt-5 space-y-2.5","children":[["$","li",null,{"children":["$","a",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"https://github.com/s-Nebula","target":"_blank","rel":"noopener noreferrer","children":"GitHub"}]}],["$","li",null,{"children":["$","a",null,{"className":"text-[0.92rem] text-mist hover:text-haze","href":"https://www.tiktok.com/@nebulagnu","target":"_blank","rel":"noopener noreferrer","children":["TikTok ","@nebulagnu"]}]}]]}]]}],["$","div",null,{"children":[["$","h2",null,{"className":"sx-label","children":"Contacto"}],["$","address",null,{"className":"mt-5 space-y-2.5 text-[0.92rem] not-italic","children":[["$","p",null,{"className":"font-semibold text-haze","children":"FORBIDDEN S.A.S."}],["$","p",null,{"className":"text-mist","children":["NIT ","901653270-2"]}],["$","p",null,{"className":"text-mist","children":"Santa Marta, Magdalena, Colombia"}],["$","p",null,{"children":["$","a",null,{"className":"sx-link","href":"mailto:nebulagnu@proton.me","children":"nebulagnu@proton.me"}]}],["$","p",null,{"children":["$","a",null,{"className":"sx-link","href":"https://wa.me/573246167956?text=Hola%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratuito%20de%20seguridad%20para%20mi%20negocio.","target":"_blank","rel":"noopener noreferrer","children":["WhatsApp ","+57 324 616 7956"]}]}]]}]]}]]}]
+c:["$","div",null,{"className":"border-t border-night-600","children":["$","div",null,{"className":"sx-wrap flex flex-col gap-2 py-6 text-xs text-dim sm:flex-row sm:items-center sm:justify-between","children":[["$","p",null,{"children":["© ",["$","$L29",null,{"initial":2026}]," Vesta Security · ","FORBIDDEN S.A.S."," Todos los derechos reservados."]}],["$","p",null,{"children":"Matrícula mercantil 262746 · Cámara de Comercio de Santa Marta para el Magdalena"}]]}]}]
+f:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}]
+13:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}]
+16:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","template":["$","$L4",null,{}]}]]}]
+2a:T3282,    <p class="fecha">Vigente desde el 25 de noviembre de 2026 · Versión 1</p>
+
+  <div class="resumen">
+    <b>En pocas palabras</b>
+    <ul>
+      <li>Financial Security guarda la información de cada negocio de cobranza: su equipo, sus clientes, sus créditos y sus pagos.</li>
+      <li>Los datos de los clientes de cada negocio <b>son de ese negocio</b>. Nosotros solo los guardamos y procesamos para que la app funcione; no los vendemos, no los compartimos y no los usamos para nada más.</li>
+      <li>La información viaja cifrada, cada negocio está separado de los demás y cada noche se hace una copia de seguridad cifrada.</li>
+      <li>Usted puede consultar, corregir o pedir que se borren sus datos escribiendo a <a href="mailto:nebulagnu@proton.me">nebulagnu@proton.me</a>.</li>
+    </ul>
+  </div>
+
+  <h2 id="indice">Contenido</h2>
+  <ol class="indice">
+    <li><a href="#responsable">Quién es el responsable</a></li>
+    <li><a href="#alcance">A quién aplica y qué papel cumplimos</a></li>
+    <li><a href="#datos">Qué datos tratamos</a></li>
+    <li><a href="#finalidades">Para qué los usamos</a></li>
+    <li><a href="#negocios">Obligaciones de los negocios</a></li>
+    <li><a href="#sensibles">Datos sensibles y de menores</a></li>
+    <li><a href="#derechos">Sus derechos</a></li>
+    <li><a href="#procedimiento">Cómo ejercer sus derechos</a></li>
+    <li><a href="#seguridad">Cómo protegemos los datos</a></li>
+    <li><a href="#proveedores">Proveedores y transferencias</a></li>
+    <li><a href="#conservacion">Cuánto tiempo los guardamos</a></li>
+    <li><a href="#web">Esta página web</a></li>
+    <li><a href="#cambios">Cambios a esta política</a></li>
+  </ol>
+
+  <h2 id="responsable">1. Quién es el responsable</h2>
+  <dl class="ficha">
+    <dt>Razón social</dt><dd>FORBIDDEN S.A.S.</dd>
+    <dt>NIT</dt><dd>901.653.270-2</dd>
+    <dt>Dirección</dt><dd>Carrera 28 # 12-50, Santa Marta, Magdalena, Colombia</dd>
+    <dt>Correo electrónico</dt><dd><a href="mailto:nebulagnu@proton.me">nebulagnu@proton.me</a></dd>
+    <dt>Teléfono y WhatsApp</dt><dd><a href="https://wa.me/573246167956">+57 324 616 7956</a></dd>
+    <dt>Sitio web</dt><dd><a href="https://vestasecurity.date/aplicaciones/financial-security/">vestasecurity.date/aplicaciones/financial-security</a></dd>
+  </dl>
+  <p>Esta política cumple la Ley 1581 de 2012, el Decreto 1377 de 2013 (compilado en el Decreto 1074 de 2015) y
+    las demás normas colombianas sobre protección de datos personales. El correo y el WhatsApp de arriba son
+    también el canal para atender consultas y reclamos.</p>
+
+  <h2 id="alcance">2. A quién aplica y qué papel cumplimos</h2>
+  <p>Financial Security es un programa para administrar créditos y cobranza. Lo usan negocios (los
+    <b>"negocios"</b> o <b>"dueños"</b>) que registran a sus cobradores y clientes. Por eso
+    cumplimos dos papeles distintos:</p>
+  <ul>
+    <li><b>Somos responsables</b> de los datos de los dueños, de las personas de su equipo que usan la app
+      (cobradores), de quienes nos escriben para pedir información y de los visitantes de esta página.</li>
+    <li><b>Somos encargados</b> de los datos de los clientes (deudores) que cada negocio registra. En ese caso el
+      <b>responsable es el negocio</b>: él decide a quién presta, qué datos anota y para qué. Nosotros solo
+      guardamos y procesamos esos datos por cuenta del negocio y siguiendo sus instrucciones, para prestarle el servicio.</li>
+  </ul>
+  <p>Si usted es cliente de un negocio que usa Financial Security y quiere ejercer sus derechos sobre sus datos,
+    lo primero es dirigirse a ese negocio. También puede escribirnos: le ayudaremos a hacer llegar su solicitud al
+    negocio correspondiente.</p>
+
+  <h2 id="datos">3. Qué datos tratamos</h2>
+  <div class="tabla">
+  <table>
+    <thead><tr><th>De quién</th><th>Qué datos</th></tr></thead>
+    <tbody>
+      <tr><td>Dueños y personas del equipo</td><td>Nombre, usuario, rol (dueño o cobrador), clave (guardada solo como huella cifrada, nunca en texto), la ruta asignada, el nombre del dispositivo con el que se inicia sesión, las sesiones abiertas y el registro de las acciones hechas en la app (por ejemplo, quién registró o anuló un pago y cuándo).</td></tr>
+      <tr><td>Clientes de cada negocio</td><td>Nombre y, si el negocio los anota, número de documento, teléfono, dirección, barrio y notas. También sus créditos, cuotas, pagos, abonos, mora, renovaciones y ajustes.</td></tr>
+      <tr><td>Negocios que contratan el servicio</td><td>Nombre del negocio, datos de contacto, la configuración de la app y los pagos de la suscripción.</td></tr>
+      <tr><td>Personas que nos contactan</td><td>Lo que nos escriban por WhatsApp o correo: nombre, número, correo y el contenido del mensaje.</td></tr>
+      <tr><td>Visitantes de la página y usuarios de la app</td><td>Datos técnicos de conexión que guarda el servidor: dirección IP, fecha y hora, página o función solicitada y tipo de navegador o dispositivo.</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>La app <b>no</b> accede a los contactos, fotos, micrófono ni cámara del celular, y actualmente no recoge la
+    ubicación del dispositivo.</p>
+
+  <h2 id="finalidades">4. Para qué los usamos</h2>
+  <ul>
+    <li>Prestar el servicio: que el cobrador registre pagos, préstamos, clientes y gastos, y que el dueño vea su
+      cartera, recaudo, mora, caja y métricas.</li>
+    <li>Sincronizar la información entre los celulares, el computador y el servidor.</li>
+    <li>Controlar el acceso: iniciar sesión, que cada persona vea solo lo que le corresponde según su rol y ruta, y
+      dejar constancia de quién hizo cada operación.</li>
+    <li>Hacer copias de seguridad y recuperar la información si algo falla.</li>
+    <li>Dar soporte, activar negocios, cobrar la suscripción y avisar sobre cambios o actualizaciones del servicio.</li>
+    <li>Proteger el servicio contra accesos indebidos y fraudes, y cumplir obligaciones legales.</li>
+  </ul>
+  <p>No vendemos, alquilamos ni compartimos datos personales con terceros para publicidad. No usamos los datos de
+    los clientes de un negocio para ofrecerles nada, ni los cruzamos con los de otros negocios, ni los reportamos a
+    centrales de riesgo.</p>
+
+  <h2 id="negocios">5. Obligaciones de los negocios que usan la app</h2>
+  <p>Como responsable de los datos de sus clientes, cada negocio se compromete a:</p>
+  <ul>
+    <li>Pedir a sus clientes la autorización para tratar sus datos, informarles para qué los usa y conservar prueba de esa autorización.</li>
+    <li>Registrar solo los datos necesarios para administrar el crédito y mantenerlos exactos y actualizados.</li>
+    <li>Atender las consultas y reclamos de sus clientes en los plazos de la ley.</li>
+    <li>Usar la app y los datos de manera lícita, sin prácticas de cobro abusivas, amenazantes o contrarias a la ley,
+      y respetando los límites legales de intereses.</li>
+    <li>Cuidar los usuarios y claves de su equipo, y desactivar de inmediato a quien deje de trabajar con el negocio.</li>
+  </ul>
+  <p>Podemos suspender el servicio a un negocio que use la app en contra de esta política o de la ley.</p>
+
+  <h2 id="sensibles">6. Datos sensibles y de menores de edad</h2>
+  <p>La app no pide datos sensibles (salud, origen étnico, orientación política, religiosa o sexual, datos
+    biométricos, entre otros). Los negocios no deben anotarlos en las notas ni en ningún otro campo. Tampoco deben
+    registrar datos de niñas, niños ni adolescentes. Si nos enteramos de que se registraron, pediremos al negocio
+    que los elimine.</p>
+
+  <h2 id="derechos">7. Sus derechos</h2>
+  <p>Como titular de los datos, usted tiene derecho a:</p>
+  <ul>
+    <li>Conocer, actualizar y corregir sus datos personales.</li>
+    <li>Pedir prueba de la autorización que dio para el tratamiento.</li>
+    <li>Saber, si lo pide, cómo se han usado sus datos.</li>
+    <li>Presentar quejas ante la Superintendencia de Industria y Comercio, después de haber agotado el trámite de
+      consulta o reclamo con el responsable.</li>
+    <li>Revocar la autorización y pedir que se borren sus datos, cuando no exista un deber legal o contractual de conservarlos.</li>
+    <li>Acceder gratis a sus datos personales.</li>
+  </ul>
+
+  <h2 id="procedimiento">8. Cómo ejercer sus derechos</h2>
+  <p>Escriba a <a href="mailto:nebulagnu@proton.me">nebulagnu@proton.me</a> o al WhatsApp
+    <a href="https://wa.me/573246167956">+57 324 616 7956</a> con: su nombre y número de documento, qué pide
+    (consulta, corrección, borrado o revocatoria), los hechos que la motivan, una forma de contactarlo y, si actúa
+    en nombre de otra persona, el documento que lo acredite. Si es cliente de un negocio, indique también el nombre de ese negocio.</p>
+  <h3>Consultas</h3>
+  <p>Se responden en máximo <b>10 días hábiles</b> desde que las recibimos. Si no alcanzamos, le avisaremos el
+    motivo y le responderemos en máximo 5 días hábiles más.</p>
+  <h3>Reclamos (corrección, actualización, borrado o revocatoria)</h3>
+  <p>Se responden en máximo <b>15 días hábiles</b> desde el día siguiente a recibirlos. Si no alcanzamos, le
+    avisaremos el motivo y le responderemos en máximo 8 días hábiles más. Si al reclamo le falta información, se la
+    pediremos dentro de los 5 días siguientes; si pasan 2 meses sin que la envíe, entenderemos que desistió.
+    Si el reclamo es sobre datos que administra un negocio, se lo trasladaremos en máximo 2 días hábiles y le
+    informaremos a usted.</p>
+  <h3>Borrar los datos de un negocio</h3>
+  <p>El dueño puede, desde "Mi perfil" en la app, dejar el negocio como nuevo (borra clientes, créditos, cajas,
+    rutas y las cuentas del equipo) o eliminar su cuenta con todos los datos del servidor.</p>
+
+  <h2 id="seguridad">9. Cómo protegemos los datos</h2>
+  <ul>
+    <li>Todas las conexiones entre la app, la página y el servidor van cifradas (HTTPS).</li>
+    <li>Los datos de cada negocio están separados de los demás en la base de datos, con reglas de seguridad que
+      impiden que un negocio vea los datos de otro.</li>
+    <li>Cada persona del equipo ve solo lo que su rol permite; cada cobrador ve solo los clientes de su ruta.</li>
+    <li>Las claves se guardan como huella cifrada; en el celular, la sesión se guarda en el almacenamiento seguro del sistema.</li>
+    <li>Los cobradores no pueden editar ni borrar pagos. Solo el dueño puede anularlos (queda el motivo, quién lo hizo y cuándo) o eliminarlos si fueron un error.</li>
+    <li>Cada noche se hace una copia de seguridad cifrada, que se guarda también fuera del servidor.</li>
+  </ul>
+  <p>Ningún sistema es infalible. Si ocurre un incidente que ponga en riesgo datos personales, lo informaremos a los
+    negocios afectados y a la Superintendencia de Industria y Comercio, como lo exige la ley.</p>
+
+  <h2 id="proveedores">10. Proveedores y transferencias</h2>
+  <p>Para prestar el servicio usamos proveedores que solo procesan los datos por nuestra cuenta, bajo obligaciones
+    de confidencialidad y seguridad:</p>
+  <ul>
+    <li><b>Cloudflare, Inc.</b>: conecta de forma segura la página y la app con nuestro servidor.</li>
+    <li><b>GitHub, Inc.</b>: guarda una copia externa de las copias de seguridad, ya cifradas. La clave para abrirlas no se guarda allí.</li>
+  </ul>
+  <p>Estos proveedores pueden procesar información fuera de Colombia, principalmente en Estados Unidos, país con
+    niveles adecuados de protección según la Superintendencia de Industria y Comercio. Al aceptar esta política, el
+    titular autoriza esa transmisión. Solo entregaremos datos a autoridades cuando una orden legal lo exija.</p>
+
+  <h2 id="conservacion">11. Cuánto tiempo los guardamos</h2>
+  <ul>
+    <li>Los datos de un negocio se guardan mientras use el servicio, o hasta que el dueño los borre desde la app o lo pida.</li>
+    <li>Cuando un negocio se elimina, sus datos se borran del servidor de inmediato. Las copias de seguridad
+      cifradas que ya existían se borran solas en <b>30 días</b>.</li>
+    <li>De un negocio eliminado solo conservamos, sin nombres ni datos de personas, la fecha de eliminación y el
+      total pagado por la suscripción, para nuestra contabilidad.</li>
+    <li>Los mensajes de contacto y los registros técnicos de conexión se conservan solo el tiempo necesario para
+      atender la solicitud y para la seguridad del servicio.</li>
+  </ul>
+
+  <h2 id="web">12. Esta página web</h2>
+  <p>Esta página no usa cookies de seguimiento, publicidad ni analítica de terceros.</p>
+
+  <h2 id="cambios">13. Cambios a esta política</h2>
+  <p>Si cambiamos esta política de forma importante, lo publicaremos en esta página con la nueva fecha y lo
+    avisaremos a los negocios por la app, WhatsApp o correo antes de aplicarlo.</p>
+</main>
+19:["$","$1","c",{"children":[[["$","div",null,{"className":"sticky top-[4.25rem] z-40 border-b border-[#09573f] bg-[#0B6E4F] text-white","children":["$","div",null,{"className":"sx-wrap flex h-12 items-center gap-6","children":[["$","$L6",null,{"href":"/aplicaciones/financial-security/","className":"flex shrink-0 items-center gap-2 text-[0.92rem] font-semibold","children":[["$","img",null,{"src":"/brand/financial_logo.svg","alt":"","width":24,"height":24,"className":"size-6 rounded-md"}],"Financial",["$","span",null,{"className":"text-[#E9B949]","children":"Security"}]]}],["$","nav",null,{"aria-label":"Financial Security","className":"no-scrollbar flex-1 overflow-x-auto","children":["$","ul",null,{"className":"flex gap-1 whitespace-nowrap","children":[["$","li","/aplicaciones/financial-security/#como-funciona",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/#como-funciona","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Cómo funciona"}]}],["$","li","/aplicaciones/financial-security/#funciones",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/#funciones","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Lo que hace"}]}],["$","li","/aplicaciones/financial-security/#uso",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/#uso","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Cómo se usa"}]}],["$","li","/aplicaciones/financial-security/#precio",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/#precio","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Precio"}]}],["$","li","/aplicaciones/financial-security/#preguntas",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/#preguntas","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Preguntas"}]}],["$","li","/aplicaciones/financial-security/politica-de-datos/",{"children":["$","$L6",null,{"href":"/aplicaciones/financial-security/politica-de-datos/","className":"rounded px-2.5 py-1.5 text-[0.84rem] text-white/80 hover:text-white","children":"Política de datos"}]}]]}]}],["$","$L6",null,{"href":"/aplicaciones/financial-security/#descargar","className":"hidden shrink-0 rounded-full bg-[#E9B949] px-3.5 py-1.5 text-[0.82rem] font-semibold text-[#16211d] hover:bg-[#f1ca6b] md:inline-flex","children":"Descargar"}]]}]}],["$","div",null,{"className":"sx-wrap max-w-[52rem] py-14 md:py-20","children":[["$","p",null,{"className":"sx-label","children":"Financial Security"}],["$","h1",null,{"className":"mt-4 text-[clamp(2rem,1.4rem+2.4vw,3.2rem)] font-medium leading-[1.05] tracking-[-0.04em]","children":"Política de tratamiento de datos personales"}],["$","div",null,{"className":"sx-prose mt-6","dangerouslySetInnerHTML":{"__html":"$2a"}}]]}]],null,"$L2b"]}]
+20:["$","meta","20",{"name":"twitter:image","content":"https://vestasecurity.date/og-financial.png"}]
+21:["$","link","21",{"rel":"icon","href":"/favicon.ico","sizes":"any"}]
+22:["$","link","22",{"rel":"icon","href":"/icon.svg","type":"image/svg+xml"}]
+23:["$","link","23",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}]
+24:["$","$L2c","24",{}]
+25:["$","meta",null,{"name":"next-size-adjust","content":""}]
+2d:I[97367,["$2"],"OutletBoundary"]
+8:300
+2b:["$","$L2d",null,{"children":["$","$1f",null,{"name":"Next.MetadataOutlet","children":"$@2e"}]}]
+28:true
+8:C
+2e:null
+27:0
+17:"$undefined"
+14:"$undefined"
+10:"$undefined"
+7:"$undefined"
+26:"$undefined"
+d:"$undefined"
+1a:"$undefined"

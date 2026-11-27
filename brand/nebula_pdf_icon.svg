@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6CB3FF"/><stop offset="0.45" stop-color="#2F74E6"/><stop offset="1" stop-color="#1846B8"/>
+    </linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.45"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="pg" x1="36" y1="28" x2="72" y2="82" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCE6F7"/>
+    </linearGradient>
+    <linearGradient id="fd" x1="62" y1="28" x2="72" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#B9CBEA"/>
+    </linearGradient>
+    <linearGradient id="bl" x1="41" y1="0" x2="66" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E5CD6"/><stop offset="1" stop-color="#4A90F5"/>
+    </linearGradient>
+    <radialGradient id="gr" cx="65" cy="62" r="17" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9BEA84"/><stop offset="0.55" stop-color="#43A83A"/><stop offset="1" stop-color="#22741D"/>
+    </radialGradient>
+    <linearGradient id="gg" x1="0" y1="57.5" x2="0" y2="67.5" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.75"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <path d="M0,0 H108 V108 H0 Z" fill="url(#bg)"/>
+  <path d="M0,0 H108 V40 Q54,52 0,40 Z" fill="url(#gl)"/>
+  <path d="M38.5,31 H64.5 L74.5,41 V83 Q74.5,85 72.5,85 H40.5 Q38.5,85 38.5,83 Z" fill="#0A2370" fill-opacity="0.35"/>
+  <path d="M36,28 H62 L72,38 V80 Q72,82 70,82 H38 Q36,82 36,80 Z" fill="url(#pg)" stroke="#6F8CC4" stroke-width="0.8"/>
+  <path d="M62,28 V36 Q62,38 64,38 H72 Z" fill="url(#fd)" stroke="#6F8CC4" stroke-width="0.8" stroke-linejoin="round"/>
+  <path d="M42.50,43 H59.50 A1.5,1.5 0 0 1 59.50,46.00 H42.50 A1.5,1.5 0 0 1 42.50,43 ZM42.50,49 H64.50 A1.5,1.5 0 0 1 64.50,52.00 H42.50 A1.5,1.5 0 0 1 42.50,49 ZM42.50,55 H55.50 A1.5,1.5 0 0 1 55.50,58.00 H42.50 A1.5,1.5 0 0 1 42.50,55 Z" fill="#A3AFC4"/>
+  <path d="M42.50,63 H52.50 A1.5,1.5 0 0 1 52.50,66.00 H42.50 A1.5,1.5 0 0 1 42.50,63 ZM42.50,69 H49.50 A1.5,1.5 0 0 1 49.50,72.00 H42.50 A1.5,1.5 0 0 1 42.50,69 Z" fill="url(#bl)"/>
+  <path d="M53.6,68 A14.4,14.4 0 1 1 82.4,68 A14.4,14.4 0 1 1 53.6,68 Z" fill="#0A2370" fill-opacity="0.3"/>
+  <path d="M55,68 A13,13 0 1 1 81,68 A13,13 0 1 1 55,68 Z" fill="url(#gr)" stroke="#FFFFFF" stroke-width="1.8"/>
+  <path d="M59,62.5 A9,5 0 1 1 77,62.5 A9,5 0 1 1 59,62.5 Z" fill="url(#gg)"/>
+  <path d="M61.5,67 A7,7 0 0 1 73.6,63.2" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M76.6,61.2 L74.9,67.2 L70.4,63.3 Z" fill="#FFFFFF"/>
+  <path d="M74.5,69 A7,7 0 0 1 62.4,72.8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M59.4,74.8 L61.1,68.8 L65.6,72.7 Z" fill="#FFFFFF"/>
+  <path d="M30,33 Q31,38 35,39.5 Q31,41 30,46 Q29,41 25,39.5 Q29,38 30,33 Z" fill="#FFF7B0"/>
+  <path d="M78,26 Q78.6,28.6 81,29.3 Q78.6,30 78,32.6 Q77.4,30 75,29.3 Q77.4,28.6 78,26 Z" fill="#FFFFFF" fill-opacity="0.9"/>
+</svg>
