@@ -59,12 +59,12 @@ export const financial = {
   downloadsBase: "https://financial.vestasecurity.date/downloads",
   android: {
     file: "Financial-Security.apk",
-    sha256: "818a4c5c9b76fe80d0b6af7e4d50f518c6cebf7796e7c95f734d0505853ddf13",
+    sha256: "29ab1f7590ccc0c5be8bc644de99c7e0686c6fe85aefc090b940509b74bbfbba",
     req: "Android 7 o superior",
   },
   windows: {
     file: "Financial-Security-Setup.exe",
-    sha256: "02f14cac9111afc926354107e323ed720e0515978f8285a3a3df519c74dcfeed",
+    sha256: "c28e9e7030e7b969d6589c27f13948a5c64c077b20e44b6436178526a6a0bf34",
     req: "Windows 10 u 11 de 64 bits",
   },
   priceMonth: 100_000,
