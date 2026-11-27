@@ -315,6 +315,56 @@
     color: var(--color-muted);
     font-weight: 600;
   }
+
+  /* Artículos del blog (se suma a .prose-legal). */
+  .prose-blog p {
+    white-space: normal;
+  }
+  .prose-blog h2 {
+    border-top: 0;
+    padding-top: 0;
+    margin-top: 2.8rem;
+  }
+  .prose-blog a {
+    color: var(--color-wine);
+    text-decoration: underline;
+    text-decoration-color: var(--color-rose);
+    text-underline-offset: 0.22em;
+  }
+  .prose-blog a:hover {
+    text-decoration-thickness: 2px;
+  }
+  .prose-blog strong {
+    font-weight: 650;
+  }
+  .prose-blog code {
+    font-family: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    font-size: 0.85em;
+    background: var(--color-beige-100);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+  }
+  .prose-blog pre {
+    margin-block: 1.4rem;
+    padding: 1.1rem 1.25rem;
+    overflow-x: auto;
+    background: var(--color-wine-950);
+    color: var(--color-ivory);
+    border-radius: 3px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+  }
+  .prose-blog pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+  }
+  .prose-blog blockquote {
+    margin-block: 1.4rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid var(--color-rose);
+    color: var(--color-muted);
+  }
 }
 
 @layer utilities {

@@ -10,6 +10,14 @@ Lo que el sitio no puede inventar y necesita del equipo de Vesta.
 - Capturas reales de la 1.1 (el mapa y el código QR van difuminados).
 - Faltan capturas de la interfaz en inglés y del aviso de app bloqueada del Tracker.
 
+## Servicios de seguridad (portada nueva)
+
+- **Horario de atención** del bloque de contacto: «Lunes a viernes, 8:00 a. m. a 6:00 p. m.» es una propuesta
+  (`src/components/security/parts.tsx`).
+- **Precios** en `src/content/security.ts` (antes de IVA). Revisarlos cada año.
+- **Imagen para redes** (`public/og.png`) es la de la app de control parental; falta una de servicios.
+- La portada de la app pasó de `/` a `/control-parental/`. Las demás URL de la app no cambiaron.
+
 ## Confirmar
 
 4. **Textos de «Quiénes somos»** (`src/content/institutional.ts`): requieren aprobación.

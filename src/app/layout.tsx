@@ -3,12 +3,13 @@ import "@fontsource-variable/montserrat/wght.css";
 import "@fontsource-variable/source-serif-4/opsz.css";
 import "@fontsource-variable/source-serif-4/opsz-italic.css";
 import "@/styles/globals.css";
-import { site, siteText } from "@/content/site";
+import { site } from "@/content/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name} · ${siteText.es.title}`, template: `%s · ${site.name}` },
-  description: siteText.es.description,
+  title: { default: `${site.name} · Ciberseguridad para pequeños negocios`, template: `%s · ${site.name}` },
+  description:
+    "Auditorías de seguridad y pruebas de penetración para pequeños negocios en Santa Marta y toda Colombia. También, Vesta: protección digital familiar para Android.",
   applicationName: site.name,
   authors: [{ name: "FORBIDDEN S.A.S." }],
   formatDetection: { telephone: false, email: false, address: false },
