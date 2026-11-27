@@ -9,6 +9,8 @@ fail() { echo "ERROR: $*" >&2; exit 1; }
 
 for page in index.html 404.html robots.txt sitemap.xml \
   servicios/index.html blog/index.html control-parental/index.html \
+  aplicaciones/index.html aplicaciones/financial-security/index.html \
+  aplicaciones/financial-security/politica-de-datos/index.html aplicaciones/nebula-pdf/index.html \
   plataforma/index.html funcionalidades/index.html mision-y-vision/index.html \
   descargas/index.html ayuda/index.html documentacion/index.html \
   documentacion/terminos-y-condiciones/index.html \

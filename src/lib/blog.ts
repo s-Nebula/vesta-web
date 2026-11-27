@@ -7,6 +7,7 @@
  *   description: Una o dos frases para la lista y los buscadores.
  *   date: 2026-11-26
  *   tags: Comercios, WiFi
+ *   app: nebula-pdf        (opcional: lo muestra también en la página de esa app)
  *   ---
  *
  * Se lee al compilar (el sitio es estático); no hay panel ni base de datos.
@@ -25,6 +26,7 @@ export type PostMeta = {
   description: string;
   date: string;
   tags: string[];
+  app?: string;
   minutes: number;
 };
 
@@ -55,6 +57,7 @@ function meta(file: string): PostMeta & { body: string } {
     description: data.description,
     date: data.date,
     tags: (data.tags ?? "").split(",").map((t) => t.trim()).filter(Boolean),
+    app: data.app || undefined,
     minutes: Math.max(1, Math.round(words / 200)),
     body,
   };
