@@ -1,0 +1,59 @@
+3:"$Sreact.fragment"
+4:"/_next/static/chunks/3qfy96eoyh-ek.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+d:"/_next/static/chunks/2edfwpza-0rgc.js"
+e:I[22016,["$4","$d"],""]
+f:I[5014,["$4","$d"],"default"]
+15:"ViewportBoundary"
+16:I[97367,["$4"],"$15"]
+17:"MetadataBoundary"
+18:I[97367,["$4"],"$17"]
+19:"$Sreact.suspense"
+1a:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+10:Tbf7,<p>El fraude funciona así: tu contador, tu proveedor o tú mismo reciben un correo que parece legítimo. Mismo nombre, mismo logo, a veces la misma dirección. Dice algo como <em>&quot;Cambiamos de banco, por favor consigne la factura de este mes a esta nueva cuenta&quot;</em>. El pago sale, y el dinero no vuelve.</p>
+<p>A esto se le llama <strong>compromiso de correo empresarial</strong> (BEC, por sus siglas en inglés). No requiere virus ni conocimientos avanzados: basta con que el correo de tu dominio sea fácil de suplantar.</p>
+<h2>Por qué es posible</h2>
+<p>El correo electrónico se diseñó hace décadas sin verificar quién envía. Por defecto, cualquiera puede mandar un mensaje que diga ser de <code>facturacion@tunegocio.com</code>. Para cerrarle la puerta a eso existen tres registros que se configuran en el DNS de tu dominio.</p>
+<h2>SPF: quién puede enviar a tu nombre</h2>
+<p>SPF es una lista de los servidores autorizados para enviar correo de tu dominio. Si usas Google Workspace, se ve así:</p>
+<pre><code>v=spf1 include:_spf.google.com ~all
+</code></pre>
+<p>Si además envías facturas desde tu programa contable o boletines desde otra plataforma, esos servicios también deben estar en la lista.</p>
+<h2>DKIM: una firma en cada correo</h2>
+<p>DKIM agrega una firma digital a cada mensaje que envías. El servidor que lo recibe verifica la firma con una clave pública publicada en tu DNS. Se activa desde el panel de tu proveedor de correo (Google Workspace o Microsoft 365) en pocos minutos.</p>
+<h2>DMARC: qué hacer con los correos falsos</h2>
+<p>DMARC le dice al mundo qué hacer con un correo que dice ser tuyo pero no pasa SPF ni DKIM. Lo recomendable es empezar en modo observación:</p>
+<pre><code>v=DMARC1; p=none; rua=mailto:dmarc@tunegocio.com
+</code></pre>
+<p>Durante unas semanas recibirás reportes de quién envía correo con tu nombre. Cuando confirmes que todos tus envíos legítimos pasan, cambia <code>p=none</code> por <code>p=quarantine</code> (los falsos van a spam) y luego por <code>p=reject</code> (se rechazan).</p>
+<h2>Además de la tecnología</h2>
+<p>Estos registros evitan que suplanten <strong>tu</strong> dominio, pero no que alguien use uno parecido (<code>tunegoci0.com</code>) o que roben la contraseña del correo de tu proveedor. Por eso también conviene:</p>
+<ul>
+<li>Confirmar <strong>por teléfono</strong>, a un número que ya tenías, cualquier cambio de cuenta bancaria.</li>
+<li>Activar la <strong>verificación en dos pasos</strong> en todas las cuentas de correo del negocio.</li>
+<li>Desconfiar de la urgencia: <em>&quot;hoy mismo&quot;</em>, <em>&quot;antes del cierre&quot;</em>, <em>&quot;no me puedo comunicar&quot;</em>.</li>
+</ul>
+<h2>¿Tu dominio ya lo tiene?</h2>
+<p>El <a href="/servicios/#express">Chequeo Digital Express</a> revisa estos tres registros, entre otras cosas, y te entrega los valores exactos que debes poner. Y si solo quieres saber si estás expuesto, el <a href="/servicios/#diagnostico">diagnóstico gratuito</a> incluye una revisión de tu correo.</p>
+c:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"BlogPosting\",\"headline\":\"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC\",\"description\":\"Uno de los fraudes más comunes contra pymes es un correo que parece de un proveedor y pide pagar a una cuenta nueva. Tres registros de tu dominio lo hacen mucho más difícil.\",\"datePublished\":\"2026-11-26\",\"inLanguage\":\"es-CO\",\"url\":\"https://vestasecurity.date/blog/correo-falso-cuenta-de-pago/\",\"author\":{\"@type\":\"Person\",\"name\":\"Nebula\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Vesta Security\",\"logo\":\"https://vestasecurity.date/brand/vesta_logo.svg\"}}"}}],["$","article",null,{"children":[["$","header",null,{"className":"border-b border-line","children":["$","div",null,{"className":"wrap max-w-[52rem] pb-12 pt-12 md:pb-16 md:pt-16","children":[["$","$Le",null,{"href":"/blog/","className":"arrow-link text-sm","children":[["$","$Lf",null,{"icon":{"name":"arrow-left","size":24,"node":[["path",{"d":"m12 19-7-7 7-7","key":"1l729n"}],["path",{"d":"M19 12H5","key":"x3x0zl"}]]},"className":"size-4","aria-hidden":"true"}]," Blog"]}],["$","h1",null,{"className":"mt-6 font-serif text-[clamp(2rem,1.4rem+2.6vw,3.3rem)] leading-[1.08] tracking-[-0.025em]","children":"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC"}],["$","p",null,{"className":"lead mt-6","children":"Uno de los fraudes más comunes contra pymes es un correo que parece de un proveedor y pide pagar a una cuenta nueva. Tres registros de tu dominio lo hacen mucho más difícil."}],["$","p",null,{"className":"mt-6 text-sm text-muted","children":["Por ","Nebula"," · ",["$","time",null,{"dateTime":"2026-11-26","children":"26 de noviembre de 2026"}]," · ",2," min de lectura"]}]]}]}],["$","div",null,{"className":"wrap max-w-[52rem] py-12 md:py-16","children":[["$","div",null,{"className":"prose-legal prose-blog","dangerouslySetInnerHTML":{"__html":"$10"}}],"$L11","$L12"]}]]}]],null,"$L13"]}],"p":"$@14","v":null,"s":"$9"}}]]
+a:[["children",{"s":{"n":"slug","t":"d","k":"correo-falso-cuenta-de-pago","s":[]},"h":65632,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@b","v":"$8","s":"$9"},"c":"$Qc"}]]
+2:[["children",{"s":"blog","h":131136,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":"(security)","h":131104,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":131152,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L16",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#F4EDEA"}]]}],["$","$L18",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$19",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC · Vesta Security"}],["$","meta","1",{"name":"description","content":"Uno de los fraudes más comunes contra pymes es un correo que parece de un proveedor y pide pagar a una cuenta nueva. Tres registros de tu dominio lo hacen mucho más difícil."}],["$","meta","2",{"name":"application-name","content":"Vesta Security"}],["$","meta","3",{"name":"author","content":"FORBIDDEN S.A.S."}],["$","link","4",{"rel":"manifest","href":"/manifest.webmanifest"}],["$","link","5",{"rel":"canonical","href":"https://vestasecurity.date/blog/correo-falso-cuenta-de-pago/"}],["$","meta","6",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","7",{"property":"og:title","content":"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC · Vesta Security"}],["$","meta","8",{"property":"og:description","content":"Uno de los fraudes más comunes contra pymes es un correo que parece de un proveedor y pide pagar a una cuenta nueva. Tres registros de tu dominio lo hacen mucho más difícil."}],["$","meta","9",{"property":"og:url","content":"https://vestasecurity.date/blog/correo-falso-cuenta-de-pago/"}],["$","meta","10",{"property":"og:site_name","content":"Vesta Security"}],["$","meta","11",{"property":"og:locale","content":"es_CO"}],["$","meta","12",{"property":"og:image","content":"https://vestasecurity.date/og-servicios.png"}],["$","meta","13",{"property":"og:image:width","content":"1200"}],["$","meta","14",{"property":"og:image:height","content":"630"}],["$","meta","15",{"property":"og:image:alt","content":"Vesta Security, ciberseguridad para pequeños negocios"}],["$","meta","16",{"property":"og:type","content":"article"}],["$","meta","17",{"property":"article:published_time","content":"2026-11-26"}],["$","meta","18",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","19",{"name":"twitter:title","content":"El correo falso que cambia la cuenta de pago, y cómo evitarlo con SPF, DKIM y DMARC"}],["$","meta","20",{"name":"twitter:description","content":"Uno de los fraudes más comunes contra pymes es un correo que parece de un proveedor y pide pagar a una cuenta nueva. Tres registros de tu dominio lo hacen mucho más difícil."}],["$","meta","21",{"name":"twitter:image","content":"https://vestasecurity.date/og-servicios.png"}],["$","link","22",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","23",{"rel":"icon","href":"/icon.svg","type":"image/svg+xml"}],["$","link","24",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png"}],["$","$L1a","25",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@1b","v":null,"s":"$9"}},"a":"$@1c","u":"$@1d","b":"IpMSZSneAQCtsTtBFX9s7"}
+1e:I[97367,["$4"],"OutletBoundary"]
+11:["$","aside",null,{"className":"mt-16 border border-line bg-paper p-7","children":[["$","p",null,{"className":"font-serif text-xl","children":"¿Quieres saber cómo está tu negocio?"}],["$","p",null,{"className":"mt-2 text-muted","children":"El diagnóstico es gratuito: 30 minutos y una revisión de lo que se ve desde internet."}],["$","a",null,{"href":"https://wa.me/573246167956?text=Hola%2C%20quiero%20agendar%20el%20diagn%C3%B3stico%20gratuito%20de%20seguridad%20para%20mi%20negocio.","target":"_blank","rel":"noopener noreferrer","className":"btn btn-primary mt-5","children":[["$","$Lf",null,{"icon":{"name":"message-circle","size":24,"node":[["path",{"d":"M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719","key":"1sd12s"}]]},"className":"size-4","aria-hidden":"true"}],"Agendar por WhatsApp"]}]]}]
+12:["$","nav",null,{"aria-label":"Otros artículos","className":"mt-16","children":[["$","p",null,{"className":"kicker","children":"Sigue leyendo"}],["$","ul",null,{"className":"mt-4 grid gap-6 sm:grid-cols-2","children":[["$","li","firebase-modo-prueba",{"className":"border-t-2 border-wine pt-4","children":["$","$Le",null,{"href":"/blog/firebase-modo-prueba/","className":"font-serif text-lg leading-snug hover:text-rose-700","children":"Firebase en modo de prueba: la regla que deja tu base de datos abierta"}]}],["$","li","wifi-de-tu-negocio",{"className":"border-t-2 border-wine pt-4","children":["$","$Le",null,{"href":"/blog/wifi-de-tu-negocio/","className":"font-serif text-lg leading-snug hover:text-rose-700","children":"La WiFi de tu negocio: seis errores que le abren la puerta a cualquiera"}]}]]}]]}]
+13:["$","$L1e",null,{"children":["$","$19",null,{"name":"Next.MetadataOutlet","children":"$@1f"}]}]
+1d:true
+9:300
+1f:null
+9:C
+1c:0
+b:"$undefined"
+7:"$undefined"
+1b:"$undefined"
+14:"$undefined"
