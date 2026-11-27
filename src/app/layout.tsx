@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   authors: [{ name: "FORBIDDEN S.A.S." }],
   formatDetection: { telephone: false, email: false, address: false },
   icons: {
-    icon: [{ url: "/favicon.ico", sizes: "any" }, { url: "/icon.svg", type: "image/svg+xml" }],
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon.ico?v=2", sizes: "any" }, { url: "/icon.svg?v=2", type: "image/svg+xml" }],
+    apple: "/apple-touch-icon.png?v=2",
   },
   manifest: "/manifest.webmanifest",
 };
