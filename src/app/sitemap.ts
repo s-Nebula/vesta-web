@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { site } from "@/content/site";
 import { docHref, href, locales, type DocKey, type PageKey } from "@/i18n";
+import { allPosts } from "@/lib/blog";
 
 export const dynamic = "force-static";
 
@@ -17,8 +18,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority,
       alternates: { languages: { es: `${site.url}${paths.es}`, en: `${site.url}${paths.en}` } },
     }));
+  const security = [
+    { url: `${site.url}/`, lastModified: new Date("2026-11-26"), changeFrequency: "monthly" as const, priority: 1 },
+    { url: `${site.url}/servicios/`, lastModified: new Date("2026-11-26"), changeFrequency: "monthly" as const, priority: 0.9 },
+    { url: `${site.url}/blog/`, lastModified: new Date("2026-11-26"), changeFrequency: "weekly" as const, priority: 0.8 },
+    ...allPosts().map((p) => ({ url: `${site.url}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: "yearly" as const, priority: 0.7 })),
+  ];
   return [
-    ...pages.flatMap((p) => entry({ es: href("es", p), en: href("en", p) }, p === "home" ? 1 : 0.8)),
+    ...security,
+    ...pages.flatMap((p) => entry({ es: href("es", p), en: href("en", p) }, 0.8)),
     ...docs.flatMap((d) => entry({ es: docHref("es", d), en: docHref("en", d) }, 0.6)),
   ];
 }

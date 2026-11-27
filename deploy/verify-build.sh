@@ -8,6 +8,7 @@ fail() { echo "ERROR: $*" >&2; exit 1; }
 [ -d "$DIR" ] || fail "no existe $DIR"
 
 for page in index.html 404.html robots.txt sitemap.xml \
+  servicios/index.html blog/index.html control-parental/index.html \
   plataforma/index.html funcionalidades/index.html mision-y-vision/index.html \
   descargas/index.html ayuda/index.html documentacion/index.html \
   documentacion/terminos-y-condiciones/index.html \

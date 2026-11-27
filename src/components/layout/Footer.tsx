@@ -17,6 +17,7 @@ const text = {
     deleteAccount: "Eliminar cuenta",
     contact: "Contacto",
     help: "Centro de ayuda →",
+    security: "Auditorías de seguridad para negocios →",
     rights: "Todos los derechos reservados.",
     tax: "NIT",
   },
@@ -30,6 +31,7 @@ const text = {
     deleteAccount: "Delete account",
     contact: "Contact",
     help: "Help center →",
+    security: "Security audits for businesses (Spanish) →",
     rights: "All rights reserved.",
     tax: "Tax ID (NIT)",
   },
@@ -115,6 +117,9 @@ export function Footer({ locale }: { locale: Locale }) {
             </address>
             <Link href={href(locale, "help")} className="arrow-link mt-6 text-sm">
               {t.help}
+            </Link>
+            <Link href="/" className="arrow-link mt-3 block text-sm">
+              {t.security}
             </Link>
           </div>
         </nav>

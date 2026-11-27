@@ -10,7 +10,7 @@ export type Locale = "es" | "en";
 export const locales: Locale[] = ["es", "en"];
 
 const pages = {
-  home: { es: "/", en: "/en/" },
+  home: { es: "/control-parental/", en: "/en/" },
   platform: { es: "/plataforma/", en: "/en/platform/" },
   features: { es: "/funcionalidades/", en: "/en/features/" },
   mission: { es: "/mision-y-vision/", en: "/en/mission/" },
