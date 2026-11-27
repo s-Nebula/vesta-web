@@ -57,17 +57,25 @@ Desde noviembre de 2026 el sitio separa la **empresa** (Vesta Security, servicio
 parental Vesta y solo se usa en sus páginas.
 
 - **Logotipo**: solo texto, «VESTA» en Space Grotesk 700 y «Security» en Space Grotesk 400 lavanda
-  (`src/components/brand/Wordmark.tsx`). Icono de pestaña: una V lavanda sobre grafito (`public/icon.svg`).
+  (`src/components/brand/Wordmark.tsx`). Icono de pestaña: una V lila sobre blanco lavanda (`public/icon.svg`).
 - **Colores** (tokens `night-*`, `haze`, `mist`, `dim`, `violet-*` en `globals.css`):
 
 | Token | Hex | Uso |
 |---|---|---|
-| `night-900` | `#0E1014` | Fondo |
-| `night-800` / `night-700` | `#14171C` / `#1B1E25` | Tarjetas |
-| `night-600` | `#262A33` | Filetes |
-| `haze` | `#ECEAF3` | Texto |
-| `mist` / `dim` | `#A6A4B5` / `#75738A` | Texto secundario |
-| `violet-300` / `violet-400` | `#C6BCF4` / `#A99BEB` | Acento, botones, palabras en cursiva |
+| `night-900` | `#FFFFFF` | Fondo |
+| `night-800` / `night-700` | `#FBFAFF` / `#F1EEFA` | Tarjetas, menús |
+| `night-950` | `#F3F0FC` | Bandas lavanda entre secciones y pie |
+| `night-600` / `night-500` | `#E4E0F1` / `#CDC6E3` | Filetes |
+| `haze` | `#17161F` | Texto (grafito) |
+| `mist` / `dim` | `#4E4C60` / `#6A687E` | Texto secundario |
+| `violet-300` / `violet-200` | `#5944C2` / `#4A3AA3` | Acento: palabras en cursiva, rótulos, enlaces |
+| `violet-500` → `violet-600` | `#8B7AE0` → `#6D5BC8` | Botón principal (texto blanco) |
+
+  Desde el 2026-11-27 el tema es **claro** (antes grafito `#0E1014` con texto claro): blanco con lila y un
+  poco de grafito. Los nombres de los tokens vienen del tema oscuro y se conservaron para no tocar cada
+  componente. La nebulosa de fondo es `public/img/nebula.webp`, generada con `scripts/nebula/render-claro.html`.
+  Los bloques de código siguen oscuros, como una terminal. El icono y la imagen para redes de los servicios
+  también son claros; se generan con `scripts/marca/`.
 
 - **Tipografía**: Space Grotesk para todo; palabras destacadas en Source Serif 4 cursiva (`.sx-em`);
   rótulos y datos técnicos en monoespaciada (`.sx-label`, `.sx-mono`).

@@ -1,9 +1,10 @@
 /**
  * Servicios de auditoría de Vesta Security (operado por FORBIDDEN S.A.S.).
  *
- * Precios en pesos colombianos ANTES de IVA. FORBIDDEN S.A.S. es responsable
- * de IVA (19 %): la web muestra el precio + IVA y el total. Para cambiar un
- * precio, cámbialo solo aquí.
+ * Precios en pesos colombianos con el IVA INCLUIDO (el total que paga el
+ * cliente). FORBIDDEN S.A.S. es responsable de IVA (19 %): la web muestra el
+ * precio sin IVA («+ IVA», calculado con sinIva) y el total. Los adicionales
+ * se muestran solo con el total. Para cambiar un precio, cámbialo solo aquí.
  */
 import { company } from "@/content/site";
 
@@ -36,7 +37,8 @@ export function waLink(message = "Hola, quiero agendar el diagnóstico gratuito 
 
 const cop = new Intl.NumberFormat("es-CO", { style: "currency", currency: "COP", maximumFractionDigits: 0 });
 export const formatCop = (n: number) => cop.format(n).replace(/\s/g, " ");
-export const withIva = (n: number) => Math.round(n * (1 + IVA));
+/** Precio antes de IVA a partir del total (redondeado al peso). */
+export const sinIva = (total: number) => Math.round(total / (1 + IVA));
 
 export type SegmentId = "comercios" | "tiendas" | "oficinas" | "startups";
 
@@ -44,7 +46,7 @@ export type Service = {
   id: string;
   name: string;
   segment: SegmentId | "todos";
-  /** Precio antes de IVA; 0 = gratis. */
+  /** Total con IVA incluido; 0 = gratis. */
   price: number;
   per?: "mes";
   summary: string;

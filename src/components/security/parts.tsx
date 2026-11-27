@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ArrowUpRight, Plus } from "lucide-react";
 import { site } from "@/content/site";
-import { contact, formatCop, waLink, withIva, type QA, type Service } from "@/content/security";
+import { contact, formatCop, sinIva, waLink, type QA, type Service } from "@/content/security";
 
 /** Metadatos de una página en español sin versión en inglés. */
-export function securityMeta(title: string, description: string, path: string, absolute = false, image = "/og-servicios.png"): Metadata {
+export function securityMeta(title: string, description: string, path: string, absolute = false, image = "/og-servicios.png?v=2"): Metadata {
   const url = `${site.url}${path}`;
   const full = absolute ? title : `${title} · ${site.name}`;
   return {
@@ -55,11 +55,11 @@ export function Price({ value, per, size = "lg" }: { value: number; per?: "mes";
   return (
     <div>
       <p className={`${big} font-medium leading-none tracking-[-0.04em] tabular-nums`}>
-        {formatCop(value)}
+        {formatCop(sinIva(value))}
         <span className="ml-1.5 text-[0.86rem] font-medium tracking-normal text-mist">+ IVA{per ? ` / ${per}` : ""}</span>
       </p>
       <p className="sx-mono mt-2 text-[0.8rem] text-dim">
-        total {formatCop(withIva(value))}
+        total {formatCop(value)}
         {per ? ` / ${per}` : ""}
       </p>
     </div>
@@ -206,7 +206,7 @@ export function ContactBand({ id = "contacto" }: { id?: string }) {
               ["Cobertura", contact.coverage],
               ["Horario", "Lunes a viernes, 8:00 a. m. a 6:00 p. m."],
             ].map(([k, v]) => (
-              <div key={k} className="border-t border-white/10 pt-4">
+              <div key={k} className="border-t border-night-600 pt-4">
                 <dt className="sx-label !text-[0.76rem]">{k}</dt>
                 <dd className="mt-1.5 text-lg">{v}</dd>
               </div>

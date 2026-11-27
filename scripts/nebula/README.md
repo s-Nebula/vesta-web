@@ -1,5 +1,8 @@
 # Nebulosa de fondo
 
+La web usa la versión **clara** desde el 2026-11-27: `render-claro.html` (fondo blanco, nubes lila
+y un velo grafito tenue). `render.html` es la versión oscura anterior. El procedimiento es el mismo.
+
 `render.html` dibuja las nubes de la nebulosa (filtros feTurbulence + desenfoque)
 a 1560×1170. Para regenerar `public/img/nebula.webp`:
 

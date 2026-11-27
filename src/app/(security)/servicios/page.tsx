@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { ContactBand, Head, Price, ServiceDetail, SxFaq, securityMeta } from "@/components/security/parts";
-import { enterprise, extras, faq, formatCop, legal, payment, plan, segments, services, waLink, withIva } from "@/content/security";
+import { enterprise, extras, faq, formatCop, legal, payment, plan, segments, services, sinIva, waLink } from "@/content/security";
 
 export const metadata = securityMeta(
   "Servicios y precios",
-  "Diagnóstico gratuito, Chequeo Digital Express, Red Segura para Comercios, Oficina Protegida, Tienda en Línea Segura, Firebase y pentest de apps. Precios cerrados en COP + IVA.",
+  "Diagnóstico gratuito, Chequeo Digital Express, Red Segura para Comercios, Oficina Protegida, Tienda en Línea Segura, Firebase y pentest de apps. Precios cerrados en COP, con IVA incluido en el total.",
   "/servicios/",
 );
 
@@ -42,7 +42,7 @@ export default function Page() {
                 Precio cerrado <span className="sx-em">antes de empezar.</span>
               </>
             }
-            lead="Precios en pesos colombianos antes de IVA (19 %); debajo verás el total. Incluyen el informe, una reunión para explicarte los resultados y, en las pruebas de penetración, una nueva prueba cuando corrijas."
+            lead="Precios en pesos colombianos antes de IVA (19 %); debajo verás el total con IVA incluido (los adicionales muestran directamente el total). Incluyen el informe, una reunión para explicarte los resultados y, en las pruebas de penetración, una nueva prueba cuando corrijas."
           />
           <nav aria-label="Ir a un servicio" className="sx-panel self-end p-5 text-[0.9rem] lg:col-span-4">
             <p className="sx-label">Ir a</p>
@@ -94,8 +94,8 @@ export default function Page() {
                     </th>
                     <td className="py-3.5 pr-4 text-mist">{s.segment === "todos" ? "Cualquier negocio" : segments.find((g) => g.id === s.segment)!.name}</td>
                     <td className="py-3.5 pr-4 text-mist">{s.duration}</td>
-                    <td className="py-3.5 pr-4 text-right font-medium tabular-nums">{s.price ? formatCop(s.price) : "Gratis"}</td>
-                    <td className="py-3.5 pr-5 text-right tabular-nums text-dim">{s.price ? formatCop(withIva(s.price)) : "—"}</td>
+                    <td className="py-3.5 pr-4 text-right font-medium tabular-nums">{s.price ? formatCop(sinIva(s.price)) : "Gratis"}</td>
+                    <td className="py-3.5 pr-5 text-right tabular-nums text-dim">{s.price ? formatCop(s.price) : "—"}</td>
                   </tr>
                 ))}
                 <tr>
@@ -106,8 +106,8 @@ export default function Page() {
                   </th>
                   <td className="py-3.5 pr-4 text-mist">Clientes</td>
                   <td className="py-3.5 pr-4 text-mist">Mensual</td>
-                  <td className="py-3.5 pr-4 text-right font-medium tabular-nums">{formatCop(plan.price)} / mes</td>
-                  <td className="py-3.5 pr-5 text-right tabular-nums text-dim">{formatCop(withIva(plan.price))}</td>
+                  <td className="py-3.5 pr-4 text-right font-medium tabular-nums">{formatCop(sinIva(plan.price))} / mes</td>
+                  <td className="py-3.5 pr-5 text-right tabular-nums text-dim">{formatCop(plan.price)}</td>
                 </tr>
                 <tr className="border-t border-night-600">
                   <th scope="row" className="px-5 py-3.5 font-medium">
@@ -117,8 +117,8 @@ export default function Page() {
                   </th>
                   <td className="py-3.5 pr-4 text-mist">Charla, nueva prueba, atestación</td>
                   <td className="py-3.5 pr-4 text-mist">Según el adicional</td>
-                  <td className="py-3.5 pr-4 text-right font-medium tabular-nums">Desde {formatCop(minExtra)}</td>
-                  <td className="py-3.5 pr-5 text-right tabular-nums text-dim">Desde {formatCop(withIva(minExtra))}</td>
+                  <td className="py-3.5 pr-4 text-right font-medium tabular-nums">Desde {formatCop(sinIva(minExtra))}</td>
+                  <td className="py-3.5 pr-5 text-right tabular-nums text-dim">Desde {formatCop(minExtra)}</td>
                 </tr>
               </tbody>
             </table>
@@ -186,7 +186,7 @@ export default function Page() {
                   </div>
                   <p className="shrink-0 text-right font-medium tabular-nums">
                     {formatCop(e.price)}
-                    <span className="block text-xs font-normal text-dim">+ IVA</span>
+                    <span className="block text-xs font-normal text-dim">total</span>
                   </p>
                 </li>
               ))}

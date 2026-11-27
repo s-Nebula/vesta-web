@@ -15,7 +15,7 @@ Lo que el sitio no puede inventar y necesita del equipo de Vesta.
 - **Horario de atención** del bloque de contacto: «Lunes a viernes, 8:00 a. m. a 6:00 p. m.» es una propuesta
   (`src/components/security/parts.tsx`).
 - **Precios** en `src/content/security.ts` (antes de IVA). Revisarlos cada año.
-- **Imagen para redes** de servicios: `public/og-servicios.png` (precio «desde» y certificaciones dibujados; si cambian, regenerarla).
+- **Imagen para redes** de servicios: `public/og-servicios.png` (precio «desde» y certificaciones dibujados; si cambian, regenerarla con `scripts/marca/` y subir el `?v=` en `securityMeta`).
 - La portada de la app pasó de `/` a `/control-parental/`. Las demás URL de la app no cambiaron.
 - **Financial Security** se mudó a `/aplicaciones/financial-security/`. En el servidor, `financial.vestasecurity.date`
   debe redirigir `/`, `/index.html` y `/politica-datos.html` a las páginas nuevas y seguir sirviendo `/downloads/`

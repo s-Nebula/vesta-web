@@ -13,6 +13,8 @@ export const metadata = securityMeta(
 );
 
 const BLUE = "#6CB3FF";
+/** El mismo azul, oscurecido para texto sobre fondo claro (contraste AA). */
+const BLUE_TEXT = "#1F64C4";
 
 const features: [string, string][] = [
   ["Mismo diseño", "El texto traducido se escribe en la misma posición, con el mismo tamaño, color y tipo de letra aproximado. Imágenes, gráficos y fondos no se tocan."],
@@ -104,13 +106,13 @@ function BeforeAfter() {
         </p>
       </div>
       <div className="sx-panel p-6" style={{ borderColor: `${BLUE}55` }}>
-        <p className="sx-label" style={{ color: BLUE }}>
+        <p className="sx-label" style={{ color: BLUE_TEXT }}>
           Nebula PDF
         </p>
         <p className="mt-4 leading-relaxed">
-          Inicia un listener con <code className="sx-mono text-violet-200">nc -lvnp 4444</code> y envía el <b style={{ color: BLUE }}>payload</b> de{" "}
-          <b style={{ color: BLUE }}>reverse shell</b> por el parámetro vulnerable. Luego usa <b style={{ color: BLUE }}>Mimikatz</b> para extraer los{" "}
-          <b style={{ color: BLUE }}>hashes</b>.
+          Inicia un listener con <code className="sx-mono text-violet-200">nc -lvnp 4444</code> y envía el <b style={{ color: BLUE_TEXT }}>payload</b> de{" "}
+          <b style={{ color: BLUE_TEXT }}>reverse shell</b> por el parámetro vulnerable. Luego usa <b style={{ color: BLUE_TEXT }}>Mimikatz</b> para extraer los{" "}
+          <b style={{ color: BLUE_TEXT }}>hashes</b>.
         </p>
       </div>
       <p className="text-[0.88rem] text-dim md:col-span-2">
@@ -144,7 +146,7 @@ export default function Page() {
         <div className="sx-wrap relative grid items-center gap-14 pb-16 pt-16 md:pb-24 md:pt-20 lg:grid-cols-12">
           <div className="lg:col-span-7">
             <p className="flex flex-wrap items-center gap-2">
-              <span className="sx-chip" style={{ borderColor: `${BLUE}66`, color: BLUE }}>
+              <span className="sx-chip" style={{ borderColor: `${BLUE}66`, color: BLUE_TEXT }}>
                 Aplicaciones · Traductor de PDF
               </span>
               {nebulaPdf.beta && <span className="sx-chip">Beta</span>}
@@ -157,7 +159,7 @@ export default function Page() {
               imágenes y tablas. Los exploits, los payloads y los nombres de herramientas se quedan en inglés, como deben estar.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
-              <a href="#descargar" className="sx-btn text-night-950" style={{ background: BLUE }}>
+              <a href="#descargar" className="sx-btn text-[#0e1014]" style={{ background: BLUE }}>
                 <Download aria-hidden="true" className="size-4" /> Descargar para Android
               </a>
               <a href={nebulaPdf.repo} target="_blank" rel="noopener noreferrer" className="sx-btn sx-btn-ghost">
@@ -196,7 +198,7 @@ export default function Page() {
           <dl className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {features.map(([t, d]) => (
               <div key={t} className="sx-panel p-6">
-                <dt className="sx-h3 !text-[1.15rem]" style={{ color: t === "Modo ciberseguridad" ? BLUE : undefined }}>
+                <dt className="sx-h3 !text-[1.15rem]" style={{ color: t === "Modo ciberseguridad" ? BLUE_TEXT : undefined }}>
                   {t}
                 </dt>
                 <dd className="mt-2 text-[0.93rem] leading-relaxed text-mist">{d}</dd>
@@ -222,7 +224,7 @@ export default function Page() {
           <ol className="lg:col-span-7">
             {steps.map(([t, d], i) => (
               <li key={t} className="grid grid-cols-[3.2rem_1fr] gap-4 border-t border-night-600 py-6 last:border-b">
-                <span className="sx-mono pt-1 text-sm" style={{ color: BLUE }}>
+                <span className="sx-mono pt-1 text-sm" style={{ color: BLUE_TEXT }}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div>
@@ -239,14 +241,14 @@ export default function Page() {
       <section id="descargar" className="scroll-mt-24 pb-20 md:pb-24">
         <div className="sx-wrap grid gap-5 lg:grid-cols-12">
           <div className="sx-panel p-8 md:p-10 lg:col-span-7" style={{ borderColor: `${BLUE}55` }}>
-            <p className="sx-label" style={{ color: BLUE }}>
+            <p className="sx-label" style={{ color: BLUE_TEXT }}>
               Descargar
             </p>
             <h2 className="sx-h2 mt-4">Nebula PDF {nebulaPdf.version}</h2>
             <p className="mt-3 text-mist">
               Android 8.0 o superior · APK de {nebulaPdf.sizeMb} MB · Gratis · Publicada el {formatDate(nebulaPdf.date)}
             </p>
-            <a href={nebulaPdf.apk} className="sx-btn mt-7 text-night-950" style={{ background: BLUE }}>
+            <a href={nebulaPdf.apk} className="sx-btn mt-7 text-[#0e1014]" style={{ background: BLUE }}>
               <Download aria-hidden="true" className="size-4" /> Descargar APK
             </a>
             <p className="sx-mono mt-6 text-[0.8rem] text-dim">SHA-256</p>
@@ -267,7 +269,7 @@ export default function Page() {
             <ul className="mt-5 space-y-3 text-[0.92rem] leading-relaxed text-mist">
               {limits.map((l) => (
                 <li key={l} className="flex gap-3">
-                  <span aria-hidden="true" className="sx-mono text-xs" style={{ color: BLUE }}>
+                  <span aria-hidden="true" className="sx-mono text-xs" style={{ color: BLUE_TEXT }}>
                     !
                   </span>
                   {l}
@@ -301,7 +303,7 @@ export default function Page() {
                     </p>
                     <h3 className="mt-3 text-[1.3rem] font-medium leading-snug tracking-[-0.025em]">{p.title}</h3>
                     <p className="mt-3 flex-1 text-[0.93rem] leading-relaxed text-mist">{p.description}</p>
-                    <span className="sx-arrow mt-5" style={{ color: BLUE }}>
+                    <span className="sx-arrow mt-5" style={{ color: BLUE_TEXT }}>
                       Leer <ArrowRight aria-hidden="true" className="size-4" />
                     </span>
                   </Link>
