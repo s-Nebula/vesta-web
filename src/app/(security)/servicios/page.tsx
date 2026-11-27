@@ -70,7 +70,7 @@ export default function Page() {
           <div className="sx-panel mt-10 overflow-x-auto">
             <table className="w-full min-w-[44rem] border-collapse text-left text-[0.92rem]">
               <thead>
-                <tr className="sx-mono border-b border-night-600 text-[0.7rem] uppercase tracking-wider text-dim">
+                <tr className="sx-mono border-b border-night-600 text-[0.78rem] uppercase tracking-wider text-dim">
                   <th scope="col" className="px-5 py-4 font-medium">Servicio</th>
                   <th scope="col" className="py-4 pr-4 font-medium">Para</th>
                   <th scope="col" className="py-4 pr-4 font-medium">Duración</th>

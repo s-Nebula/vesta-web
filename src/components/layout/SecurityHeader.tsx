@@ -93,7 +93,7 @@ export function SecurityHeader() {
                               <span className="block font-semibold text-haze">
                                 {a.name} <span className="font-normal text-mist">· {a.kind}</span>
                               </span>
-                              <span className="mt-0.5 block text-[0.82rem] leading-snug text-mist">{a.security}</span>
+                              <span className="mt-0.5 block text-[0.88rem] leading-snug text-mist">{a.security}</span>
                             </span>
                           </Link>
                         </li>

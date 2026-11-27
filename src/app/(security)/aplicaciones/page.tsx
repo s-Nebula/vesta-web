@@ -43,12 +43,12 @@ export default function Page() {
                     </p>
                   </div>
                 </div>
-                <p className="sx-mono mt-6 text-[0.78rem] text-dim">{a.platform}</p>
+                <p className="sx-mono mt-6 text-[0.85rem] text-dim">{a.platform}</p>
               </div>
               <div className="lg:col-span-7">
                 <p className="sx-lead !text-haze">{a.summary}</p>
                 <p className="mt-5 text-[0.95rem] leading-relaxed text-mist">
-                  <span className="sx-label mr-2 !text-[0.68rem]">Seguridad</span>
+                  <span className="sx-label mr-2 !text-[0.76rem]">Seguridad</span>
                   {a.security}
                 </p>
                 <Link href={a.href} className="sx-btn sx-btn-ghost mt-7">

@@ -49,7 +49,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </Link>
             <h1 className="mt-7 text-[clamp(2rem,1.3rem+2.8vw,3.4rem)] font-medium leading-[1.04] tracking-[-0.04em]">{p.title}</h1>
             <p className="sx-lead mt-6">{p.description}</p>
-            <p className="sx-mono mt-7 text-[0.75rem] text-dim">
+            <p className="sx-mono mt-7 text-[0.82rem] text-dim">
               por {company.author} · <time dateTime={p.date}>{formatDate(p.date)}</time> · {p.minutes} min de lectura
             </p>
           </div>

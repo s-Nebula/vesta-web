@@ -47,23 +47,23 @@ function FindingCard() {
   return (
     <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-black/40">
       <div className="flex items-center justify-between border-b border-night-600 px-5 py-3">
-        <span className="sx-mono text-[0.72rem] text-dim">informe · hallazgo VS-07</span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#3a1d22] px-2.5 py-1 text-[0.72rem] font-semibold text-[#f3a7a7]">
+        <span className="sx-mono text-[0.8rem] text-dim">informe · hallazgo VS-07</span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#3a1d22] px-2.5 py-1 text-[0.8rem] font-semibold text-[#f3a7a7]">
           <span className="size-1.5 rounded-full bg-[#f07a7a]" /> Alta · CVSS 8.1
         </span>
       </div>
       <div className="space-y-4 px-5 py-5">
         <p className="text-[1.08rem] font-medium leading-snug tracking-[-0.01em]">El cupón de bienvenida se puede aplicar varias veces en el mismo pedido.</p>
         <dl className="grid grid-cols-[5.5rem_1fr] gap-x-4 gap-y-2.5 text-[0.86rem]">
-          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Impacto</dt>
+          <dt className="sx-mono text-[0.78rem] uppercase tracking-wider text-dim">Impacto</dt>
           <dd className="text-mist">Un pedido de $96.000 se pagó en $12.000.</dd>
-          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Evidencia</dt>
-          <dd className="sx-mono text-[0.78rem] text-violet-200">POST /checkout · coupon=BIENVENIDA ×8</dd>
-          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Corrección</dt>
+          <dt className="sx-mono text-[0.78rem] uppercase tracking-wider text-dim">Evidencia</dt>
+          <dd className="sx-mono text-[0.85rem] text-violet-200">POST /checkout · coupon=BIENVENIDA ×8</dd>
+          <dt className="sx-mono text-[0.78rem] uppercase tracking-wider text-dim">Corrección</dt>
           <dd className="text-mist">Validar el cupón en el servidor y marcarlo como usado al confirmar el pago.</dd>
         </dl>
       </div>
-      <figcaption className="border-t border-night-600 px-5 py-3 text-[0.75rem] text-dim">Así se ve un hallazgo en tus informes. Ejemplo ilustrativo.</figcaption>
+      <figcaption className="border-t border-night-600 px-5 py-3 text-[0.82rem] text-dim">Así se ve un hallazgo en tus informes. Ejemplo ilustrativo.</figcaption>
     </figure>
   );
 }
@@ -281,7 +281,7 @@ export default function Page() {
                     <img src={a.logo} alt="" width={44} height={44} className="size-11 rounded-xl" />
                     <div>
                       <p className="text-[1.15rem] font-semibold tracking-[-0.02em]">{a.name}</p>
-                      <p className="text-[0.82rem]" style={{ color: a.accent }}>
+                      <p className="text-[0.88rem]" style={{ color: a.accent }}>
                         {a.kind}
                       </p>
                     </div>
@@ -290,7 +290,7 @@ export default function Page() {
                   <p className="mt-5 flex-1 border-l-2 pl-4 text-[0.9rem] leading-relaxed" style={{ borderColor: a.accent }}>
                     {a.security}
                   </p>
-                  <p className="sx-mono mt-6 flex items-center justify-between text-[0.75rem] text-dim">
+                  <p className="sx-mono mt-6 flex items-center justify-between text-[0.82rem] text-dim">
                     {a.platform}
                     <ArrowUpRight aria-hidden="true" className="size-4 text-mist transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </p>
@@ -321,7 +321,7 @@ export default function Page() {
             <ul className="mt-12 grid gap-10 md:grid-cols-3">
               {posts.map((p) => (
                 <li key={p.slug} className="border-t border-night-500 pt-5">
-                  <p className="sx-mono text-[0.72rem] text-dim">
+                  <p className="sx-mono text-[0.8rem] text-dim">
                     {formatDate(p.date)} · {p.minutes} min
                   </p>
                   <h3 className="mt-3 text-[1.2rem] font-medium leading-snug tracking-[-0.02em]">

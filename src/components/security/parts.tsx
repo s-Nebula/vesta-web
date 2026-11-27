@@ -56,9 +56,9 @@ export function Price({ value, per, size = "lg" }: { value: number; per?: "mes";
     <div>
       <p className={`${big} font-medium leading-none tracking-[-0.04em] tabular-nums`}>
         {formatCop(value)}
-        <span className="ml-1.5 text-[0.8rem] font-medium tracking-normal text-mist">+ IVA{per ? ` / ${per}` : ""}</span>
+        <span className="ml-1.5 text-[0.86rem] font-medium tracking-normal text-mist">+ IVA{per ? ` / ${per}` : ""}</span>
       </p>
-      <p className="sx-mono mt-2 text-[0.72rem] text-dim">
+      <p className="sx-mono mt-2 text-[0.8rem] text-dim">
         total {formatCop(withIva(value))}
         {per ? ` / ${per}` : ""}
       </p>
@@ -95,11 +95,11 @@ export function ServiceDetail({ s }: { s: Service }) {
           <Price value={s.price} per={s.per} />
         </div>
         <dl className="mt-7 grid grid-cols-[6.5rem_1fr] gap-x-4 gap-y-2.5 text-[0.9rem]">
-          <dt className="sx-mono text-[0.72rem] uppercase tracking-wider text-dim">Duración</dt>
+          <dt className="sx-mono text-[0.8rem] uppercase tracking-wider text-dim">Duración</dt>
           <dd>{s.duration}</dd>
-          <dt className="sx-mono text-[0.72rem] uppercase tracking-wider text-dim">Modalidad</dt>
+          <dt className="sx-mono text-[0.8rem] uppercase tracking-wider text-dim">Modalidad</dt>
           <dd>{s.modality}</dd>
-          <dt className="sx-mono text-[0.72rem] uppercase tracking-wider text-dim">Alcance</dt>
+          <dt className="sx-mono text-[0.8rem] uppercase tracking-wider text-dim">Alcance</dt>
           <dd>{s.scope}</dd>
         </dl>
         <a href={waLink(msg)} target="_blank" rel="noopener noreferrer" className="sx-btn sx-btn-ghost mt-7">
@@ -207,7 +207,7 @@ export function ContactBand({ id = "contacto" }: { id?: string }) {
               ["Horario", "Lunes a viernes, 8:00 a. m. a 6:00 p. m."],
             ].map(([k, v]) => (
               <div key={k} className="border-t border-white/10 pt-4">
-                <dt className="sx-label !text-[0.68rem]">{k}</dt>
+                <dt className="sx-label !text-[0.76rem]">{k}</dt>
                 <dd className="mt-1.5 text-lg">{v}</dd>
               </div>
             ))}

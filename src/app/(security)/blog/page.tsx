@@ -36,7 +36,7 @@ export default function Page() {
               {posts.map((p) => (
                 <li key={p.slug} className="grid gap-4 border-t border-night-600 py-10 md:grid-cols-12">
                   <div className="md:col-span-3">
-                    <p className="sx-mono text-[0.74rem] text-dim">
+                    <p className="sx-mono text-[0.82rem] text-dim">
                       <time dateTime={p.date}>{formatDate(p.date)}</time> · {p.minutes} min
                     </p>
                     {p.tags.length > 0 && (
