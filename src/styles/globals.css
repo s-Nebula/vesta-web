@@ -733,7 +733,7 @@
     transform: translateZ(0); /* capa propia: al desplazar no se repinta */
   }
   .nebula-gas {
-    background: var(--color-night-900) url("/img/nebula.webp") center / 100% 100% no-repeat;
+    background: var(--color-night-900) url("/img/nebula-claro.webp") center / 100% 100% no-repeat;
   }
   .nebula-stars {
     background-image:

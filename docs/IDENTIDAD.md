@@ -73,7 +73,7 @@ parental Vesta y solo se usa en sus páginas.
 
   Desde el 2026-11-27 el tema es **claro** (antes grafito `#0E1014` con texto claro): blanco con lila y un
   poco de grafito. Los nombres de los tokens vienen del tema oscuro y se conservaron para no tocar cada
-  componente. La nebulosa de fondo es `public/img/nebula.webp`, generada con `scripts/nebula/render-claro.html`.
+  componente. La nebulosa de fondo es `public/img/nebula-claro.webp`, generada con `scripts/nebula/render-claro.html`.
   Los bloques de código siguen oscuros, como una terminal. El icono y la imagen para redes de los servicios
   también son claros; se generan con `scripts/marca/`.
 
