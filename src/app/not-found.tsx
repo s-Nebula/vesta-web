@@ -1,38 +1,40 @@
 import Link from "next/link";
-import { Logo } from "@/components/brand/Logo";
+import { Wordmark } from "@/components/brand/Wordmark";
 
-/** 404 page, in both languages (static export cannot know the visitor's language). */
+/** Página 404 en los dos idiomas (la exportación estática no conoce el idioma del visitante). */
 export default function NotFound() {
   return (
-    <main className="wrap py-20 md:py-32">
-      <Link href="/" aria-label="Vesta Security">
-        <Logo className="h-12 w-auto" />
-      </Link>
-      <div className="mt-16 grid gap-16 md:grid-cols-2">
-        <section lang="es">
-          <p className="kicker">Error 404</p>
-          <h1 className="h-section mt-4">Esta página no existe o ha cambiado de lugar.</h1>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/" className="btn btn-primary">
-              Volver al inicio
-            </Link>
-            <Link href="/ayuda/" className="btn btn-ghost">
-              Ayuda
-            </Link>
-          </div>
-        </section>
-        <section lang="en">
-          <p className="kicker">Error 404</p>
-          <h2 className="h-section mt-4">This page does not exist or has moved.</h2>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <Link href="/en/" className="btn btn-primary">
-              Back to home
-            </Link>
-            <Link href="/en/help/" className="btn btn-ghost">
-              Help
-            </Link>
-          </div>
-        </section>
+    <main className="sx min-h-dvh">
+      <div className="sx-wrap py-16 md:py-28">
+        <Link href="/" aria-label="Vesta Security">
+          <Wordmark size="lg" />
+        </Link>
+        <p className="sx-mono mt-16 text-[0.8rem] text-dim">HTTP 404</p>
+        <div className="mt-6 grid gap-16 md:grid-cols-2">
+          <section lang="es">
+            <h1 className="sx-h2">
+              Esta página no existe <span className="sx-em">o cambió de lugar.</span>
+            </h1>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/" className="sx-btn sx-btn-primary">
+                Volver al inicio
+              </Link>
+              <Link href="/aplicaciones/" className="sx-btn sx-btn-ghost">
+                Aplicaciones
+              </Link>
+            </div>
+          </section>
+          <section lang="en">
+            <h2 className="sx-h2">
+              This page does not exist <span className="sx-em">or has moved.</span>
+            </h2>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Link href="/en/" className="sx-btn sx-btn-ghost">
+                Vesta in English
+              </Link>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   );

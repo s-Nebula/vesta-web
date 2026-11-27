@@ -17,6 +17,12 @@ Lo que el sitio no puede inventar y necesita del equipo de Vesta.
 - **Precios** en `src/content/security.ts` (antes de IVA). Revisarlos cada año.
 - **Imagen para redes** de servicios: `public/og-servicios.png` (precio «desde» y certificaciones dibujados; si cambian, regenerarla).
 - La portada de la app pasó de `/` a `/control-parental/`. Las demás URL de la app no cambiaron.
+- **Financial Security** se mudó a `/aplicaciones/financial-security/`. En el servidor, `financial.vestasecurity.date`
+  debe redirigir `/`, `/index.html` y `/politica-datos.html` a las páginas nuevas y seguir sirviendo `/downloads/`
+  (la app consulta `/downloads/version.json` para actualizarse). Al publicar una versión nueva de Financial,
+  actualizar `version` y las huellas en `src/content/apps.ts`.
+- **Nebula PDF**: el APK se sirve desde `/var/www/vesta-downloads/Nebula-PDF.apk`. Es una compilación *debug*
+  (beta). Al publicar una versión firmada, reemplazar el archivo y actualizar `nebulaPdf` en `src/content/apps.ts`.
 
 ## Confirmar
 

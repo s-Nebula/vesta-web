@@ -1,10 +1,10 @@
 import { SecurityHeader } from "@/components/layout/SecurityHeader";
 import { SecurityFooter } from "@/components/layout/SecurityFooter";
 
-/** Páginas de servicios de seguridad y blog (solo en español). */
+/** Páginas de Vesta Security: servicios, blog y aplicaciones (solo en español). */
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div lang="es">
+    <div lang="es" className="sx min-h-dvh">
       <SecurityHeader />
       <main id="contenido">{children}</main>
       <SecurityFooter />

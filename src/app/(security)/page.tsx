@@ -1,12 +1,11 @@
 import Link from "next/link";
-import { ArrowRight, MessageCircle, ShieldCheck } from "lucide-react";
-import { SectionHead } from "@/components/ui/SectionHead";
-import { Faq } from "@/components/ui/Faq";
-import { ContactBand, ServiceCard, securityMeta } from "@/components/security/parts";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
+import { ContactBand, Head, Ribbon, ServiceCard, SxFaq, securityMeta } from "@/components/security/parts";
 import { JsonLd } from "@/lib/seo";
 import { allPosts, formatDate } from "@/lib/blog";
 import { site, company } from "@/content/site";
-import { certifications, faq, projects, segments, services, steps, waLink, formatCop } from "@/content/security";
+import { apps } from "@/content/apps";
+import { certifications, faq, formatCop, segments, services, steps, waLink } from "@/content/security";
 
 export const metadata = securityMeta(
   "Vesta Security · Ciberseguridad para pequeños negocios en Santa Marta y Colombia",
@@ -21,7 +20,6 @@ const schema = {
   name: site.name,
   legalName: company.legalName,
   url: site.url,
-  logo: `${site.url}/brand/vesta_logo.svg`,
   email: company.email,
   telephone: company.phone,
   priceRange: "$$",
@@ -29,14 +27,46 @@ const schema = {
   address: { "@type": "PostalAddress", addressLocality: "Santa Marta", addressRegion: "Magdalena", addressCountry: "CO" },
   makesOffer: services
     .filter((s) => s.price > 0)
-    .map((s) => ({
-      "@type": "Offer",
-      name: s.name,
-      price: s.price,
-      priceCurrency: "COP",
-      url: `${site.url}/servicios/#${s.id}`,
-    })),
+    .map((s) => ({ "@type": "Offer", name: s.name, price: s.price, priceCurrency: "COP", url: `${site.url}/servicios/#${s.id}` })),
 };
+
+const ribbon = [
+  "Red Segura para Comercios",
+  "OWASP Top 10",
+  "Tienda en Línea Segura",
+  "SPF · DKIM · DMARC",
+  "Reglas de Firebase",
+  "Ley 1581 de 2012",
+  "Pentest Android",
+  "Oficina Protegida",
+  "Revisión de código",
+];
+
+/** Un hallazgo de ejemplo, con el formato real de los informes. */
+function FindingCard() {
+  return (
+    <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-black/40">
+      <div className="flex items-center justify-between border-b border-night-600 px-5 py-3">
+        <span className="sx-mono text-[0.72rem] text-dim">informe · hallazgo VS-07</span>
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#3a1d22] px-2.5 py-1 text-[0.72rem] font-semibold text-[#f3a7a7]">
+          <span className="size-1.5 rounded-full bg-[#f07a7a]" /> Alta · CVSS 8.1
+        </span>
+      </div>
+      <div className="space-y-4 px-5 py-5">
+        <p className="text-[1.08rem] font-medium leading-snug tracking-[-0.01em]">El cupón de bienvenida se puede aplicar varias veces en el mismo pedido.</p>
+        <dl className="grid grid-cols-[5.5rem_1fr] gap-x-4 gap-y-2.5 text-[0.86rem]">
+          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Impacto</dt>
+          <dd className="text-mist">Un pedido de $96.000 se pagó en $12.000.</dd>
+          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Evidencia</dt>
+          <dd className="sx-mono text-[0.78rem] text-violet-200">POST /checkout · coupon=BIENVENIDA ×8</dd>
+          <dt className="sx-mono text-[0.7rem] uppercase tracking-wider text-dim">Corrección</dt>
+          <dd className="text-mist">Validar el cupón en el servidor y marcarlo como usado al confirmar el pago.</dd>
+        </dl>
+      </div>
+      <figcaption className="border-t border-night-600 px-5 py-3 text-[0.75rem] text-dim">Así se ve un hallazgo en tus informes. Ejemplo ilustrativo.</figcaption>
+    </figure>
+  );
+}
 
 export default function Page() {
   const featured = services.filter((s) => s.featured);
@@ -48,63 +78,80 @@ export default function Page() {
       <JsonLd data={schema} />
 
       {/* Portada */}
-      <section className="grain border-b border-line">
-        <div className="wrap grid gap-12 pb-16 pt-14 md:pb-24 md:pt-20 lg:grid-cols-12">
-          <div className="lg:col-span-8">
-            <p className="kicker">Ciberseguridad para pequeños negocios · Santa Marta y toda Colombia</p>
-            <h1 className="display mt-5">Encuentro las fallas de tu negocio antes que un delincuente.</h1>
-            <p className="lead mt-7 max-w-2xl">
-              Reviso tu WiFi, tu página web, tu tienda en línea, tu correo o tu app como lo haría un atacante, con autorización y sin
-              detener tu operación. Te entrego qué encontré, qué tan grave es y cómo corregirlo, en palabras que se entienden.
+      <section className="relative overflow-hidden">
+        <div aria-hidden="true" className="sx-grid-bg pointer-events-none absolute inset-0" />
+        <div aria-hidden="true" className="pointer-events-none absolute -right-40 -top-40 size-[42rem] rounded-full bg-violet-600/10 blur-3xl" />
+        <div className="sx-wrap relative grid gap-14 pb-16 pt-16 md:pt-24 lg:grid-cols-12 lg:gap-10">
+          <div className="lg:col-span-7">
+            <p className="sx-chip">
+              <span className="size-1.5 rounded-full bg-violet-400" /> Santa Marta · Remoto en toda Colombia
             </p>
-            <div className="mt-9 flex flex-wrap gap-4">
-              <a href={waLink()} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                <MessageCircle aria-hidden="true" className="size-4" />
-                Diagnóstico gratis por WhatsApp
+            <h1 className="sx-display mt-7">
+              Encuentro las fallas de tu negocio <span className="sx-em">antes que un delincuente.</span>
+            </h1>
+            <p className="sx-lead mt-7 max-w-xl">
+              Reviso tu WiFi, tu página web, tu tienda en línea, tu correo o tu app como lo haría un atacante, con autorización y sin detener tu
+              operación. Te entrego qué encontré, qué tan grave es y cómo corregirlo, en palabras que se entienden.
+            </p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <a href={waLink()} target="_blank" rel="noopener noreferrer" className="sx-btn sx-btn-primary">
+                Diagnóstico gratis por WhatsApp <ArrowRight aria-hidden="true" className="size-4" />
               </a>
-              <Link href="/servicios/" className="btn btn-ghost">
-                Ver servicios y precios
+              <Link href="/servicios/" className="sx-btn sx-btn-ghost">
+                Servicios y precios
               </Link>
             </div>
           </div>
-          <aside className="lg:col-span-4 lg:self-end">
-            <dl className="border border-line bg-paper text-sm">
-              {[
-                ["Desde", `${formatCop(from)} + IVA, precio cerrado`],
-                ["Certificaciones", certifications.map((c) => c.name).join(" · ")],
-                ["Presencial", "Santa Marta, Magdalena"],
-                ["Remoto", "Toda Colombia"],
-                ["Informe", "En español claro, con prioridades"],
-              ].map(([k, v]) => (
-                <div key={k} className="flex justify-between gap-4 border-b border-line px-5 py-3.5 last:border-b-0">
-                  <dt className="text-muted">{k}</dt>
-                  <dd className="text-right font-semibold text-ink">{v}</dd>
-                </div>
-              ))}
-            </dl>
-          </aside>
+          <div className="lg:col-span-5 lg:pt-6">
+            <FindingCard />
+          </div>
+        </div>
+
+        {/* Datos reales, no métricas de relleno */}
+        <div className="sx-wrap relative pb-10">
+          <dl className="grid grid-cols-2 border-t border-night-600 md:grid-cols-4">
+            {[
+              [formatCop(from), "+ IVA, el servicio más económico, con precio cerrado"],
+              ["OSWE · PNPT · eJPT", "certificaciones internacionales en pruebas de penetración"],
+              ["60 días", "para la nueva prueba incluida, cuando corrijas"],
+              ["0", "pruebas sin autorización firmada (Ley 1273 de 2009)"],
+            ].map(([k, v], i) => (
+              <div key={k} className={`py-7 pr-6 ${i > 0 ? "md:border-l md:border-night-600 md:pl-6" : ""} ${i % 2 ? "border-l border-night-600 pl-6 md:pl-6" : ""}`}>
+                <dt className="text-[1.45rem] font-medium tracking-[-0.04em] md:text-[1.75rem]">{k}</dt>
+                <dd className="mt-2 text-[0.86rem] leading-snug text-mist">{v}</dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </section>
 
+      <Ribbon words={ribbon} />
+
       {/* Para quién */}
-      <section className="border-b border-line">
-        <div className="wrap py-20 md:py-28">
-          <SectionHead
-            kicker="Para quién"
-            title="¿A cuál de estos negocios se parece el tuyo?"
+      <section className="py-20 md:py-28">
+        <div className="sx-wrap">
+          <Head
+            label="Para quién"
+            title={
+              <>
+                ¿A cuál se parece <span className="sx-em">tu negocio?</span>
+              </>
+            }
             lead="Cada tipo de negocio tiene un riesgo típico. Empieza por el que más se parece al tuyo."
           />
-          <ol className="mt-14 grid gap-px border border-line bg-line md:grid-cols-2">
+          <ol className="mt-14 grid gap-4 md:grid-cols-2">
             {segments.map((seg, i) => {
               const pick = services.find((s) => s.id === seg.pick)!;
               return (
-                <li key={seg.id} className="flex flex-col bg-ivory p-8">
-                  <p className="font-serif text-lg text-rose-700">{String(i + 1).padStart(2, "0")}</p>
-                  <h3 className="h-sub mt-2">{seg.name}</h3>
-                  <p className="mt-1 text-sm text-muted">{seg.who}</p>
-                  <p className="mt-5 flex-1 text-[0.97rem]">{seg.risk}</p>
-                  <Link href={`/servicios/#${pick.id}`} className="arrow-link mt-6 text-sm">
-                    Recomendado: {pick.name} <ArrowRight aria-hidden="true" className="size-4" />
+                <li key={seg.id} className="sx-panel flex flex-col p-7 md:p-8">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <h3 className="sx-h3">{seg.name}</h3>
+                    <span className="sx-mono text-xs text-dim">{String(i + 1).padStart(2, "0")}</span>
+                  </div>
+                  <p className="mt-1.5 text-[0.88rem] text-dim">{seg.who}</p>
+                  <p className="mt-5 flex-1 leading-relaxed text-mist">{seg.risk}</p>
+                  <Link href={`/servicios/#${pick.id}`} className="sx-arrow mt-6">
+                    {pick.name} <ArrowRight aria-hidden="true" className="size-4" />
                   </Link>
                 </li>
               );
@@ -113,39 +160,51 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Paquetes destacados */}
-      <section className="border-b border-line bg-paper">
-        <div className="wrap py-20 md:py-28">
+      {/* Servicios destacados */}
+      <section className="border-y border-night-600 bg-night-950/60 py-20 md:py-28">
+        <div className="sx-wrap">
           <div className="flex flex-wrap items-end justify-between gap-6">
-            <SectionHead kicker="Servicios" title="Precios cerrados, sin sorpresas." lead="Paquetes con alcance y entregables definidos desde el principio. Estos son los más pedidos por pequeños negocios." />
-            <Link href="/servicios/" className="arrow-link">
-              Todos los servicios <ArrowRight aria-hidden="true" className="size-4" />
+            <Head
+              label="Servicios"
+              title={
+                <>
+                  Precio cerrado, <span className="sx-em">sin sorpresas.</span>
+                </>
+              }
+              lead="Alcance y entregables definidos desde el principio. Estos son los que más piden los pequeños negocios."
+            />
+            <Link href="/servicios/" className="sx-arrow">
+              Los 9 servicios <ArrowRight aria-hidden="true" className="size-4" />
             </Link>
           </div>
-          <div className="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {featured.map((s) => (
-              <ServiceCard key={s.id} s={s} />
+          <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+            {featured.map((s, i) => (
+              <ServiceCard key={s.id} s={s} index={i} />
             ))}
           </div>
         </div>
       </section>
 
       {/* Cómo trabajo */}
-      <section className="border-b border-line">
-        <div className="wrap grid gap-12 py-20 md:py-28 lg:grid-cols-12">
-          <SectionHead
-            className="lg:col-span-4"
-            kicker="Cómo trabajo"
-            title="Del primer mensaje al informe, en 1 a 3 semanas."
+      <section className="py-20 md:py-28">
+        <div className="sx-wrap grid gap-14 lg:grid-cols-12">
+          <Head
+            className="lg:col-span-5"
+            label="Cómo trabajo"
+            title={
+              <>
+                Del primer mensaje al informe, <span className="sx-em">en 1 a 3 semanas.</span>
+              </>
+            }
             lead="Siempre con autorización por escrito. Si encuentro algo crítico durante las pruebas, te aviso ese mismo día."
           />
-          <ol className="lg:col-span-8">
+          <ol className="lg:col-span-7">
             {steps.map((st, i) => (
-              <li key={st.title} className="grid grid-cols-[3rem_1fr] gap-4 border-t border-line py-6 first:border-t-0 first:pt-0">
-                <span className="font-serif text-2xl text-rose-700">{String(i + 1).padStart(2, "0")}</span>
+              <li key={st.title} className="grid grid-cols-[3.2rem_1fr] gap-4 border-t border-night-600 py-6 last:border-b">
+                <span className="sx-mono pt-1 text-sm text-violet-300">{String(i + 1).padStart(2, "0")}</span>
                 <div>
-                  <h3 className="text-lg font-semibold font-sans">{st.title}</h3>
-                  <p className="mt-1 text-muted">{st.text}</p>
+                  <h3 className="text-[1.15rem] font-semibold tracking-[-0.015em]">{st.title}</h3>
+                  <p className="mt-1 text-mist">{st.text}</p>
                 </div>
               </li>
             ))}
@@ -154,85 +213,123 @@ export default function Page() {
       </section>
 
       {/* Quién soy */}
-      <section className="on-dark bg-wine-900 text-ivory">
-        <div className="wrap grid gap-12 py-20 md:py-28 lg:grid-cols-12">
-          <div className="lg:col-span-6">
-            <p className="kicker">Quién está detrás</p>
-            <h2 className="h-section mt-4">Hola, soy Nebula.</h2>
-            <div className="lead mt-6 space-y-4">
-              <p>
-                Soy especialista en seguridad ofensiva, ingeniero de software y profesional en comercio internacional. Mi formación como
-                desarrollador me permite ir más allá de los escáneres automáticos: leo el código, entiendo cómo se construyó tu sistema y
-                encuentro los fallos de lógica que las herramientas no ven.
-              </p>
-              <p>
-                Vesta Security empieza atendiendo a pequeños negocios porque son los que más ataques reciben y los que menos acceso tienen a
-                una auditoría seria. Cuando me escribes, hablas directamente conmigo.
-              </p>
+      <section className="pb-20 md:pb-28">
+        <div className="sx-wrap">
+          <div className="sx-glass grid gap-12 p-8 md:p-14 lg:grid-cols-12">
+            <div className="lg:col-span-6">
+              <p className="sx-label">Quién está detrás</p>
+              <h2 className="sx-h2 mt-4">
+                Hola, soy <span className="sx-em">Nebula.</span>
+              </h2>
+              <div className="sx-lead mt-6 space-y-4">
+                <p>
+                  Soy especialista en seguridad ofensiva, ingeniero de software y profesional en comercio internacional. Como desarrollador, leo
+                  el código y entiendo cómo se construyó tu sistema: así encuentro los fallos de lógica que los escáneres automáticos no ven.
+                </p>
+                <p>
+                  Empiezo con pequeños negocios porque son los que más ataques reciben y los que menos acceso tienen a una auditoría seria. Cuando
+                  escribes, hablas directamente conmigo.
+                </p>
+              </div>
             </div>
-          </div>
-          <div className="space-y-10 lg:col-span-6">
-            <div>
-              <h3 className="kicker">Certificaciones</h3>
+            <div className="lg:col-span-6">
+              <h3 className="sx-label">Certificaciones</h3>
               <ul className="mt-4">
                 {certifications.map((c) => (
-                  <li key={c.name} className="flex gap-4 border-t border-ivory/20 py-4">
-                    <ShieldCheck aria-hidden="true" className="mt-1 size-5 shrink-0 text-rose-300" />
+                  <li key={c.name} className="grid grid-cols-[5.5rem_1fr] gap-4 border-t border-white/10 py-4">
+                    <span className="text-[1.25rem] font-semibold tracking-[-0.02em]">{c.name}</span>
                     <div>
-                      <p className="font-semibold">
-                        {c.name} <span className="font-normal text-ivory/70">· {c.full} · {c.issuer}</span>
+                      <p className="text-[0.95rem]">
+                        {c.full} <span className="text-mist">· {c.issuer}</span>
                       </p>
-                      <p className="text-sm text-ivory/75">{c.focus}</p>
+                      <p className="text-[0.86rem] text-mist">{c.focus}</p>
                     </div>
                   </li>
                 ))}
               </ul>
-            </div>
-            <div>
-              <h3 className="kicker">Construyo lo que audito</h3>
-              <ul className="mt-4">
-                {projects.map((p) => (
-                  <li key={p.name} className="border-t border-ivory/20 py-4">
-                    {p.href.startsWith("http") ? (
-                      <a href={p.href} target="_blank" rel="noopener noreferrer" className="font-semibold underline decoration-rose-300 underline-offset-4">
-                        {p.name}
-                      </a>
-                    ) : (
-                      <Link href={p.href} className="font-semibold underline decoration-rose-300 underline-offset-4">
-                        {p.name}
-                      </Link>
-                    )}
-                    <p className="text-sm text-ivory/75">{p.text}</p>
-                  </li>
-                ))}
-              </ul>
+              <a href="https://github.com/s-Nebula" target="_blank" rel="noopener noreferrer" className="sx-arrow mt-4">
+                Mi código en GitHub <ArrowUpRight aria-hidden="true" className="size-4" />
+              </a>
             </div>
           </div>
         </div>
       </section>
 
+      {/* Aplicaciones */}
+      <section className="border-y border-night-600 bg-night-950/60 py-20 md:py-28">
+        <div className="sx-wrap">
+          <div className="flex flex-wrap items-end justify-between gap-6">
+            <Head
+              label="Aplicaciones"
+              title={
+                <>
+                  Construyo lo que <span className="sx-em">audito.</span>
+                </>
+              }
+              lead="Tres aplicaciones propias, en uso real, diseñadas con la seguridad que reviso en las de mis clientes."
+            />
+            <Link href="/aplicaciones/" className="sx-arrow">
+              Ver aplicaciones <ArrowRight aria-hidden="true" className="size-4" />
+            </Link>
+          </div>
+          <ul className="mt-14 grid gap-4 lg:grid-cols-3">
+            {apps.map((a) => (
+              <li key={a.id}>
+                <Link href={a.href} className="sx-panel group flex h-full flex-col p-7 transition-colors hover:border-night-500">
+                  <div className="flex items-center gap-3.5">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={a.logo} alt="" width={44} height={44} className="size-11 rounded-xl" />
+                    <div>
+                      <p className="text-[1.15rem] font-semibold tracking-[-0.02em]">{a.name}</p>
+                      <p className="text-[0.82rem]" style={{ color: a.accent }}>
+                        {a.kind}
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-6 leading-relaxed text-mist">{a.summary}</p>
+                  <p className="mt-5 flex-1 border-l-2 pl-4 text-[0.9rem] leading-relaxed" style={{ borderColor: a.accent }}>
+                    {a.security}
+                  </p>
+                  <p className="sx-mono mt-6 flex items-center justify-between text-[0.75rem] text-dim">
+                    {a.platform}
+                    <ArrowUpRight aria-hidden="true" className="size-4 text-mist transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* Blog */}
       {posts.length > 0 && (
-        <section className="border-b border-line">
-          <div className="wrap py-20 md:py-28">
+        <section className="py-20 md:py-28">
+          <div className="sx-wrap">
             <div className="flex flex-wrap items-end justify-between gap-6">
-              <SectionHead kicker="Blog" title="Seguridad explicada para negocios." />
-              <Link href="/blog/" className="arrow-link">
+              <Head
+                label="Blog"
+                title={
+                  <>
+                    Seguridad explicada <span className="sx-em">sin tecnicismos.</span>
+                  </>
+                }
+              />
+              <Link href="/blog/" className="sx-arrow">
                 Todos los artículos <ArrowRight aria-hidden="true" className="size-4" />
               </Link>
             </div>
-            <ul className="mt-12 grid gap-8 md:grid-cols-3">
+            <ul className="mt-12 grid gap-10 md:grid-cols-3">
               {posts.map((p) => (
-                <li key={p.slug} className="border-t-2 border-wine pt-5">
-                  <p className="text-xs font-semibold text-muted">
+                <li key={p.slug} className="border-t border-night-500 pt-5">
+                  <p className="sx-mono text-[0.72rem] text-dim">
                     {formatDate(p.date)} · {p.minutes} min
                   </p>
-                  <h3 className="mt-2 font-serif text-xl leading-snug">
-                    <Link href={`/blog/${p.slug}/`} className="hover:text-rose-700">
+                  <h3 className="mt-3 text-[1.2rem] font-medium leading-snug tracking-[-0.02em]">
+                    <Link href={`/blog/${p.slug}/`} className="hover:text-violet-200">
                       {p.title}
                     </Link>
                   </h3>
-                  <p className="mt-3 text-sm text-muted">{p.description}</p>
+                  <p className="mt-3 text-[0.92rem] leading-relaxed text-mist">{p.description}</p>
                 </li>
               ))}
             </ul>
@@ -241,25 +338,20 @@ export default function Page() {
       )}
 
       {/* Preguntas */}
-      <section className="border-b border-line bg-paper">
-        <div className="wrap grid gap-12 py-20 md:py-28 lg:grid-cols-12">
-          <SectionHead className="lg:col-span-4" kicker="Preguntas frecuentes" title="Antes de escribirme." />
+      <section className="border-t border-night-600 py-20 md:py-28">
+        <div className="sx-wrap grid gap-12 lg:grid-cols-12">
+          <Head
+            className="lg:col-span-4"
+            label="Preguntas frecuentes"
+            title={
+              <>
+                Antes de <span className="sx-em">escribirme.</span>
+              </>
+            }
+          />
           <div className="lg:col-span-8">
-            <Faq items={faq.slice(0, 5)} />
+            <SxFaq items={faq.slice(0, 5)} />
           </div>
-        </div>
-      </section>
-
-      {/* Vesta app */}
-      <section className="border-b border-line">
-        <div className="wrap flex flex-col gap-4 py-10 md:flex-row md:items-center md:justify-between">
-          <p className="text-[0.97rem]">
-            <strong className="font-semibold">¿Buscas Vesta, la app de control parental?</strong>{" "}
-            <span className="text-muted">Está en su propia sección, con descargas, ayuda y documentación.</span>
-          </p>
-          <Link href="/control-parental/" className="arrow-link shrink-0">
-            Ir a Vesta control parental <ArrowRight aria-hidden="true" className="size-4" />
-          </Link>
         </div>
       </section>
 

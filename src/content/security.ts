@@ -24,8 +24,8 @@ export const contact = {
 export const securityNav = [
   { href: "/", label: "Inicio" },
   { href: "/servicios/", label: "Servicios y precios" },
+  { href: "/aplicaciones/", label: "Aplicaciones" },
   { href: "/blog/", label: "Blog" },
-  { href: "/control-parental/", label: "Control parental" },
   { href: "/#contacto", label: "Contacto" },
 ] as const;
 
@@ -316,12 +316,6 @@ export const certifications: { name: string; full: string; issuer: string; focus
   { name: "OSWE", full: "Offensive Security Web Expert", issuer: "OffSec", focus: "Explotación web avanzada y revisión de código fuente" },
   { name: "PNPT", full: "Practical Network Penetration Tester", issuer: "TCM Security", focus: "Pentest de red externa, interna y Active Directory, con informe" },
   { name: "eJPT", full: "Junior Penetration Tester", issuer: "INE Security", focus: "Fundamentos de las pruebas de penetración" },
-];
-
-export const projects: { name: string; text: string; href: string }[] = [
-  { name: "Vesta", text: "Plataforma de control parental para Android: dos apps, API y reglas de seguridad en la nube, publicadas como código abierto.", href: "/control-parental/" },
-  { name: "Financial Security", text: "Gestión de créditos y cobranza con trabajo sin conexión y seguridad a nivel de fila por negocio.", href: "https://financial.vestasecurity.date" },
-  { name: "Código abierto", text: "El código de Vesta es público en GitHub, bajo licencia AGPL-3.0, para que cualquiera lo revise.", href: "https://github.com/s-Nebula" },
 ];
 
 export type QA = { q: string; a: string[] };

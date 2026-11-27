@@ -21,6 +21,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const security = [
     { url: `${site.url}/`, lastModified: new Date("2026-11-26"), changeFrequency: "monthly" as const, priority: 1 },
     { url: `${site.url}/servicios/`, lastModified: new Date("2026-11-26"), changeFrequency: "monthly" as const, priority: 0.9 },
+    ...["/aplicaciones/", "/aplicaciones/financial-security/", "/aplicaciones/nebula-pdf/", "/aplicaciones/financial-security/politica-de-datos/"].map((u) => ({
+      url: `${site.url}${u}`,
+      lastModified: new Date("2026-11-27"),
+      changeFrequency: "monthly" as const,
+      priority: u.includes("politica") ? 0.5 : 0.85,
+    })),
     { url: `${site.url}/blog/`, lastModified: new Date("2026-11-26"), changeFrequency: "weekly" as const, priority: 0.8 },
     ...allPosts().map((p) => ({ url: `${site.url}/blog/${p.slug}/`, lastModified: new Date(p.date), changeFrequency: "yearly" as const, priority: 0.7 })),
   ];

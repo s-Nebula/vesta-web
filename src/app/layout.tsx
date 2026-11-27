@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "@fontsource-variable/montserrat/wght.css";
+import "@fontsource-variable/space-grotesk/wght.css";
 import "@fontsource-variable/source-serif-4/opsz.css";
 import "@fontsource-variable/source-serif-4/opsz-italic.css";
 import "@/styles/globals.css";
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#F4EDEA",
+  themeColor: "#0E1014",
   width: "device-width",
   initialScale: 1,
 };
