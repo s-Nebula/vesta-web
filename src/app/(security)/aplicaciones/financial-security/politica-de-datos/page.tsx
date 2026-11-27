@@ -14,6 +14,14 @@ export const metadata = securityMeta(
 /** Texto oficial de la política (copiado de la antigua web de Financial). */
 const body = fs.readFileSync(path.join(process.cwd(), "src/content/financial/politica-datos.html"), "utf8");
 
+// Es un fragmento que va dentro del <main> de la página. Una etiqueta de estructura
+// suelta (p. ej. un </main> que quedó al copiarlo) hace que el navegador reacomode el
+// HTML y React falle al hidratar (error #418). Mejor que falle la compilación.
+const etiqueta = /<\/?(html|head|body|main)\b/i.exec(body);
+if (etiqueta) {
+  throw new Error(`politica-datos.html no debe incluir <${etiqueta[1]}>: es un fragmento, no una página completa.`);
+}
+
 export default function Page() {
   return (
     <>
