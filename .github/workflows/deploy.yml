@@ -56,6 +56,8 @@ jobs:
           name: sitio
           path: out
           retention-days: 30
+          # Sin esto, upload-artifact@v4 omite las carpetas con punto (.well-known/security.txt).
+          include-hidden-files: true
 
   publish:
     name: Publicar en la rama deploy
