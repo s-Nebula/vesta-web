@@ -5,7 +5,7 @@
   "description": "Sitio web oficial de Vesta Security",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/csp.mjs",
     "preview": "npx serve@14 out",
     "typecheck": "tsc --noEmit",
     "legal": "python3 scripts/convert_legal.py"

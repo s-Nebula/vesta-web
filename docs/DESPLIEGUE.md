@@ -183,6 +183,29 @@ purga la caché después de un despliegue o de un rollback.
 - Configuración de OpenMediaVault.
 - Repositorios `vesta-tutor` y `vesta-tracker`.
 
+## Cabeceras de seguridad y CSP
+
+La Content-Security-Policy tiene dos partes, y el navegador aplica ambas a la vez:
+
+1. **Cabecera (Cloudflare).** Regla de transformación «Cabeceras de seguridad de la web», solo para
+   `vestasecurity.date` y `www`:
+   `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'`.
+   La misma regla pone `X-Frame-Options` y `Referrer-Policy`. HSTS y `nosniff` vienen del ajuste
+   *Security Header* de la zona.
+2. **`<meta>` en cada página.** `scripts/csp.mjs` corre después de `next build`. Calcula la huella SHA-256
+   de cada `<script>` en línea y deja `script-src 'self' 'sha256-…'`. Por eso el `'unsafe-inline'` de la
+   cabecera no abre la puerta: un script inyectado no tiene huella y no se ejecuta.
+
+`deploy/verify-build.sh` falla si alguna página queda sin CSP o con un script en línea sin huella.
+
+**Si algo deja de funcionar:**
+- Un script de otro dominio (analítica, chat, mapas) hay que agregarlo a `script-src` y `connect-src`
+  en la regla de Cloudflare.
+- Si se activa en Cloudflare algo que inyecte scripts en línea (Rocket Loader, *Bot Fight Mode* con
+  detección por JavaScript, Web Analytics automático), lo bloqueará la `<meta>`: no activarlo sin revisar.
+- Se puede ver qué bloquea el navegador en la consola de las herramientas de desarrollo
+  («Refused to execute…»).
+
 ## Credenciales
 
 - En GitHub: la Action solo usa el `GITHUB_TOKEN` temporal de cada ejecución. No hay secretos configurados.
