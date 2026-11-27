@@ -189,7 +189,8 @@ La Content-Security-Policy tiene dos partes, y el navegador aplica ambas a la ve
 
 1. **Cabecera (Cloudflare).** Regla de transformación «Cabeceras de seguridad de la web», solo para
    `vestasecurity.date` y `www`:
-   `default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'`.
+   `default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'`.
+   `cloudflareinsights.com` es Cloudflare Web Analytics, que Cloudflare inyecta en cada página.
    La misma regla pone `X-Frame-Options` y `Referrer-Policy`. HSTS y `nosniff` vienen del ajuste
    *Security Header* de la zona.
 2. **`<meta>` en cada página.** `scripts/csp.mjs` corre después de `next build`. Calcula la huella SHA-256
@@ -200,7 +201,7 @@ La Content-Security-Policy tiene dos partes, y el navegador aplica ambas a la ve
 
 **Si algo deja de funcionar:**
 - Un script de otro dominio (analítica, chat, mapas) hay que agregarlo a `script-src` y `connect-src`
-  en la regla de Cloudflare.
+  en la regla de Cloudflare **y** a `EXTERNOS` en `scripts/csp.mjs`.
 - Si se activa en Cloudflare algo que inyecte scripts en línea (Rocket Loader, *Bot Fight Mode* con
   detección por JavaScript, Web Analytics automático), lo bloqueará la `<meta>`: no activarlo sin revisar.
 - Se puede ver qué bloquea el navegador en la consola de las herramientas de desarrollo
