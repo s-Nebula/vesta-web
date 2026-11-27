@@ -18,9 +18,9 @@ export function securityMeta(title: string, description: string, path: string, a
       title: absolute ? title : `${title} · ${site.name}`,
       description,
       url,
-      images: [{ url: `${site.url}/og.png`, width: 1200, height: 630, alt: "Vesta Security" }],
+      images: [{ url: `${site.url}/og-servicios.png`, width: 1200, height: 630, alt: "Vesta Security, ciberseguridad para pequeños negocios" }],
     },
-    twitter: { card: "summary_large_image", title, description, images: [`${site.url}/og.png`] },
+    twitter: { card: "summary_large_image", title, description, images: [`${site.url}/og-servicios.png`] },
   };
 }
 
