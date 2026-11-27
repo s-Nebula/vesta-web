@@ -36,19 +36,21 @@
   --color-warn: #8a5a14;
   --color-error: #a2434f;
 
-  /* Vesta Security (empresa): grafito + violeta. Ver docs/IDENTIDAD.md §5. */
-  --color-night-950: #0a0b0e;
-  --color-night-900: #0e1014;
-  --color-night-800: #14171c;
-  --color-night-700: #1b1e25;
-  --color-night-600: #262a33;
-  --color-night-500: #343947;
-  --color-haze: #eceaf3;
-  --color-mist: #a6a4b5;
-  --color-dim: #75738a;
-  --color-violet-200: #ddd6fb;
-  --color-violet-300: #c6bcf4;
-  --color-violet-400: #a99beb;
+  /* Vesta Security (empresa): blanco + lila, texto grafito. Ver docs/IDENTIDAD.md §5.
+     Los nombres vienen del tema oscuro anterior: «night» son ahora los fondos claros
+     (900 = fondo de página, 950 = bandas lavanda) y «haze» el texto oscuro. */
+  --color-night-950: #f3f0fc;
+  --color-night-900: #ffffff;
+  --color-night-800: #fbfaff;
+  --color-night-700: #f1eefa;
+  --color-night-600: #e4e0f1;
+  --color-night-500: #cdc6e3;
+  --color-haze: #17161f;
+  --color-mist: #4e4c60;
+  --color-dim: #6a687e;
+  --color-violet-200: #4a3aa3;
+  --color-violet-300: #5944c2;
+  --color-violet-400: #7a66d8;
   --color-violet-500: #8b7ae0;
   --color-violet-600: #6d5bc8;
   --color-violet-700: #52429e;
@@ -508,12 +510,14 @@
       transform 0.2s ease;
   }
   .sx-btn-primary {
-    background: linear-gradient(180deg, var(--color-violet-300), var(--color-violet-400));
-    color: var(--color-night-950);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.45);
+    background: linear-gradient(180deg, var(--color-violet-500), var(--color-violet-600));
+    color: #fff;
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.3),
+      0 6px 18px -8px rgb(89 68 194 / 0.55);
   }
   .sx-btn-primary:hover {
-    background: var(--color-violet-200);
+    background: var(--color-violet-700);
   }
   .sx-btn-ghost {
     border: 1px solid var(--color-night-500);
@@ -549,16 +553,16 @@
   /* Degradé lavanda de las tarjetas destacadas. */
   .sx-glass {
     background:
-      radial-gradient(120% 90% at 0% 0%, rgb(198 188 244 / 0.22), transparent 55%),
-      linear-gradient(160deg, #2a2445 0%, #1a1729 55%, #14141c 100%);
-    border: 1px solid rgb(198 188 244 / 0.18);
+      radial-gradient(120% 90% at 0% 0%, rgb(169 155 235 / 0.28), transparent 55%),
+      linear-gradient(160deg, #f1edff 0%, #f8f6ff 55%, #ffffff 100%);
+    border: 1px solid rgb(122 102 216 / 0.25);
     border-radius: 1.5rem;
   }
   /* Rejilla de fondo muy tenue, solo en la portada. */
   .sx-grid-bg {
     background-image:
-      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+      linear-gradient(rgb(23 22 31 / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(23 22 31 / 0.05) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse 80% 70% at 75% 20%, #000 20%, transparent 75%);
   }
@@ -603,11 +607,11 @@
   .sx-mono {
     font-family: var(--font-mono);
   }
-  /* Texto de artículos en el tema oscuro. */
+  /* Texto de artículos. */
   .sx-prose {
     font-size: 1.08rem;
     line-height: 1.75;
-    color: #d8d6e2;
+    color: #2d2b3a;
   }
   .sx-prose h2 {
     font-size: 1.75rem;
@@ -664,8 +668,8 @@
     margin-block: 1.5rem;
     padding: 1.1rem 1.3rem;
     overflow-x: auto;
-    background: var(--color-night-950);
-    border: 1px solid var(--color-night-600);
+    background: #17161f; /* los bloques de código siguen oscuros, como una terminal */
+    border: 1px solid #17161f;
     border-radius: 14px;
     font-size: 0.9rem;
     line-height: 1.65;
@@ -674,7 +678,7 @@
     background: none;
     border: 0;
     padding: 0;
-    color: var(--color-violet-200);
+    color: #ddd6fb;
   }
   .sx-prose blockquote {
     border-left: 2px solid var(--color-violet-500);
@@ -733,13 +737,13 @@
   }
   .nebula-stars {
     background-image:
-      radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / 0.55), transparent 60%),
-      radial-gradient(1px 1px at 37% 72%, rgb(255 255 255 / 0.4), transparent 60%),
-      radial-gradient(1.4px 1.4px at 64% 31%, rgb(221 214 251 / 0.7), transparent 60%),
-      radial-gradient(1px 1px at 81% 63%, rgb(255 255 255 / 0.45), transparent 60%),
-      radial-gradient(1px 1px at 23% 47%, rgb(255 255 255 / 0.3), transparent 60%),
-      radial-gradient(1.2px 1.2px at 91% 12%, rgb(198 220 255 / 0.6), transparent 60%),
-      radial-gradient(1px 1px at 52% 91%, rgb(255 255 255 / 0.35), transparent 60%);
+      radial-gradient(1px 1px at 12% 18%, rgb(23 22 31 / 0.28), transparent 60%),
+      radial-gradient(1px 1px at 37% 72%, rgb(89 68 194 / 0.3), transparent 60%),
+      radial-gradient(1.4px 1.4px at 64% 31%, rgb(89 68 194 / 0.4), transparent 60%),
+      radial-gradient(1px 1px at 81% 63%, rgb(23 22 31 / 0.22), transparent 60%),
+      radial-gradient(1px 1px at 23% 47%, rgb(122 102 216 / 0.3), transparent 60%),
+      radial-gradient(1.2px 1.2px at 91% 12%, rgb(23 22 31 / 0.25), transparent 60%),
+      radial-gradient(1px 1px at 52% 91%, rgb(89 68 194 / 0.25), transparent 60%);
     background-size: 433px 433px;
     opacity: 1;
   }

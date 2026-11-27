@@ -54,7 +54,7 @@ export function SecurityHeader() {
     <header data-site-header className="sx sticky top-0 z-50 border-b border-night-600 bg-night-900">
       <a
         href="#contenido"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-full focus:bg-violet-300 focus:px-4 focus:py-2 focus:text-night-950"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-50 focus:rounded-full focus:bg-violet-600 focus:px-4 focus:py-2 focus:text-white"
       >
         Saltar al contenido
       </a>
@@ -81,7 +81,7 @@ export function SecurityHeader() {
                   <div
                     id="menu-aplicaciones"
                     hidden={!appsOpen}
-                    className="absolute left-1/2 top-[calc(100%+0.8rem)] w-[24rem] -translate-x-1/2 rounded-2xl border border-night-600 bg-night-800 p-2 shadow-2xl shadow-black/50"
+                    className="absolute left-1/2 top-[calc(100%+0.8rem)] w-[24rem] -translate-x-1/2 rounded-2xl border border-night-600 bg-night-800 p-2 shadow-2xl shadow-violet-700/15"
                   >
                     <ul>
                       {apps.map((a) => (

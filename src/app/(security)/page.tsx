@@ -5,11 +5,13 @@ import { JsonLd } from "@/lib/seo";
 import { allPosts, formatDate } from "@/lib/blog";
 import { site, company } from "@/content/site";
 import { apps } from "@/content/apps";
-import { certifications, faq, formatCop, segments, services, steps, waLink } from "@/content/security";
+import { certifications, faq, formatCop, segments, services, sinIva, steps, waLink } from "@/content/security";
+
+const desde = Math.min(...services.filter((s) => s.price > 0).map((s) => s.price));
 
 export const metadata = securityMeta(
   "Vesta Security · Ciberseguridad para pequeños negocios en Santa Marta y Colombia",
-  "Auditorías de seguridad y pruebas de penetración para comercios, tiendas en línea, consultorios y startups. Precios fijos desde $390.000 + IVA. Diagnóstico gratuito.",
+  `Auditorías de seguridad y pruebas de penetración para comercios, tiendas en línea, consultorios y startups. Precios fijos desde ${formatCop(sinIva(desde))} + IVA. Diagnóstico gratuito.`,
   "/",
   true,
 );
@@ -45,11 +47,11 @@ const ribbon = [
 /** Un hallazgo de ejemplo, con el formato real de los informes. */
 function FindingCard() {
   return (
-    <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-black/40">
+    <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-violet-700/15">
       <div className="flex items-center justify-between border-b border-night-600 px-5 py-3">
         <span className="sx-mono text-[0.8rem] text-dim">informe · hallazgo VS-07</span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#3a1d22] px-2.5 py-1 text-[0.8rem] font-semibold text-[#f3a7a7]">
-          <span className="size-1.5 rounded-full bg-[#f07a7a]" /> Alta · CVSS 8.1
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#fde9e7] px-2.5 py-1 text-[0.8rem] font-semibold text-[#a3302a]">
+          <span className="size-1.5 rounded-full bg-[#d9473f]" /> Alta · CVSS 8.1
         </span>
       </div>
       <div className="space-y-4 px-5 py-5">
@@ -71,7 +73,6 @@ function FindingCard() {
 export default function Page() {
   const featured = services.filter((s) => s.featured);
   const posts = allPosts().slice(0, 3);
-  const from = Math.min(...services.filter((s) => s.price > 0).map((s) => s.price));
 
   return (
     <>
@@ -111,7 +112,7 @@ export default function Page() {
         <div className="sx-wrap relative pb-10">
           <dl className="grid grid-cols-2 border-t border-night-600 md:grid-cols-4">
             {[
-              [formatCop(from), "+ IVA, el servicio más económico, con precio cerrado"],
+              [formatCop(sinIva(desde)), `+ IVA (${formatCop(desde)} en total), el servicio más económico, con precio cerrado`],
               ["OSWE · PNPT · eJPT", "certificaciones internacionales en pruebas de penetración"],
               ["60 días", "para la nueva prueba incluida, cuando corrijas"],
               ["0", "pruebas sin autorización firmada (Ley 1273 de 2009)"],
@@ -236,7 +237,7 @@ export default function Page() {
               <h3 className="sx-label">Certificaciones</h3>
               <ul className="mt-4">
                 {certifications.map((c) => (
-                  <li key={c.name} className="grid grid-cols-[5.5rem_1fr] gap-4 border-t border-white/10 py-4">
+                  <li key={c.name} className="grid grid-cols-[5.5rem_1fr] gap-4 border-t border-night-600 py-4">
                     <span className="text-[1.25rem] font-semibold tracking-[-0.02em]">{c.name}</span>
                     <div>
                       <p className="text-[0.95rem]">
