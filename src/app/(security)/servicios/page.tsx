@@ -27,6 +27,7 @@ const groups: { label: string; title: string; lead: string; ids: string[] }[] = 
 
 export default function Page() {
   const byId = (id: string) => services.find((s) => s.id === id)!;
+  const minExtra = Math.min(...extras.map((e) => e.price));
 
   return (
     <>
@@ -56,6 +57,11 @@ export default function Page() {
               <li>
                 <a href="#plan" className="text-mist hover:text-haze">
                   {plan.name}
+                </a>
+              </li>
+              <li>
+                <a href="#adicionales" className="text-mist hover:text-haze">
+                  Adicionales
                 </a>
               </li>
             </ul>
@@ -102,6 +108,17 @@ export default function Page() {
                   <td className="py-3.5 pr-4 text-mist">Mensual</td>
                   <td className="py-3.5 pr-4 text-right font-medium tabular-nums">{formatCop(plan.price)} / mes</td>
                   <td className="py-3.5 pr-5 text-right tabular-nums text-dim">{formatCop(withIva(plan.price))}</td>
+                </tr>
+                <tr className="border-t border-night-600">
+                  <th scope="row" className="px-5 py-3.5 font-medium">
+                    <a href="#adicionales" className="hover:text-violet-200">
+                      Adicionales
+                    </a>
+                  </th>
+                  <td className="py-3.5 pr-4 text-mist">Charla, nueva prueba, atestación</td>
+                  <td className="py-3.5 pr-4 text-mist">Según el adicional</td>
+                  <td className="py-3.5 pr-4 text-right font-medium tabular-nums">Desde {formatCop(minExtra)}</td>
+                  <td className="py-3.5 pr-5 text-right tabular-nums text-dim">Desde {formatCop(withIva(minExtra))}</td>
                 </tr>
               </tbody>
             </table>
@@ -156,7 +173,7 @@ export default function Page() {
       </section>
 
       {/* Adicionales y empresas */}
-      <section className="border-t border-night-600 py-16 md:py-20">
+      <section id="adicionales" className="scroll-mt-20 border-t border-night-600 py-16 md:py-20">
         <div className="sx-wrap grid gap-14 lg:grid-cols-2">
           <div>
             <Head title="Adicionales" lead="Se pueden contratar solos o junto con cualquier servicio." />
