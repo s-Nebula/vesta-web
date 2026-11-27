@@ -2,7 +2,7 @@
  * Fondo de nebulosa (por Nebula, el autor): nubes de gas violeta, azul y
  * magenta más un campo de estrellas. Es fijo y no recibe clics.
  *
- * Las nubes son una imagen ya renderizada (public/img/nebula.webp, generada
+ * Las nubes son una imagen ya renderizada (public/img/nebula-claro.webp, generada
  * desde scripts/nebula/render.html). Antes eran tres filtros feTurbulence con
  * desenfoque y mezcla "screen" calculados en vivo y animados, lo que hacía
  * lenta la navegación en celulares. Ahora solo se anima `transform` (lo hace
