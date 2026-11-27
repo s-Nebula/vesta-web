@@ -1,0 +1,8 @@
+# Política de reporte de vulnerabilidades de Vesta Security (FORBIDDEN S.A.S.).
+# Si encontraste un fallo de seguridad en nuestros sitios o aplicaciones, escríbenos.
+# No hagas pruebas que afecten el servicio ni accedas a datos de otras personas.
+
+Contact: mailto:nebulagnu@proton.me
+Expires: 2027-11-27T00:00:00.000Z
+Preferred-Languages: es, en
+Canonical: https://vestasecurity.date/.well-known/security.txt
