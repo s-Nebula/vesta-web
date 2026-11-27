@@ -27,4 +27,23 @@ if grep -rIl --exclude-dir=_next -E '(BEGIN [A-Z ]*PRIVATE KEY|ghp_[A-Za-z0-9]{2
   fail "posible credencial en el sitio compilado"
 fi
 
+# Cada página debe llevar su CSP y cada script en línea ejecutable, su huella
+# (ver scripts/csp.mjs). Si falta, publicar dejaría la página sin protección o rota.
+node --input-type=module -e '
+import { readFileSync } from "node:fs";
+import { execSync } from "node:child_process";
+import { huellas } from "./scripts/csp.mjs";
+const dir = process.argv[1];
+const paginas = execSync(`find "${dir}" -name "*.html"`).toString().trim().split("\n");
+for (const p of paginas) {
+  const doc = readFileSync(p, "utf8");
+  const m = /<meta http-equiv="Content-Security-Policy" content="([^"]*)"/.exec(doc);
+  if (!m) { console.error(`ERROR: ${p} no tiene CSP`); process.exit(1); }
+  for (const h of huellas(doc)) {
+    if (!m[1].includes(h)) { console.error(`ERROR: ${p}: script en línea sin huella en la CSP`); process.exit(1); }
+  }
+}
+console.log(`CSP: ${paginas.length} páginas verificadas`);
+' "$DIR" || fail "CSP incompleta"
+
 echo "OK: $(find "$DIR" -type f | wc -l) archivos, $(du -sh "$DIR" | cut -f1)"
