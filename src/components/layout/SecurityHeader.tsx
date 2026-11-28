@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { Wordmark } from "@/components/brand/Wordmark";
+import { TemaBoton } from "@/components/layout/TemaBoton";
 import { securityNav, waLink } from "@/content/security";
 import { apps } from "@/content/apps";
 
@@ -81,7 +82,7 @@ export function SecurityHeader() {
                   <div
                     id="menu-aplicaciones"
                     hidden={!appsOpen}
-                    className="absolute left-1/2 top-[calc(100%+0.8rem)] w-[24rem] -translate-x-1/2 rounded-2xl border border-night-600 bg-night-800 p-2 shadow-2xl shadow-violet-700/15"
+                    className="absolute left-1/2 top-[calc(100%+0.8rem)] w-[24rem] -translate-x-1/2 rounded-2xl border border-night-600 bg-night-800 p-2 shadow-2xl shadow-violet-700/15 dark:shadow-black/50"
                   >
                     <ul>
                       {apps.map((a) => (
@@ -116,6 +117,7 @@ export function SecurityHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <TemaBoton />
           <a href={waLink()} target="_blank" rel="noopener noreferrer" className="sx-btn sx-btn-primary hidden !min-h-[2.5rem] !py-2 !text-[0.88rem] sm:inline-flex">
             Diagnóstico gratis
           </a>

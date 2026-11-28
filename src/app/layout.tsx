@@ -5,6 +5,7 @@ import "@fontsource-variable/source-serif-4/opsz.css";
 import "@fontsource-variable/source-serif-4/opsz-italic.css";
 import "@/styles/globals.css";
 import { site } from "@/content/site";
+import { TEMA_SCRIPT } from "@/components/layout/TemaBoton";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
@@ -30,10 +31,16 @@ export const viewport: Viewport = {
 /**
  * The document is Spanish by default; English pages wrap their content in
  * lang="en" (see components/layout/Shell.tsx) and declare hreflang alternates.
+ *
+ * TEMA_SCRIPT pone data-tema="oscuro" en <html> antes de pintar si el visitante eligió
+ * el modo oscuro; por eso <html> lleva suppressHydrationWarning.
  */
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: TEMA_SCRIPT }} />
+      </head>
       <body className="min-h-dvh">{children}</body>
     </html>
   );

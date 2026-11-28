@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Modo oscuro de Vesta Security: lo activa el botón de la cabecera (TemaBoton), que pone
+   data-tema="oscuro" en <html>. Solo afecta al marco y a las páginas de Vesta Security
+   (.sx); el contenido de Control parental sigue claro. `dark:` sigue esa misma regla. */
+@custom-variant dark (&:where(html[data-tema="oscuro"] .sx, html[data-tema="oscuro"] .sx *));
+
 /*
  * SISTEMA VISUAL VESTA
  * Paleta derivada de los SVG oficiales (vesta_logo.svg / vesta_simbolo.svg):
@@ -54,6 +59,16 @@
   --color-violet-500: #8b7ae0;
   --color-violet-600: #6d5bc8;
   --color-violet-700: #52429e;
+
+  /* Financial Security (página de la app): verde #0B6E4F + dorado #E9B949 sobre blanco.
+     Variables para que el modo oscuro las cambie; la maqueta del celular usa colores fijos. */
+  --color-fin-fondo: #f5f8f6;
+  --color-fin-tarjeta: #ffffff;
+  --color-fin-suave: #e6f2ec;
+  --color-fin-linea: #d5e5dc;
+  --color-fin-texto: #4b5d55;
+  --color-fin-tinta: #16211d;
+  --color-fin-acento: #0b6e4f;
 
   --font-grotesk: "Space Grotesk Variable", "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "JetBrains Mono", Menlo, Consolas, monospace;
@@ -401,6 +416,7 @@
 
   /* ───────── Vesta Security (tema oscuro de la empresa) ───────── */
   .sx {
+    --nebula-pdf-texto: #1f64c4; /* azul de Nebula PDF oscurecido para texto sobre claro (AA) */
     background: var(--color-night-900);
     color: var(--color-haze);
     font-family: var(--font-grotesk);
@@ -777,6 +793,77 @@
     to {
       opacity: 0.9;
     }
+  }
+}
+
+/* ───────── Modo oscuro (grafito + violeta, el tema anterior al PR #10) ───────── */
+@layer components {
+  html[data-tema="oscuro"] .sx {
+    color-scheme: dark;
+    --color-night-950: #0a0b0e;
+    --color-night-900: #0e1014;
+    --color-night-800: #14171c;
+    --color-night-700: #1b1e25;
+    --color-night-600: #262a33;
+    --color-night-500: #343947;
+    --color-haze: #eceaf3;
+    --color-mist: #a6a4b5;
+    --color-dim: #8b899e;
+    --color-violet-200: #ddd6fb;
+    --color-violet-300: #c6bcf4;
+    --color-violet-400: #a99beb;
+    --nebula-pdf-texto: #6cb3ff;
+    --color-fin-fondo: #0d1311;
+    --color-fin-tarjeta: #131b18;
+    --color-fin-suave: #163327;
+    --color-fin-linea: #25382f;
+    --color-fin-texto: #a9bdb3;
+    --color-fin-tinta: #e7efea;
+    --color-fin-acento: #5fcf9f;
+  }
+  /* Sin esto, al estirar la página en el celular asoma el fondo claro. */
+  html[data-tema="oscuro"]:has(body > .sx),
+  html[data-tema="oscuro"]:has(body > .sx) body {
+    background: #0e1014;
+  }
+  html[data-tema="oscuro"] .sx-btn-primary {
+    background: linear-gradient(180deg, var(--color-violet-300), var(--color-violet-400));
+    color: var(--color-night-950);
+    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.45);
+  }
+  html[data-tema="oscuro"] .sx-btn-primary:hover {
+    background: var(--color-violet-200);
+  }
+  html[data-tema="oscuro"] .sx-glass {
+    background:
+      radial-gradient(120% 90% at 0% 0%, rgb(198 188 244 / 0.22), transparent 55%),
+      linear-gradient(160deg, #2a2445 0%, #1a1729 55%, #14141c 100%);
+    border-color: rgb(198 188 244 / 0.18);
+  }
+  html[data-tema="oscuro"] .sx-grid-bg {
+    background-image:
+      linear-gradient(rgb(255 255 255 / 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 0.035) 1px, transparent 1px);
+  }
+  html[data-tema="oscuro"] .sx-prose {
+    color: #d8d6e2;
+  }
+  html[data-tema="oscuro"] .sx-prose pre {
+    background: var(--color-night-950);
+    border-color: var(--color-night-600);
+  }
+  html[data-tema="oscuro"] .nebula-gas {
+    background-image: url("/img/nebula-oscuro.webp");
+  }
+  html[data-tema="oscuro"] .nebula-stars {
+    background-image:
+      radial-gradient(1px 1px at 12% 18%, rgb(255 255 255 / 0.55), transparent 60%),
+      radial-gradient(1px 1px at 37% 72%, rgb(255 255 255 / 0.4), transparent 60%),
+      radial-gradient(1.4px 1.4px at 64% 31%, rgb(221 214 251 / 0.7), transparent 60%),
+      radial-gradient(1px 1px at 81% 63%, rgb(255 255 255 / 0.45), transparent 60%),
+      radial-gradient(1px 1px at 23% 47%, rgb(255 255 255 / 0.3), transparent 60%),
+      radial-gradient(1.2px 1.2px at 91% 12%, rgb(198 220 255 / 0.6), transparent 60%),
+      radial-gradient(1px 1px at 52% 91%, rgb(255 255 255 / 0.35), transparent 60%);
   }
 }
 

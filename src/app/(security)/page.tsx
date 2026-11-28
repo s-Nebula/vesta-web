@@ -47,11 +47,11 @@ const ribbon = [
 /** Un hallazgo de ejemplo, con el formato real de los informes. */
 function FindingCard() {
   return (
-    <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-violet-700/15">
+    <figure className="sx-panel relative overflow-hidden p-0 shadow-2xl shadow-violet-700/15 dark:shadow-black/40">
       <div className="flex items-center justify-between border-b border-night-600 px-5 py-3">
         <span className="sx-mono text-[0.8rem] text-dim">informe · hallazgo VS-07</span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#fde9e7] px-2.5 py-1 text-[0.8rem] font-semibold text-[#a3302a]">
-          <span className="size-1.5 rounded-full bg-[#d9473f]" /> Alta · CVSS 8.1
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-[#fde9e7] px-2.5 py-1 text-[0.8rem] font-semibold text-[#a3302a] dark:bg-[#3a1d22] dark:text-[#f3a7a7]">
+          <span className="size-1.5 rounded-full bg-[#d9473f] dark:bg-[#f07a7a]" /> Alta · CVSS 8.1
         </span>
       </div>
       <div className="space-y-4 px-5 py-5">

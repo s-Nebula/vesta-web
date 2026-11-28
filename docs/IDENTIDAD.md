@@ -77,6 +77,17 @@ parental Vesta y solo se usa en sus páginas.
   Los bloques de código siguen oscuros, como una terminal. El icono y la imagen para redes de los servicios
   también son claros; se generan con `scripts/marca/`.
 
+- **Modo oscuro (opcional, 2026-11-27).** El sitio abre claro para todos. El botón de luna de la cabecera
+  (`components/layout/TemaBoton.tsx`) pone `data-tema="oscuro"` en `<html>` y lo recuerda en `localStorage`
+  (`vs-tema`); un script en el `<head>` lo aplica antes de pintar, y la CSP le calcula la huella al compilar.
+  En oscuro vuelven los valores grafito + violeta de antes (`night-900` `#0E1014`, `haze` `#ECEAF3`,
+  `mist` `#A6A4B5`, `dim` `#8B899E`, violetas claros `#DDD6FB`/`#C6BCF4`/`#A99BEB`, botón principal violeta
+  claro con texto grafito) y la nebulosa `public/img/nebula-oscuro.webp`. Todo está en `globals.css`
+  («Modo oscuro»); para un color fijo en un componente se usa la variante `dark:` (solo actúa dentro de `.sx`).
+  Alcance: marco común (cabecera y pie), páginas de Vesta Security y las de Financial Security y Nebula PDF.
+  El contenido de Control parental sigue claro. Financial usa los tokens `fin-*` (verde/dorado) con su
+  versión oscura; la maqueta del celular y la ventana de Nebula PDF son imágenes de las apps y no cambian.
+
 - **Tipografía**: Space Grotesk para todo; palabras destacadas en Source Serif 4 cursiva (`.sx-em`);
   rótulos y datos técnicos en monoespaciada (`.sx-label`, `.sx-mono`).
 - **Recursos**: botones en píldora, tarjetas con filete fino, degradé lavanda solo en bloques destacados
