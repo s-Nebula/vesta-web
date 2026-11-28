@@ -14,7 +14,7 @@ export const metadata = securityMeta(
 
 const BLUE = "#6CB3FF";
 /** El mismo azul, oscurecido para texto sobre fondo claro (contraste AA). */
-const BLUE_TEXT = "#1F64C4";
+const BLUE_TEXT = "var(--nebula-pdf-texto)"; // #1F64C4 en claro, #6CB3FF en oscuro (globals.css)
 
 const features: [string, string][] = [
   ["Mismo diseño", "El texto traducido se escribe en la misma posición, con el mismo tamaño, color y tipo de letra aproximado. Imágenes, gráficos y fondos no se tocan."],

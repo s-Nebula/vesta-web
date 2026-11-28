@@ -92,11 +92,11 @@ function Steps({ items }: { items: [string, string][] }) {
   return (
     <ol className="mt-6 space-y-0">
       {items.map(([t, d], i) => (
-        <li key={t} className="grid grid-cols-[2.2rem_1fr] gap-3 border-t border-[#d5e5dc] py-4">
+        <li key={t} className="grid grid-cols-[2.2rem_1fr] gap-3 border-t border-fin-linea py-4">
           <span className="flex size-7 items-center justify-center rounded-full bg-[#0B6E4F] text-[0.86rem] font-bold text-white">{i + 1}</span>
           <div>
             <p className="font-semibold">{t}</p>
-            <p className="mt-0.5 text-[0.93rem] text-[#4b5d55]">{d}</p>
+            <p className="mt-0.5 text-[0.93rem] text-fin-texto">{d}</p>
           </div>
         </li>
       ))}
@@ -114,7 +114,7 @@ function PhoneMock() {
   ];
   return (
     <figure className="mx-auto w-full max-w-[20rem]">
-      <div className="rounded-[2.2rem] border-[10px] border-[#16211d] bg-[#F5F8F6] p-4 shadow-2xl shadow-[#0B6E4F]/25">
+      <div className="rounded-[2.2rem] border-[10px] border-[#16211d] bg-[#F5F8F6] p-4 text-[#16211d] shadow-2xl shadow-[#0B6E4F]/25">
         <div className="flex items-center justify-between">
           <p className="font-bold">Cobros de hoy</p>
           <span className="rounded-full bg-[#E6F2EC] px-2 py-0.5 text-[0.78rem] font-semibold text-[#0B6E4F]">Al día</span>
@@ -145,23 +145,23 @@ function PhoneMock() {
         </ul>
         <p className="mt-3 rounded-xl bg-[#0B6E4F] px-3 py-2 text-center text-[0.8rem] font-semibold text-white">Pago de $ 15.000 guardado en el celular</p>
       </div>
-      <figcaption className="mt-3 text-center text-[0.86rem] text-[#4b5d55]">Así trabaja el cobrador, con o sin señal. Datos de ejemplo.</figcaption>
+      <figcaption className="mt-3 text-center text-[0.86rem] text-fin-texto">Así trabaja el cobrador, con o sin señal. Datos de ejemplo.</figcaption>
     </figure>
   );
 }
 
 function Download_({ title, req, file, sha, label }: { title: string; req: string; file: string; sha: string; label: string }) {
   return (
-    <div className="rounded-2xl border border-[#d5e5dc] bg-white p-6">
+    <div className="rounded-2xl border border-fin-linea bg-fin-tarjeta p-6">
       <h3 className="text-xl font-bold">{title}</h3>
-      <p className="mt-1 text-[0.92rem] text-[#4b5d55]">
+      <p className="mt-1 text-[0.92rem] text-fin-texto">
         Versión {financial.version} · {req}.
       </p>
       <a href={`${financial.downloadsBase}/${file}`} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#0B6E4F] px-5 py-2.5 font-semibold text-white hover:bg-[#09573f]">
         <Download aria-hidden="true" className="size-4" /> {label}
       </a>
-      <p className="mt-4 text-[0.82rem] text-[#4b5d55]">Huella SHA-256 del archivo:</p>
-      <p className="mt-1 break-all font-mono text-[0.8rem] text-[#16211d]">{sha}</p>
+      <p className="mt-4 text-[0.82rem] text-fin-texto">Huella SHA-256 del archivo:</p>
+      <p className="mt-1 break-all font-mono text-[0.8rem] text-fin-tinta">{sha}</p>
     </div>
   );
 }
@@ -182,16 +182,16 @@ export default function Page() {
         }}
       />
       <FinancialBar />
-      <div className="bg-[#F5F8F6] font-[family-name:var(--font-sans)] text-[#16211d]">
+      <div className="bg-fin-fondo font-[family-name:var(--font-sans)] text-fin-tinta">
         {/* Portada */}
-        <section className="border-b border-[#d5e5dc]">
+        <section className="border-b border-fin-linea">
           <div className="sx-wrap grid items-center gap-14 py-16 md:py-24 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <p className="inline-flex rounded-full bg-[#E6F2EC] px-3 py-1 text-[0.88rem] font-semibold text-[#0B6E4F]">App de cobros para prestamistas</p>
+              <p className="inline-flex rounded-full bg-fin-suave px-3 py-1 text-[0.88rem] font-semibold text-fin-acento">App de cobros para prestamistas</p>
               <h1 className="mt-6 font-[family-name:var(--font-grotesk)] text-[clamp(2.4rem,1.4rem+3.8vw,4.4rem)] font-semibold leading-[1.02] tracking-[-0.04em]">
-                Sus cobros al día, sin cuadernos y <span className="text-[#0B6E4F]">sin perder un peso.</span>
+                Sus cobros al día, sin cuadernos y <span className="text-fin-acento">sin perder un peso.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-[1.12rem] leading-relaxed text-[#4b5d55]">
+              <p className="mt-6 max-w-xl text-[1.12rem] leading-relaxed text-fin-texto">
                 El cobrador registra cada pago en el celular, aunque no tenga señal. Usted ve en el computador cuánto se cobró, cuánto está en mora y
                 cuánto está ganando.
               </p>
@@ -199,11 +199,11 @@ export default function Page() {
                 <a href="#descargar" className="inline-flex items-center gap-2 rounded-full bg-[#0B6E4F] px-6 py-3 font-semibold text-white hover:bg-[#09573f]">
                   <Download aria-hidden="true" className="size-4" /> Descargar para Android
                 </a>
-                <a href="#como-funciona" className="inline-flex rounded-full border border-[#0B6E4F] px-6 py-3 font-semibold text-[#0B6E4F] hover:bg-[#E6F2EC]">
+                <a href="#como-funciona" className="inline-flex rounded-full border border-fin-acento px-6 py-3 font-semibold text-fin-acento hover:bg-fin-suave">
                   Ver cómo funciona
                 </a>
               </div>
-              <p className="mt-7 text-[0.88rem] text-[#4b5d55]">Créditos diarios, semanales, quincenales y mensuales · Funciona sin internet · Hecho en Colombia</p>
+              <p className="mt-7 text-[0.88rem] text-fin-texto">Créditos diarios, semanales, quincenales y mensuales · Funciona sin internet · Hecho en Colombia</p>
             </div>
             <div className="lg:col-span-5">
               <PhoneMock />
@@ -215,16 +215,16 @@ export default function Page() {
         <section id="como-funciona" className="scroll-mt-32 py-16 md:py-24">
           <div className="sx-wrap">
             <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em]">Cómo funciona</h2>
-            <p className="mt-4 max-w-2xl text-[1.05rem] text-[#4b5d55]">
+            <p className="mt-4 max-w-2xl text-[1.05rem] text-fin-texto">
               Tres partes conectadas. El cobrador trabaja en la calle con el celular, la información llega a un servidor seguro y usted la ve desde la
               oficina.
             </p>
             <ol className="mt-10 grid gap-4 md:grid-cols-3">
               {parts.map((p) => (
-                <li key={p.title} className="rounded-2xl border border-[#d5e5dc] bg-white p-7">
-                  <p.icon aria-hidden="true" className="size-7 text-[#0B6E4F]" />
+                <li key={p.title} className="rounded-2xl border border-fin-linea bg-fin-tarjeta p-7">
+                  <p.icon aria-hidden="true" className="size-7 text-fin-acento" />
                   <h3 className="mt-5 text-lg font-bold">{p.title}</h3>
-                  <p className="mt-2 text-[#4b5d55]">{p.text}</p>
+                  <p className="mt-2 text-fin-texto">{p.text}</p>
                 </li>
               ))}
             </ol>
@@ -232,15 +232,15 @@ export default function Page() {
         </section>
 
         {/* Lo que hace */}
-        <section id="funciones" className="scroll-mt-32 border-y border-[#d5e5dc] bg-white py-16 md:py-24">
+        <section id="funciones" className="scroll-mt-32 border-y border-fin-linea bg-fin-tarjeta py-16 md:py-24">
           <div className="sx-wrap">
             <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em]">Lo que hace</h2>
-            <p className="mt-4 max-w-2xl text-[1.05rem] text-[#4b5d55]">Pensada para el cobro diario de verdad: abonos, mora, renovaciones y la caja del cobrador.</p>
+            <p className="mt-4 max-w-2xl text-[1.05rem] text-fin-texto">Pensada para el cobro diario de verdad: abonos, mora, renovaciones y la caja del cobrador.</p>
             <dl className="mt-10 grid gap-x-10 gap-y-8 md:grid-cols-2">
               {features.map(([t, d]) => (
                 <div key={t} className="border-l-[3px] border-[#E9B949] pl-5">
                   <dt className="text-lg font-bold">{t}</dt>
-                  <dd className="mt-1.5 text-[#4b5d55]">{d}</dd>
+                  <dd className="mt-1.5 text-fin-texto">{d}</dd>
                 </div>
               ))}
             </dl>
@@ -251,7 +251,7 @@ export default function Page() {
         <section id="uso" className="scroll-mt-32 py-16 md:py-24">
           <div className="sx-wrap">
             <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em]">Cómo se usa</h2>
-            <p className="mt-4 max-w-2xl text-[1.05rem] text-[#4b5d55]">Empezar toma unos minutos. Nosotros creamos su negocio y su usuario de dueño.</p>
+            <p className="mt-4 max-w-2xl text-[1.05rem] text-fin-texto">Empezar toma unos minutos. Nosotros creamos su negocio y su usuario de dueño.</p>
             <div className="mt-10 grid gap-12 lg:grid-cols-2">
               <div>
                 <h3 className="text-xl font-bold">El dueño</h3>
@@ -266,7 +266,7 @@ export default function Page() {
         </section>
 
         {/* Precio */}
-        <section id="precio" className="scroll-mt-32 bg-[#0B6E4F] py-16 text-white md:py-24">
+        <section id="precio" className="scroll-mt-32 bg-[#0B6E4F] py-16 text-white md:py-24 dark:bg-[#0a4a36]">
           <div className="sx-wrap grid gap-12 lg:grid-cols-12">
             <div className="lg:col-span-5">
               <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em]">Un solo plan, todo incluido</h2>
@@ -294,9 +294,9 @@ export default function Page() {
         <section id="descargar" className="scroll-mt-32 py-16 md:py-24">
           <div className="sx-wrap">
             <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em]">Descargar</h2>
-            <p className="mt-4 max-w-2xl text-[1.05rem] text-[#4b5d55]">
+            <p className="mt-4 max-w-2xl text-[1.05rem] text-fin-texto">
               La misma app sirve para el cobrador y para el dueño: cada uno ve lo suyo según su usuario. Para usarla necesita un negocio activo.{" "}
-              <a href={wa("Hola, quiero información sobre Financial Security")} target="_blank" rel="noopener noreferrer" className="font-semibold text-[#0B6E4F] underline underline-offset-4">
+              <a href={wa("Hola, quiero información sobre Financial Security")} target="_blank" rel="noopener noreferrer" className="font-semibold text-fin-acento underline underline-offset-4">
                 Escríbanos para activarlo.
               </a>
             </p>
@@ -318,22 +318,22 @@ export default function Page() {
         </section>
 
         {/* Preguntas */}
-        <section id="preguntas" className="scroll-mt-32 border-t border-[#d5e5dc] bg-white py-16 md:py-24">
+        <section id="preguntas" className="scroll-mt-32 border-t border-fin-linea bg-fin-tarjeta py-16 md:py-24">
           <div className="sx-wrap grid gap-12 lg:grid-cols-12">
             <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(2rem,1.4rem+2vw,3rem)] font-semibold tracking-[-0.035em] lg:col-span-4">Preguntas frecuentes</h2>
-            <div className="border-t border-[#d5e5dc] lg:col-span-8">
+            <div className="border-t border-fin-linea lg:col-span-8">
               {faq.map(([q, a]) => (
-                <details key={q} className="group border-b border-[#d5e5dc]">
+                <details key={q} className="group border-b border-fin-linea">
                   <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 [&::-webkit-details-marker]:hidden">
                     <h3 className="text-[1.08rem] font-semibold">{q}</h3>
-                    <Plus aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-[#0B6E4F] transition-transform group-open:rotate-45" />
+                    <Plus aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-fin-acento transition-transform group-open:rotate-45" />
                   </summary>
-                  <p className="pb-6 pr-10 text-[#4b5d55]">
+                  <p className="pb-6 pr-10 text-fin-texto">
                     {a}
                     {q.startsWith("¿Mis datos") && (
                       <>
                         {" "}
-                        <Link href="/aplicaciones/financial-security/politica-de-datos/" className="font-semibold text-[#0B6E4F] underline underline-offset-4">
+                        <Link href="/aplicaciones/financial-security/politica-de-datos/" className="font-semibold text-fin-acento underline underline-offset-4">
                           Ver la política.
                         </Link>
                       </>
@@ -346,17 +346,17 @@ export default function Page() {
         </section>
 
         {/* Contacto */}
-        <section className="border-t border-[#d5e5dc] py-16 md:py-20">
-          <div className="sx-wrap flex flex-col items-start justify-between gap-8 rounded-3xl bg-[#E6F2EC] p-8 md:flex-row md:items-center md:p-12">
+        <section className="border-t border-fin-linea py-16 md:py-20">
+          <div className="sx-wrap flex flex-col items-start justify-between gap-8 rounded-3xl bg-fin-suave p-8 md:flex-row md:items-center md:p-12">
             <div>
               <h2 className="font-[family-name:var(--font-grotesk)] text-[clamp(1.8rem,1.3rem+1.6vw,2.6rem)] font-semibold tracking-[-0.035em]">¿Quiere probarla en su negocio?</h2>
-              <p className="mt-3 max-w-xl text-[#4b5d55]">Escríbanos y activamos su negocio, le creamos el usuario de dueño y le ayudamos a cargar sus clientes.</p>
+              <p className="mt-3 max-w-xl text-fin-texto">Escríbanos y activamos su negocio, le creamos el usuario de dueño y le ayudamos a cargar sus clientes.</p>
             </div>
             <div className="flex flex-wrap gap-3">
               <a href={wa("Hola, quiero información sobre Financial Security")} target="_blank" rel="noopener noreferrer" className="rounded-full bg-[#0B6E4F] px-6 py-3 font-semibold text-white hover:bg-[#09573f]">
                 WhatsApp
               </a>
-              <a href={`mailto:${company.email}?subject=Financial%20Security`} className="rounded-full border border-[#0B6E4F] px-6 py-3 font-semibold text-[#0B6E4F]">
+              <a href={`mailto:${company.email}?subject=Financial%20Security`} className="rounded-full border border-fin-acento px-6 py-3 font-semibold text-fin-acento">
                 {company.email}
               </a>
             </div>
