@@ -53,6 +53,30 @@ const notes11 = {
   ],
 };
 
+const notesPadre111: Release["notes"] = {
+  es: [
+    "Eliminar perfiles desde el panel (si otro tutor lo comparte, lo conserva).",
+    "Actualizaciones automáticas: la app se instala sola las versiones nuevas.",
+    "Panel web en app.vestasecurity.date con la misma cuenta.",
+  ],
+  en: [
+    "Delete profiles from the dashboard (if another guardian shares it, they keep it).",
+    "Automatic updates: the app installs new versions by itself.",
+    "Web dashboard at app.vestasecurity.date with the same account.",
+  ],
+};
+
+const notesTracker111: Release["notes"] = {
+  es: [
+    "Actualizaciones automáticas: Vesta Tracker se mantiene al día sola.",
+    "El filtrado web se reactiva solo después de cada actualización.",
+  ],
+  en: [
+    "Automatic updates: Vesta Tracker keeps itself up to date.",
+    "Web filtering turns itself back on after each update.",
+  ],
+};
+
 export const apps: AppDownload[] = [
   {
     id: "padre",
@@ -77,11 +101,12 @@ export const apps: AppDownload[] = [
     packageId: "org.vestaopensource.tutor",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 68_305_534,
-    sha256: "bf8c43883e9122dfd7d3405683b166bfda7d6134bbe2ddb5c0ba826369404ddc",
+    sizeBytes: 68_449_644,
+    sha256: "6bdf9786bb3fec4fd7e3174e71d9c7f031670813900b188dafe0dd2f217a7ed7",
     apkUrl: "https://vestasecurity.date/downloads/Vesta-Padre.apk",
     playStoreUrl: null,
     releases: [
+      { version: "1.1.1", versionCode: 11, date: "2026-11-28", notes: notesPadre111 },
       { version: "1.1.0", versionCode: 9, date: "2026-11-22", notes: notes11 },
       { version: "1.0.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
     ],
@@ -109,11 +134,12 @@ export const apps: AppDownload[] = [
     packageId: "org.vestaopensource.tracker",
     minSdk: 24,
     targetSdk: 36,
-    sizeBytes: 78_228_513,
-    sha256: "7233a03aa19a0a2bad483d5941d0f5ee806dd97bd14359c711b8adcde9373222",
+    sizeBytes: 78_355_973,
+    sha256: "19b7bd6ba71da9286a65ec73a7129a74dd801e704f9bd758325557c1fee27450",
     apkUrl: "https://vestasecurity.date/downloads/Vesta-Tracker.apk",
     playStoreUrl: null,
     releases: [
+      { version: "1.1.1", versionCode: 7, date: "2026-11-28", notes: notesTracker111 },
       { version: "1.1.0", versionCode: 6, date: "2026-11-22", notes: notes11 },
       { version: "1.0", versionCode: 1, date: null, notes: { es: ["Versión inicial."], en: ["First version."] } },
     ],
