@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, ArrowDownToLine } from "lucide-react";
+import { ArrowRight, ArrowDownToLine, MonitorSmartphone } from "lucide-react";
 import { Device } from "@/components/ui/Device";
 import { AppTag } from "@/components/ui/AppTag";
 import { SectionHead } from "@/components/ui/SectionHead";
@@ -15,6 +15,9 @@ import { JsonLd } from "@/lib/seo";
 import { organizationSchema, appsSchema } from "@/lib/schema";
 import { docHref, href, type Locale } from "@/i18n";
 
+/** Vesta Padre web panel (Flutter web, separate subdomain). */
+const WEB_APP_URL = "https://app.vestasecurity.date";
+
 const copy = {
   es: {
     eyebrow: "Para familias con hijos en Android",
@@ -27,6 +30,9 @@ const copy = {
       </>
     ),
     cta: "Descargar aplicaciones",
+    webCta: "Abrir Vesta Padre en la web",
+    webTitle: "Vesta Padre también en el navegador.",
+    webLead: "Consulta el panel desde el ordenador, un iPhone o cualquier navegador, con tu misma cuenta de tutor. El teléfono del menor sigue necesitando Vesta Tracker para Android.",
     more: "Cómo funciona",
     shotTracker: "Vesta Tracker en el dispositivo del menor",
     shotPadre: "Panel de control de Vesta Padre",
@@ -193,6 +199,9 @@ const copy = {
     docsLink: "All documentation",
     aboutLabel: "About us",
     aboutLink: "Our values and commitments",
+    webCta: "Open Vesta Parent on the web",
+    webTitle: "Vesta Parent in your browser too.",
+    webLead: "Use the dashboard from a computer, an iPhone or any browser, with the same guardian account. The minor's phone still needs Vesta Tracker for Android.",
     downloadsLabel: "Download",
     downloadsTitle: "Vesta Parent and Vesta Tracker.",
     downloadsLead: "Vesta is distributed for Android as APK files. Check the requirements before installing.",
@@ -233,6 +242,10 @@ export function HomeView({ locale }: { locale: Locale }) {
                 <ArrowDownToLine aria-hidden="true" className="size-4" />
                 {t.cta}
               </Link>
+              <a href={WEB_APP_URL} className="btn btn-ghost">
+                <MonitorSmartphone aria-hidden="true" className="size-4" />
+                {t.webCta}
+              </a>
               <a href="#como-empezar" className="arrow-link">
                 {t.more} <ArrowRight aria-hidden="true" className="size-4" />
               </a>
@@ -466,6 +479,17 @@ export function HomeView({ locale }: { locale: Locale }) {
                 <DownloadPanel app={a} locale={locale} />
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 flex flex-col gap-6 border-t border-line pt-12 md:flex-row md:items-center md:justify-between">
+            <div className="max-w-2xl">
+              <h3 className="font-serif text-2xl text-wine">{t.webTitle}</h3>
+              <p className="mt-3 text-[1.02rem] leading-relaxed text-muted">{t.webLead}</p>
+            </div>
+            <a href={WEB_APP_URL} className="btn btn-primary shrink-0">
+              <MonitorSmartphone aria-hidden="true" className="size-4" />
+              {t.webCta}
+            </a>
           </div>
         </div>
       </section>
